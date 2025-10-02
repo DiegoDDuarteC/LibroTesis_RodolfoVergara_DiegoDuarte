@@ -1,0 +1,159 @@
+\chapter{Fragmentación en Redes Ópticas Elásticas}
+Las redes ópticas tradicionales basadas en WDM, también conocidas como redes ópticas de grilla fija o \textit{fixed-grid networks}, dividen el espectro de cada enlace en canales fijos de 50 GHz o 100 GHz de ancho de banda,  según se especifica en el estándar G.694.1 del año 2002 de la
+Unión Internacional de Telecomunicaciones (\textit{ITU-T International Telecommunication Union}).
+
+Debido a la rigidez de estas redes WDM, es posible que ocurra una utilización ineficiente de la capacidad, esto es debido a que el espacio entre dos canales adyacentes es relativamente grande y si la señal transmitida usa un ancho de banda bajo, gran parte del espectro será desperdiciado.
+
+Una nueva tecnología denominada Redes Ópticas Elásticas o \textit{Elastic Optical Networks} (EON) propuestas por Masahiko Jinno en \cite{jinno2009spectrum}, también denominadas como redes ópticas de grilla flexible o \textit{Flex-grid Networks}, dividen el espectro óptico en Ranuras de Frecuencia o \textit{Frequency Slots} (FS) de 12.5 GHz de acuerdo con el estándar definido en ITU-T (G.694.1) en el año 2012.
+
+En la Figura \ref{fig:eonwdm}, se muestra una comparación en la asignación de demandas en ambas tecnologías, observándose un mejor aprovechamiento del espectro óptico para el caso de las redes EON, debido a un menor desperdicio de ancho en banda.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\textwidth]{capitulos/img/eonwdm.png}
+    \caption{Redes WDM v s Redes EON}
+    \label{fig:eonwdm}
+\end{figure}
+
+
+\section{Fragmentación del Ancho de Banda en EON}
+Las redes elásticas ópticas permiten que el ancho de banda requerido por la demanda sea ubicado en el lugar más conveniente, siguiendo dos principales restricciones:
+
+\begin{itemize}
+    \item \textbf{Restricción de continuidad del espectro:} los recursos de ancho de banda asignados a cada demanda deben ser los mismos a través de todos los enlaces físicos de la ruta.
+    \item \textbf{Restricción de consecutividad del espectro:} el ancho de banda asignado a una demanda debe ser contigua en el espectro, formando un solo bloque de FS. 
+\end{itemize}
+
+Estas restricciones dan lugar a que luego de varias asignaciones de demandas y liberaciones de recursos se produzca la aparición de bloques aislados de FS no utilizados en los enlaces ópticos y no coincidentes unos respecto a otros en enlaces consecutivos, en consecuencia, esto permite una alta probabilidad de bloqueo, por lo que la red podría no satisfacer una demanda a pesar de tener ancho de banda disponible en los enlaces, este problema se conoce como “Fragmentación de la red”.
+
+%\begin{enumerate}[a)]
+%    \item Se muestra el estado del enlace con las conexiones asignadas.
+%    \item Se liberan recursos cuando una conexión expira.
+%    \item Se nota como una nueva solicitud de conexión es rechazada, porque a pesar de tener libre la cantidad de FS necesarios, estos no están contiguos en un bloque y la conexión no puede ubicarse en ninguno de los dos bloques, debido a la fragmentación del espectro.  
+%\end{enumerate}
+
+Un ejemplo de un escenario donde se pueden apreciar las restricciones de continuidad y contigüidad se muestra en la figura \ref{fig:fragmentacion} donde se considera una demanda de origen en el nodo ``A'' y destino en el nodo ``B'' con dos FS a ser asignados en el espectro.
+
+El camino más corto entre ambos nodos sería el A-C-E, pero este camino es rechazado por el algoritmo RSA, ya que los enlaces A-C y C-E no cuentan con suficientes FS contiguos y alineados para satisfacer la demandas, tal y como se ve en la parte 1 de la figura \ref{fig:fragmentacion}.
+
+El siguiente camino que encuentra el algoritmo RSA es el A-C-D-E, a diferencia del anterior este camino sí cumple con ambas restricciones por lo que la demanda se asignaría correctamente en los FS respectivos, la parte 2 de la figura \ref{fig:fragmentacion} expone dicha situación.
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{capitulos/img/fragmentacion.png}
+    \caption{Restricciones de contigüidad y continuidad en redes EON}
+    \label{fig:fragmentacion}
+\end{figure}
+
+De esta manera es posible observar que quedan algunos bloques aislados, como los bloques de los enlaces A-C y sus enlaces adyacentes, en los cuales sus bloques difícilmente  sean utilizables ya que en su mayoría los bloques de un enlace no coinciden con el de los enlaces adyacentes. A esto es lo que llamamos fragmentación del espectro. 
+
+\subsection{Enfoques de gestión de fragmentación}
+El problema explicado anteriormente trae consigo efectos adversos para la red, provoca que la probabilidad de bloqueo de la red aumente, afectando directamente a su correcto y fluido funcionamiento. Debido a esto es importante encontrar mecanismos que ayuden a evitar, alivianar o disminuir la fragmentación del ancho de banda. 
+
+Según la literatura científica existen diversos enfoques a ser considerados para la gestión de la desfragmentación , en la figura \ref{fig:gestion_fragmentacion} se muestran los principales enfoques de gestión de la fragmentación \cite{chatterjee2017fragmentation}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{capitulos/img/Gestion_Fragmentacion.PNG}
+    \caption{Esquema de Gestión de la Fragmentación}
+    \label{fig:gestion_fragmentacion}
+\end{figure}
+
+La Desfragmentación es un proceso en el cual se realiza la reconfiguración o re-ruteo de un sub-conjunto de conexiones existentes en la red, cuyo objetivo principal es reacomodar las asignaciones de espectro de las demandas de tráfico existentes
+para consolidar los espacios disponibles en grandes bloques contiguos y continuos que pueden ser utilizados para establecer futuras demandas \cite{talebi2014spectrum}.
+
+Es posible gestionar el problema de la fragmentación sin utilizar técnicas de desfragmentación del espectro (Sin Desfragmentación), esto se logra realizando una gestión del espectro con el objetivo de evitar su fragmentación.
+
+En el tratamiento de la fragmentación siguiendo un esquema Sin Desfragmentación podemos mencionar a los algoritmos denominados Sensibles a la Fragmentación o \textit{Fragmentation Aware RSA} (FA-RSA). Los mismos consideran la fragmentación del ancho de banda para establecer las demandas siguiendo distintos indicadores de fragmentación y de esta manera se trata de minimizar la fragmentación del espectro.
+
+Otra manera sería emplear técnicas de desfragmentación, utilizando dos enfoques principales:
+\begin{itemize}
+         \item Desfragmentación Reactiva: El proceso se realiza ante el bloqueo de una demanda, con el objetivo de conseguir su establecimiento.
+         \item Desfragmentación Proactiva: Se realiza periódicamente o considerando ciertos valores que disparen el proceso, de esta forma se logra disminuir la fragmentación de la red y se minimiza la aparición de futuros bloqueos de demandas.
+\end{itemize}
+Los enfoques que utilizan técnicas de desfragmentación también pueden clasificarse en: (i) enfoques sin re-ruteo, que realizan sólo una reasignación del espectro en los \textit{lightpaths} o caminos de luz existentes, y (ii) con re-ruteos, que son técnicas que cambian las rutas y el espectro de los lightpaths existentes.
+
+En el presente trabajo para la gestión de la fragmentación se utilizó el enfoque con desfragmentacion, proactiva y con re-ruteos de lightpaths existentes, en la figura \ref{fig:gestion_fragmentacion} se puede ver resaltado dicha estrategia.
+
+\section{Descripción del problema tratado}
+La Fragmentación del Ancho de Banda en Redes Ópticas Elásticas (EON) es un problema que afecta a la eficiencia en la utilización de recursos, el rendimiento de la red termina siendo profundamente afectada ya que este fenómeno podría provocar bloqueos de demandas por falta de ranuras disponibles contiguas y alineadas entre enlaces inmediatos y no necesariamente porque el espectro está totalmente ocupado. En secciones anteriores se explicaron estrategias para manejar la fragmentación de la red, en este trabajo se analiza la estrategia con desfragmentación, considerando un enfoque proactivo.
+
+Un método ampliamente utilizado consiste en ejecutar el proceso de desfragmentación manera periódica con el fin de prevenir bloqueos futuros, abordando así una de las cuatro preguntas planteadas por Zhang \cite{zhang2014dynamic}, ¿Cuándo reconfigurar?.
+
+En la figura \ref{fig:ejemploPeriodico} podemos ver una posible solución al problema de la selección del momento a realizar la desfragmentación, el cual consiste en realizar desfragmentaciones periódicas en tiempos fijos, en este caso cada 100 unidades de tiempo, el eje vertical indica el volumen de tráfico medido en el número de conexiones activas y el eje horizontal indica las unidades de tiempo, cada punto azul representa el momento en que el proceso de desfragmentación se ejecuta. Siguiendo este patrón se aprecia que se dan casos donde se realizan procesos de desfragmentación cuando la red podría no estar necesitando, si se considera que la utilización de la red es un indicador importante del grado de fragmentación. 
+
+Además de la utilización de la red, se tienen otras métricas de fragmentación importantes, cuyos valores deben tenerse en cuenta para el disparo de los procesos de desfragmentación.
+
+De esta forma vemos la necesidad de un disparador inteligente para ejecutar el proceso de desfragmentación que considere todos estos parámetros o ``características'' para seleccionar convenientemente el momento del disparo, ya que realizar muchas desfragmentaciones de manera frecuente afectan directamente al rendimiento de la red pudiendo causar disrupciones en las conexiones activas y en caso de realizar pocas y muy dispersas desfragmentaciones los efectos de las mismas serían casi imperceptibles.
+
+En síntesis, la selección del momento para realizar el proceso de desfragmentación es crítica debido a que tiene un efecto importante en la cantidad de procesos de desfragmentación y esto tiene efecto en las dos métricas globales más importantes en el ruteo de redes elásticas las cuales son: Cantidad de bloqueos y Cantidad de reconfiguraciones. 
+
+En los siguientes capítulos presentamos y abordamos en profundidad un modelo de disparo inteligente, que tiene en cuenta numerosos factores tales como métricas de fragmentación de la red, utilización de la red y bloqueos de demandas.
+ 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{capitulos/img/ejemploPeriodico.png}
+    \caption{Ejemplo de desfragmentaciones periódicas con volumen de carga de tráfico variado}
+    \label{fig:ejemploPeriodico}
+\end{figure}
+
+
+
+\section{Análisis Bibliográfico}     
+%El trabajo presentado por M. Quagliotti \cite{quagliotti2017spectrum} propone un algoritmo RSA que busca mantener bajo el índice de fragmentación mediante el uso de una heurística básica durante la asignación del espectro, también brinda una amplia y útil descripción de métricas para evaluar la fragmentación del espectro.
+
+%Para recopilar el conjunto de métricas de fragmentación utilizadas, realizaron un extenso estudio de la literatura científica, las cuales son: Utilization Entropy (UE), Shannon Entropy (SHF), External Fragmentation (EF), Access Blocking Probability (ABP), Compactness (SC) y High-slot Mark (HSM).
+
+%Cada métrica de fragmentación proporciona su propia y peculiar medida de ocupación del espectro, relacionadas a la accesibilidad de recursos para el caso de EF, y ABP, grado de desorden y entropía en UE y SHF y compacidad del espectro ocupado en SC.
+
+%Para nuestra investigación utilizamos algunas de las métricas presentadas en el mencionado articulo, las cuales nos sirven como características esenciales en la construcción de nuestro modelo de predicción de probabilidades de bloqueo.  
+
+Seguidamente presentamos un análisis bibliográfico de trabajos presentes en el estado del arte que abordaron el mismo problema.
+
+Jaume Comellas, Laura Vicario, y Gabriel Junyent \cite{comellas2018periodic} nos presentan un análisis de la desfragmentación periódica en redes EON con un tráfico dinámico, evaluando los diferentes efectos de los parámetros de desfragmentación en el rendimiento de la red.
+
+El enfoque presentado en el trabajo consiste en realizar las desfragmentaciones en periodos fijos de N unidades de tiempo, con el principal objetivo de encontrar valores adecuados de N, ya que periodos de desfragmetación muy pequeños implican tener el espectro tan compactado como sea posible, pero a expensas de ejecutar el algoritmo con demasiada frecuencia, lo cual añade complejidad al proceso. Por otro lado, para valores muy altos de N, los efectos de la desfragmentación son insignificantes.
+
+Este tipo de desfragmentaciones en periodos fijos es utilizado ampliamente en distintas investigaciones tales cómo \cite{davalos2019spectrum}, \cite{luo2012partial}, entre otros. En nuestra investigación utilizamos esta técnica a fin de comparar los resultados con el disparador que proponemos.
+
+Otra manera de afrontar el enfoque proactivo del proceso de desfragmentación es realizarlo mediante algún tipo de disparador de tal manera que la misma sea ejecutada solo en periodos de tiempo donde es realmente necesaria, a continuación, veremos algunos artículos los cuales usaron esta estrategia.
+
+La investigación realizada por Yutaka Takita y colegas \cite{takita2016wavelength} propone un mecanismo de disparo para el proceso de desfragmentación basado en el valor del \textit{High-slot Mark} (HM) el cual indica el número máximo de una ranura ocupada en la red. Utilizan esta métrica ya que lo consideran como una medida válida para evaluar la eficiencia en la utilización de los recursos. El proceso de desfragmentación se dispara de manera aleatoria cuando el valor del HM es mayor a un valor de \( HM_{max} \) definido previamente, en el artículo mencionado utilizan 30 como valor para \( HM_{max} \). 
+
+Para el proceso de disparo en nuestro método propuesto se utilizan un conjunto de características o parámetros que indican el estado actual de la red, parte de ellas al igual que el \textit{High-slot Mark} son también métricas que indican la fragmentación del espectro. En el capitulo 4 se explican en profundidad estas características donde una de ellas es el llamado \textit{Maximum Slot Index} (MSI) el cual tiene una definición equivalente al del \textit{High-slot Mark}. 
+
+Otra propuesta para el disparo es presentada por Ricardo V. Fávero y colegas \cite{favero2015new}. En su método combinan el enfoque reactivo y el enfoque proactivo para determinar el periodo en el que será ejecutado el proceso de desfragmentación, en la figura \ref{fig:favero} se puede observar el diagrama que ilustra el algoritmo propuesto.
+
+Inicialmente la variable \textit{d} que utilizan para representar el estado de fragmentación se coloca en 0, el proceso de desfragmentación (DS) se ejecuta al cumplirse alguna de las siguientes condiciones.
+
+Si se intenta establecer una demanda y no se encuentra un camino disponible para la misma, se verifica la variable \textit{d}, si esta se encuentra en 0 se ejecuta el proceso \textit{DS}, si no se logra establecer la demanda aun después del proceso de desfragmentación la misma se bloquea y la variable \textit{d} se cambia a 1.
+
+La otra posibilidad de ejecución es cuando se intenta liberar una demanda, se ejecuta el proceso \textit{DS} sí \textit{d} = 1 y si la cantidad de \textit{lighpaths} liberados (\textit{r}) es igual a la variable predefinida previamente \textit{R}. 
+
+Como se puede ver el método propuesto considera principalmente las conexiones liberadas por lo que puede considerarse como periódica.
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics{capitulos/img/disparoFavero}
+    \caption{Algoritmo propuesto por Favero y colegas \cite{favero2015new}}
+    \label{fig:favero}
+\end{figure}
+
+Mingyang Zanhg y colegas plantean en su investigación \cite{zhang2013bandwidth} un disparo para el proceso de desfragmentación basado en la cantidad de conexiones liberadas. Básicamente consiste en ejecutar la desfragmentación cuándo la cantidad de conexiones liberadas es igual al parámetro fijo \textit{TH} (\textit{Threshold}). En su investigación utilizaron 300 como valor de \textit{TH}.
+
+El trabajo presentado por Jie Zhang y colegas \cite{zhang2012priority}, proponen un disparo basado en el concepto de \textit{Spectrum Compacteness} o Compacidad del Espectro (SC) el cual es una métrica de fragmentación.
+
+Para determinar el momento del disparo para el proceso de desfragmentación tienen en cuenta los siguientes pasos:  
+\begin{enumerate}[label=\arabic*)]
+    \item Seleccionar un valor apropiado de \textit{Spectrum Compactness} (SC) para actuar como umbral (T) para el disparo de la desfragmentación.
+    \item Actualizar el valor de SC después de liberar conexiones o al establecer una nueva conexión. 
+    \item Comparar los valores de SC y T; si SC < T disparar la desfragmentación y pasar al siguiente paso, sino volver al paso 2.
+    \item Actualizar el ultimo valor de SC después de la desfragmentación y volver al paso 3.
+\end{enumerate}
+
+Por último el trabajo propuesto por Zhang y colegas \cite{zhang2014dynamic} presentan un análisis del problema de la desfragmentación de redes EON dividido en cuatro sub-problemas, el tercero de ellos es ¿Cuándo reconfigurar?.
+
+Para el tercer subproblema plantean un algoritmo de disparo el cual tiene en cuenta la probabilidad de bloqueo instantánea (B) en un periodo \(\Delta \)t \((B(\Delta t))\) y la utilización del ancho de banda. 
+De esta forma buscan realizan la comparación entre \(B(\Delta t)\) con \(B_{th}\) (umbral de probabilidad de bloqueo para el disparo del proceso de desfragmentación) solo cuando la red se encuentra con un crecimiento en la utilización del ancho de banda. 
+\newpage
+

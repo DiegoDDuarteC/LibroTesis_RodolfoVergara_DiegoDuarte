@@ -1,0 +1,1175 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.24)  1 OCT 2025 20:09
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"c:/Users/DD/Desktop/FACU/Libro Tesis/Tesis_DiegoDuarte_RodolfoVergara/book/tesis.tex"
+(c:/Users/DD/Desktop/FACU/Libro Tesis/Tesis_DiegoDuarte_RodolfoVergara/book/tesis.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-09-02>
+(./util/fpunathesis.cls
+
+LaTeX Warning: You have requested document class `./util/fpunathesis',
+               but the document class provides `fpunathesis'.
+
+Document Class: fpunathesis 2014/08/25 v0.02 Formato para tesis de la FPUNA
+(c:/texlive/2025/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+) (c:/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+) (c:/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
+) (c:/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count275
+\float@exts=\toks20
+\float@box=\box53
+\@float@everytoks=\toks21
+\@floatcapt=\box54
+) (c:/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks22
+\c@algorithm=\count276
+) (c:/texlive/2025/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count277
+\c@ALC@line=\count278
+\c@ALC@rem=\count279
+\c@ALC@depth=\count280
+\ALC@tlm=\skip49
+\algorithmicindent=\skip50
+) (c:/texlive/2025/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(c:/texlive/2025/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count281
+\c@chapter=\count282
+\c@section=\count283
+\c@subsection=\count284
+\c@subsubsection=\count285
+\c@paragraph=\count286
+\c@subparagraph=\count287
+\c@figure=\count288
+\c@table=\count289
+\abovecaptionskip=\skip51
+\belowcaptionskip=\skip52
+\bibindent=\dimen150
+) (c:/texlive/2025/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2025/08/03 v25.12 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+\babel@savecnt=\count290
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2045.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2047.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2049.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2050.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2051.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2053.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2078.
+\U@D=\dimen151
+\l@unhyphenated=\language90
+ (c:/texlive/2025/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count291
+ (c:/texlive/2025/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+ (c:/texlive/2025/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 12.
+)
+\es@quottoks=\toks23
+\es@quotdepth=\count292
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+Package babel Info: Making ' an active character on input line 740.
+))
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 39.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 39.
+\hours=\count293
+\minutes=\count294
+\c@@count=\count295
+\c@@index=\count296
+\@line=\skip53
+) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/06/16 v2.17y AMS math features
+\@mathmargin=\skip54
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+ (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks24
+\ex@=\dimen152
+)) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen153
+) (c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count297
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count298
+\leftroot@=\count299
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count300
+\DOTSCASE@=\count301
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box55
+\strutbox@=\box56
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen154
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count302
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count303
+\dotsspace@=\muskip17
+\c@parentequation=\count304
+\dspbrk@lvl=\count305
+\tag@help=\toks25
+\row@=\count306
+\column@=\count307
+\maxfields@=\count308
+\andhelp@=\toks26
+\eqnshift@=\dimen155
+\alignsep@=\dimen156
+\tagshift@=\dimen157
+\tagwidth@=\dimen158
+\totwidth@=\dimen159
+\lineht@=\dimen160
+\@envbody=\toks27
+\multlinegap=\skip55
+\multlinetaggap=\skip56
+\mathdisplay@stack=\toks28
+LaTeX Info: Redefining \[ on input line 2949.
+LaTeX Info: Redefining \] on input line 2950.
+) (c:/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks29
+\thm@bodyfont=\toks30
+\thm@headfont=\toks31
+\thm@notefont=\toks32
+\thm@headpunct=\toks33
+\thm@preskip=\skip57
+\thm@postskip=\skip58
+\thm@headsep=\skip59
+\dth@everypar=\toks34
+) (c:/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+) (c:/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
+) (c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+ (c:/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count309
+)
+\csq@reset=\count310
+\csq@gtype=\count311
+\csq@glevel=\count312
+\csq@qlevel=\count313
+\csq@maxlvl=\count314
+\csq@tshold=\count315
+\csq@ltx@everypar=\toks35
+ (c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (c:/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)) (c:/texlive/2025/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
+\@enLab=\toks36
+) (c:/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip60
+\enit@outerparindent=\dimen161
+\enit@toks=\toks37
+\enit@inbox=\box57
+\enit@count@id=\count316
+\enitdp@description=\count317
+) (c:/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (c:/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen162
+\captionmargin=\dimen163
+\caption@leftmargin=\dimen164
+\caption@rightmargin=\dimen165
+\caption@width=\dimen166
+\caption@indent=\dimen167
+\caption@parindent=\dimen168
+\caption@hangindent=\dimen169
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count318
+\c@continuedfloat=\count319
+Package caption Info: float package is loaded.
+) (c:/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count320
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count321
+) (c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
+ (c:/texlive/2025/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (c:/texlive/2025/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (c:/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+) (c:/texlive/2025/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (c:/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (c:/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (c:/texlive/2025/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count322
+ (c:/texlive/2025/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) (c:/texlive/2025/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count323
+\c@listtotal=\count324
+\c@listcount=\count325
+\c@liststart=\count326
+\c@liststop=\count327
+\c@citecount=\count328
+\c@citetotal=\count329
+\c@multicitecount=\count330
+\c@multicitetotal=\count331
+\c@instcount=\count332
+\c@maxnames=\count333
+\c@minnames=\count334
+\c@maxitems=\count335
+\c@minitems=\count336
+\c@citecounter=\count337
+\c@maxcitecounter=\count338
+\c@savedcitecounter=\count339
+\c@uniquelist=\count340
+\c@uniquename=\count341
+\c@refsection=\count342
+\c@refsegment=\count343
+\c@maxextratitle=\count344
+\c@maxextratitleyear=\count345
+\c@maxextraname=\count346
+\c@maxextradate=\count347
+\c@maxextraalpha=\count348
+\c@abbrvpenalty=\count349
+\c@highnamepenalty=\count350
+\c@lownamepenalty=\count351
+\c@maxparens=\count352
+\c@parenlevel=\count353
+\blx@tempcnta=\count354
+\blx@tempcntb=\count355
+\blx@tempcntc=\count356
+\c@blx@maxsection=\count357
+\blx@maxsegment@0=\count358
+\blx@notetype=\count359
+\blx@parenlevel@text=\count360
+\blx@parenlevel@foot=\count361
+\blx@sectionciteorder@0=\count362
+\blx@sectionciteorderinternal@0=\count363
+\blx@entrysetcounter=\count364
+\blx@biblioinstance=\count365
+\labelnumberwidth=\skip61
+\labelalphawidth=\skip62
+\biblabelsep=\skip63
+\bibitemsep=\skip64
+\bibnamesep=\skip65
+\bibinitsep=\skip66
+\bibparsep=\skip67
+\bibhang=\skip68
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language91
+\c@mincomprange=\count366
+\c@maxcomprange=\count367
+\c@mincompwidth=\count368
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count369
+\c@savedafterword=\count370
+\c@annotator=\count371
+\c@savedannotator=\count372
+\c@author=\count373
+\c@savedauthor=\count374
+\c@bookauthor=\count375
+\c@savedbookauthor=\count376
+\c@commentator=\count377
+\c@savedcommentator=\count378
+\c@editor=\count379
+\c@savededitor=\count380
+\c@editora=\count381
+\c@savededitora=\count382
+\c@editorb=\count383
+\c@savededitorb=\count384
+\c@editorc=\count385
+\c@savededitorc=\count386
+\c@foreword=\count387
+\c@savedforeword=\count388
+\c@holder=\count389
+\c@savedholder=\count390
+\c@introduction=\count391
+\c@savedintroduction=\count392
+\c@namea=\count393
+\c@savednamea=\count394
+\c@nameb=\count395
+\c@savednameb=\count396
+\c@namec=\count397
+\c@savednamec=\count398
+\c@translator=\count399
+\c@savedtranslator=\count400
+\c@shortauthor=\count401
+\c@savedshortauthor=\count402
+\c@shorteditor=\count403
+\c@savedshorteditor=\count404
+\c@labelname=\count405
+\c@savedlabelname=\count406
+\c@institution=\count407
+\c@savedinstitution=\count408
+\c@lista=\count409
+\c@savedlista=\count410
+\c@listb=\count411
+\c@savedlistb=\count412
+\c@listc=\count413
+\c@savedlistc=\count414
+\c@listd=\count415
+\c@savedlistd=\count416
+\c@liste=\count417
+\c@savedliste=\count418
+\c@listf=\count419
+\c@savedlistf=\count420
+\c@location=\count421
+\c@savedlocation=\count422
+\c@organization=\count423
+\c@savedorganization=\count424
+\c@origlocation=\count425
+\c@savedoriglocation=\count426
+\c@origpublisher=\count427
+\c@savedorigpublisher=\count428
+\c@publisher=\count429
+\c@savedpublisher=\count430
+\c@language=\count431
+\c@savedlanguage=\count432
+\c@origlanguage=\count433
+\c@savedoriglanguage=\count434
+\c@pageref=\count435
+\c@savedpageref=\count436
+\shorthandwidth=\skip69
+\shortjournalwidth=\skip70
+\shortserieswidth=\skip71
+\shorttitlewidth=\skip72
+\shortauthorwidth=\skip73
+\shorteditorwidth=\skip74
+\locallabelnumberwidth=\skip75
+\locallabelalphawidth=\skip76
+\localshorthandwidth=\skip77
+\localshortjournalwidth=\skip78
+\localshortserieswidth=\skip79
+\localshorttitlewidth=\skip80
+\localshortauthorwidth=\skip81
+\localshorteditorwidth=\skip82
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+\c@textcitecount=\count437
+\c@textcitetotal=\count438
+\c@textcitemaxnames=\count439
+\c@biburlbigbreakpenalty=\count440
+\c@biburlbreakpenalty=\count441
+\c@biburlnumpenalty=\count442
+\c@biburlucpenalty=\count443
+\c@biburllcpenalty=\count444
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count445
+)
+Package biblatex Info: Trying to load natbib compatibility...
+Package biblatex Info: ... file 'blx-natbib.def' found.
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-natbib.def
+File: blx-natbib.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined, overwriting.
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count446
+\c@bbx:relatedtotal=\count447
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+ (c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-09-02 L3 programming layer (loader) 
+ (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count448
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2025-09-02 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (c:/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
+)) (c:/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count449
+\lst@gtempboxa=\box58
+\lst@token=\toks38
+\lst@length=\count450
+\lst@currlwidth=\dimen170
+\lst@column=\count451
+\lst@pos=\count452
+\lst@lostspace=\dimen171
+\lst@width=\dimen172
+\lst@newlines=\count453
+\lst@lineno=\count454
+\lst@maxwidth=\dimen173
+ (c:/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+) (c:/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count455
+\lst@skipnumbers=\count456
+\lst@framebox=\box59
+) (c:/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
+))
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
+ (c:/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
+\col@sep=\dimen174
+\ar@mcellbox=\box60
+\extrarowheight=\dimen175
+\NC@list=\toks39
+\extratabsurround=\skip83
+\backup@length=\skip84
+\ar@cellbox=\box61
+) (c:/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip85
+\multirow@cntb=\count457
+\multirow@dima=\skip86
+\bigstrutjot=\dimen176
+) (c:/texlive/2025/texmf-dist/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip87
+\L@UnitsRaiseTextstyle=\skip88
+\L@UnitsRaiseScriptstyle=\skip89
+) (c:/texlive/2025/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen177
+\c@nlinenum=\count458
+\TeXr@lab=\toks40
+) (c:/texlive/2025/texmf-dist/tex/latex/tabto-ltx/tabto.sty
+Package: tabto 2018/12/28  v 1.4  Another tabbing mechanism
+\CurrentLineWidth=\dimen178
+\TabPrevPos=\dimen179
+) (c:/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'spanish'.
+ (./tesis.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 11.
+ (./simbolos.aux) (./capitulos/capitulo1.aux) (./capitulos/capitulo2.aux) (./capitulos/capitulo3.aux) (./capitulos/capitulo4.aux) (./capitulos/capitulo5.aux) (./capitulos/capitulo6.aux) (./anexo-1.aux))
+\openout1 = `tesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+ (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count459
+\scratchdimen=\dimen180
+\scratchbox=\box62
+\nofMPsegments=\count460
+\nofMParguments=\count461
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count462
+\MPscratchDim=\dimen181
+\MPnumerator=\count463
+\makeMPintoPDFobject=\count464
+\everyMPtoPDFconversion=\toks42
+) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Info: Redefining \. on input line 42.
+LaTeX Info: Redefining \% on input line 42.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package biblatex Info: Trying to load language 'spanish'...
+Package biblatex Info: ... file 'spanish.lbx' found.
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx
+File: spanish.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `tesis.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'tesis.bbl' found.
+ (./tesis.bbl)
+Package biblatex Info: Reference section=0 on input line 42.
+Package biblatex Info: Reference segment=0 on input line 42.
+\c@lstlisting=\count465
+<./graphics/logo.png, id=1, 83.8332pt x 125.268pt>
+File: ./graphics/logo.png Graphic file (type png)
+<use ./graphics/logo.png>
+Package pdftex.def Info: ./graphics/logo.png  used on input line 45.
+(pdftex.def)             Requested size: 83.83298pt x 125.26768pt.
+
+
+[1
+
+{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./graphics/logo.png (PNG copy)>] (./tesis.toc
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+
+[1
+
+
+
+
+])
+\tf@toc=\write4
+\openout4 = `tesis.toc'.
+
+
+
+LaTeX Info: Redefining \. on input line 55.
+LaTeX Info: Redefining \% on input line 55.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 55.
+[2] (./tesis.lof
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@lof=\write5
+\openout5 = `tesis.lof'.
+
+
+
+[3
+
+
+] (./tesis.lot
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@lot=\write6
+\openout6 = `tesis.lot'.
+
+
+
+[4
+
+
+]
+\openout2 = `simbolos.aux'.
+
+ (./simbolos.tex
+
+[5
+
+
+
+])
+
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
+[6]
+\openout2 = `capitulos/capitulo1.aux'.
+
+ (./capitulos/capitulo1.tex
+Cap\'{\i }tulo 1.
+
+
+[1
+
+
+
+
+
+
+
+]
+
+LaTeX Info: Redefining \. on input line 30.
+LaTeX Info: Redefining \% on input line 30.
+[2]
+
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
+[3]
+
+LaTeX Info: Redefining \. on input line 65.
+LaTeX Info: Redefining \% on input line 65.
+[4]
+
+LaTeX Info: Redefining \. on input line 77.
+LaTeX Info: Redefining \% on input line 77.
+[5])
+
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+[6]
+\openout2 = `capitulos/capitulo2.aux'.
+
+ (./capitulos/capitulo2.tex
+Cap\'{\i }tulo 2.
+<capitulos/img/eonwdm.png, id=60, 727.21687pt x 343.2825pt>
+File: capitulos/img/eonwdm.png Graphic file (type png)
+<use capitulos/img/eonwdm.png>
+Package pdftex.def Info: capitulos/img/eonwdm.png  used on input line 13.
+(pdftex.def)             Requested size: 405.45047pt x 191.39879pt.
+
+
+[7
+
+
+
+
+
+]
+
+LaTeX Info: Redefining \. on input line 36.
+LaTeX Info: Redefining \% on input line 36.
+[8 <./capitulos/img/eonwdm.png>]
+<capitulos/img/fragmentacion.png, id=69, 198.9834pt x 133.2177pt>
+File: capitulos/img/fragmentacion.png Graphic file (type png)
+<use capitulos/img/fragmentacion.png>
+Package pdftex.def Info: capitulos/img/fragmentacion.png  used on input line 42.
+(pdftex.def)             Requested size: 426.79135pt x 285.7518pt.
+
+
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
+[9 <./capitulos/img/fragmentacion.png>]
+<capitulos/img/Gestion_Fragmentacion.PNG, id=74, 459.21562pt x 294.34969pt>
+File: capitulos/img/Gestion_Fragmentacion.PNG Graphic file (type png)
+<use capitulos/img/Gestion_Fragmentacion.PNG>
+Package pdftex.def Info: capitulos/img/Gestion_Fragmentacion.PNG  used on input line 56.
+(pdftex.def)             Requested size: 426.79135pt x 273.58067pt.
+
+
+LaTeX Info: Redefining \. on input line 63.
+LaTeX Info: Redefining \% on input line 63.
+[10 <./capitulos/img/Gestion_Fragmentacion.PNG>]
+
+LaTeX Info: Redefining \. on input line 79.
+LaTeX Info: Redefining \% on input line 79.
+[11]
+
+LaTeX Info: Redefining \. on input line 87.
+LaTeX Info: Redefining \% on input line 87.
+[12]
+<capitulos/img/ejemploPeriodico.png, id=86, 446.41782pt x 100.12407pt>
+File: capitulos/img/ejemploPeriodico.png Graphic file (type png)
+<use capitulos/img/ejemploPeriodico.png>
+Package pdftex.def Info: capitulos/img/ejemploPeriodico.png  used on input line 94.
+(pdftex.def)             Requested size: 426.79135pt x 95.72383pt.
+
+
+LaTeX Info: Redefining \. on input line 115.
+LaTeX Info: Redefining \% on input line 115.
+[13 <./capitulos/img/ejemploPeriodico.png>]
+
+LaTeX Info: Redefining \. on input line 125.
+LaTeX Info: Redefining \% on input line 125.
+[14]
+<capitulos/img/disparoFavero.png, id=93, 216.05719pt x 341.02406pt>
+File: capitulos/img/disparoFavero.png Graphic file (type png)
+<use capitulos/img/disparoFavero.png>
+Package pdftex.def Info: capitulos/img/disparoFavero.png  used on input line 137.
+(pdftex.def)             Requested size: 216.05664pt x 341.02322pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+LaTeX Info: Redefining \. on input line 150.
+LaTeX Info: Redefining \% on input line 150.
+[15]
+
+LaTeX Info: Redefining \. on input line 158.
+LaTeX Info: Redefining \% on input line 158.
+[16 <./capitulos/img/disparoFavero.png>]
+
+LaTeX Info: Redefining \. on input line 158.
+LaTeX Info: Redefining \% on input line 158.
+[17])
+\openout2 = `capitulos/capitulo3.aux'.
+
+ (./capitulos/capitulo3.tex
+Cap\'{\i }tulo 3.
+
+
+[18
+
+
+
+
+
+]
+
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+[19{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<capitulos/img/perceptron.png, id=111, 185.19188pt x 76.78688pt>
+File: capitulos/img/perceptron.png Graphic file (type png)
+<use capitulos/img/perceptron.png>
+Package pdftex.def Info: capitulos/img/perceptron.png  used on input line 36.
+(pdftex.def)             Requested size: 185.1914pt x 76.78668pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--39
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 40.
+LaTeX Info: Redefining \% on input line 40.
+[20]
+<capitulos/img/funcion_activacion.png, id=115, 521.95pt x 321.2pt>
+File: capitulos/img/funcion_activacion.png Graphic file (type png)
+<use capitulos/img/funcion_activacion.png>
+Package pdftex.def Info: capitulos/img/funcion_activacion.png  used on input line 58.
+(pdftex.def)             Requested size: 426.79135pt x 262.64563pt.
+
+
+LaTeX Info: Redefining \. on input line 62.
+LaTeX Info: Redefining \% on input line 62.
+[21 <./capitulos/img/perceptron.png>]
+
+LaTeX Info: Redefining \. on input line 62.
+LaTeX Info: Redefining \% on input line 62.
+[22 <./capitulos/img/funcion_activacion.png>]
+<capitulos/img/redNeuronal.png, id=124, 222.07968pt x 139.27031pt>
+File: capitulos/img/redNeuronal.png Graphic file (type png)
+<use capitulos/img/redNeuronal.png>
+Package pdftex.def Info: capitulos/img/redNeuronal.png  used on input line 68.
+(pdftex.def)             Requested size: 222.07913pt x 139.26996pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
+[23 <./capitulos/img/redNeuronal.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 85.
+LaTeX Info: Redefining \% on input line 85.
+[24]
+
+LaTeX Info: Redefining \. on input line 101.
+LaTeX Info: Redefining \% on input line 101.
+[25]
+
+LaTeX Info: Redefining \. on input line 115.
+LaTeX Info: Redefining \% on input line 115.
+[26])
+
+LaTeX Info: Redefining \. on input line 72.
+LaTeX Info: Redefining \% on input line 72.
+[27]
+\openout2 = `capitulos/capitulo4.aux'.
+
+ (./capitulos/capitulo4.tex
+Cap\'{\i }tulo 4.
+
+
+[28
+
+
+
+
+
+]
+
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
+[29]
+
+LaTeX Info: Redefining \. on input line 62.
+LaTeX Info: Redefining \% on input line 62.
+[30]
+<capitulos/img/ejemploMetricasCompleto4.png, id=152, 192.72pt x 163.812pt>
+File: capitulos/img/ejemploMetricasCompleto4.png Graphic file (type png)
+<use capitulos/img/ejemploMetricasCompleto4.png>
+Package pdftex.def Info: capitulos/img/ejemploMetricasCompleto4.png  used on input line 78.
+(pdftex.def)             Requested size: 426.79135pt x 362.77206pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+LaTeX Info: Redefining \. on input line 92.
+LaTeX Info: Redefining \% on input line 92.
+[31]
+
+LaTeX Info: Redefining \. on input line 101.
+LaTeX Info: Redefining \% on input line 101.
+[32 <./capitulos/img/ejemploMetricasCompleto4.png>]
+<capitulos/img/trafico_1_a.png, id=160, 406.51875pt x 30.86531pt>
+File: capitulos/img/trafico_1_a.png Graphic file (type png)
+<use capitulos/img/trafico_1_a.png>
+Package pdftex.def Info: capitulos/img/trafico_1_a.png  used on input line 106.
+(pdftex.def)             Requested size: 426.79135pt x 32.40575pt.
+<capitulos/img/trafico_2_b.png, id=161, 406.51875pt x 30.86531pt>
+File: capitulos/img/trafico_2_b.png Graphic file (type png)
+<use capitulos/img/trafico_2_b.png>
+Package pdftex.def Info: capitulos/img/trafico_2_b.png  used on input line 107.
+(pdftex.def)             Requested size: 426.79135pt x 32.40575pt.
+<capitulos/img/trafico_3_c.png, id=162, 406.51875pt x 30.86531pt>
+File: capitulos/img/trafico_3_c.png Graphic file (type png)
+<use capitulos/img/trafico_3_c.png>
+Package pdftex.def Info: capitulos/img/trafico_3_c.png  used on input line 108.
+(pdftex.def)             Requested size: 426.79135pt x 32.40575pt.
+
+
+LaTeX Info: Redefining \. on input line 125.
+LaTeX Info: Redefining \% on input line 125.
+[33 <./capitulos/img/trafico_1_a.png> <./capitulos/img/trafico_2_b.png> <./capitulos/img/trafico_3_c.png>]
+<capitulos/img/graficoErrorEs.png, id=169, 332.74312pt x 237.13594pt>
+File: capitulos/img/graficoErrorEs.png Graphic file (type png)
+<use capitulos/img/graficoErrorEs.png>
+Package pdftex.def Info: capitulos/img/graficoErrorEs.png  used on input line 140.
+(pdftex.def)             Requested size: 256.0748pt x 182.50838pt.
+
+
+LaTeX Info: Redefining \. on input line 144.
+LaTeX Info: Redefining \% on input line 144.
+[34]
+
+LaTeX Info: Redefining \. on input line 158.
+LaTeX Info: Redefining \% on input line 158.
+[35 <./capitulos/img/graficoErrorEs.png>]
+<capitulos/img/trafico_1.png, id=177, 513.92pt x 41.15375pt>
+File: capitulos/img/trafico_1.png Graphic file (type png)
+<use capitulos/img/trafico_1.png>
+Package pdftex.def Info: capitulos/img/trafico_1.png  used on input line 162.
+(pdftex.def)             Requested size: 426.79135pt x 34.17706pt.
+<capitulos/img/grafico_prediccion_usnet.PNG, id=178, 676.02562pt x 71.51718pt>
+File: capitulos/img/grafico_prediccion_usnet.PNG Graphic file (type png)
+<use capitulos/img/grafico_prediccion_usnet.PNG>
+Package pdftex.def Info: capitulos/img/grafico_prediccion_usnet.PNG  used on input line 166.
+(pdftex.def)             Requested size: 426.79135pt x 45.15208pt.
+)
+
+LaTeX Info: Redefining \. on input line 73.
+LaTeX Info: Redefining \% on input line 73.
+[36 <./capitulos/img/trafico_1.png> <./capitulos/img/grafico_prediccion_usnet.PNG>]
+\openout2 = `capitulos/capitulo5.aux'.
+
+ (./capitulos/capitulo5.tex
+Cap\'{\i }tulo 5.
+<capitulos/img/diagramaML6.png, id=185, 325.215pt x 203.25937pt>
+File: capitulos/img/diagramaML6.png Graphic file (type png)
+<use capitulos/img/diagramaML6.png>
+Package pdftex.def Info: capitulos/img/diagramaML6.png  used on input line 8.
+(pdftex.def)             Requested size: 426.79135pt x 266.76485pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[37
+
+
+
+
+
+]
+
+LaTeX Info: Redefining \. on input line 30.
+LaTeX Info: Redefining \% on input line 30.
+[38 <./capitulos/img/diagramaML6.png>]
+
+LaTeX Info: Redefining \. on input line 49.
+LaTeX Info: Redefining \% on input line 49.
+[39]
+
+LaTeX Info: Redefining \. on input line 67.
+LaTeX Info: Redefining \% on input line 67.
+[40]
+<capitulos/img/nsfnet_pareto_1.png, id=198, 513.92pt x 385.44pt>
+File: capitulos/img/nsfnet_pareto_1.png Graphic file (type png)
+<use capitulos/img/nsfnet_pareto_1.png>
+Package pdftex.def Info: capitulos/img/nsfnet_pareto_1.png  used on input line 71.
+(pdftex.def)             Requested size: 384.1096pt x 288.08534pt.
+<capitulos/img/nsfnet_pareto_2.png, id=199, 513.92pt x 385.44pt>
+File: capitulos/img/nsfnet_pareto_2.png Graphic file (type png)
+<use capitulos/img/nsfnet_pareto_2.png>
+Package pdftex.def Info: capitulos/img/nsfnet_pareto_2.png  used on input line 72.
+(pdftex.def)             Requested size: 384.1096pt x 288.08534pt.
+<capitulos/img/nsfnet_pareto_3.png, id=200, 513.92pt x 385.44pt>
+File: capitulos/img/nsfnet_pareto_3.png Graphic file (type png)
+<use capitulos/img/nsfnet_pareto_3.png>
+Package pdftex.def Info: capitulos/img/nsfnet_pareto_3.png  used on input line 78.
+(pdftex.def)             Requested size: 384.1096pt x 288.08534pt.
+
+
+LaTeX Info: Redefining \. on input line 82.
+LaTeX Info: Redefining \% on input line 82.
+[41 <./capitulos/img/nsfnet_pareto_1.png> <./capitulos/img/nsfnet_pareto_2.png>]
+<capitulos/img/paretoUsnetSB.jpg, id=204, 481.04718pt x 368.87813pt>
+File: capitulos/img/paretoUsnetSB.jpg Graphic file (type jpg)
+<use capitulos/img/paretoUsnetSB.jpg>
+Package pdftex.def Info: capitulos/img/paretoUsnetSB.jpg  used on input line 85.
+(pdftex.def)             Requested size: 384.1096pt x 294.55128pt.
+<capitulos/img/paretoUsnetSBSB.jpeg, id=205, 642.4pt x 481.8pt>
+File: capitulos/img/paretoUsnetSBSB.jpeg Graphic file (type jpg)
+<use capitulos/img/paretoUsnetSBSB.jpeg>
+Package pdftex.def Info: capitulos/img/paretoUsnetSBSB.jpeg  used on input line 90.
+(pdftex.def)             Requested size: 384.1096pt x 288.08975pt.
+<capitulos/img/paretoUsnetSBS.png, id=206, 481.8pt x 373.395pt>
+File: capitulos/img/paretoUsnetSBS.png Graphic file (type png)
+<use capitulos/img/paretoUsnetSBS.png>
+Package pdftex.def Info: capitulos/img/paretoUsnetSBS.png  used on input line 91.
+(pdftex.def)             Requested size: 384.1096pt x 297.69084pt.
+
+
+LaTeX Info: Redefining \. on input line 95.
+LaTeX Info: Redefining \% on input line 95.
+[42 <./capitulos/img/nsfnet_pareto_3.png> <./capitulos/img/paretoUsnetSB.jpg>]
+
+LaTeX Info: Redefining \. on input line 95.
+LaTeX Info: Redefining \% on input line 95.
+[43 <./capitulos/img/paretoUsnetSBSB.jpeg> <./capitulos/img/paretoUsnetSBS.png>])
+
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
+[44]
+\openout2 = `capitulos/capitulo6.aux'.
+
+ (./capitulos/capitulo6.tex
+Cap\'{\i }tulo 6.
+
+
+[45
+
+
+
+
+
+]
+
+LaTeX Info: Redefining \. on input line 31.
+LaTeX Info: Redefining \% on input line 31.
+[46]
+
+LaTeX Info: Redefining \. on input line 44.
+LaTeX Info: Redefining \% on input line 44.
+[47])
+
+LaTeX Info: Redefining \. on input line 75.
+LaTeX Info: Redefining \% on input line 75.
+[48]
+\openout2 = `./anexo-1.aux'.
+
+
+No file ./anexo-1.tex.
+
+Overfull \hbox (2.30606pt too wide) in paragraph at lines 84--84
+\T1/cmr/m/n/12 works: A sur-vey^^T. En: \T1/cmr/m/it/12 Op-ti-cal Swit-ching and Net-wor-king \T1/cmr/m/n/12 13 (2014), págs. 34[]48. 
+ []
+
+
+
+[49
+
+
+
+
+
+
+
+]
+
+LaTeX Info: Redefining \. on input line 83.
+LaTeX Info: Redefining \% on input line 83.
+[50]
+
+LaTeX Info: Redefining \. on input line 83.
+LaTeX Info: Redefining \% on input line 83.
+[51]
+
+LaTeX Info: Redefining \. on input line 85.
+LaTeX Info: Redefining \% on input line 85.
+[52] (./tesis.aux
+LaTeX Info: Redefining \sptext on input line 11.
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+ (./simbolos.aux) (./capitulos/capitulo1.aux) (./capitulos/capitulo2.aux) (./capitulos/capitulo3.aux) (./capitulos/capitulo4.aux) (./capitulos/capitulo5.aux) (./capitulos/capitulo6.aux) (./anexo-1.aux))
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-09-02>
+ ***********
+Package logreq Info: Writing requests to 'tesis.run.xml'.
+\openout1 = `tesis.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 17695 strings out of 467797
+ 322467 string characters out of 5435982
+ 1189629 words of memory out of 5000000
+ 46079 multiletter control sequences out of 15000+600000
+ 644974 words of font info for 73 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 72i,16n,79p,971b,3172s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb>
+Output written on tesis.pdf (59 pages, 982960 bytes).
+PDF statistics:
+ 333 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+

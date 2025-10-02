@@ -1,0 +1,1402 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{aibin2016defragmentation}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cf2b520b8a53f6aea73feb44fb6522e7}{%
+           family={Aibin},
+           familyi={A\bibinitperiod},
+           given={Michal},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d982f0fabf218c1469751920c16ca4b}{%
+           family={Walkowiak},
+           familyi={W\bibinitperiod},
+           given={Krzysztof},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{7081038e2e7b7f46b56eaee3a0c81225}
+      \strng{fullhash}{7081038e2e7b7f46b56eaee3a0c81225}
+      \strng{fullhashraw}{7081038e2e7b7f46b56eaee3a0c81225}
+      \strng{bibnamehash}{7081038e2e7b7f46b56eaee3a0c81225}
+      \strng{authorbibnamehash}{7081038e2e7b7f46b56eaee3a0c81225}
+      \strng{authornamehash}{7081038e2e7b7f46b56eaee3a0c81225}
+      \strng{authorfullhash}{7081038e2e7b7f46b56eaee3a0c81225}
+      \strng{authorfullhashraw}{7081038e2e7b7f46b56eaee3a0c81225}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2016 International Conference on Computing, Networking and Communications (ICNC)}
+      \field{title}{Defragmentation algorithm for joint dynamic and static routing problems in elastic optical networks with unicast and anycast traffic}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+    \endentry
+    \entry{jinno2009spectrum}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=ba81c84c64ede5044598d9a5372a55ba}{%
+           family={Jinno},
+           familyi={J\bibinitperiod},
+           given={Masahiko},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5702f33a4d2cee3045d31d958828913}{%
+           family={Takara},
+           familyi={T\bibinitperiod},
+           given={Hidehiko},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b3ceb73996ad9879581e8683024614d}{%
+           family={Kozicki},
+           familyi={K\bibinitperiod},
+           given={Bartlomiej},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b310ad2cf022cad4e81ae83a9f653189}{%
+           family={Tsukishima},
+           familyi={T\bibinitperiod},
+           given={Yukio},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ff0811e54aa68cf4d6fa1066964153d}{%
+           family={Sone},
+           familyi={S\bibinitperiod},
+           given={Yoshiaki},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=652fcd7f1408ff821c4bade72515e85c}{%
+           family={Matsuoka},
+           familyi={M\bibinitperiod},
+           given={Shinji},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{d4021970c05c9d04e34314095e7ed8f0}
+      \strng{fullhash}{2f8bf0887a2d71605615edc3844a3ce2}
+      \strng{fullhashraw}{2f8bf0887a2d71605615edc3844a3ce2}
+      \strng{bibnamehash}{d4021970c05c9d04e34314095e7ed8f0}
+      \strng{authorbibnamehash}{d4021970c05c9d04e34314095e7ed8f0}
+      \strng{authornamehash}{d4021970c05c9d04e34314095e7ed8f0}
+      \strng{authorfullhash}{2f8bf0887a2d71605615edc3844a3ce2}
+      \strng{authorfullhashraw}{2f8bf0887a2d71605615edc3844a3ce2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE communications magazine}
+      \field{number}{11}
+      \field{title}{Spectrum-efficient and scalable elastic optical path network: architecture, benefits, and enabling technologies}
+      \field{volume}{47}
+      \field{year}{2009}
+      \field{pages}{66\bibrangedash 73}
+      \range{pages}{8}
+    \endentry
+    \entry{chatterjee2015routing}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1a0fa02c0447656fb6d98bd3585f52a5}{%
+           family={Chatterjee},
+           familyi={C\bibinitperiod},
+           given={Bijoy\bibnamedelima Chand},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=457d444bcc472272ce9261d163d7a702}{%
+           family={Sarma},
+           familyi={S\bibinitperiod},
+           given={Nityananda},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=767da0c53714e13042aeb3d5f0101528}{%
+           family={Oki},
+           familyi={O\bibinitperiod},
+           given={Eiji},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{d1872122fc145e4f9627cde5135762dc}
+      \strng{fullhash}{d1872122fc145e4f9627cde5135762dc}
+      \strng{fullhashraw}{d1872122fc145e4f9627cde5135762dc}
+      \strng{bibnamehash}{d1872122fc145e4f9627cde5135762dc}
+      \strng{authorbibnamehash}{d1872122fc145e4f9627cde5135762dc}
+      \strng{authornamehash}{d1872122fc145e4f9627cde5135762dc}
+      \strng{authorfullhash}{d1872122fc145e4f9627cde5135762dc}
+      \strng{authorfullhashraw}{d1872122fc145e4f9627cde5135762dc}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Communications Surveys \& Tutorials}
+      \field{number}{3}
+      \field{title}{Routing and spectrum allocation in elastic optical networks: A tutorial}
+      \field{volume}{17}
+      \field{year}{2015}
+      \field{pages}{1776\bibrangedash 1800}
+      \range{pages}{25}
+    \endentry
+    \entry{shi2013effect}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=4196e499795f58154b9a2ca5fbface89}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Weiran},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=63dc14e9d44da7d0b463ea0de3d7292f}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Zuqing},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d5d31f94a9041f4f5e9c5718ef2f433}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Mingyang},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cba71b67b56e8052d93465e1bf285d0f}{%
+           family={Ansari},
+           familyi={A\bibinitperiod},
+           given={Nirwan},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{e3a2517ceb84bf9ffa202773881d4a68}
+      \strng{fullhash}{84b0297ff564c16de0c7c79ef07d8e1b}
+      \strng{fullhashraw}{84b0297ff564c16de0c7c79ef07d8e1b}
+      \strng{bibnamehash}{e3a2517ceb84bf9ffa202773881d4a68}
+      \strng{authorbibnamehash}{e3a2517ceb84bf9ffa202773881d4a68}
+      \strng{authornamehash}{e3a2517ceb84bf9ffa202773881d4a68}
+      \strng{authorfullhash}{84b0297ff564c16de0c7c79ef07d8e1b}
+      \strng{authorfullhashraw}{84b0297ff564c16de0c7c79ef07d8e1b}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE transactions on communications}
+      \field{number}{7}
+      \field{title}{On the effect of bandwidth fragmentation on blocking probability in elastic optical networks}
+      \field{volume}{61}
+      \field{year}{2013}
+      \field{pages}{2970\bibrangedash 2978}
+      \range{pages}{9}
+    \endentry
+    \entry{zhang2014dynamic}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=1,uniquepart=given,hash=1d5d31f94a9041f4f5e9c5718ef2f433}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Mingyang},
+           giveni={M\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=89b46b01e15d48be6174867364817342}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={Changsheng},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dc639c93169306edccf51b85418d6376}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Huihui},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=63dc14e9d44da7d0b463ea0de3d7292f}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Zuqing},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{4133386eb16faae4baee605dada5e802}
+      \strng{fullhash}{028611583f9d4683f80b300b3e8a0bf9}
+      \strng{fullhashraw}{028611583f9d4683f80b300b3e8a0bf9}
+      \strng{bibnamehash}{4133386eb16faae4baee605dada5e802}
+      \strng{authorbibnamehash}{4133386eb16faae4baee605dada5e802}
+      \strng{authornamehash}{4133386eb16faae4baee605dada5e802}
+      \strng{authorfullhash}{028611583f9d4683f80b300b3e8a0bf9}
+      \strng{authorfullhashraw}{028611583f9d4683f80b300b3e8a0bf9}
+      \field{extraname}{1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Lightwave Technology}
+      \field{number}{5}
+      \field{title}{Dynamic and adaptive bandwidth defragmentation in spectrum-sliced elastic optical networks with time-varying traffic}
+      \field{volume}{32}
+      \field{year}{2014}
+      \field{pages}{1014\bibrangedash 1023}
+      \range{pages}{10}
+    \endentry
+    \entry{chatterjee2017fragmentation}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1a0fa02c0447656fb6d98bd3585f52a5}{%
+           family={Chatterjee},
+           familyi={C\bibinitperiod},
+           given={Bijoy\bibnamedelima Chand},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=09aafa6393cc0d8eb9d4d08fc50a026a}{%
+           family={Ba},
+           familyi={B\bibinitperiod},
+           given={Seydou},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=767da0c53714e13042aeb3d5f0101528}{%
+           family={Oki},
+           familyi={O\bibinitperiod},
+           given={Eiji},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{e867d50bc9dab09ffad67521b7f719f5}
+      \strng{fullhash}{e867d50bc9dab09ffad67521b7f719f5}
+      \strng{fullhashraw}{e867d50bc9dab09ffad67521b7f719f5}
+      \strng{bibnamehash}{e867d50bc9dab09ffad67521b7f719f5}
+      \strng{authorbibnamehash}{e867d50bc9dab09ffad67521b7f719f5}
+      \strng{authornamehash}{e867d50bc9dab09ffad67521b7f719f5}
+      \strng{authorfullhash}{e867d50bc9dab09ffad67521b7f719f5}
+      \strng{authorfullhashraw}{e867d50bc9dab09ffad67521b7f719f5}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Communications Surveys \& Tutorials}
+      \field{number}{1}
+      \field{title}{Fragmentation problems and management approaches in elastic optical networks: A survey}
+      \field{volume}{20}
+      \field{year}{2017}
+      \field{pages}{183\bibrangedash 210}
+      \range{pages}{28}
+    \endentry
+    \entry{talebi2014spectrum}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=8e23a7160b3581c72b2050346bea71b1}{%
+           family={Talebi},
+           familyi={T\bibinitperiod},
+           given={Sahar},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d0f690b62d4a7d42de2d764addd193c}{%
+           family={Alam},
+           familyi={A\bibinitperiod},
+           given={Furqan},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ebb27e4f2780d9ee80a61ffcc3f0127}{%
+           family={Katib},
+           familyi={K\bibinitperiod},
+           given={Iyad},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e4a088ce615fa698edf37678a3997f6}{%
+           family={Khamis},
+           familyi={K\bibinitperiod},
+           given={Mohamed},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8893c2e8831cc13bbfa410e6e4fe327f}{%
+           family={Salama},
+           familyi={S\bibinitperiod},
+           given={Reda},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=931fe14b9a31947a1ac532faef8cb589}{%
+           family={Rouskas},
+           familyi={R\bibinitperiod},
+           given={George\bibnamedelima N},
+           giveni={G\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{f42e5f1a24a3e0bd36ed3fe806bbe66b}
+      \strng{fullhash}{a282905299c5a46187da2a64a0d95829}
+      \strng{fullhashraw}{a282905299c5a46187da2a64a0d95829}
+      \strng{bibnamehash}{f42e5f1a24a3e0bd36ed3fe806bbe66b}
+      \strng{authorbibnamehash}{f42e5f1a24a3e0bd36ed3fe806bbe66b}
+      \strng{authornamehash}{f42e5f1a24a3e0bd36ed3fe806bbe66b}
+      \strng{authorfullhash}{a282905299c5a46187da2a64a0d95829}
+      \strng{authorfullhashraw}{a282905299c5a46187da2a64a0d95829}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optical Switching and Networking}
+      \field{title}{Spectrum management techniques for elastic optical networks: A survey}
+      \field{volume}{13}
+      \field{year}{2014}
+      \field{pages}{34\bibrangedash 48}
+      \range{pages}{15}
+    \endentry
+    \entry{comellas2018periodic}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=d16bf49394ac3079668d7552c1406afa}{%
+           family={Comellas},
+           familyi={C\bibinitperiod},
+           given={Jaume},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f85d928926b9a32243602dbc4cb1d81d}{%
+           family={Vicario},
+           familyi={V\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2568e8900f741e71e7653d78bde24242}{%
+           family={Junyent},
+           familyi={J\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{6dae147f571e944f8ab4b285e62f1a62}
+      \strng{fullhash}{6dae147f571e944f8ab4b285e62f1a62}
+      \strng{fullhashraw}{6dae147f571e944f8ab4b285e62f1a62}
+      \strng{bibnamehash}{6dae147f571e944f8ab4b285e62f1a62}
+      \strng{authorbibnamehash}{6dae147f571e944f8ab4b285e62f1a62}
+      \strng{authornamehash}{6dae147f571e944f8ab4b285e62f1a62}
+      \strng{authorfullhash}{6dae147f571e944f8ab4b285e62f1a62}
+      \strng{authorfullhashraw}{6dae147f571e944f8ab4b285e62f1a62}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 20th International Conference on Transparent Optical Networks (ICTON)}
+      \field{title}{Periodic Defragmentation in Elastic Optical Networks}
+      \field{year}{2018}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+    \endentry
+    \entry{davalos2019spectrum}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=346ff4e7432027e07c1fcb1af3fc3d6b}{%
+           family={Dávalos},
+           familyi={D\bibinitperiod},
+           given={Enrique\bibnamedelima J},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=acad8e92f8d775a9b827cf9282d96c47}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={Matilde\bibnamedelima F},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0fb87221d0c3fec4030e19f042c1bb2}{%
+           family={Galeano},
+           familyi={G\bibinitperiod},
+           given={Sergio\bibnamedelima M},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=748fba7cc0bbfae2c880699b3d281463}{%
+           family={Báez},
+           familyi={B\bibinitperiod},
+           given={Diego\bibnamedelima A},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc411d9225d141b67c2d3e99b717b7d4}{%
+           family={Leiva},
+           familyi={L\bibinitperiod},
+           given={Ariel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=089e96b17e0c35516631ba2d35e3221f}{%
+           family={Baran},
+           familyi={B\bibinitperiod},
+           given={Benjamín},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a95d06e6715d57e4945498b6834f857d}
+      \strng{fullhash}{27225fe9dce762be74e6ee127353a07a}
+      \strng{fullhashraw}{27225fe9dce762be74e6ee127353a07a}
+      \strng{bibnamehash}{a95d06e6715d57e4945498b6834f857d}
+      \strng{authorbibnamehash}{a95d06e6715d57e4945498b6834f857d}
+      \strng{authornamehash}{a95d06e6715d57e4945498b6834f857d}
+      \strng{authorfullhash}{27225fe9dce762be74e6ee127353a07a}
+      \strng{authorfullhashraw}{27225fe9dce762be74e6ee127353a07a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Spectrum defragmentation in elastic optical networks: Two Approaches With Metaheuristics}
+      \field{volume}{7}
+      \field{year}{2019}
+      \field{pages}{119835\bibrangedash 119843}
+      \range{pages}{9}
+    \endentry
+    \entry{luo2012partial}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=1,uniquepart=given,hash=13535c907b998556836ce5420388500a}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=24147b4f83bbe8b53a76ed7fffef51fe}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zitian},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7766d85d2248e0db1b60fa91e2aff359}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Weiqiang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b51c2c7e24671235aa4ea9f62d050f37}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Weisheng},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Optical Society of America}%
+      }
+      \strng{namehash}{a831151597350cb7d9dbd32e07d04893}
+      \strng{fullhash}{77ec667d383e45e6b4b3250279255025}
+      \strng{fullhashraw}{77ec667d383e45e6b4b3250279255025}
+      \strng{bibnamehash}{a831151597350cb7d9dbd32e07d04893}
+      \strng{authorbibnamehash}{a831151597350cb7d9dbd32e07d04893}
+      \strng{authornamehash}{a831151597350cb7d9dbd32e07d04893}
+      \strng{authorfullhash}{77ec667d383e45e6b4b3250279255025}
+      \strng{authorfullhashraw}{77ec667d383e45e6b4b3250279255025}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Asia Communications and Photonics Conference}
+      \field{title}{Partial defragmentation in flexible grid optical networks}
+      \field{year}{2012}
+      \field{pages}{AF4A\bibrangedash 54}
+      \range{pages}{-1}
+    \endentry
+    \entry{takita2016wavelength}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=555a60d62f0c919021080ae745033fd7}{%
+           family={Takita},
+           familyi={T\bibinitperiod},
+           given={Yutaka},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=506b8ae9826a1f388fa80961a77bf917}{%
+           family={Tajima},
+           familyi={T\bibinitperiod},
+           given={Kazuyuki},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=72f2327630073a68c4242d3d0d768deb}{%
+           family={Hashiguchi},
+           familyi={H\bibinitperiod},
+           given={Tomohiro},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b52d20b3301843a2009d030b1d258329}{%
+           family={Katagiri},
+           familyi={K\bibinitperiod},
+           given={Toru},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Optical Society of America}%
+      }
+      \strng{namehash}{e4b001f8b6ef518b8a41cad1f08f8851}
+      \strng{fullhash}{47f197375e2445425280d2007ffffbcf}
+      \strng{fullhashraw}{47f197375e2445425280d2007ffffbcf}
+      \strng{bibnamehash}{e4b001f8b6ef518b8a41cad1f08f8851}
+      \strng{authorbibnamehash}{e4b001f8b6ef518b8a41cad1f08f8851}
+      \strng{authornamehash}{e4b001f8b6ef518b8a41cad1f08f8851}
+      \strng{authorfullhash}{47f197375e2445425280d2007ffffbcf}
+      \strng{authorfullhashraw}{47f197375e2445425280d2007ffffbcf}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Optical Fiber Communication Conference}
+      \field{title}{Wavelength defragmentation with minimum optical path disruptions for seamless service migration}
+      \field{year}{2016}
+      \field{pages}{M2J\bibrangedash 3}
+      \range{pages}{-1}
+    \endentry
+    \entry{favero2015new}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=e6190aa945417ecc44e8f3b8c4098b0c}{%
+           family={Fávero},
+           familyi={F\bibinitperiod},
+           given={Ricardo\bibnamedelima V},
+           giveni={R\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f350b1c398d845b59b03e64703939946}{%
+           family={Marçal},
+           familyi={M\bibinitperiod},
+           given={Juliano\bibnamedelima S},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=83b86445e552abdb4d8f22aab77a255b}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Paulo\bibnamedelima CB},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=78c5cf2bd0b69752be5381c709b9895c}{%
+           family={Bonani},
+           familyi={B\bibinitperiod},
+           given={Luiz\bibnamedelima H},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae0ba4bbfa479d89a5ba839cd8a26852}{%
+           family={Abbade},
+           familyi={A\bibinitperiod},
+           given={Marcelo\bibnamedelima LF},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{4b6d214979c1a669bb96c233a0f4edef}
+      \strng{fullhash}{2c0dfb02e6d0899af5c0b86ee7cbed9a}
+      \strng{fullhashraw}{2c0dfb02e6d0899af5c0b86ee7cbed9a}
+      \strng{bibnamehash}{4b6d214979c1a669bb96c233a0f4edef}
+      \strng{authorbibnamehash}{4b6d214979c1a669bb96c233a0f4edef}
+      \strng{authornamehash}{4b6d214979c1a669bb96c233a0f4edef}
+      \strng{authorfullhash}{2c0dfb02e6d0899af5c0b86ee7cbed9a}
+      \strng{authorfullhashraw}{2c0dfb02e6d0899af5c0b86ee7cbed9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 SBMO/IEEE MTT-S International Microwave and Optoelectronics Conference (IMOC)}
+      \field{title}{A new elastic optical network defragmentation strategy based on the reallocation of lightpaths sharing the most fragmented link}
+      \field{year}{2015}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+    \endentry
+    \entry{zhang2013bandwidth}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{un=1,uniquepart=given,hash=1d5d31f94a9041f4f5e9c5718ef2f433}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Mingyang},
+           giveni={M\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=4196e499795f58154b9a2ca5fbface89}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Weiran},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dfb7ab1c9bc52dfa9ebd708a96b024e7}{%
+           family={Gong},
+           familyi={G\bibinitperiod},
+           given={Long},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cb550a145b27c55a56001120c672da49}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=63dc14e9d44da7d0b463ea0de3d7292f}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Zuqing},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{4133386eb16faae4baee605dada5e802}
+      \strng{fullhash}{52aa6f97b30aa716e8154875411616b5}
+      \strng{fullhashraw}{52aa6f97b30aa716e8154875411616b5}
+      \strng{bibnamehash}{4133386eb16faae4baee605dada5e802}
+      \strng{authorbibnamehash}{4133386eb16faae4baee605dada5e802}
+      \strng{authornamehash}{4133386eb16faae4baee605dada5e802}
+      \strng{authorfullhash}{52aa6f97b30aa716e8154875411616b5}
+      \strng{authorfullhashraw}{52aa6f97b30aa716e8154875411616b5}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2013 IEEE International Conference on Communications (ICC)}
+      \field{title}{Bandwidth defragmentation in dynamic elastic optical networks with minimum traffic disruptions}
+      \field{year}{2013}
+      \field{pages}{3894\bibrangedash 3898}
+      \range{pages}{5}
+    \endentry
+    \entry{zhang2012priority}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{un=1,uniquepart=given,hash=2f4cc163c8766d4437008ea260208de8}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=51ecb770e82fd99de5a41a2446492e0d}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yongli},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=691fde1c50e0a42d01f0d3536cc6d358}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Xiaosong},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=16f500cb339d313abef00243df704e3a}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{7cf8eaf74a2659f76a70a943f2d3282a}
+      \strng{fullhash}{a5a797d00a22012ad72d7ecd116c1dec}
+      \strng{fullhashraw}{a5a797d00a22012ad72d7ecd116c1dec}
+      \strng{bibnamehash}{7cf8eaf74a2659f76a70a943f2d3282a}
+      \strng{authorbibnamehash}{7cf8eaf74a2659f76a70a943f2d3282a}
+      \strng{authornamehash}{7cf8eaf74a2659f76a70a943f2d3282a}
+      \strng{authorfullhash}{a5a797d00a22012ad72d7ecd116c1dec}
+      \strng{authorfullhashraw}{a5a797d00a22012ad72d7ecd116c1dec}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The 10th International Conference on Optical Internet (COIN2012)}
+      \field{title}{Priority-based defragmentation scheme in spectrum-efficient optical networks}
+      \field{year}{2012}
+      \field{pages}{16\bibrangedash 17}
+      \range{pages}{2}
+    \endentry
+    \entry{zhang2020matrix}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=41c38b18b98b6f4bb936cee6cb447336}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xian-Da},
+           giveni={X\bibinithyphendelim D\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{41c38b18b98b6f4bb936cee6cb447336}
+      \strng{fullhash}{41c38b18b98b6f4bb936cee6cb447336}
+      \strng{fullhashraw}{41c38b18b98b6f4bb936cee6cb447336}
+      \strng{bibnamehash}{41c38b18b98b6f4bb936cee6cb447336}
+      \strng{authorbibnamehash}{41c38b18b98b6f4bb936cee6cb447336}
+      \strng{authornamehash}{41c38b18b98b6f4bb936cee6cb447336}
+      \strng{authorfullhash}{41c38b18b98b6f4bb936cee6cb447336}
+      \strng{authorfullhashraw}{41c38b18b98b6f4bb936cee6cb447336}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A matrix algebra approach to artificial intelligence}
+      \field{year}{2020}
+      \field{pages}{223\bibrangedash 440}
+      \range{pages}{218}
+    \endentry
+    \entry{mitchell1997machine}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6b1b95cdca60865947b9a309e5e904f6}{%
+           family={Mitchell},
+           familyi={M\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw hill Burr Ridge}%
+      }
+      \strng{namehash}{6b1b95cdca60865947b9a309e5e904f6}
+      \strng{fullhash}{6b1b95cdca60865947b9a309e5e904f6}
+      \strng{fullhashraw}{6b1b95cdca60865947b9a309e5e904f6}
+      \strng{bibnamehash}{6b1b95cdca60865947b9a309e5e904f6}
+      \strng{authorbibnamehash}{6b1b95cdca60865947b9a309e5e904f6}
+      \strng{authornamehash}{6b1b95cdca60865947b9a309e5e904f6}
+      \strng{authorfullhash}{6b1b95cdca60865947b9a309e5e904f6}
+      \strng{authorfullhashraw}{6b1b95cdca60865947b9a309e5e904f6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Machine learning}
+      \field{year}{1997}
+    \endentry
+    \entry{rashid2016make}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c7430d4073cb7deaa45e1025f17dd3a6}{%
+           family={Rashid},
+           familyi={R\bibinitperiod},
+           given={Tariq},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {CreateSpace Independent Publishing Platform}%
+      }
+      \strng{namehash}{c7430d4073cb7deaa45e1025f17dd3a6}
+      \strng{fullhash}{c7430d4073cb7deaa45e1025f17dd3a6}
+      \strng{fullhashraw}{c7430d4073cb7deaa45e1025f17dd3a6}
+      \strng{bibnamehash}{c7430d4073cb7deaa45e1025f17dd3a6}
+      \strng{authorbibnamehash}{c7430d4073cb7deaa45e1025f17dd3a6}
+      \strng{authornamehash}{c7430d4073cb7deaa45e1025f17dd3a6}
+      \strng{authorfullhash}{c7430d4073cb7deaa45e1025f17dd3a6}
+      \strng{authorfullhashraw}{c7430d4073cb7deaa45e1025f17dd3a6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Make your own neural network}
+      \field{year}{2016}
+    \endentry
+    \entry{choudhury2019recent}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f1d6667b6e878193857242da128e1913}{%
+           family={Choudhury},
+           familyi={C\bibinitperiod},
+           given={Panchali\bibnamedelima Datta},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ec9aa5405e437dd7d609425949d2e723}{%
+           family={De},
+           familyi={D\bibinitperiod},
+           given={Tanmay},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{ac0169906ead9138bfcd4827bdf0c85e}
+      \strng{fullhash}{ac0169906ead9138bfcd4827bdf0c85e}
+      \strng{fullhashraw}{ac0169906ead9138bfcd4827bdf0c85e}
+      \strng{bibnamehash}{ac0169906ead9138bfcd4827bdf0c85e}
+      \strng{authorbibnamehash}{ac0169906ead9138bfcd4827bdf0c85e}
+      \strng{authornamehash}{ac0169906ead9138bfcd4827bdf0c85e}
+      \strng{authorfullhash}{ac0169906ead9138bfcd4827bdf0c85e}
+      \strng{authorfullhashraw}{ac0169906ead9138bfcd4827bdf0c85e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 21st International Conference on Transparent Optical Networks (ICTON)}
+      \field{title}{Recent developments in Elastic Optical Networks Using Machine Learning}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 3}
+      \range{pages}{3}
+    \endentry
+    \entry{panayiotou2019data}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=055ff3e7392f40ed8bd15a470b49a71b}{%
+           family={Panayiotou},
+           familyi={P\bibinitperiod},
+           given={Tania},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f060ea9b232e67f4cd9baaf8e3d479de}{%
+           family={Manousakis},
+           familyi={M\bibinitperiod},
+           given={Konstantinos},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2a0eedc9bf06b97285877e502c0b61ab}{%
+           family={Chatzis},
+           familyi={C\bibinitperiod},
+           given={Sotirios\bibnamedelima P},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7d4a98372cf87486367939209d345a65}{%
+           family={Ellinas},
+           familyi={E\bibinitperiod},
+           given={Georgios},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{91545b9f96ea3ccbf372b30edea4a8a9}
+      \strng{fullhash}{d9862d60ba715fd8312c9a7c9a7a8915}
+      \strng{fullhashraw}{d9862d60ba715fd8312c9a7c9a7a8915}
+      \strng{bibnamehash}{91545b9f96ea3ccbf372b30edea4a8a9}
+      \strng{authorbibnamehash}{91545b9f96ea3ccbf372b30edea4a8a9}
+      \strng{authornamehash}{91545b9f96ea3ccbf372b30edea4a8a9}
+      \strng{authorfullhash}{d9862d60ba715fd8312c9a7c9a7a8915}
+      \strng{authorfullhashraw}{d9862d60ba715fd8312c9a7c9a7a8915}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Lightwave Technology}
+      \field{number}{9}
+      \field{title}{A data-driven bandwidth allocation framework with QoS considerations for EONs}
+      \field{volume}{37}
+      \field{year}{2019}
+      \field{pages}{1853\bibrangedash 1864}
+      \range{pages}{12}
+    \endentry
+    \entry{luo2019leveraging}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=1,uniquepart=given,hash=ba5587eab0cd41eacff6ad85c4ded80e}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Xiao},
+           giveni={X\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=15811d338c4b369a604b2fa82be99d52}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Chen},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4902a8bdb4405033610fe52eedda8a1}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Liqian},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3ce6a3f9286ea3b0873b6583cf3b8faf}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xue},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2af761d9bef859ea29248418adce0dd7}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=30dbf96c2effbc0427e80f15e466813e}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Tao},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Optical Society of America}%
+      }
+      \strng{namehash}{f3694aec7b160dd2b2507d3106dd2911}
+      \strng{fullhash}{548bed0a7dcca53b9385a9a559dd1b47}
+      \strng{fullhashraw}{548bed0a7dcca53b9385a9a559dd1b47}
+      \strng{bibnamehash}{f3694aec7b160dd2b2507d3106dd2911}
+      \strng{authorbibnamehash}{f3694aec7b160dd2b2507d3106dd2911}
+      \strng{authornamehash}{f3694aec7b160dd2b2507d3106dd2911}
+      \strng{authorfullhash}{548bed0a7dcca53b9385a9a559dd1b47}
+      \strng{authorfullhashraw}{548bed0a7dcca53b9385a9a559dd1b47}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optics express}
+      \field{number}{6}
+      \field{title}{Leveraging double-agent-based deep reinforcement learning to global optimization of elastic optical networks with enhanced survivability}
+      \field{volume}{27}
+      \field{year}{2019}
+      \field{pages}{7896\bibrangedash 7911}
+      \range{pages}{16}
+    \endentry
+    \entry{aibin2018traffic}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cf2b520b8a53f6aea73feb44fb6522e7}{%
+           family={Aibin},
+           familyi={A\bibinitperiod},
+           given={Michal},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{cf2b520b8a53f6aea73feb44fb6522e7}
+      \strng{fullhash}{cf2b520b8a53f6aea73feb44fb6522e7}
+      \strng{fullhashraw}{cf2b520b8a53f6aea73feb44fb6522e7}
+      \strng{bibnamehash}{cf2b520b8a53f6aea73feb44fb6522e7}
+      \strng{authorbibnamehash}{cf2b520b8a53f6aea73feb44fb6522e7}
+      \strng{authornamehash}{cf2b520b8a53f6aea73feb44fb6522e7}
+      \strng{authorfullhash}{cf2b520b8a53f6aea73feb44fb6522e7}
+      \strng{authorfullhashraw}{cf2b520b8a53f6aea73feb44fb6522e7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optical Switching and Networking}
+      \field{title}{Traffic prediction based on machine learning for elastic optical networks}
+      \field{volume}{30}
+      \field{year}{2018}
+      \field{pages}{33\bibrangedash 39}
+      \range{pages}{7}
+    \endentry
+    \entry{chen2018deep}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=a421dae816fe4e394bf1326f4054af8b}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xiaoliang},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fcd10619f008c4406d8a27bfdb3b7749}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Jiannan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=63dc14e9d44da7d0b463ea0de3d7292f}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Zuqing},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=318749b4e82dcdaaf19b432be08b2806}{%
+           family={Proietti},
+           familyi={P\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fcfd4a514987c24366e172b4a4de6972}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c5d5d0731f321d9b0ec4e26bd8f43a54}{%
+           family={Yoo},
+           familyi={Y\bibinitperiod},
+           given={SJ\bibnamedelima Ben},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{c94d63908a825c8be9372248805ea9ec}
+      \strng{fullhash}{bed6c045ce91760cfd52a2918c7bf7c6}
+      \strng{fullhashraw}{bed6c045ce91760cfd52a2918c7bf7c6}
+      \strng{bibnamehash}{c94d63908a825c8be9372248805ea9ec}
+      \strng{authorbibnamehash}{c94d63908a825c8be9372248805ea9ec}
+      \strng{authornamehash}{c94d63908a825c8be9372248805ea9ec}
+      \strng{authorfullhash}{bed6c045ce91760cfd52a2918c7bf7c6}
+      \strng{authorfullhashraw}{bed6c045ce91760cfd52a2918c7bf7c6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 Optical Fiber Communications Conference and Exposition (OFC)}
+      \field{title}{Deep-RMSA: A deep-reinforcement-learning routing, modulation and spectrum assignment agent for elastic optical networks}
+      \field{year}{2018}
+      \field{pages}{1\bibrangedash 3}
+      \range{pages}{3}
+    \endentry
+    \entry{trindade2020machine}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=56128134ea2b50bc4ded8e7490450761}{%
+           family={Trindade},
+           familyi={T\bibinitperiod},
+           given={Silvana},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d0f646469dc6b2e2abe521ddd438d8f1}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Nelson\bibnamedelima LS},
+           giveni={N\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0,
+           prefix={da},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{0a67059f20196c054ec85510dba4ee11}
+      \strng{fullhash}{0a67059f20196c054ec85510dba4ee11}
+      \strng{fullhashraw}{0a67059f20196c054ec85510dba4ee11}
+      \strng{bibnamehash}{0a67059f20196c054ec85510dba4ee11}
+      \strng{authorbibnamehash}{0a67059f20196c054ec85510dba4ee11}
+      \strng{authornamehash}{0a67059f20196c054ec85510dba4ee11}
+      \strng{authorfullhash}{0a67059f20196c054ec85510dba4ee11}
+      \strng{authorfullhashraw}{0a67059f20196c054ec85510dba4ee11}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Network}
+      \field{number}{1}
+      \field{title}{Machine Learning for Spectrum Defragmentation in Space-Division Multiplexing Elastic Optical Networks}
+      \field{volume}{35}
+      \field{year}{2020}
+      \field{pages}{326\bibrangedash 332}
+      \range{pages}{7}
+    \endentry
+    \entry{xiong2019machine}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=8e3e3c8d33315b6f161cf2b5d3dc7a46}{%
+           family={Xiong},
+           familyi={X\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=065dfa144c5d9780da4520f73c91cdda}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Yaya},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ec2757f8f88a66efce3c1b79fbb4c974}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Yulong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=931fe14b9a31947a1ac532faef8cb589}{%
+           family={Rouskas},
+           familyi={R\bibinitperiod},
+           given={George\bibnamedelima N},
+           giveni={G\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{72b76f23c016920088f2b6dfbfa627be}
+      \strng{fullhash}{f0aba3db9c71602f922fecb54930a780}
+      \strng{fullhashraw}{f0aba3db9c71602f922fecb54930a780}
+      \strng{bibnamehash}{72b76f23c016920088f2b6dfbfa627be}
+      \strng{authorbibnamehash}{72b76f23c016920088f2b6dfbfa627be}
+      \strng{authornamehash}{72b76f23c016920088f2b6dfbfa627be}
+      \strng{authorfullhash}{f0aba3db9c71602f922fecb54930a780}
+      \strng{authorfullhashraw}{f0aba3db9c71602f922fecb54930a780}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Optical Fiber Technology}
+      \field{title}{A machine learning approach to mitigating fragmentation and crosstalk in space division multiplexing elastic optical networks}
+      \field{volume}{50}
+      \field{year}{2019}
+      \field{pages}{99\bibrangedash 107}
+      \range{pages}{9}
+    \endentry
+    \entry{quagliotti2017spectrum}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=6d6e207aba66a7cee3a4646c43ff502d}{%
+           family={Quagliotti},
+           familyi={Q\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6c82ec4e28c50ffaafe8e00ed0237998}{%
+           family={Arango},
+           familyi={A\bibinitperiod},
+           given={D\bibnamedelima Cifuentes},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ba0f38e60ddef240288717279b0e7520}{%
+           family={Schiano},
+           familyi={S\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=72d2bd1e018351fcb0c288ef7333effd}{%
+           family={Carena},
+           familyi={C\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1d14d16d0e3033f61a2ae8b1dd194b1}{%
+           family={Cantono},
+           familyi={C\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cea32d6a76621c27b89f955699713e10}{%
+           family={Curri},
+           familyi={C\bibinitperiod},
+           given={V},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IET}%
+      }
+      \strng{namehash}{c055bd6eab070dd8a637f818995e5504}
+      \strng{fullhash}{94dae89408806fae17696ce3ce0f6284}
+      \strng{fullhashraw}{94dae89408806fae17696ce3ce0f6284}
+      \strng{bibnamehash}{c055bd6eab070dd8a637f818995e5504}
+      \strng{authorbibnamehash}{c055bd6eab070dd8a637f818995e5504}
+      \strng{authornamehash}{c055bd6eab070dd8a637f818995e5504}
+      \strng{authorfullhash}{94dae89408806fae17696ce3ce0f6284}
+      \strng{authorfullhashraw}{94dae89408806fae17696ce3ce0f6284}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Spectrum fragmentation metrics and their use in optical channel allocation algorithms}
+      \field{year}{2017}
+    \endentry
+    \entry{wang2012utilization}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{un=1,uniquepart=given,hash=f2e5f45a009e71ca581b562c25df1b47}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xi},
+           giveni={X\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=d003999e09e53ee999fd1096f39fe053}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Qiong},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=411a43300181dae38da7f4405da28021}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Inwoong},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=da5ce5232a7218f04ad4540a772f6a0b}{%
+           family={Palacharla},
+           familyi={P\bibinitperiod},
+           given={Paparao},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0a05a754660001abfde8ab789d262d33}{%
+           family={Sekiya},
+           familyi={S\bibinitperiod},
+           given={Motoyoshi},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Optical Society of America}%
+      }
+      \strng{namehash}{285f5d8c256e01b478750d976f48fe64}
+      \strng{fullhash}{c721d7ff2e9165ddef6c0d7ff3053d65}
+      \strng{fullhashraw}{c721d7ff2e9165ddef6c0d7ff3053d65}
+      \strng{bibnamehash}{285f5d8c256e01b478750d976f48fe64}
+      \strng{authorbibnamehash}{285f5d8c256e01b478750d976f48fe64}
+      \strng{authornamehash}{285f5d8c256e01b478750d976f48fe64}
+      \strng{authorfullhash}{c721d7ff2e9165ddef6c0d7ff3053d65}
+      \strng{authorfullhashraw}{c721d7ff2e9165ddef6c0d7ff3053d65}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Optical Fiber Communication Conference}
+      \field{title}{Utilization entropy for assessing resource fragmentation in optical networks}
+      \field{year}{2012}
+      \field{pages}{OTh1A\bibrangedash 2}
+      \range{pages}{-1}
+    \endentry
+    \entry{wright2015minimum}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=93a6ba9f36b93c9a5fc18e0abbd69436}{%
+           family={Wright},
+           familyi={W\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b7ead96266376989a5c5957f8be85589}{%
+           family={Parker},
+           familyi={P\bibinitperiod},
+           given={Michael\bibnamedelima C},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=57c0382a44473069c294d76999a56e09}{%
+           family={Lord},
+           familyi={L\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Optical Society of America}%
+      }
+      \strng{namehash}{77ccb98c6098f6ada92598c1a9572e70}
+      \strng{fullhash}{77ccb98c6098f6ada92598c1a9572e70}
+      \strng{fullhashraw}{77ccb98c6098f6ada92598c1a9572e70}
+      \strng{bibnamehash}{77ccb98c6098f6ada92598c1a9572e70}
+      \strng{authorbibnamehash}{77ccb98c6098f6ada92598c1a9572e70}
+      \strng{authornamehash}{77ccb98c6098f6ada92598c1a9572e70}
+      \strng{authorfullhash}{77ccb98c6098f6ada92598c1a9572e70}
+      \strng{authorfullhashraw}{77ccb98c6098f6ada92598c1a9572e70}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Optical Communications and Networking}
+      \field{number}{1}
+      \field{title}{Minimum-and maximum-entropy routing and spectrum assignment for flexgrid elastic optical networking}
+      \field{volume}{7}
+      \field{year}{2015}
+      \field{pages}{A66\bibrangedash A72}
+      \range{pages}{-1}
+    \endentry
+    \entry{wang2012spectrum}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{5}{}{%
+        {{un=1,uniquepart=given,hash=330e18fb499a5fa7fa598125962993f7}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ying},
+           giveni={Y\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=2f4cc163c8766d4437008ea260208de8}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=51ecb770e82fd99de5a41a2446492e0d}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yongli},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a271eaaa49991dfa4ca461fb6e68706a}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Junyan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=750269e0628ea342a402c85d60d293fe}{%
+           family={Gu},
+           familyi={G\bibinitperiod},
+           given={Wanyi},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{861d3561078aa4b22f46dcc058ed9bc6}
+      \strng{fullhash}{1a0e1aacc3954c929fc93fd54adcbe16}
+      \strng{fullhashraw}{1a0e1aacc3954c929fc93fd54adcbe16}
+      \strng{bibnamehash}{861d3561078aa4b22f46dcc058ed9bc6}
+      \strng{authorbibnamehash}{861d3561078aa4b22f46dcc058ed9bc6}
+      \strng{authornamehash}{861d3561078aa4b22f46dcc058ed9bc6}
+      \strng{authorfullhash}{1a0e1aacc3954c929fc93fd54adcbe16}
+      \strng{authorfullhashraw}{1a0e1aacc3954c929fc93fd54adcbe16}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Chinese Optics Letters}
+      \field{number}{s1}
+      \field{title}{Spectrum consecutiveness based routing and spectrum allocation in flexible bandwidth networks}
+      \field{volume}{10}
+      \field{year}{2012}
+      \field{pages}{S10606}
+      \range{pages}{-1}
+    \endentry
+    \entry{tensowFlow}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.tensorflow.org}}
+      \field{title}{Tensor Flow}
+    \endentry
+    \entry{von2014survey}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f81a2d6cbc6f1939e98b75f872a2a165}{%
+           family={Von\bibnamedelima Lucken},
+           familyi={V\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e5ce5734f8f1a93aeca21b7d3f9f625}{%
+           family={Baran},
+           familyi={B\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6a3ea05b939f0261e8390b223ba8bb44}{%
+           family={Brizuela},
+           familyi={B\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{4dc1d5c05e549b04e9cfdb40c2a09f34}
+      \strng{fullhash}{4dc1d5c05e549b04e9cfdb40c2a09f34}
+      \strng{fullhashraw}{4dc1d5c05e549b04e9cfdb40c2a09f34}
+      \strng{bibnamehash}{4dc1d5c05e549b04e9cfdb40c2a09f34}
+      \strng{authorbibnamehash}{4dc1d5c05e549b04e9cfdb40c2a09f34}
+      \strng{authornamehash}{4dc1d5c05e549b04e9cfdb40c2a09f34}
+      \strng{authorfullhash}{4dc1d5c05e549b04e9cfdb40c2a09f34}
+      \strng{authorfullhashraw}{4dc1d5c05e549b04e9cfdb40c2a09f34}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computational optimization and applications}
+      \field{number}{3}
+      \field{title}{A survey on multi-objective evolutionary algorithms for many-objective problems}
+      \field{volume}{58}
+      \field{year}{2014}
+      \field{pages}{707\bibrangedash 756}
+      \range{pages}{50}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,57 @@
+\chapter{ Conclusiones y Trabajos Futuros }
+
+En las redes ópticas elásticas, la constante asignación y liberación de recursos en forma dinámica puede dar lugar al problema conocido como "fragmentación del ancho de banda". Este problema es crítico ya que la presencia de bloques aislados de ancho de banda dentro del dominio del espectro deja a los mismos inutilizables ante futuras solicitudes de conexiones, debido a que los mismos no se encuentran alineados y contiguos,
+
+Un enfoque utilizado para combatir la fragmentación son los procesos de desfragmentación, que consisten en el retiro y posterior re-ruteo de un sub-conjunto de conexiones existentes, con el objetivo de consolidar los espacios disponibles en grandes bloques contiguos y continuos que puedan ser utilizados para futuras solicitudes de conexiones.
+
+El problema analizado en este trabajo es el de ¿Cuándo Reconfigurar?, es decir, buscar el momento adecuado para disparar el proceso de desfragmentación, ya que desfragmentaciones muy frecuentes o muy distantes en el tiempo pueden hacer que estos no sean muy eficientes.
+
+Este trabajo presenta un enfoque con desfragmentación para tráfico dinámico de redes ópticas elásticas por medio de un disparador inteligente utilizando técnicas de \textit{Machine Learning}. En su implementación se utilizó un enfoque de aprendizaje supervisado, con un modelo de redes neuronales artificiales para la predicción de futuros bloqueos y utilizando algunas características para medir el estado de fragmentación de la red y el uso de la misma.
+
+El método propuesto de disparo recibe el estado actual de la red o ``características'' para cada instante de tiempo, con estas características y el entrenamiento previo del modelo, obtenemos una predicción de la probabilidad de futuros bloqueos, para una ventana de 10 unidades de tiempo hacia delante.
+
+Para evaluar la eficiencia del método propuesto de disparo se consideraron tres escenarios diferentes, con un volumen de tráfico variable, utilizando las topologías NSFNET y USNET. Los objetivos a optimizar fueron: 
+\begin{itemize}
+    \item La cantidad de bloqueos obtenidos (BL)
+    \item La cantidad de reconfiguraciones al final de cada instancia de prueba (RC)
+\end{itemize}
+
+\section{Conclusiones Experimentales}
+Se realizaron pruebas experimentales a fin de comparar nuestro método de disparo contra otros dos presentes en la literatura científica. El método de desfragmentanción periódica es una estrategia ampliamente utilizada, la cual consiste en realizar el proceso de desfragmentación cada cierto periodo fijo de tiempo y el disparo por medio de métricas, la cual considera en realizar el proceso de desfragmetación en base al valor actual de la métrica, para las pruebas de este método se utilizó la métrica de fragmentación BFR.
+
+Para comparar los resultados obtenidos en relación a los objetivos citados anteriormente (BL y RC), se utilizaron dos métricas de desempeño para optimización multi-objetivo.
+
+\begin{enumerate}
+    \item Número de soluciones en el Frente Pareto (SFP).
+    \item Cobertura Pareto (CP).
+\end{enumerate}
+
+Como resultado de la comparación de los métodos en base a los objetivos expuestos previamente, se concluye que el método propuesto es mejor ya que consigue en la mayoría de los escenarios mejores resultados,
+minimizando los valores obtenidos para BL y RC. Considerando la métrica SFP se obtiene que constituye el 52.9\% de soluciones no dominadas y en el caso de CP se logró en un 67\% del total de comparaciones resultados favorables a nuestro método.
+
+\section{Aportes}
+Los aportes del presente trabajo son:
+\begin{enumerate}[label=\arabic*)]
+    \item Un análisis bibliográfico sobre el problema relacionado al periodo de tiempo en el que el proceso de desfragmentación será ejecutado.
+    \item Una investigación y recopilación de métricas de fragmentación las cuales son utilizadas como características necesarias para la predicción de la probabilidad de bloqueo por parte del modelo entrenado.
+    \item Como principal aporte se diseñó un algoritmo que realiza el preprocesamiento de datos, entrenamiento del modelo y predicción de probabilidades de bloqueo utilizando técnicas de \textit{Machine Learning}.
+    \item Pruebas experimentales utilizando en conjunto un simulador de redes EON y el modelo entrenado a fin de evaluar la eficiencia de nuestro método propuesto. Se realizaron comparaciones contra otros dos mecanismos de disparo, disparo periódico en tiempos fijos y disparo basado en la métrica BFR, teniendo resultados favorables para nuestro método en relación a la minimización de la cantidad de bloqueos y reconfiguraciones.
+\end{enumerate}
+
+\section{Trabajos Futuros}
+\begin{itemize}
+    \item Aplicar el modelo de disparo inteligente del proceso de desfragmentación propuesto en este trabajo a redes ópticas elásticas que utilizan otras tecnologías o técnicas, como las redes EON con multiplexación por división de espacios o \textit{Space División Multiplexing} (SDM).
+    
+    EL SDM es utilizado en redes con múltiples núcleos, por lo que sería interesante realizar un análisis de la eficiencia del modelo en este tipo de redes.
+    
+    \item Proponer algoritmos de disparo del proceso de desfragmentación utilizando métodos estadísticos, tal como la regresión logística binaria (RLB), la cual se utiliza cuando se desea conocer la relación entre una variable dependiente binaria y una o más variables independientes o explicativas, las cuales pueden ser cuantitativas y/o cualitativas.
+    
+    El objetivo de la RLB es obtener una estimación ajustada de la probabilidad de ocurrencia de un evento a partir de una o más variables independientes.
+    
+    \item Otro enfoque posible es utilizar programación genética, el cual consiste en una metodología basada en algoritmos evolutivos e inspirada en la evolución biológica para desarrollar programas que realicen ciertas tareas, por ejemplo, realizar disparo del proceso de desfragmentación en el mejor momento.
+    
+    Es una técnica de aprendizaje automático utilizada para optimizar una población de programas de acuerdo a una función de ajuste o \textit{fitness function} que evalúala capacidad de cada programa de realizar la tarea.
+\end{itemize}
+	
+	
+	

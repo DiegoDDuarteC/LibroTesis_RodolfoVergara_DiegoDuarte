@@ -1,0 +1,93 @@
+\chapter{Introducción}
+\section{Justificación}
+
+Debido al incremento de la popularidad de internet y del uso de servicios en la nube, tales como \textit{Content Delivery Network} (CDN) y \textit{Video on Demand} (VoD), las demandas de  tasas de bits en las redes han crecido de manera exponencial, lo que obliga a estudiar nuevas y mejores tecnologías relacionadas a la transmisión de datos.
+
+Las  Redes de Multiplexación por División de Longitud de Onda o \textit{Wavelength Division Multiplexing} (WDM), utilizan una grilla fija, de 50 o 100 GHz, dan una gran ventaja logrando velocidades muy superiores
+frente a las viejas tecnologías, pero a pesar de esta ventaja señalada, la gruesa granularidad lleva a un
+uso ineficiente del espectro, ya que cada demanda es asignada a un canal fijo y estas pueden requerir un
+ancho de banda menor al tamaño del canal.
+
+Esta desventaja da lugar a las Redes Elásticas Ópticas o \textit{Elastic Optical Networks} (EON) \cite{jinno2009spectrum}, las cuales surgen como una solución al problema anteriormente citado, ya que estas proporcionan una mayor flexibilidad en la división del espectro y de esa forma lograr que los requerimientos sean asignados de manera más eficiente.
+
+A las redes EON tambien se la conocen como redes de grilla flexible, debido a que las ranuras de frecuencia o FS (\textit{Frequency Slot}) que reemplazan a los ``Canales WDM'', cuentan con una división más flexible. Cada FS tiene un ancho de banda de 12.5 GHz, de esta manera se logra una cantidad más apropiada de FS para satisfacer un requerimiento.
+%
+
+Sin embargo, a pesar de las mejoras introducidas por las redes EON, el crecimiento exponencial del tráfico de datos demanda soluciones aún mas avanzadas. En este contexto, surgen las Redes Ópticas Elásticas Multicore o \textit{Elastic Optical Networks with Multicore Fibers} (EON-MCF) y por consecuente \textit{Space Division Multiplexing-Elastic Optical Networks} (SDM-EON) , que incorporan fibras ópticas multinúcleo (MCF), para multiplicar la capacidad de transmisión mediante la explotación de la dimensión espacial, ademas de las dimensiones espectral y temporal ya utilizadas en las redes EON convencionales.
+%
+
+Las fibras multinúcleo contienen múltiples núcleos dentro de una única fibra, donde cada núcleo puede transmitir señales de manera independiente. Esta arquitectura permite aumentar significativamente la capacidad de la red sin necesidad de desplegar nuevas fibras, ofreciendo una solución escalable y económicamente viable para satisfacer las crecientes demandas de ancho de banda.
+%
+
+Los métodos de ruteo y asignación del espectro y núcleo tienen gran impacto sobre el uso eficiente de los recursos de la red. Los algoritmos RSCA (\textit{Routing, Spectrum and Core Assigment}) se encargan de resolver dicho problema encontrando el camino más apropiado desde el origen hasta el destino, el núcleo a utilizar y las ranuras que utilizará el requerimiento dentro del espectro de los enlaces.
+%
+
+Se han propuestos varios algoritmos RSCA con el fin de conseguir la mejor utilización de recursos, estos algoritmos están sujetos a tres principios fundamentales: la restricción de consecutividad del ancho de banda, la restricción de la continuidad del ancho de banda y la restricción de continuidad de núcleo. 
+%
+
+La restricción de continuidad espectral establece que se deben utilizar los mismos FS en todo el camino y la restricción de contigüidad dispone que los FS seleccionados para satisfacer la demanda deben ser contiguos. La restricción de continuidad de núcleo especifíca que se debe mantener el mismo núcleo a lo largo de toda la ruta establecida.
+%
+
+Adicionalmente, en las redes SDM-EON surge un nuevo fenómeno denominado \textit{Crosstalk} o diafonía entre núcleos \textit{inter-core crosstalk, XT}, que ocurre cuando las señales ópticas de núcleos adyacentes interfieren entre sí, degradando la calidad de la transmisión. Este fenómeno debe ser considerado como una restricción adicional en los algoritmos RSCA para garantizar la calidad del servicio.
+%
+
+Debido a las restricciones explicadas y a que las asignaciones de recursos son realizadas de manera dinámica, surge el fenómeno denominado "Fragmentación del Ancho de Banda y del Espacio", este problema es una de las principales dificultades de las redes SDM-EON ya que tiene un impacto directo en el uso eficiente del espectro y de los núcleos disponibles.
+%
+
+El fenómeno de la fragmentación espectro-espacial del ancho de banda sucede cuando en los enlaces se encuentran FS disponibles separados por FS que están siendo utilizados por otras conexiones, o cuando existen  núcleos con recursos fragmentados que no pueden ser eficientemente asignados, por lo que estas podrían quedar inutilizables para nuevas conexiones por no poder satisfacer a la demanda debido a las restricciones citadas anteriormente, en consecuencia, la probabilidad de bloqueo \cite{shi2013effect} aumenta considerablemente.
+%
+
+Un bloqueo sucede cuando el algoritmo RSCA no puede encontrar núcleos y FS disponibles para una demanda, esto puede deberse a una alta saturación del espectro o de los núcleos, pero también debido al problema mencionado anteriormente, donde existe la cantidad de FS libres que se solicitan, pero sin respetar las restricciones de continuidad y contigüidad, o donde no hay núcleos disponibles que cumplan con las restricciones de crosstalk, es decir el espectro y el espacio se encuentran fragmentados.
+%
+
+El problema de la fragmentación de redes SDM-EON es ampliamente estudiado en la literatura actual, para buscar manejarlo se han propuesto soluciones con distintos enfoques.
+%
+
+% 
+
+Uno de los enfoques es el llamado \textit{Enfoque proactivo} el cual consiste en ejecutar un proceso de desfragmentación periódicamente o mediante un disparador. Tiene como principal objetivo prevenir futuros bloqueos en la red, este enfoque será el utilizado en este trabajo.
+%
+
+El proceso de desfragmentación consiste en la reconfiguración o re-ruteo de un sub-conjunto de conexiones ya establecidas en la red, teniendo como principal objetivo reducir la fragmentación del espectro y la fragmentación espacial mediante la eliminación de bloques de FS libres no contiguos y la registribución eficiente de conexiones entre núcleos. 
+%
+
+En el trabajo presentado por Zhang \cite{zhang2014dynamic}, se realizó un análisis del problema de desfragmentación en redes EON, en el cual lo dividen en cuatro subproblemas, los cuales son, (I) ¿Cómo reconfigurar?, (II) ¿Cómo migrar el tráfico?, (III) ¿Cuándo reconfigurar? y (IV) ¿Qué reconfigurar?. Estos subproblemas mantienen su vigencia en el contexto de las redes SDM-EON, con la complejidad adicional de considerar la dimensión espacial.
+%
+
+En este trabajo nos centraremos en el tercer subproblema, ¿Cuándo reconfigurar?, ya que considerando el enfoque proactivo para resolver el problema de la fragmentación, encontramos que los procesos de desfragmentación podrían ejecutarse en periodos de tiempo donde no son del todo necesarios, es decir cuando la red se encuentra con una baja fragmentación, provocando desfragmentaciones ineficientes, una cantidad mayor de disrupciones de conexiones y una elevación innecesaria del costo de procesamiento.
+%
+
+En los siguientes capítulos presentamos un novedoso modelo de predicción de probabilidades de bloqueo implementado con técnicas de aprendizaje automático o \textit{Machine Learning}, el cual se utiliza como disparador del proceso de desfragmentación pero en este caso redes SDM-EON Multinúcleo, proponiendo de esta manera una solución al sub problema planteado anteriormente. 
+%
+\section{Objetivos del trabajo}
+\subsection{Objetivo General}
+Diseñar un modelo de disparo para el proceso de desfragmentación en redes ópticas elásticas multicore basado en probabilidades de bloqueo, utilizando técnicas de aprendizaje automático (\textit{Machine Learning}), con el propósito de maximizar la eficiencia en el uso de los recursos de la red mediante la reducción de reconfiguraciones de conexiones existentes y la minimización de la probabilidad de bloqueo. Este trabajo extiende la propuesta de Enciso y Silva [], originalmente desarrollada para redes EON convencionales, al contexto de redes multicore. 
+
+\subsection{Objetivos Específicos}
+\begin{itemize}
+    \item Realizar una revisión bibliográfica del estado del arte en técnicas de desfragmentación para redes ópticas elásticas, con énfasis en métodos basados en aprendizaje automático y su aplicación en redes multicore.
+
+    \item Identificar y definir métricas de fragmentación apropiadas para redes ópticas elásticas multicore, considerando las particularidades de la asignación de recursos en múltiples núcleos.
+    
+    \item Desarrollar e implementar un modelo de aprendizaje automático capaz de predecir probabilidades de bloqueo y determinar momentos óptimos para activar el proceso de desfragmentación en redes EON multicore.
+    
+    \item Diseñar e implementar una interfaz de integración entre el simulador de redes ópticas elásticas multicore y el modelo de aprendizaje automático entrenado, permitiendo la evaluación en tiempo real del sistema propuesto.
+    
+    \item Evaluar el desempeño del modelo propuesto mediante simulaciones, comparando sus resultados con técnicas de desfragmentación existentes en términos de probabilidad de bloqueo, número de reconfiguraciones y eficiencia en el uso de recursos espectrales.
+\end{itemize}
+
+\section{Organización del libro}
+El presente trabajo se encuentra organizado de la siguiente manera:
+
+En el capítulo dos se trata sobre características y conceptos relacionados con las redes EON, su principal
+dificultad (la fragmentación del ancho de banda), los diferentes enfoques para manejar la misma y una 
+presentación de trabajos relacionados presentes en la literatura científica.
+
+En el capítulo tres se hace una introducción al \textit{Machine learning}, enfocado al aprendizaje supervisado y redes neuronales.
+
+En el capítulo cuatro se presenta el método propuesto para la selección del momento de desfragmentación, 
+describiendo todo el proceso que conlleva.
+
+El capítulo cinco se muestra las pruebas experimentales junto a un análisis de los resultados obtenidos.
+
+Por último, el capítulo seis presenta las conclusiones del trabajo y sugerencias para trabajos futuros. 
