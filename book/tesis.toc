@@ -11,26 +11,26 @@
 \contentsline {chapter}{\numberline {2}Fragmentación en Redes Ópticas Elásticas}{7}{}%
 \contentsline {section}{\numberline {2.1}Fragmentación del Ancho de Banda en EON}{8}{}%
 \contentsline {subsection}{\numberline {2.1.1}Enfoques de gestión de fragmentación}{10}{}%
-\contentsline {section}{\numberline {2.2}Descripción del problema tratado}{12}{}%
+\contentsline {section}{\numberline {2.2}Descripción del problema tratado}{11}{}%
 \contentsline {section}{\numberline {2.3}Análisis Bibliográfico}{13}{}%
-\contentsline {chapter}{\numberline {3} Aprendizaje Automático }{18}{}%
-\contentsline {section}{\numberline {3.1}Tipos de sistemas de aprendizaje automático}{19}{}%
-\contentsline {section}{\numberline {3.2}Redes Neuronales Artificiales}{20}{}%
-\contentsline {subsection}{\numberline {3.2.1}Perceptrón}{20}{}%
-\contentsline {subsection}{\numberline {3.2.2}Funciones de activación}{22}{}%
-\contentsline {subsection}{\numberline {3.2.3}Arquitectura y aprendizaje}{23}{}%
-\contentsline {section}{\numberline {3.3}Aplicación de Machine Learning en Redes Ópticas Elásticas}{25}{}%
-\contentsline {chapter}{\numberline {4} Método Propuesto }{28}{}%
-\contentsline {section}{\numberline {4.1}Características}{28}{}%
-\contentsline {section}{\numberline {4.2}Obtención de datos para el entrenamiento}{31}{}%
-\contentsline {section}{\numberline {4.3}Herramientas Utilizadas}{33}{}%
-\contentsline {section}{\numberline {4.4}Modelado}{34}{}%
-\contentsline {section}{\numberline {4.5}Entrenamiento}{34}{}%
-\contentsline {section}{\numberline {4.6}Pruebas de predicción}{35}{}%
-\contentsline {chapter}{\numberline {5} Pruebas y resultados obtenidos }{37}{}%
-\contentsline {section}{\numberline {5.1}Objetivos a optimizar}{39}{}%
-\contentsline {section}{\numberline {5.2}Análisis de los resultados}{39}{}%
-\contentsline {chapter}{\numberline {6} Conclusiones y Trabajos Futuros }{45}{}%
-\contentsline {section}{\numberline {6.1}Conclusiones Experimentales}{46}{}%
-\contentsline {section}{\numberline {6.2}Aportes}{47}{}%
-\contentsline {section}{\numberline {6.3}Trabajos Futuros}{48}{}%
+\contentsline {chapter}{\numberline {3} Aprendizaje Automático }{17}{}%
+\contentsline {section}{\numberline {3.1}Tipos de sistemas de aprendizaje automático}{18}{}%
+\contentsline {section}{\numberline {3.2}Redes Neuronales Artificiales}{19}{}%
+\contentsline {subsection}{\numberline {3.2.1}Perceptrón}{19}{}%
+\contentsline {subsection}{\numberline {3.2.2}Funciones de activación}{21}{}%
+\contentsline {subsection}{\numberline {3.2.3}Arquitectura y aprendizaje}{22}{}%
+\contentsline {section}{\numberline {3.3}Aplicación de Machine Learning en Redes Ópticas Elásticas}{24}{}%
+\contentsline {chapter}{\numberline {4} Método Propuesto }{27}{}%
+\contentsline {section}{\numberline {4.1}Características}{27}{}%
+\contentsline {section}{\numberline {4.2}Obtención de datos para el entrenamiento}{30}{}%
+\contentsline {section}{\numberline {4.3}Herramientas Utilizadas}{32}{}%
+\contentsline {section}{\numberline {4.4}Modelado}{33}{}%
+\contentsline {section}{\numberline {4.5}Entrenamiento}{33}{}%
+\contentsline {section}{\numberline {4.6}Pruebas de predicción}{34}{}%
+\contentsline {chapter}{\numberline {5} Pruebas y resultados obtenidos }{36}{}%
+\contentsline {section}{\numberline {5.1}Objetivos a optimizar}{38}{}%
+\contentsline {section}{\numberline {5.2}Análisis de los resultados}{38}{}%
+\contentsline {chapter}{\numberline {6} Conclusiones y Trabajos Futuros }{44}{}%
+\contentsline {section}{\numberline {6.1}Conclusiones Experimentales}{45}{}%
+\contentsline {section}{\numberline {6.2}Aportes}{46}{}%
+\contentsline {section}{\numberline {6.3}Trabajos Futuros}{47}{}%

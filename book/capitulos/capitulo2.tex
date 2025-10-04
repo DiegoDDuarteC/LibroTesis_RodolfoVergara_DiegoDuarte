@@ -1,19 +1,21 @@
 \chapter{Fragmentación en Redes Ópticas Elásticas}
-Las redes ópticas tradicionales basadas en WDM, también conocidas como redes ópticas de grilla fija o \textit{fixed-grid networks}, dividen el espectro de cada enlace en canales fijos de 50 GHz o 100 GHz de ancho de banda,  según se especifica en el estándar G.694.1 del año 2002 de la
-Unión Internacional de Telecomunicaciones (\textit{ITU-T International Telecommunication Union}).
+Las redes ópticas que se basan en WDM dividen el espectro de cada enlace en canales cuyo ancho de banda se fija de 50 GHz o 100 GHz. Esto debido a que la Unión Internacional de Telecomunicaciones (\textit{ITU-T International Telecommunication Union}) especificó el estándar G.694.1 en el año 2002.
+%
+Estas redes WDM resultan muy rígidas, y debido a eso es posible que ocurra una utilización ineficiente de la capacidad, provocado por el hecho de que el espacio entre dos canales adyacentes es relativamente grande y si la señal que se transmite utiliza un ancho de banda muy bajo, gran parte del espectro será desperdiciado.
+%
 
-Debido a la rigidez de estas redes WDM, es posible que ocurra una utilización ineficiente de la capacidad, esto es debido a que el espacio entre dos canales adyacentes es relativamente grande y si la señal transmitida usa un ancho de banda bajo, gran parte del espectro será desperdiciado.
+Una nueva tecnología denominada Redes Ópticas Elásticas o \textit{Elastic Optical Networks} (EON) y su evolución: Las Redes ópticas Elásticas Multinúcleo o \textit{Multicore Elastic Optical Networks} (MC-EON) el cual no solo dividen el espectro óptico en Ranuras de Frecuencia o \textit{Frequency Slots} (FS) de 12.5 GHz conforme a lo establecido por el estándar definido en ITU-T (G.694.1) en el año 2012, sino que las (MC-EON) introducen un nuevo dominio de multiplexación espacial, al permitir la transmisión simultánea de múltiples señales ópticas en diferentes núcleos dentro de una misma fibra.
+%
+Esta aproximación multidimensional proporciona una mayor escalabilidad, eficiencia en la asignación del espectro y reducción del consumo energético, posicionando a las MC-EON como una de las tecnologías mas prometedoras para la implementación de redes ópticas de ultra alta capacidad en escenarios de próxima generación.
 
-Una nueva tecnología denominada Redes Ópticas Elásticas o \textit{Elastic Optical Networks} (EON) propuestas por Masahiko Jinno en \cite{jinno2009spectrum}, también denominadas como redes ópticas de grilla flexible o \textit{Flex-grid Networks}, dividen el espectro óptico en Ranuras de Frecuencia o \textit{Frequency Slots} (FS) de 12.5 GHz de acuerdo con el estándar definido en ITU-T (G.694.1) en el año 2012.
+% En la Figura \ref{fig:eonwdm}, se muestra una comparación en la asignación de demandas en ambas tecnologías, observándose un mejor aprovechamiento del espectro óptico para el caso de las redes EON, debido a un menor desperdicio de ancho en banda.
 
-En la Figura \ref{fig:eonwdm}, se muestra una comparación en la asignación de demandas en ambas tecnologías, observándose un mejor aprovechamiento del espectro óptico para el caso de las redes EON, debido a un menor desperdicio de ancho en banda.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.95\textwidth]{capitulos/img/eonwdm.png}
-    \caption{Redes WDM v s Redes EON}
-    \label{fig:eonwdm}
-\end{figure}
+% % \begin{figure}
+% %     \centering
+% %     \includegraphics[width=0.95\textwidth]{capitulos/img/eonwdm.png}
+% %     \caption{Redes WDM v s Redes EON}
+% %     \label{fig:eonwdm}
+% % \end{figure}
 
 
 \section{Fragmentación del Ancho de Banda en EON}

@@ -2376,40 +2376,39 @@
     <bcf:citekey order="2" intorder="1">jinno2009spectrum</bcf:citekey>
     <bcf:citekey order="3" intorder="1">shi2013effect</bcf:citekey>
     <bcf:citekey order="4" intorder="1">zhang2014dynamic</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">jinno2009spectrum</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">chatterjee2017fragmentation</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">talebi2014spectrum</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">zhang2014dynamic</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">comellas2018periodic</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">davalos2019spectrum</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">luo2012partial</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">takita2016wavelength</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">chatterjee2017fragmentation</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">talebi2014spectrum</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">zhang2014dynamic</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">comellas2018periodic</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">davalos2019spectrum</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">luo2012partial</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">takita2016wavelength</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">favero2015new</bcf:citekey>
     <bcf:citekey order="13" intorder="1">favero2015new</bcf:citekey>
     <bcf:citekey order="14" intorder="1">favero2015new</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">favero2015new</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">zhang2013bandwidth</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">zhang2012priority</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">zhang2014dynamic</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">zhang2020matrix</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">mitchell1997machine</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">rashid2016make</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">choudhury2019recent</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">panayiotou2019data</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">luo2019leveraging</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">aibin2018traffic</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">chen2018deep</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">trindade2020machine</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">xiong2019machine</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">quagliotti2017spectrum</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">wang2012utilization</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">wright2015minimum</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">zhang2013bandwidth</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">wang2012spectrum</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">davalos2019spectrum</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">tensowFlow</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">zhang2013bandwidth</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">zhang2012priority</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">zhang2014dynamic</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">zhang2020matrix</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">mitchell1997machine</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">rashid2016make</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">choudhury2019recent</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">panayiotou2019data</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">luo2019leveraging</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">aibin2018traffic</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">chen2018deep</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">trindade2020machine</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">xiong2019machine</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">quagliotti2017spectrum</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">wang2012utilization</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">wright2015minimum</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">zhang2013bandwidth</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">wang2012spectrum</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">davalos2019spectrum</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">tensowFlow</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">davalos2019spectrum</bcf:citekey>
     <bcf:citekey order="36" intorder="1">davalos2019spectrum</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">davalos2019spectrum</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">von2014survey</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">von2014survey</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
