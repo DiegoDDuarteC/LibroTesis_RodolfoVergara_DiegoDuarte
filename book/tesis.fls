@@ -1,8 +1,8 @@
-PWD c:/Users/rsvf9/Documents/tesis/LibroTesis_RodolfoVergara_DiegoDuarte/book
+PWD c:/Users/DD/Desktop/FACU/Libro Tesis/Tesis_DiegoDuarte_RodolfoVergara/book
 INPUT c:/texlive/2025/texmf.cnf
 INPUT c:/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/rsvf9/Documents/tesis/LibroTesis_RodolfoVergara_DiegoDuarte/book/tesis.tex
+INPUT c:/Users/DD/Desktop/FACU/Libro Tesis/Tesis_DiegoDuarte_RodolfoVergara/book/tesis.tex
 OUTPUT tesis.log
 INPUT ./util/fpunathesis.cls
 INPUT ./util/fpunathesis.cls

@@ -1,4 +1,4 @@
-\chapter{Fragmentación en Redes Ópticas Elásticas}
+\chapter{Redes Ópticas Elásticas Multicore y Fragmentación del Ancho de Banda}
 Las redes ópticas que se basan en WDM dividen el espectro de cada enlace en canales cuyo ancho de banda se fija de 50 GHz o 100 GHz. Esto debido a que la Unión Internacional de Telecomunicaciones (\textit{ITU-T International Telecommunication Union}) especificó el estándar G.694.1 en el año 2002.
 %
 Estas redes WDM resultan muy rígidas, y debido a eso es posible que ocurra una utilización ineficiente de la capacidad, provocado por el hecho de que el espacio entre dos canales adyacentes es relativamente grande y si la señal que se transmite utiliza un ancho de banda muy bajo, gran parte del espectro será desperdiciado.
@@ -7,6 +7,7 @@ Estas redes WDM resultan muy rígidas, y debido a eso es posible que ocurra una 
 Una nueva tecnología denominada Redes Ópticas Elásticas o \textit{Elastic Optical Networks} (EON) y su evolución: Las Redes ópticas Elásticas Multinúcleo o \textit{Multicore Elastic Optical Networks} (MC-EON) el cual no solo dividen el espectro óptico en Ranuras de Frecuencia o \textit{Frequency Slots} (FS) de 12.5 GHz conforme a lo establecido por el estándar definido en ITU-T (G.694.1) en el año 2012, sino que las (MC-EON) introducen un nuevo dominio de multiplexación espacial, al permitir la transmisión simultánea de múltiples señales ópticas en diferentes núcleos dentro de una misma fibra.
 %
 Esta aproximación multidimensional proporciona una mayor escalabilidad, eficiencia en la asignación del espectro y reducción del consumo energético, posicionando a las MC-EON como una de las tecnologías mas prometedoras para la implementación de redes ópticas de ultra alta capacidad en escenarios de próxima generación.
+%
 
 % En la Figura \ref{fig:eonwdm}, se muestra una comparación en la asignación de demandas en ambas tecnologías, observándose un mejor aprovechamiento del espectro óptico para el caso de las redes EON, debido a un menor desperdicio de ancho en banda.
 
@@ -19,20 +20,33 @@ Esta aproximación multidimensional proporciona una mayor escalabilidad, eficien
 
 
 \section{Fragmentación del Ancho de Banda en EON}
-Las redes elásticas ópticas permiten que el ancho de banda requerido por la demanda sea ubicado en el lugar más conveniente, siguiendo dos principales restricciones:
+Las redes ópticas elásticas multinúcleo (MC-EON) permiten optimizar el uso del ancho de banda necesario para satisfacer una demanda, respetando tres restricciones fundamentales:
+%
 
 \begin{itemize}
-    \item \textbf{Restricción de continuidad del espectro:} los recursos de ancho de banda asignados a cada demanda deben ser los mismos a través de todos los enlaces físicos de la ruta.
-    \item \textbf{Restricción de consecutividad del espectro:} el ancho de banda asignado a una demanda debe ser contigua en el espectro, formando un solo bloque de FS. 
+    \item \textbf{Restricción de continuidad:} esta restricción implica que un cambio de luz o lightpath debe utilizar los mismos \textit{Frecuency Slots} (FS) a lo largo del camino establecido entre los nodos de origen y destino, tanto en la dimensión espectral como en la dimensión espacial (núcleo).
+    \item \textbf{Restricción de consecutividad:} esta restricción establece que todos los FS utilizados para establecer un lightpath deben ser contiguos en el dominio espectral, formando un solo bloque contiguo de FS dentro del mismo núcleo. 
 \end{itemize}
+%
 
-Estas restricciones dan lugar a que luego de varias asignaciones de demandas y liberaciones de recursos se produzca la aparición de bloques aislados de FS no utilizados en los enlaces ópticos y no coincidentes unos respecto a otros en enlaces consecutivos, en consecuencia, esto permite una alta probabilidad de bloqueo, por lo que la red podría no satisfacer una demanda a pesar de tener ancho de banda disponible en los enlaces, este problema se conoce como “Fragmentación de la red”.
+Estas restricciones conducen a que, tras sucesivas asignaciones y liberaciones de recursos, se genere la aparición de bloques aislados de FS no utilizados tanto en la dimensión espectral como en la dimesión espacial (núcleos) de los enlaces ópticos.
+Dichos bloques fragmentados presentan desalineación tanto entre enlaces consecutivos de la ruta como entre los diferentes núcleos de una misma fibra multinúcleo. Como consecuencia, se incrementa significativamente la probabilidad de bloqueo de solicitudes, 
+pudiendo la red rechazar demandas incluso cuando existe ancho de banda disponible suficiente en los enlaces. Este fenómeno se denomina \textbf{Fragmentación de la red} y en arquitecturas multinúcleo se manifiesta en dos domensiones complementarias:
+%
 
-%\begin{enumerate}[a)]
-%    \item Se muestra el estado del enlace con las conexiones asignadas.
-%    \item Se liberan recursos cuando una conexión expira.
-%    \item Se nota como una nueva solicitud de conexión es rechazada, porque a pesar de tener libre la cantidad de FS necesarios, estos no están contiguos en un bloque y la conexión no puede ubicarse en ninguno de los dos bloques, debido a la fragmentación del espectro.  
-%\end{enumerate}
+\begin{itemize}
+    \item \textbf{Fragmentación espectral:} se refiere a la presencia de bloques aislados de FS no utilizados en el dominio espectral, que no pueden ser aprovechados para establecer nuevas conexiones debido a las restricciones de continuidad y consecutividad.
+    \item \textbf{Fragmentación espacial:} se refiere a la desalineación de bloques de FS disponibles entre los diferentes núcleos de una misma fibra multinúcleo, lo que dificulta la asignación eficiente de recursos en la dimensión espacial.
+\end{itemize}
+%
+
+\textbf{Ejemplo ilustrativo del fenómeno:}
+\begin{enumerate}[1 -]
+   \item Se presenta el estado inicial del enlace mostrando las asignaciones activas de lightpaths distribuidos en los múltiples núcleos de la fibra.
+   \item Se produce la liberación de recursos al finalizar el tiempo de vida de determinadas conexiones, generando segmentos espectrales disponibles dispersos en diferentes núcleos y posiciones del espectro.
+   \item Se evidencia el rechazo de una nueva solicitud de conexión debido a que, pese a existir una cantidad agregada suficiente de FS libres en la red, estos no satisfacen simultáneamente las restricciones de contigüidad espectral dentro de un único núcleo y continuidad espacial a lo largo de la ruta. La conexión resulta bloqueada en todos los núcleos disponibles como resultado de la fragmentación tanto espectral como espacial inherente al sistema multinúcleo.  
+\end{enumerate}
+%
 
 Un ejemplo de un escenario donde se pueden apreciar las restricciones de continuidad y contigüidad se muestra en la figura \ref{fig:fragmentacion} donde se considera una demanda de origen en el nodo ``A'' y destino en el nodo ``B'' con dos FS a ser asignados en el espectro.
 
