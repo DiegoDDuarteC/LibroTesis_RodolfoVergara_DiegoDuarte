@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.24)  20 OCT 2025 20:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.24)  25 OCT 2025 17:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1061,18 +1061,22 @@ LaTeX Info: Redefining \% on input line 171.
 
 LaTeX Warning: Citation '[]' on page 35 undefined on input line 174.
 
-)
+
+
+LaTeX Info: Redefining \. on input line 185.
+LaTeX Info: Redefining \% on input line 185.
+[35])
 
 LaTeX Info: Redefining \. on input line 72.
 LaTeX Info: Redefining \% on input line 72.
-[35]
+[36]
 \openout2 = `capitulos/capitulo4.aux'.
 
  (./capitulos/capitulo4.tex
 Cap\'{\i }tulo 4.
 
 
-[36
+[37
 
 
 
@@ -1080,17 +1084,21 @@ Cap\'{\i }tulo 4.
 
 ]
 
-LaTeX Info: Redefining \. on input line 39.
-LaTeX Info: Redefining \% on input line 39.
-[37]
-
-LaTeX Info: Redefining \. on input line 62.
-LaTeX Info: Redefining \% on input line 62.
+LaTeX Info: Redefining \. on input line 32.
+LaTeX Info: Redefining \% on input line 32.
 [38]
-<capitulos/img/ejemploMetricasCompleto4.png, id=193, 192.72pt x 163.812pt>
+
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
+[39]
+
+LaTeX Info: Redefining \. on input line 94.
+LaTeX Info: Redefining \% on input line 94.
+[40]
+<capitulos/img/ejemploMetricasCompleto4.png, id=200, 192.72pt x 163.812pt>
 File: capitulos/img/ejemploMetricasCompleto4.png Graphic file (type png)
 <use capitulos/img/ejemploMetricasCompleto4.png>
-Package pdftex.def Info: capitulos/img/ejemploMetricasCompleto4.png  used on input line 78.
+Package pdftex.def Info: capitulos/img/ejemploMetricasCompleto4.png  used on input line 101.
 (pdftex.def)             Requested size: 426.79135pt x 362.77206pt.
 
 
@@ -1098,67 +1106,67 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-LaTeX Info: Redefining \. on input line 92.
-LaTeX Info: Redefining \% on input line 92.
-[39]
+LaTeX Info: Redefining \. on input line 116.
+LaTeX Info: Redefining \% on input line 116.
+[41]
 
-LaTeX Info: Redefining \. on input line 101.
-LaTeX Info: Redefining \% on input line 101.
-[40 <./capitulos/img/ejemploMetricasCompleto4.png>]
-<capitulos/img/trafico_1_a.png, id=201, 406.51875pt x 30.86531pt>
+LaTeX Info: Redefining \. on input line 126.
+LaTeX Info: Redefining \% on input line 126.
+[42 <./capitulos/img/ejemploMetricasCompleto4.png>]
+<capitulos/img/trafico_1_a.png, id=210, 406.51875pt x 30.86531pt>
 File: capitulos/img/trafico_1_a.png Graphic file (type png)
 <use capitulos/img/trafico_1_a.png>
-Package pdftex.def Info: capitulos/img/trafico_1_a.png  used on input line 106.
+Package pdftex.def Info: capitulos/img/trafico_1_a.png  used on input line 129.
 (pdftex.def)             Requested size: 426.79135pt x 32.40575pt.
-<capitulos/img/trafico_2_b.png, id=202, 406.51875pt x 30.86531pt>
+<capitulos/img/trafico_2_b.png, id=211, 406.51875pt x 30.86531pt>
 File: capitulos/img/trafico_2_b.png Graphic file (type png)
 <use capitulos/img/trafico_2_b.png>
-Package pdftex.def Info: capitulos/img/trafico_2_b.png  used on input line 107.
+Package pdftex.def Info: capitulos/img/trafico_2_b.png  used on input line 130.
 (pdftex.def)             Requested size: 426.79135pt x 32.40575pt.
-<capitulos/img/trafico_3_c.png, id=203, 406.51875pt x 30.86531pt>
+<capitulos/img/trafico_3_c.png, id=212, 406.51875pt x 30.86531pt>
 File: capitulos/img/trafico_3_c.png Graphic file (type png)
 <use capitulos/img/trafico_3_c.png>
-Package pdftex.def Info: capitulos/img/trafico_3_c.png  used on input line 108.
+Package pdftex.def Info: capitulos/img/trafico_3_c.png  used on input line 131.
 (pdftex.def)             Requested size: 426.79135pt x 32.40575pt.
 
 
-LaTeX Info: Redefining \. on input line 125.
-LaTeX Info: Redefining \% on input line 125.
-[41 <./capitulos/img/trafico_1_a.png> <./capitulos/img/trafico_2_b.png> <./capitulos/img/trafico_3_c.png>]
-<capitulos/img/graficoErrorEs.png, id=211, 332.74312pt x 237.13594pt>
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
+[43 <./capitulos/img/trafico_1_a.png> <./capitulos/img/trafico_2_b.png> <./capitulos/img/trafico_3_c.png>]
+<capitulos/img/graficoErrorEs.png, id=218, 332.74312pt x 237.13594pt>
 File: capitulos/img/graficoErrorEs.png Graphic file (type png)
 <use capitulos/img/graficoErrorEs.png>
-Package pdftex.def Info: capitulos/img/graficoErrorEs.png  used on input line 140.
+Package pdftex.def Info: capitulos/img/graficoErrorEs.png  used on input line 163.
 (pdftex.def)             Requested size: 256.0748pt x 182.50838pt.
 
 
-LaTeX Info: Redefining \. on input line 144.
-LaTeX Info: Redefining \% on input line 144.
-[42]
+LaTeX Info: Redefining \. on input line 167.
+LaTeX Info: Redefining \% on input line 167.
+[44]
 
-LaTeX Info: Redefining \. on input line 158.
-LaTeX Info: Redefining \% on input line 158.
-[43 <./capitulos/img/graficoErrorEs.png>]
-<capitulos/img/trafico_1.png, id=220, 513.92pt x 41.15375pt>
+LaTeX Info: Redefining \. on input line 181.
+LaTeX Info: Redefining \% on input line 181.
+[45 <./capitulos/img/graficoErrorEs.png>]
+<capitulos/img/trafico_1.png, id=226, 513.92pt x 41.15375pt>
 File: capitulos/img/trafico_1.png Graphic file (type png)
 <use capitulos/img/trafico_1.png>
-Package pdftex.def Info: capitulos/img/trafico_1.png  used on input line 162.
+Package pdftex.def Info: capitulos/img/trafico_1.png  used on input line 185.
 (pdftex.def)             Requested size: 426.79135pt x 34.17706pt.
-<capitulos/img/grafico_prediccion_usnet.PNG, id=221, 676.02562pt x 71.51718pt>
+<capitulos/img/grafico_prediccion_usnet.PNG, id=227, 676.02562pt x 71.51718pt>
 File: capitulos/img/grafico_prediccion_usnet.PNG Graphic file (type png)
 <use capitulos/img/grafico_prediccion_usnet.PNG>
-Package pdftex.def Info: capitulos/img/grafico_prediccion_usnet.PNG  used on input line 166.
+Package pdftex.def Info: capitulos/img/grafico_prediccion_usnet.PNG  used on input line 189.
 (pdftex.def)             Requested size: 426.79135pt x 45.15208pt.
 )
 
 LaTeX Info: Redefining \. on input line 73.
 LaTeX Info: Redefining \% on input line 73.
-[44 <./capitulos/img/trafico_1.png> <./capitulos/img/grafico_prediccion_usnet.PNG>]
+[46 <./capitulos/img/trafico_1.png> <./capitulos/img/grafico_prediccion_usnet.PNG>]
 \openout2 = `capitulos/capitulo5.aux'.
 
  (./capitulos/capitulo5.tex
 Cap\'{\i }tulo 5.
-<capitulos/img/diagramaML6.png, id=227, 325.215pt x 203.25937pt>
+<capitulos/img/diagramaML6.png, id=233, 325.215pt x 203.25937pt>
 File: capitulos/img/diagramaML6.png Graphic file (type png)
 <use capitulos/img/diagramaML6.png>
 Package pdftex.def Info: capitulos/img/diagramaML6.png  used on input line 8.
@@ -1168,7 +1176,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[45
+[47
 
 
 
@@ -1178,26 +1186,26 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Info: Redefining \. on input line 30.
 LaTeX Info: Redefining \% on input line 30.
-[46 <./capitulos/img/diagramaML6.png>]
+[48 <./capitulos/img/diagramaML6.png>]
 
 LaTeX Info: Redefining \. on input line 49.
 LaTeX Info: Redefining \% on input line 49.
-[47]
+[49]
 
 LaTeX Info: Redefining \. on input line 67.
 LaTeX Info: Redefining \% on input line 67.
-[48]
-<capitulos/img/nsfnet_pareto_1.png, id=241, 513.92pt x 385.44pt>
+[50]
+<capitulos/img/nsfnet_pareto_1.png, id=247, 513.92pt x 385.44pt>
 File: capitulos/img/nsfnet_pareto_1.png Graphic file (type png)
 <use capitulos/img/nsfnet_pareto_1.png>
 Package pdftex.def Info: capitulos/img/nsfnet_pareto_1.png  used on input line 71.
 (pdftex.def)             Requested size: 384.1096pt x 288.08534pt.
-<capitulos/img/nsfnet_pareto_2.png, id=242, 513.92pt x 385.44pt>
+<capitulos/img/nsfnet_pareto_2.png, id=248, 513.92pt x 385.44pt>
 File: capitulos/img/nsfnet_pareto_2.png Graphic file (type png)
 <use capitulos/img/nsfnet_pareto_2.png>
 Package pdftex.def Info: capitulos/img/nsfnet_pareto_2.png  used on input line 72.
 (pdftex.def)             Requested size: 384.1096pt x 288.08534pt.
-<capitulos/img/nsfnet_pareto_3.png, id=243, 513.92pt x 385.44pt>
+<capitulos/img/nsfnet_pareto_3.png, id=249, 513.92pt x 385.44pt>
 File: capitulos/img/nsfnet_pareto_3.png Graphic file (type png)
 <use capitulos/img/nsfnet_pareto_3.png>
 Package pdftex.def Info: capitulos/img/nsfnet_pareto_3.png  used on input line 78.
@@ -1206,18 +1214,18 @@ Package pdftex.def Info: capitulos/img/nsfnet_pareto_3.png  used on input line 7
 
 LaTeX Info: Redefining \. on input line 82.
 LaTeX Info: Redefining \% on input line 82.
-[49 <./capitulos/img/nsfnet_pareto_1.png> <./capitulos/img/nsfnet_pareto_2.png>]
-<capitulos/img/paretoUsnetSB.jpg, id=247, 481.04718pt x 368.87813pt>
+[51 <./capitulos/img/nsfnet_pareto_1.png> <./capitulos/img/nsfnet_pareto_2.png>]
+<capitulos/img/paretoUsnetSB.jpg, id=253, 481.04718pt x 368.87813pt>
 File: capitulos/img/paretoUsnetSB.jpg Graphic file (type jpg)
 <use capitulos/img/paretoUsnetSB.jpg>
 Package pdftex.def Info: capitulos/img/paretoUsnetSB.jpg  used on input line 85.
 (pdftex.def)             Requested size: 384.1096pt x 294.55128pt.
-<capitulos/img/paretoUsnetSBSB.jpeg, id=248, 642.4pt x 481.8pt>
+<capitulos/img/paretoUsnetSBSB.jpeg, id=254, 642.4pt x 481.8pt>
 File: capitulos/img/paretoUsnetSBSB.jpeg Graphic file (type jpg)
 <use capitulos/img/paretoUsnetSBSB.jpeg>
 Package pdftex.def Info: capitulos/img/paretoUsnetSBSB.jpeg  used on input line 90.
 (pdftex.def)             Requested size: 384.1096pt x 288.08975pt.
-<capitulos/img/paretoUsnetSBS.png, id=249, 481.8pt x 373.395pt>
+<capitulos/img/paretoUsnetSBS.png, id=255, 481.8pt x 373.395pt>
 File: capitulos/img/paretoUsnetSBS.png Graphic file (type png)
 <use capitulos/img/paretoUsnetSBS.png>
 Package pdftex.def Info: capitulos/img/paretoUsnetSBS.png  used on input line 91.
@@ -1226,22 +1234,22 @@ Package pdftex.def Info: capitulos/img/paretoUsnetSBS.png  used on input line 91
 
 LaTeX Info: Redefining \. on input line 95.
 LaTeX Info: Redefining \% on input line 95.
-[50 <./capitulos/img/nsfnet_pareto_3.png> <./capitulos/img/paretoUsnetSB.jpg>]
+[52 <./capitulos/img/nsfnet_pareto_3.png> <./capitulos/img/paretoUsnetSB.jpg>]
 
 LaTeX Info: Redefining \. on input line 95.
 LaTeX Info: Redefining \% on input line 95.
-[51 <./capitulos/img/paretoUsnetSBSB.jpeg> <./capitulos/img/paretoUsnetSBS.png>])
+[53 <./capitulos/img/paretoUsnetSBSB.jpeg> <./capitulos/img/paretoUsnetSBS.png>])
 
 LaTeX Info: Redefining \. on input line 74.
 LaTeX Info: Redefining \% on input line 74.
-[52]
+[54]
 \openout2 = `capitulos/capitulo6.aux'.
 
  (./capitulos/capitulo6.tex
 Cap\'{\i }tulo 6.
 
 
-[53
+[55
 
 
 
@@ -1251,15 +1259,15 @@ Cap\'{\i }tulo 6.
 
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
-[54]
+[56]
 
 LaTeX Info: Redefining \. on input line 44.
 LaTeX Info: Redefining \% on input line 44.
-[55])
+[57])
 
 LaTeX Info: Redefining \. on input line 75.
 LaTeX Info: Redefining \% on input line 75.
-[56]
+[58]
 \openout2 = `./anexo-1.aux'.
 
 
@@ -1271,7 +1279,7 @@ Overfull \hbox (2.30606pt too wide) in paragraph at lines 84--84
 
 
 
-[57
+[59
 
 
 
@@ -1283,7 +1291,7 @@ Overfull \hbox (2.30606pt too wide) in paragraph at lines 84--84
 
 LaTeX Info: Redefining \. on input line 85.
 LaTeX Info: Redefining \% on input line 85.
-[58] (./tesis.aux
+[60] (./tesis.aux
 LaTeX Info: Redefining \sptext on input line 11.
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
@@ -1297,18 +1305,18 @@ Package logreq Info: Writing requests to 'tesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17689 strings out of 467797
- 322176 string characters out of 5435982
- 1188863 words of memory out of 5000000
- 46073 multiletter control sequences out of 15000+600000
+ 17685 strings out of 467797
+ 321756 string characters out of 5435982
+ 1188638 words of memory out of 5000000
+ 46069 multiletter control sequences out of 15000+600000
  644974 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,16n,79p,1088b,1990s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on tesis.pdf (66 pages, 1680101 bytes).
+Output written on tesis.pdf (68 pages, 1686645 bytes).
 PDF statistics:
- 377 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
+ 384 PDF objects out of 1000 (max. 8388607)
+ 223 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 

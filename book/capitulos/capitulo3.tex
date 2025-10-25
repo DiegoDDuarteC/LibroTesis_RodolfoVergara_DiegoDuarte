@@ -176,9 +176,10 @@ Las principales áreas de aplicación de estas técnicas en el contexto de MC-EO
 \end{itemize}
 %
 
-En el área de interés de este trabajo, nos encontramos con algunos trabajos enfocados a la solución del problema de la fragmentación, pero enfocados en otro tipo de redes, como el presentado en \cite{trindade2020machine}, el cual se encuentra enfocado en \textit{Space Division Multiplexing Elastic Optical Networks} o SDM-EON , utilizando redes neuronales, específicamente una conocida como red neuronal de Elman, para la predicción de tráfico de forma a mitigar la fragmentación y el problema de \textit{Cross-talk}.
+Durante este trabajo dentro de los puntos mas destacados nos podemos encontrar con algunos trabajos cuyo principal objetivo y enfoque es la solución al problema de la fragmentación de la red, con alguno de ellos para otro tipo de redes, como el presentado en \cite{trindade2020machine}, el cual encuentra su principal enfoque en \textit{Space Division Multiplexing Elastic Optical Networks} o SDM-EON , implementando redes neuronales, específicamente la red neuronal de Elman, para la predicción de tráfico de manera de disminuir la fragmentación y la diafonía o \textit{Cross-talk}.
+ También se cuenta con el trabajo presentado por Enciso y Silva, el cual propone un algoritmo para decidir el mejor momento para disparar la desfragmentación de la red. Tomando ese trabajo como base, en este trabajo se propone un modelo para predecir el mejor momento para para ejecutar la desfragmentación para Redes Ópticas Elásticas Multinúcleo (MC-EON). De manera en que se contemplan los mismos problemas agregando la complejidad que conlleva el uso de múltiples núcleos en una misma fibra.
+%
 
-Para este tipo de redes también contamos con un algoritmo de desfragmentación basado en Machine Learning \cite{xiong2019machine}. Los autores proponen un algoritmo de desfragmentación utilizando un enfoque de aprendizaje no supervisado, por lo que no requiere de conocimientos previos de la red. El algoritmo se encarga de identificar aquellos \textit{lightpaths} que pueden ser agrupados en base a ciertas características, para luego mapear esos grupos a los núcleos y reordenar al espectro sin necesidad de realizar re-ruteos.
-
-
+Para redes MC-EON también contamos con algoritmos de desfragmentación basados en Machine Learning, como el presentado en \cite{xiong2019machine}, donde los autores proponen un enfoque de aprendizaje no supervisado que no requiere conocimientos previos de la red. El algoritmo identifica aquellos \textit{lightpaths} que pueden ser agrupados en base a ciertas características, para luego mapear esos grupos a los núcleos y reordenar el espectro sin necesidad de realizar re-ruteos.
+%
 

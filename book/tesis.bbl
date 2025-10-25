@@ -133,12 +133,12 @@
     \endentry
     \entry{zhang2014dynamic}{article}{}{}
       \name{author}{4}{}{%
-        {{un=1,uniquepart=given,hash=1d5d31f94a9041f4f5e9c5718ef2f433}{%
+        {{un=0,uniquepart=base,hash=1d5d31f94a9041f4f5e9c5718ef2f433}{%
            family={Zhang},
            familyi={Z\bibinitperiod},
            given={Mingyang},
            giveni={M\bibinitperiod},
-           givenun=1}}%
+           givenun=0}}%
         {{un=0,uniquepart=base,hash=89b46b01e15d48be6174867364817342}{%
            family={You},
            familyi={Y\bibinitperiod},
@@ -377,169 +377,14 @@
       \field{pages}{99\bibrangedash 107}
       \range{pages}{9}
     \endentry
-    \entry{quagliotti2017spectrum}{article}{}{}
-      \name{author}{6}{}{%
-        {{un=0,uniquepart=base,hash=6d6e207aba66a7cee3a4646c43ff502d}{%
-           family={Quagliotti},
-           familyi={Q\bibinitperiod},
-           given={M},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=6c82ec4e28c50ffaafe8e00ed0237998}{%
-           family={Arango},
-           familyi={A\bibinitperiod},
-           given={D\bibnamedelima Cifuentes},
-           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ba0f38e60ddef240288717279b0e7520}{%
-           family={Schiano},
-           familyi={S\bibinitperiod},
-           given={M},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=72d2bd1e018351fcb0c288ef7333effd}{%
-           family={Carena},
-           familyi={C\bibinitperiod},
-           given={A},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=e1d14d16d0e3033f61a2ae8b1dd194b1}{%
-           family={Cantono},
-           familyi={C\bibinitperiod},
-           given={M},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=cea32d6a76621c27b89f955699713e10}{%
-           family={Curri},
-           familyi={C\bibinitperiod},
-           given={V},
-           giveni={V\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {IET}%
-      }
-      \strng{namehash}{c055bd6eab070dd8a637f818995e5504}
-      \strng{fullhash}{94dae89408806fae17696ce3ce0f6284}
-      \strng{fullhashraw}{94dae89408806fae17696ce3ce0f6284}
-      \strng{bibnamehash}{c055bd6eab070dd8a637f818995e5504}
-      \strng{authorbibnamehash}{c055bd6eab070dd8a637f818995e5504}
-      \strng{authornamehash}{c055bd6eab070dd8a637f818995e5504}
-      \strng{authorfullhash}{94dae89408806fae17696ce3ce0f6284}
-      \strng{authorfullhashraw}{94dae89408806fae17696ce3ce0f6284}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Spectrum fragmentation metrics and their use in optical channel allocation algorithms}
-      \field{year}{2017}
-    \endentry
-    \entry{wang2012utilization}{inproceedings}{}{}
-      \name{author}{5}{}{%
-        {{un=1,uniquepart=given,hash=f2e5f45a009e71ca581b562c25df1b47}{%
-           family={Wang},
-           familyi={W\bibinitperiod},
-           given={Xi},
-           giveni={X\bibinitperiod},
-           givenun=1}}%
-        {{un=0,uniquepart=base,hash=d003999e09e53ee999fd1096f39fe053}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Qiong},
-           giveni={Q\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=411a43300181dae38da7f4405da28021}{%
-           family={Kim},
-           familyi={K\bibinitperiod},
-           given={Inwoong},
-           giveni={I\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=da5ce5232a7218f04ad4540a772f6a0b}{%
-           family={Palacharla},
-           familyi={P\bibinitperiod},
-           given={Paparao},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0a05a754660001abfde8ab789d262d33}{%
-           family={Sekiya},
-           familyi={S\bibinitperiod},
-           given={Motoyoshi},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{organization}{1}{%
-        {Optical Society of America}%
-      }
-      \strng{namehash}{285f5d8c256e01b478750d976f48fe64}
-      \strng{fullhash}{c721d7ff2e9165ddef6c0d7ff3053d65}
-      \strng{fullhashraw}{c721d7ff2e9165ddef6c0d7ff3053d65}
-      \strng{bibnamehash}{285f5d8c256e01b478750d976f48fe64}
-      \strng{authorbibnamehash}{285f5d8c256e01b478750d976f48fe64}
-      \strng{authornamehash}{285f5d8c256e01b478750d976f48fe64}
-      \strng{authorfullhash}{c721d7ff2e9165ddef6c0d7ff3053d65}
-      \strng{authorfullhashraw}{c721d7ff2e9165ddef6c0d7ff3053d65}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Optical Fiber Communication Conference}
-      \field{title}{Utilization entropy for assessing resource fragmentation in optical networks}
-      \field{year}{2012}
-      \field{pages}{OTh1A\bibrangedash 2}
-      \range{pages}{-1}
-    \endentry
-    \entry{wright2015minimum}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=93a6ba9f36b93c9a5fc18e0abbd69436}{%
-           family={Wright},
-           familyi={W\bibinitperiod},
-           given={Paul},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b7ead96266376989a5c5957f8be85589}{%
-           family={Parker},
-           familyi={P\bibinitperiod},
-           given={Michael\bibnamedelima C},
-           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=57c0382a44473069c294d76999a56e09}{%
-           family={Lord},
-           familyi={L\bibinitperiod},
-           given={Andrew},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Optical Society of America}%
-      }
-      \strng{namehash}{77ccb98c6098f6ada92598c1a9572e70}
-      \strng{fullhash}{77ccb98c6098f6ada92598c1a9572e70}
-      \strng{fullhashraw}{77ccb98c6098f6ada92598c1a9572e70}
-      \strng{bibnamehash}{77ccb98c6098f6ada92598c1a9572e70}
-      \strng{authorbibnamehash}{77ccb98c6098f6ada92598c1a9572e70}
-      \strng{authornamehash}{77ccb98c6098f6ada92598c1a9572e70}
-      \strng{authorfullhash}{77ccb98c6098f6ada92598c1a9572e70}
-      \strng{authorfullhashraw}{77ccb98c6098f6ada92598c1a9572e70}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Optical Communications and Networking}
-      \field{number}{1}
-      \field{title}{Minimum-and maximum-entropy routing and spectrum assignment for flexgrid elastic optical networking}
-      \field{volume}{7}
-      \field{year}{2015}
-      \field{pages}{A66\bibrangedash A72}
-      \range{pages}{-1}
-    \endentry
     \entry{zhang2013bandwidth}{inproceedings}{}{}
       \name{author}{5}{}{%
-        {{un=1,uniquepart=given,hash=1d5d31f94a9041f4f5e9c5718ef2f433}{%
+        {{un=0,uniquepart=base,hash=1d5d31f94a9041f4f5e9c5718ef2f433}{%
            family={Zhang},
            familyi={Z\bibinitperiod},
            given={Mingyang},
            giveni={M\bibinitperiod},
-           givenun=1}}%
+           givenun=0}}%
         {{un=0,uniquepart=base,hash=4196e499795f58154b9a2ca5fbface89}{%
            family={Shi},
            familyi={S\bibinitperiod},
@@ -587,59 +432,48 @@
       \field{pages}{3894\bibrangedash 3898}
       \range{pages}{5}
     \endentry
-    \entry{wang2012spectrum}{article}{}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{5}{}{%
-        {{un=1,uniquepart=given,hash=330e18fb499a5fa7fa598125962993f7}{%
-           family={Wang},
+    \entry{wright2015minimum}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=93a6ba9f36b93c9a5fc18e0abbd69436}{%
+           family={Wright},
            familyi={W\bibinitperiod},
-           given={Ying},
-           giveni={Y\bibinitperiod},
-           givenun=1}}%
-        {{un=1,uniquepart=given,hash=2f4cc163c8766d4437008ea260208de8}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Jie},
-           giveni={J\bibinitperiod},
-           givenun=1}}%
-        {{un=0,uniquepart=base,hash=51ecb770e82fd99de5a41a2446492e0d}{%
-           family={Zhao},
-           familyi={Z\bibinitperiod},
-           given={Yongli},
-           giveni={Y\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=a271eaaa49991dfa4ca461fb6e68706a}{%
-           family={Liu},
+        {{un=0,uniquepart=base,hash=b7ead96266376989a5c5957f8be85589}{%
+           family={Parker},
+           familyi={P\bibinitperiod},
+           given={Michael\bibnamedelima C},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=57c0382a44473069c294d76999a56e09}{%
+           family={Lord},
            familyi={L\bibinitperiod},
-           given={Junyan},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=750269e0628ea342a402c85d60d293fe}{%
-           family={Gu},
-           familyi={G\bibinitperiod},
-           given={Wanyi},
-           giveni={W\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{861d3561078aa4b22f46dcc058ed9bc6}
-      \strng{fullhash}{1a0e1aacc3954c929fc93fd54adcbe16}
-      \strng{fullhashraw}{1a0e1aacc3954c929fc93fd54adcbe16}
-      \strng{bibnamehash}{861d3561078aa4b22f46dcc058ed9bc6}
-      \strng{authorbibnamehash}{861d3561078aa4b22f46dcc058ed9bc6}
-      \strng{authornamehash}{861d3561078aa4b22f46dcc058ed9bc6}
-      \strng{authorfullhash}{1a0e1aacc3954c929fc93fd54adcbe16}
-      \strng{authorfullhashraw}{1a0e1aacc3954c929fc93fd54adcbe16}
+      \list{publisher}{1}{%
+        {Optical Society of America}%
+      }
+      \strng{namehash}{77ccb98c6098f6ada92598c1a9572e70}
+      \strng{fullhash}{77ccb98c6098f6ada92598c1a9572e70}
+      \strng{fullhashraw}{77ccb98c6098f6ada92598c1a9572e70}
+      \strng{bibnamehash}{77ccb98c6098f6ada92598c1a9572e70}
+      \strng{authorbibnamehash}{77ccb98c6098f6ada92598c1a9572e70}
+      \strng{authornamehash}{77ccb98c6098f6ada92598c1a9572e70}
+      \strng{authorfullhash}{77ccb98c6098f6ada92598c1a9572e70}
+      \strng{authorfullhashraw}{77ccb98c6098f6ada92598c1a9572e70}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Chinese Optics Letters}
-      \field{number}{s1}
-      \field{title}{Spectrum consecutiveness based routing and spectrum allocation in flexible bandwidth networks}
-      \field{volume}{10}
-      \field{year}{2012}
-      \field{pages}{S10606}
+      \field{journaltitle}{Journal of Optical Communications and Networking}
+      \field{number}{1}
+      \field{title}{Minimum-and maximum-entropy routing and spectrum assignment for flexgrid elastic optical networking}
+      \field{volume}{7}
+      \field{year}{2015}
+      \field{pages}{A66\bibrangedash A72}
       \range{pages}{-1}
     \endentry
     \entry{davalos2019spectrum}{article}{}{}
@@ -704,8 +538,8 @@
       \range{pages}{9}
     \endentry
     \entry{tensowFlow}{misc}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.tensorflow.org}}
       \field{title}{Tensor Flow}

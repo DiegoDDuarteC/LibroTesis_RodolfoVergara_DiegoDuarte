@@ -1,76 +1,99 @@
 \chapter{ Método Propuesto }
-Este trabajo propone una solución para la selección del momento de disparo de procesos proactivos de desfragmentación en redes EON, basado en técnicas de \textit{Machine Learning} para los cuáles predicen la probabilidad de bloqueo de una demanda \textit{unicast} en un momento determinado \textit{t}.
+Este trabajo propone una solución para determinar los momentos en los que se disparará la ejecución de los procesos de desfragmentación de manera proactiva en redes MC-EON, mediante la utilización de técnicas de \textit{Machine Learning} para predecir el índice de fragmentación \textit{\textbf{BFR}} que sufrirá la red mediante el tráfico de red en un determinado periodo de tiempo \textit{t} y en base a eso, decidir si ejecutar la desfragmentación o no.
+ Esto a fin de proceder de la mejor manera ante la red cuando llegue a un estado de alta fragmentación que provoque un aumento en la probabilidad de bloqueo de las demandas y que la desfragmentación de la red en ese punto ya no sea óptima.
+%
 
-Para esta predicción se utiliza un modelo de regresión basado en redes neuronales, utilizando un conjunto de datos de simulaciones de tráfico \textit{unicast} en diversas topologías de redes EON, tomando parámetros o características relacionadas a la fragmentación y la utilización de la red como datos de entrada y produciendo un valor estimado de la probabilidad de bloqueo. Se fija además un valor límite de probabilidad para la realización del proceso de desfragmentación.
+Para esta predicción se utiliza primeramente un valor que indique el umbral del indice de fragmentación, a modo que el valor predicho del índice de fragmentación a futuro no supere ese umbral, en caso contrario realizar las desfragmentaciones con menor frecuencia hasta que el indice de fragmentación futuro \textit{\textbf{BFR}} sea menor al umbral.
+ Así como tambien un modelo de regresión y clasificación, utilizando un conjunto de datos de simulaciones de tráfico \textit{unicast}, tomando parámetros o características relacionadas a la fragmentación, la utilización de la red y las métricas específicas de múltiples núcleos como datos de entrada, produciendo un valor estimado del índice de fragmentación que experimentará la red en un periodo de tiempo \textit{t}.
+  A partir de este valor predicho, se determinará la frecuencia de desfragmentaciones realizadas fijando un umbral que permite actuar antes de que la red alcance estados críticos de fragmentación que incrementen significativamente la probabilidad de bloqueo de las demandas.
+%
 
 \section{Características}
 
-En el área de \textit{Machine Learning}, se conoce cómo ``características'' a los parámetros o datos de entrada del modelo de aprendizaje.
+En el área de \textit{Machine Learning}, se conoce como ``características'' a los parámetros o datos de entrada del modelo de aprendizaje.
 
-Las características seleccionadas fueron aquellas que se encuentran relacionadas al uso y la fragmentación de la red, así como también al bloqueo de las demandas. Se tomaron las principales métricas usadas para la determinación del estado de fragmentación, de acuerdo con \cite{quagliotti2017spectrum}, además de otras relacionadas a la utilización de la red. 
+Las características seleccionadas fueron aquellas relacionadas al uso y la fragmentación de la red, así como métricas específicas de redes MC-EON. Se tomaron las principales métricas utilizadas para la determinación del estado de fragmentación, además de otras relacionadas a la utilización de la red y al comportamiento del tráfico, con el objetivo de predecir el índice de fragmentación futuro y determinar los momentos óptimos para ejecutar la desfragmentación de manera proactiva.
 
 Estas características son las siguientes: 
 
 \begin{itemize}
-    \item Entropía de utilización\cite{wang2012utilization}: La entropía de utilización es una métrica de fragmentación de enlaces de la red.  Un valor bajo de entropía indica que el ancho de banda de los enlaces de fibra óptica está siendo usado de forma ordenada, con menos bloques de FS utilizados o no utilizados, y con un nivel de fragmentación menor.
-    La entropía de un enlace está definida como:
+    \item \textit{Bandwidth Fragmentation Ratio} o Relación de Fragmentación de ancho de banda (BFR)\cite{zhang2013bandwidth}: Representa el índice de fragmentación de los recursos de la red, siendo una de las métricas principales para evaluar la fragmentación externa. El BFR de un core en un enlace se define como:
     \begin{equation}
-        Ent_{link} = \sum_{i=1}^{N-1} FS_{i} \oplus FS_{i + 1}
+        BFR_{core} = 1 - \frac{MaxBlock()}{S^{free}}
     \end{equation}
-    donde N es la cantidad de FS en el enlace, \(FS_{i}\) representa al FS de índice i dentro del enlace, y tiene valor 1 si el FS está ocupado, y valor 0 en caso contrario, y se realiza una operación XOR sobre FS contiguos del enlace.
-    Para obtener la entropía de la red se calcula el promedio de la entropía en cada enlace:
+    Donde \textit{MaxBlock()} es el tamaño del mayor bloque de FS libres y \(S^{free}\) es la sumatoria total de FS libres en el core.
+    El BFR de la red se calcula como el promedio ponderado considerando todos los cores de todos los enlaces:
     \begin{equation}
-        Ent_{red} = \sum_{i=1}^{\left | E \right |} \frac{Ent_{link - i}}{{\left | E \right |}}
+       BFR_{red} = 1 - \frac{\sum_{i=1}^{\left | E \right |} \sum_{j=1}^{C} MaxBlock_{i,j}}{\sum_{i=1}^{\left | E \right |} \sum_{j=1}^{C} S^{free}_{i,j}}
     \end{equation}
-    \item Entropía de Shannon (SHF)\cite{wright2015minimum}: Es una métrica de fragmentación de enlaces, que es una variación de la anterior característica, definida por.
-    \begin{equation}
-        SHF_{link} = \sum_{i=1}^{B} \frac{S_{i}^{free}}{N}~ln\frac{N}{S_{i}^{free}}
-    \end{equation}
-    Donde \(S^{free}\) representa la cantidad de FS libres en el enlace y \textit{B} la cantiadad de bloques de FS libres. Para calcular el SHF de la red se calcula el promedio de los valores calculados en todos los enlaces.
-    \begin{equation}
-        SHF_{red} = \sum_{i=1}^{\left | E \right |} \frac{SHF_{link - i}}{{\left | E \right |}}
-    \end{equation}
-    \item \textit{Bandwidth Fragmentation Ratio} o Relación de Fragmentación de ancho de banda o  (BFR)\cite{zhang2013bandwidth}: Representa el índice de fragmentación de los recursos de la red. El BFR de un link se define como:
-    \begin{equation}
-        BFR_{link} = 1 - \frac{MaxBlock()}{S^{free}}
-    \end{equation}
-    Donde \textit{MaxBlock()} es el tamaño del mayor bloque de FS libres y \(S^{free}\) es la sumatoria total de FS libres en el enlace \textit{link}.
-    El BFR de la red podemos calcular de la siguiente manera.
-    \begin{equation}
-       BFR_{red} = \sum_{i=1}^{\left | E \right |} \frac{BFR_{link - i}}{{\left | E \right |}}
-    \end{equation}
-    \item \textit{Maximum Slot Index} o Mayor Índice de FS utilizado (MSI): Este valor indica el valor del índice de FS más alto que está siendo utilizado dentro de un enlace.
-    Para calcular el MSI de la red, se halla el índice máximo usado en todos los enlaces de la red y se calcula el promedio:
-    \begin{equation}
-        MSI_{red} = \sum_{i=1}^{\left | E \right |} \frac{MSI_{link - i}}{{\left | E \right |}}
-    \end{equation}
-
-    Donde  \(MSI_{link} - i\) es el mayor índice utilizado en el enlace i.
-    \item Consecutividad del espectro (CE)\cite{wang2012spectrum}: Este valor refleja la alineación de los FS en un camino en particular, para obtener el valor para un camino en particular aplicamos la siguiente fórmula.
-    \begin{equation}
-        CE = \frac{Joins}{Bloques} \times \frac{S_{free}}{  N  }
-    \end{equation}
-    Donde \textit{Joins} se calcula como la cantidad total de bloques de dos FS libres adyacentes distintos dentro del enlace, \textit{Bloques} es la cantidad de bloques de FS libres en el enlace y \(S_{free}\) es la cantidad de FS libres en el enlace.
-    Y para calcular la consecutividad en una red se calculan previamente todos los caminos de dos enlaces en la red, y luego se calcula el valor de la consecutividad para todas esas rutas y al final se halla el promedio.
-    \begin{equation}
-        CE{red} = \sum_{i=1}^{\left | K \right |} \frac{CE_{link - i}}{{\left | K \right |}}
-    \end{equation}
-    donde \(CE_{link - i}\) representa la consecutividad de la ruta de dos enlaces i calculada previamente, y K es la cantidad de rutas de dos enlaces que existen en la red. 
-    \item Utilización de la Red: Se define como el cociente entre la sumatoria de todas las FS ocupados con la cantidad total de FS.
-    \begin{equation}
-        Uso_{link} =  \frac{sum(i)}{N}
-    \end{equation}
-    Donde \(sum(i)\) es la cantidad de FS utilizados en el enlace \(i\) y \(N\) es la cantidad total de FS en el enlace. 
+    Donde \(C\) es el número de cores por enlace, \(MaxBlock_{i,j}\) es el mayor bloque libre en el core \(j\) del enlace \(i\), y \(S^{free}_{i,j}\) es el total de FS libres en ese core.
     
+    \item Entropía de Shannon (SHF)\cite{wright2015minimum}: Métrica de fragmentación que mide la distribución de bloques libres en el espectro. Para un core en un enlace está definida por:
     \begin{equation}
-        Uso_{red} = \sum_{i=1}^{\left | E \right |} \frac{Uso_{link -i}}{\left | E \right |}
+        SHF_{core} = \sum_{i=1}^{B} \frac{S_{i}^{free}}{N}~\ln\frac{N}{S_{i}^{free}}
+    \end{equation}
+    Donde \(S_{i}^{free}\) representa el tamaño del bloque libre \(i\), \(N\) es el número total de FS en el core, y \(B\) es la cantidad de bloques de FS libres. Para calcular el SHF de la red se calcula el promedio de los valores en todos los cores de todos los enlaces:
+    \begin{equation}
+        SHF_{red} = \frac{1}{\left | E \right | \times C} \sum_{i=1}^{\left | E \right |} \sum_{j=1}^{C} SHF_{core_{i,j}}
     \end{equation}
     
-    \item Acumulación de FS bloqueados: Valor que muestra la sumatoria de las FS requeridos por demandas bloqueadas en las D demandas anteriores al periodo de tiempo actual.
+    \item Compacidad del Espectro (SC - \textit{Spectrum Compactness}): Métrica que evalúa qué tan compacto está el uso del espectro en un core. Se calcula considerando la dispersión de los FS ocupados y la cantidad de gaps intermedios. Para un core en un enlace se define como:
     \begin{equation}
-        FSB = \sum_{i=1}^{D} S_{i}^{block}
+        SC_{core} = \frac{s_{max} - s_{min} + 1}{S^{occupied}} \times \frac{\sum_{i=1}^{G} g_i}{G}
     \end{equation}
-    Donde \(S_{i}^{block}\) es la cantidad de FS solicitados por la demanda bloqueada i.
+    Donde \(s_{min}\) y \(s_{max}\) son los índices del primer y último FS ocupado respectivamente, \(S^{occupied}\) es la cantidad total de FS ocupados, \(g_i\) es el tamaño del gap libre \(i\), y \(G\) es la cantidad total de gaps entre bloques ocupados. Si no hay FS ocupados, \(SC_{core} = 0\).
+    El SC de la red se calcula como:
+    \begin{equation}
+        SC_{red} = \frac{1}{\left | E \right | \times C} \sum_{i=1}^{\left | E \right |} \sum_{j=1}^{C} SC_{core_{i,j}}
+    \end{equation}
+    
+    \item \textit{Golden Metric} (GM): Métrica avanzada que evalúa la fragmentación considerando rangos de tamaño de demandas esperadas. Dado dos parámetros \(n_1\) y \(n_2\) que representan el rango de tamaños de demanda típicos, el GM para un core se calcula como:
+    \begin{equation}
+        GM_{core} = \frac{a}{|b|}
+    \end{equation}
+    Donde los valores de \(a\) y \(b\) se calculan iterando sobre cada gap de FS libres de tamaño \(g\):
+    \begin{equation}
+        a_0 = \epsilon, \quad b_0 = -\epsilon
+    \end{equation}
+    \begin{equation}
+        a = a_0 + \sum_{i=1}^{G} a_i, \quad b = b_0 + \sum_{i=1}^{G} b_i
+    \end{equation}
+    Donde \(\epsilon = 0.001\) y para cada gap \(g_i\):
+    \begin{itemize}
+        \item Si \(g_i < n_1\): \(a_i = 0\), \(b_i = -\frac{g_i}{avg}\)
+        \item Si \(g_i > n_2\): \(a_i = \frac{g_i}{avg}\), \(b_i = 0\)
+        \item Si \(n_1 \leq g_i \leq n_2\): \(a_i = \frac{g_i - n_1 + 1}{avg}\), \(b_i = -\frac{n_2 - g_i}{avg}\)
+    \end{itemize}
+    Con \(avg = \frac{n_1 + n_2}{2}\).
+    El GM de la red se calcula como:
+    \begin{equation}
+        GM_{red} = \frac{1}{\left | E \right | \times C} \sum_{i=1}^{\left | E \right |} \sum_{j=1}^{C} GM_{core_{i,j}}
+    \end{equation}
+    
+    \item \textit{Available Spectrum Fragmentation Ratio 3D} (ASFR3D): Métrica que considera la fragmentación espacial en redes multi-core, evaluando bloques pequeños que no pueden ser utilizados eficientemente. Para un core se define como:
+    \begin{equation}
+        ASFR3D_{core} = \left(1 - \frac{S^{small}}{S^{free}}\right) \times F_{spatial}
+    \end{equation}
+    Donde \(S^{small}\) es la suma de FS libres en bloques menores a 5 slots, \(S^{free}\) es el total de FS libres, y \(F_{spatial}\) es un factor de peso espacial definido como:
+    \begin{equation}
+        F_{spatial} = \frac{\ln(D_{active} + 1)}{10}
+    \end{equation}
+    Donde \(D_{active}\) es el número de demandas activas en la red.
+    El ASFR3D de la red se calcula como:
+    \begin{equation}
+        ASFR3D_{red} = \frac{1}{\left | E \right | \times C} \sum_{i=1}^{\left | E \right |} \sum_{j=1}^{C} ASFR3D_{core_{i,j}}
+    \end{equation}
+    
+    \item Utilización Diferencial (UD): Métrica que mide el desbalance en la utilización entre diferentes cores y enlaces de la red. Se define como:
+    \begin{equation}
+        UD_{red} = U_{max} - U_{min}
+    \end{equation}
+    Donde \(U_{max}\) y \(U_{min}\) son las utilizaciones máxima y mínima entre todos los cores de todos los enlaces, siendo la utilización de un core:
+    \begin{equation}
+        U_{core} = \frac{S^{occupied}}{N}
+    \end{equation}
+    Con \(S^{occupied}\) siendo el número de FS ocupados y \(N\) el número total de FS en el core. Un valor alto de UD indica desbalance en la carga de la red, mientras que un valor bajo indica una distribución uniforme.
+    
 \end{itemize}
 
 \begin{figure}[!h]

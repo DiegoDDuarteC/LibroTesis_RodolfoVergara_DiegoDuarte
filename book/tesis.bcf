@@ -2386,16 +2386,13 @@
     <bcf:citekey order="11" intorder="1">[]</bcf:citekey>
     <bcf:citekey order="12" intorder="1">trindade2020machine</bcf:citekey>
     <bcf:citekey order="13" intorder="1">xiong2019machine</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">quagliotti2017spectrum</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">wang2012utilization</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">wright2015minimum</bcf:citekey>
-    <bcf:citekey order="17" intorder="1">zhang2013bandwidth</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">wang2012spectrum</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">zhang2013bandwidth</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">wright2015minimum</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">davalos2019spectrum</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">tensowFlow</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">davalos2019spectrum</bcf:citekey>
     <bcf:citekey order="19" intorder="1">davalos2019spectrum</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">tensowFlow</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">davalos2019spectrum</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">davalos2019spectrum</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">von2014survey</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">von2014survey</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

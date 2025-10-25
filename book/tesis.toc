@@ -23,17 +23,17 @@
 \contentsline {subsection}{\numberline {3.2.2}Funciones de activación}{31}{}%
 \contentsline {subsection}{\numberline {3.2.3}Arquitectura y aprendizaje}{32}{}%
 \contentsline {section}{\numberline {3.3}Aplicación de Machine Learning en Redes Ópticas Elásticas Multinúcleo}{33}{}%
-\contentsline {chapter}{\numberline {4} Método Propuesto }{36}{}%
-\contentsline {section}{\numberline {4.1}Características}{36}{}%
-\contentsline {section}{\numberline {4.2}Obtención de datos para el entrenamiento}{39}{}%
-\contentsline {section}{\numberline {4.3}Herramientas Utilizadas}{41}{}%
-\contentsline {section}{\numberline {4.4}Modelado}{42}{}%
-\contentsline {section}{\numberline {4.5}Entrenamiento}{42}{}%
-\contentsline {section}{\numberline {4.6}Pruebas de predicción}{43}{}%
-\contentsline {chapter}{\numberline {5} Pruebas y resultados obtenidos }{45}{}%
-\contentsline {section}{\numberline {5.1}Objetivos a optimizar}{47}{}%
-\contentsline {section}{\numberline {5.2}Análisis de los resultados}{47}{}%
-\contentsline {chapter}{\numberline {6} Conclusiones y Trabajos Futuros }{53}{}%
-\contentsline {section}{\numberline {6.1}Conclusiones Experimentales}{54}{}%
-\contentsline {section}{\numberline {6.2}Aportes}{55}{}%
-\contentsline {section}{\numberline {6.3}Trabajos Futuros}{56}{}%
+\contentsline {chapter}{\numberline {4} Método Propuesto }{37}{}%
+\contentsline {section}{\numberline {4.1}Características}{38}{}%
+\contentsline {section}{\numberline {4.2}Obtención de datos para el entrenamiento}{41}{}%
+\contentsline {section}{\numberline {4.3}Herramientas Utilizadas}{43}{}%
+\contentsline {section}{\numberline {4.4}Modelado}{44}{}%
+\contentsline {section}{\numberline {4.5}Entrenamiento}{44}{}%
+\contentsline {section}{\numberline {4.6}Pruebas de predicción}{45}{}%
+\contentsline {chapter}{\numberline {5} Pruebas y resultados obtenidos }{47}{}%
+\contentsline {section}{\numberline {5.1}Objetivos a optimizar}{49}{}%
+\contentsline {section}{\numberline {5.2}Análisis de los resultados}{49}{}%
+\contentsline {chapter}{\numberline {6} Conclusiones y Trabajos Futuros }{55}{}%
+\contentsline {section}{\numberline {6.1}Conclusiones Experimentales}{56}{}%
+\contentsline {section}{\numberline {6.2}Aportes}{57}{}%
+\contentsline {section}{\numberline {6.3}Trabajos Futuros}{58}{}%
