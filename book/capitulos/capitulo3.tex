@@ -1,117 +1,185 @@
-\chapter{ Aprendizaje Automático }
-Aprendizaje Automático o \textit{Machine Learning} es una rama de la inteligencia artificial, el cual construye un modelo matemático basado en datos de muestra, conocidos como datos de entrenamiento, de forma a realizar predicciones o tomar decisiones sin que haya sido programado de forma explícita para realizar dicha tarea.\cite{zhang2020matrix}
+\chapter{Aprendizaje Automático}
+%
 
-Una definición más orientada a la ingeniería podría ser:
+El Aprendizaje Automático, conocido en inglés como \textit{Machine Learning}, representa una de las áreas más dinámicas y prometedoras dentro del campo de la inteligencia artificial contemporánea. se fundamenta en el desarrollo de algoritmos y modelos computacionales capaces de identificar patrones complejos en conjuntos de datos, con el propósito de generar predicciones o tomar decisiones informadas sin necesidad de instrucciones programáticas explícitas para cada escenario específico.[]
+%
 
-Se dice que un programa de computadoras aprende de una experiencia E respecto a una tarea T y alguna forma de medida de rendimiento P, si el rendimiento en la tarea T, medido por P, mejora con la experiencia E.\cite{mitchell1997machine}
+La esencia del aprendizaje automático radica en su capacidad para mejorar el desempeño de manera iterativa mediante la experiencia acumulada. Mitchell proporciona una definición operacional particularmente esclarecedora: un sistema computacional manifiesta capacidad de aprendizaje cuando su rendimiento en una tarea determinada T, cuantificado mediante una métrica de desempeño P, experimenta una mejora mensurable como consecuencia de la exposición a una experiencia E.[] Esta conceptualización establece tres componentes fundamentales que articulan cualquier sistema de aprendizaje automático: la tarea objetivo, la experiencia de aprendizaje y el criterio de evaluación.
+%
 
-Para entender un poco mejor utilicemos un ejemplo de un programa de aprendizaje automático, como podría ser un filtro de spam de correos electrónicos. Este filtro de spam puede aprender a detectar y marcar los correos mediante ejemplos proveídos por los usuarios, tanto de aquellos correos que el usuario marcó como un spam, así como de correos que el usuario considera que no lo son. Estos datos de ejemplo que el programa puede utilizar para aprender de ellos son llamados conjuntos de entrenamiento.
+Para ilustrar estos conceptos de manera concreta, se puede examinar el caso de los sistemas de filtrado de correo electrónico no deseado. Un filtro de spam ejemplifica de forma paradigmática los principios del aprendizaje automático. El sistema desarrolla progresivamente la capacidad de discriminar entre mensajes legítimos y correo no solicitado mediante el análisis de ejemplos previamente etiquetados por usuarios. Estos conjuntos de datos, denominados conjuntos de entrenamiento, contienen tanto instancias positivas (correos identificados como spam) como negativas (mensajes legítimos), permitiendo al algoritmo extraer características distintivas de cada categoría.
+%
 
-Para este caso la tarea T es la de marcar nuevos correos electrónicos como spam, la experiencia E es el entrenamiento con los datos, y la medida del rendimiento P podría ser la proporción de acierto o \textit{Accuracy} de los correos correctamente clasificados como spam o no.
+En este contexto específico, la tarea T consiste en la clasificación binaria de nuevos mensajes electrónicos, la experiencia E está constituida por el proceso de entrenamiento con los datos etiquetados, y la métrica de desempeño P puede definirse como la tasa de precisión o \textit{Accuracy}, que cuantifica la proporción de mensajes correctamente clasificados en relación con el total de predicciones realizadas.
+%
 
-\section{Tipos de sistemas de aprendizaje automático}
-Los sistemas de aprendizaje automático pueden clasificarse de acuerdo a la cantidad y el tipo de supervisión que necesitan durante la fase de entrenamiento. Existen 3 grandes categorías de las cuales hablaremos a continuación:
+\section{Clasificación de sistemas o tipos de aprendizaje automático}
+%
+
+La diversidad de aplicaciones y contextos en los que se implementan sistemas de aprendizaje automático ha propiciado el desarrollo de múltiples paradigmas metodológicos. La clasificación más fundamental de estos enfoques se establece en función del tipo y grado de supervisión disponible durante la fase de entrenamiento. A continuación, se muestran las tres categorías principales:
+%
 
 \begin{itemize}
-    \item Aprendizaje supervisado: En este tipo de aprendizaje, el conjunto de entrenamiento que se provee al programa incluye las soluciones deseadas, a estas soluciones se les conoce como etiquetas o \textit{labels}. Este método aprende una regla general la cual mapea el conjunto de entradas con las salidas deseadas.
-    En el aprendizaje supervisado podemos dividir las tareas en dos enfoques principales, la Clasificación y Predicción de un valor numérico generalmente realizado por medio de la Regresión. 
+    \item \textbf{Aprendizaje supervisado:} Este paradigma constituye el enfoque más ampliamente implementado en aplicaciones prácticas. Se caracteriza por la disponibilidad de un conjunto de entrenamiento que incluye pares de entrada-salida, donde cada instancia de entrada está asociada con su correspondiente etiqueta o \textit{label}, que representa la solución correcta. El objetivo del algoritmo consiste en inferir una función de mapeo que establezca la correspondencia óptima entre el espacio de características de entrada y el conjunto de salidas deseadas, de manera que pueda generalizar efectivamente a instancias no observadas previamente.
+    
+    El aprendizaje supervisado se subdivide en dos categorías fundamentales según la naturaleza de la variable objetivo:
 
     \begin{itemize}
-        \item Clasificación: Consiste en brindar ejemplos de entradas indicando a que clase o clases pertenece, de forma a poder realizar el entrenamiento y de esa forma para nuevas entradas poder clasificar dentro de alguna de las clases contempladas.
-        \item Predicción: Consiste en brindar datos de entrada con un conjunto de características y un valor objetivo, de forma que con el entrenamiento para las nuevas entradas es posible predecir el valor objetivo a partir del conjunto de características. Este tipo de tareas se lo conoce como Regresión.
+        \item \textit{Clasificación:} Se trata de brindar ejemplos de entrenamiento donde cada instancia está asociada con una o múltiples clases predefinidas, a modo de que se pueda realizar el entrenamiento y clasificar nuevas entradas dentro de alguna de las clases existentes. Aplicaciones típicas incluyen el reconocimiento de imágenes, detección de fraudes y análisis de sentimientos.
+        
+        \item \textit{Predicción:} A diferencia de la clasificación, éste consiste en la predicción de una variable objetivo de naturaleza continua o numérica. El sistema recibe datos de entrenamiento compuestos por vectores de características junto con sus valores objetivos correspondientes, permitiendo al modelo aprender la relación funcional entre sí. Esta capacidad predictiva se aplica posteriormente para estimar valores numéricos de nuevas instancias basándose exclusivamente en sus características de entrada. Aplicaciones típicas comprenden la predicción de precios, estimación de demanda y proyecciones temporales.
     \end{itemize}
-    \item Aprendizaje No-supervisado: En este tipo de  aprendizaje, el conjunto de entrenamiento que se provee al programa no incluye las soluciones deseadas o conocidas. La principal tarea de este método es la de encontrar soluciones por si mismo (por ejemplo, patrones o estructuras en los datos).
-    \item Aprendizaje por refuerzo: Al tipo de aprendizaje basado en la retroalimentación se lo conoce como aprendizaje por refuerzo. En este método los datos de entrenamiento son proveídos en forma de recompensas (positivas o negativas) por medio de la retroalimentación a un agente de inteligencia artificial que interactúa con un entorno dinámico. La retroalimentación entre sistema de aprendizaje y la experiencia obtenida por el agente es muy útil para mejorar el rendimiento en la tarea que está aprendiendo.
+    
+    \item \textbf{Aprendizaje no supervisado:} Este paradigma aborda escenarios donde los datos de entrenamiento carecen de soluciones deseadas. La ausencia de supervisión directa plantea un desafío metodológico fundamentalmente diferente: el algoritmo debe descubrir estructuras intrínsecas, patrones latentes o relaciones subyacentes en los datos sin guía externa. Las técnicas de aprendizaje no supervisado resultan particularmente valiosas para tareas exploratorias, tales como la segmentación de clientes, detección de anomalías, reducción de dimensionalidad y descubrimiento de asociaciones en grandes volúmenes de datos. Este enfoque refleja una aproximación más cercana a cómo los sistemas biológicos pueden aprender mediante la observación y organización autónoma de información sensorial.
+    
+    \item \textbf{Aprendizaje por refuerzo:} Este paradigma se distingue por su naturaleza secuencial e interactiva. En lugar de aprender a partir de un conjunto estático de ejemplos, el aprendizaje por refuerzo se fundamenta en la interacción continua de un agente con un entorno dinámico. El proceso de aprendizaje se articula mediante señales de retroalimentación en forma de recompensas (positivas o negativas) que el agente recibe como consecuencia de sus acciones. El objetivo fundamental consiste en desarrollar una política de comportamiento que maximice la recompensa acumulada a largo plazo.
+     Este bucle de retroalimentación continua entre acción, observación y recompensa permite al sistema refinar progresivamente su estrategia mediante exploración y explotación del espacio de estados. Las aplicaciones emblemáticas incluyen sistemas de control robótico, estrategias de juegos, optimización de recursos y vehículos autónomos.
 \end{itemize}
+%
+
+Cada uno de estos paradigmas presenta ventajas distintivas y limitaciones inherentes, determinando su idoneidad para contextos específicos. La selección del enfoque apropiado constituye una decisión metodológica crucial que debe considerar tanto la naturaleza del problema como las características de los datos disponibles.
+%
 
 \section{Redes Neuronales Artificiales}
-Las redes neuronales artificiales son algoritmos bio-inspirados, es decir, están vagamente inspirados en el cerebro biológico. Como ocurre en el cerebro, las redes neuronales artificiales consisten en unidades simples llamadas neuronas las cuales se encuentran interconectadas entre si. Estas reciben, procesan y transmiten señales a otras neuronas actuando como un interruptor.
+%
 
-Los elementos de una red neuronal son bastantes simples, la complejidad y el poder de estos sistemas proviene de la interacción entre sus elementos. Por ejemplo, el cerebro humano cuenta  con más de cien mil millones de neuronas y cien billones de conexiones.
+Las redes neuronales artificiales constituyen una clase de algoritmos computacionales bio-inspirados que emulan, de manera simplificada, la arquitectura y funcionamiento del sistema nervioso biológico. Al igual que en el cerebro, estas estructuras computacionales se componen de unidades elementales denominadas neuronas artificiales, las cuales establecen conexiones entre sí formando redes complejas. Cada neurona recibe señales de entrada, las procesa mediante funciones matemáticas específicas y transmite el resultado a otras neuronas de la red, operando de manera análoga a un interruptor que se activa bajo determinadas condiciones.
+%
+
+La potencia computacional de las redes neuronales artificiales no reside en la sofisticación de sus componentes individuales, sino en la emergencia de comportamientos complejos producto de las interacciones masivas entre múltiples unidades simples. Esta propiedad refleja un principio fundamental observado en sistemas biológicos: el cerebro humano, con aproximadamente cien mil millones de neuronas y cien billones de sinapsis, genera capacidades cognitivas extraordinarias a partir de la interconexión de elementos relativamente simples. De manera similar, las redes neuronales artificiales derivan su capacidad de aprendizaje y generalización de la organización colectiva de sus unidades, más que de la complejidad algorítmica de cada neurona individual.
+%
 
 \subsection{Perceptrón}
-El concepto de perceptrón se encuentra inspirado en las neuronas biológicas, cuya tarea principal es la de bloquear o dejar pasar las señales. Las neuronas reciben estas señales eléctricas, si la señal sobrepasa cierto umbral, la neurona lanza una señal de salida. \\
+%
+
+El perceptrón constituye la unidad computacional elemental de las redes neuronales artificiales, inspirado directamente en el funcionamiento de las neuronas biológicas. Estas células nerviosas operan mediante un mecanismo de umbralización: reciben señales eléctricas de múltiples fuentes y, cuando la suma de estos estímulos supera un umbral crítico, generan un potencial de acción que se propaga a neuronas subsecuentes.
+%
+
 \begin{figure}[H]
     \centering
     \includegraphics{capitulos/img/perceptron.png}
     \caption{Comportamiento del perceptrón}
     \label{fig:perceptron}
 \end{figure}
-Un perceptrón busca imitar ese mismo comportamiento, de la manera en la que se muestra en la figura \ref{fig:perceptron}. El mismo puede recibir múltiples datos de entrada \(X = {x_{0},x_{1},x_{2},...,x_{n}}\), entonces estos datos son multiplicados por un conjunto de pesos \(W = {w_{0},w_{1},w_{2},...,w_{n}}\). La suma ponderada z de estos datos de entrada, pasa por una función de activación, devolviendo así un valor y dependiendo del tipo de función de activación. También es posible expresarlo matemáticamente por medio de la siguiente fórmula: 
+%
+
+El perceptrón emula este comportamiento mediante un modelo matemático relativamente simple, como se ilustra en la figura \ref{fig:perceptron}. Este componente puede recibir múltiples señales de entrada representadas por el vector \(X = \{x_{0},x_{1},x_{2},...,x_{n}\}\). Cada entrada es ponderada mediante multiplicación con un peso correspondiente del vector \(W = \{w_{0},w_{1},w_{2},...,w_{n}\}\). La suma ponderada resultante, denotada como \(z\), se procesa posteriormente mediante una función de activación que determina la salida final \(y\). Este proceso puede expresarse formalmente como:
+%
+
 \begin{equation}
 z = \sum_{i=1}^{n} w_{i} x_{i} = w^{T}x
 \end{equation}
-Este es el modelo matemático de una neurona, representado como una suma explícita y como una operación matricial. El término \(w^{T}x\)  es la representación vectorizada de la fórmula, donde \textit{w} es el peso de la matriz que primeramente es transpuesta y luego es multiplicada por un vector de entradas \textit{x}. Para obtener una descripción matemática completa podríamos añadir una constante \textit{b}, llamado bias.
+%
+
+Esta ecuación presenta dos representaciones equivalentes del modelo neuronal: la suma explícita de productos y su formulación vectorial compacta. El término \(w^{T}x\) denota el producto escalar entre el vector de pesos transpuesto y el vector de entradas. Para completar la descripción matemática, se incorpora un término de sesgo \textit{b} o \textit{bias}:
+%
+
 \begin{equation}
 z = \sum_{i=1}^{n} w_{i} x_{i} + b = w^{T}x + b
 \end{equation}
-Con esto obtenemos una expresión genérica de una ecuación lineal, el cual es  todo el proceso previo a su paso por la función de activación, la cual determinara si el perceptrón deja pasar la señal.
-Existen muchas variantes para la función de activación, La función de activación mas sencilla es la función de paso. La salida de la neurona será aproximada por esta función, la cual se expresa por medio de la siguiente ecuación:
+%
+
+Esta expresión representa una combinación lineal de las entradas, que constituye la etapa previa a la aplicación de la función de activación. La función de activación determina la respuesta final del perceptrón ante los estímulos recibidos.
+%
+
+Existen diversas funciones de activación según la aplicación específica. La más elemental es la función escalón o función de paso, que produce una salida binaria definida por:
+%
+
 \begin{equation}
-f(x)=\left\lbrace\begin{array}{c} 1~~~si~ (w^{t} x+b) > 0 \\ 0~~~caso~contrario~~ \end{array}\right.
+f(x)=\left\lbrace\begin{array}{c} 1~~~\text{si}~ (w^{T} x+b) > 0 \\ 0~~~\text{caso contrario} \end{array}\right.
 \end{equation}
+%
+
+Esta función implementa una decisión de umbral simple, donde el perceptrón se activa únicamente cuando la combinación lineal de sus entradas excede cero.
+%
 
 \subsection{Funciones de activación}
-Existen varios tipos de funciones de activación, donde dependiendo de la tarea o valor buscado, estas pueden ser más o menos útiles. A su vez, estas funciones usualmente son utilizadas para agregar la no-linealidad, ya que sin esto solo podríamos tener soluciones lineales. Algunas de las funciones de activación más utilizadas son la sigmoide, tanh y la relu (\textit{rectified linear unit}) los cuales se muestran en la figura \ref{fig:funcionesActivacion}
+%
+
+Las funciones de activación son componentes esenciales que determinan la salida de cada neurona según su entrada. Su principal propósito es introducir no-linealidad en el modelo, aspecto crucial dado que sin ellas, la composición de múltiples capas lineales equivaldría a una única transformación lineal, limitando severamente la capacidad representacional de la red.
+%
+
+Entre las funciones más utilizadas se encuentran la sigmoide, la tangente hiperbólica (tanh) y la unidad lineal rectificada (ReLU, \textit{rectified linear unit}), cada una con características específicas según la aplicación, como se observa en la figura \ref{fig:funcionesActivacion}.
+%
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=1\textwidth]{capitulos/img/funcion_activacion.png}
     \caption{Funciones de Activación}
     \label{fig:funcionesActivacion}
 \end{figure}
+%
+
 \newpage
 \subsection{Arquitectura y aprendizaje}
-Si muchas neuronas son conectadas entre sí, una red neuronal artificial es creada. En general, toda neurona de la red neuronal artificial está asociada a una capa. Cada neurona está conectada a todas las neuronas de la capa anterior y de la siguiente. Estas conexiones están ponderadas por un peso.\\
-Un ejemplo de una arquitectura de redes neuronales artificiales se puede observar en la figura \ref{fig:redNeuronal}, donde se encuentra divida en tres áreas. La primera área contiene a la capa de entrada, y es la encargada de recibir y alimentar a la red con los datos de entrada. El área intermedia está conformada por una o más capas y son conocidas como capas ocultas, donde el número de capas ocultas determina la profundidad de la red. Por último, la última área contiene a la capa de salida que dependiendo de la tarea puede tener uno o más neuronas de acuerdo a los posibles valores de salida.\\
+%
+
+La interconexión de múltiples neuronas artificiales configura una red neuronal. En las arquitecturas convencionales, las neuronas se organizan en capas, donde cada unidad está conectada a todas las neuronas de las capas adyacentes mediante conexiones ponderadas.
+%
+
+La figura \ref{fig:redNeuronal} ilustra una arquitectura típica estructurada en tres componentes. La capa de entrada recibe y alimenta los datos al sistema. Las capas intermedias u ocultas realizan transformaciones progresivas de la información; su número determina la profundidad de la red. La capa de salida genera las predicciones finales, con una dimensionalidad que depende del problema: una neurona para regresión o clasificación binaria, múltiples neuronas para clasificación multiclase.
+%
+
 \begin{figure}[H]
     \centering
     \includegraphics{capitulos/img/redNeuronal.png}
     \caption{Ejemplo de red neuronal}
     \label{fig:redNeuronal}
 \end{figure}
-Una vez que el peso de cada una de las conexiones de la red es establecido, es posible calcular un valor de salida para cada entrada de la red neuronal. En la mayoría de los casos, los pesos son establecidos de manera aleatoria por lo que los valores de salida calculados pueden ser diferentes a lo esperado. La idea es ajustar estos pesos de manera individual de forma a que el error cuadrático medio entre los valores calculados y los valores esperados sean mínimos, esto se realiza por medio del método de retropropagación o \textit{backpropagation}.\\
+%
 
-Primeramente, se calcula el resultado para un registro del conjunto de datos conocido, luego se calcula el error entre el resultado calculado y el resultado esperado. El error es propagado hacia atrás, pasando por todas las capas, empezando por la última capa y terminando con los pesos individuales de la primera capa de la red neuronal. La distribución del error toma lugar como una función de los valores de los pesos individuales. Una vez que los pesos individuales son cambiados, se procede a realizar el mismo procedimiento con un nuevo registro del conjunto de datos.\\
+Una vez establecidos los pesos de las conexiones de la red, es posible calcular valores de salida para cualquier entrada. Inicialmente, estos pesos se asignan de manera aleatoria, por lo que las salidas calculadas difieren de los valores esperados. El objetivo consiste en ajustar individualmente estos pesos para minimizar el error cuadrático medio entre las predicciones y los valores reales, proceso realizado mediante el método de retropropagación o \textit{backpropagation}.
+%
 
-Para minimizar el error, se utiliza el método de descenso del gradiente, el cual al igual que el algoritmo de retropropagación son explicados en detalle en \cite{rashid2016make}.\\
+El procedimiento opera de la siguiente manera: se calcula la salida para un registro del conjunto de datos y se determina el error respecto al valor esperado. Este error se propaga hacia atrás a través de todas las capas, desde la capa de salida hasta la capa de entrada, ajustando los pesos en función de su contribución al error total. Este proceso se repite iterativamente para cada registro del conjunto de datos.
+%
 
-Por otro lado tenemos el ratio de aprendizaje o \textit{Learning Rate} el cual es un indicador de cuánto cambian los pesos en cada iteración, Un valor de \textit{Learning rate} alto nos acerca de forma más rápida al error mínimo, pero una valor más bajo puede converger mejor. En la mayoría de los casos los valores elegidos son de 0.001 a 0.3.\\
+La minimización del error se realiza mediante el método de descenso del gradiente, ambos algoritmos se explican detalladamente en \cite{[]}.
+%
 
-Generalmente el entrenamiento de una red neuronal artificial con un solo conjunto de datos no es suficiente para alcanzar el mínimo error de salida, esto especialmente para valores bajos de \textit{Learning Rate}. Para mejorar esto, se realizan varias pasadas del conjunto de datos completo a través de la red neuronal, a cada pasada se lo conoce como época o \textit{epoch}. 
+El ratio de aprendizaje o \textit{Learning Rate} determina la magnitud de los ajustes aplicados a los pesos en cada iteración. Un valor alto acelera la convergencia pero puede comprometer la precisión, mientras que un valor bajo favorece una convergencia más estable aunque más lenta. Los valores típicamente empleados oscilan entre 0.001 y 0.3.
+%
 
-\section{Aplicación de Machine Learning en Redes Ópticas Elásticas}
+El entrenamiento con una única pasada del conjunto de datos resulta insuficiente para alcanzar el mínimo error, especialmente con valores bajos de \textit{Learning Rate}. Por ello, se realizan múltiples iteraciones completas del conjunto de datos a través de la red, denominando a cada pasada completa como época o \textit{epoch}.
+%
 
-En esta sección presentamos un estudio bibliográfico  del estado del arte de algunas técnicas de \textit{Machine Learning} aplicadas a problemas existentes en redes ópticas elásticas.
+\section{Aplicación de Machine Learning en Redes Ópticas Elásticas Multinúcleo}
+%
 
-Panchali Datta Choudhury y Tanmay De, nos presentan un analisis del estado del arte  del uso de técnicas de \textit{Machine Learning} en redes ópticas elásticas \cite{choudhury2019recent}.
+En esta sección se presenta un estudio bibliográfico del estado del arte de técnicas de \textit{Machine Learning} aplicadas a problemas en redes ópticas elásticas multinúcleo (MC-EON, \textit{Multi-Core Elastic Optical Networks}).
+%
 
-Algunas de las áreas presentadas por los autores en donde actualmente se utilizan estas técnicas son las siguientes:
+Panchali Datta Choudhury y Tanmay De presentan un análisis comprehensivo del uso de técnicas de \textit{Machine Learning} en redes ópticas elásticas \cite{[]}, fundamento que se extiende a las arquitecturas multinúcleo. Las MC-EON introducen complejidades adicionales respecto a las redes ópticas elásticas convencionales, particularmente en la gestión de múltiples núcleos dentro de una misma fibra y los fenómenos de interferencia entre núcleos (inter-core crosstalk), aspectos que requieren estrategias de optimización más sofisticadas donde el \textit{Machine Learning} demuestra particular utilidad.
+%
 
+Las principales áreas de aplicación de estas técnicas en el contexto de MC-EON incluyen:
+%
 
 
 \begin{itemize}
-    \item Evaluación o predicción de la calidad de servicio
+    \item Evaluación y predicción de calidad de servicio
     
-    Investigaciones como la propuesta en \cite{panayiotou2019data}, presenta un modelo de asignación de ancho de banda en EON teniendo en consideración los requisitos de la calidad del servicio o \textit{Quality of Service} (QoS) de la red. Utilizando la técnica de Aprendizaje Reforzado o \textit{Reinforcement Learning} para resolver el problema de asignación de ancho de banda, donde la función de recompensa para el modelo de aprendizaje reforzado se basa en el cumplimiento o no de los requisitos de QoS.
+    La investigación presentada en \cite{[]} propone un modelo de asignación de ancho de banda en EON considerando los requisitos de calidad de servicio o \textit{Quality of Service} (QoS). Se emplea aprendizaje por refuerzo o \textit{Reinforcement Learning}, donde la función de recompensa se fundamenta en el cumplimiento de los requisitos de QoS. En el contexto de MC-EON, esta aproximación adquiere mayor relevancia debido a la necesidad de garantizar QoS considerando simultáneamente la asignación de recursos en múltiples núcleos y la gestión de interferencias entre ellos.
     
-    \item Supervivencia
+    \item Supervivencia de red
     
-    Se hace uso del aprendizaje por refuerzo profundo en el trabajo \cite{luo2019leveraging}, explorando el problema de optimización de una red en general teniendo en cuenta la capacidad de supervivencia de la misma. Para ello se utilizó un enfoque de aprendizaje por refuerzo profundo, utilizando dos agentes, en donde uno de ellos se utiliza para proporcionar un esquema de trabajo y el otro se encarga de proporcionar el esquema de protección, de esta manera la combinación de ambos sumado a un enfoque de recompensas para aumentar la rentabilidad nos brinda una solución para las políticas de asignación de espectro, modulación y enrutamiento que además nos provea de  supervivencia.
+    El trabajo presentado en \cite{[]} explora la optimización de redes considerando su capacidad de supervivencia mediante aprendizaje por refuerzo profundo. Se implementa una arquitectura de dos agentes: uno proporciona el esquema de trabajo principal y otro gestiona el esquema de protección. Esta combinación, junto con un mecanismo de recompensas orientado a maximizar la rentabilidad, genera políticas de enrutamiento, asignación de espectro y selección de modulación que garantizan supervivencia. En MC-EON, estos mecanismos de protección resultan especialmente críticos dado el mayor número de recursos físicos susceptibles a fallos.
     
     \item Predicción de tráfico
     
-    El trabajo presentado por Aibin \cite{aibin2018traffic} para la predicción de tráfico en redes de centro de datos en la nube o \textit{Cloud Data Center Networks} utiliza un enfoque de árbol de búsqueda de Monte Carlo. Para una solicitud particular, esta técnica de búsqueda identifica el centro de datos en la nube más apropiado y la combinación de rutas candidatas para enrutar las solicitudes. Para lograr esto se crea un árbol disperso realizando la selección por medio del método de Monte Carlo.
+    Aibin \cite{[]} presenta un enfoque para predicción de tráfico en redes de centros de datos en la nube o \textit{Cloud Data Center Networks} utilizando búsqueda de árbol de Monte Carlo. Para cada solicitud, esta técnica identifica el centro de datos más apropiado y el conjunto óptimo de rutas candidatas mediante la construcción de un árbol disperso y selección estocástica. Esta metodología es aplicable a MC-EON para predecir patrones de tráfico y optimizar la asignación de núcleos.
     
     \item Enrutamiento, modulación y asignación del espectro
     
-    En \cite{chen2018deep}, los autores proponen un modelo de aprendizaje reforzado profundo, con el objetivo de desarrollar un modelo autónomo de RMSA en redes ópticas elásticas, utilizando redes neuronales convolucionales también conocidas como \textit{Q Networks} para aprender las políticas RMSA considerando la conectividad, utilización del espectro y solicitudes de tráfico en redes EON.
-    
+    Chen et al. \cite{[]} proponen un modelo de aprendizaje por refuerzo profundo para desarrollar un sistema autónomo de RMSA en redes ópticas elásticas. Emplean redes neuronales convolucionales, denominadas \textit{Q Networks}, para aprender políticas RMSA considerando conectividad, utilización espectral y demandas de tráfico. En MC-EON, este enfoque se extiende al problema RMSCA (\textit{Routing, Modulation, Spectrum and Core Assignment}), donde adicionalmente se debe seleccionar el núcleo óptimo y considerar las restricciones de crosstalk entre núcleos.
     
 \end{itemize}
+%
 
-En el área de interés de este trabajo, nos encontramos con algunos trabajos enfocados a la solución del problema de la fragmentación, pero enfocados en otro tipo de redes, como el presentado en \cite{trindade2020machine}, el cual se encuentra enfocado en \textit{Space Division Multiplexing Elastic Optical Networks} o SDM-EON , utilizando redes neuronales, específicamente una conocida como red neuronal de Elman, para la predicción de tráfico de forma a mitigar la fragmentación y el problema de \textit{Cross-talk}.
+Durante este trabajo dentro de los puntos mas destacados nos podemos encontrar con algunos trabajos cuyo principal objetivo y enfoque es la solución al problema de la fragmentación de la red, con alguno de ellos para otro tipo de redes, como el presentado en \cite{trindade2020machine}, el cual encuentra su principal enfoque en \textit{Space Division Multiplexing Elastic Optical Networks} o SDM-EON , implementando redes neuronales, específicamente la red neuronal de Elman, para la predicción de tráfico de manera de disminuir la fragmentación y la diafonía o \textit{Cross-talk}.
+ También se cuenta con el trabajo presentado por Enciso y Silva, el cual propone un algoritmo para decidir el mejor momento para disparar la desfragmentación de la red. Tomando ese trabajo como base, en este trabajo se propone un modelo para predecir el mejor momento para para ejecutar la desfragmentación para Redes Ópticas Elásticas Multinúcleo (MC-EON). De manera en que se contemplan los mismos problemas agregando la complejidad que conlleva el uso de múltiples núcleos en una misma fibra.
+%
 
-Para este tipo de redes también contamos con un algoritmo de desfragmentación basado en Machine Learning \cite{xiong2019machine}. Los autores proponen un algoritmo de desfragmentación utilizando un enfoque de aprendizaje no supervisado, por lo que no requiere de conocimientos previos de la red. El algoritmo se encarga de identificar aquellos \textit{lightpaths} que pueden ser agrupados en base a ciertas características, para luego mapear esos grupos a los núcleos y reordenar al espectro sin necesidad de realizar re-ruteos.
-
-
+Para redes MC-EON también contamos con algoritmos de desfragmentación basados en Machine Learning, como el presentado en \cite{xiong2019machine}, donde los autores proponen un enfoque de aprendizaje no supervisado que no requiere conocimientos previos de la red. El algoritmo identifica aquellos \textit{lightpaths} que pueden ser agrupados en base a ciertas características, para luego mapear esos grupos a los núcleos y reordenar el espectro sin necesidad de realizar re-ruteos.
+%
 

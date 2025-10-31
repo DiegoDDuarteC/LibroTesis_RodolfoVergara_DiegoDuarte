@@ -1,26 +1,29 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Restricciones de contigüidad y continuidad aplicadas- Conexión Rechazada}}{10}{}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Restricciones de contigüidad y continuidad aplicadas- Conexión Establecida}}{10}{}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Esquema de Gestión de la Fragmentación}}{12}{}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de desfragmentaciones periódicas con volumen de carga de tráfico variado}}{14}{}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Ejemplo de Fibras Multinúcleo (MCF) con 7, 12 y 19 núcleos}}{16}{}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Core Pitch entre dos núcleos adyacentes en un MCF de 7 núcleos}}{17}{}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces XT en un Fibra MCF de 3 núcleos []}}{19}{}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Ejemplo de Fibras Multinúcleo (MCF) con 7, 12 y 19 núcleos}}{9}{}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Core Pitch entre dos núcleos adyacentes en un MCF de 7 núcleos}}{10}{}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces XT en un Fibra MCF de 3 núcleos []}}{12}{}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Conmutación de núcleos con contigüidad de espectro []}}{14}{}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Asignación de espectro sin conmutación de núcleos []}}{16}{}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Asignación de espectro con conmutación de núcleos []}}{17}{}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Restricciones de contigüidad y continuidad aplicadas- Conexión Rechazada}}{20}{}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Restricciones de contigüidad y continuidad aplicadas- Conexión Establecida}}{20}{}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Esquema de Gestión de la Fragmentación}}{22}{}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Ejemplo de desfragmentaciones periódicas con volumen de carga de tráfico variado}}{24}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Comportamiento del perceptrón}}{24}{}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Funciones de Activación}}{25}{}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Ejemplo de red neuronal}}{26}{}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Comportamiento del perceptrón}}{29}{}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Funciones de Activación}}{31}{}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Ejemplo de red neuronal}}{32}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Ejemplo de métricas de fragmentación}}{35}{}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Volumen de tráfico variado utilizado}}{36}{}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Evolución del error a través de épocas}}{38}{}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Utilización de la red y predicciones}}{39}{}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ejemplo de métricas de fragmentación}}{42}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Volumen de tráfico variado utilizado}}{43}{}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Evolución del error a través de épocas}}{45}{}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Utilización de la red y predicciones}}{46}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagrama simulador / modelo entrenado}}{41}{}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología NSFNET}}{44}{}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología NSFNET}}{45}{}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología USNET}}{45}{}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología USNET}}{46}{}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagrama simulador / modelo entrenado}}{48}{}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología NSFNET}}{51}{}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología NSFNET}}{52}{}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología USNET}}{52}{}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología USNET}}{53}{}%
 \addvspace {10\p@ }
