@@ -12,18 +12,19 @@
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Esquema de Gestión de la Fragmentación}}{22}{}%
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Ejemplo de desfragmentaciones periódicas con volumen de carga de tráfico variado}}{24}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Comportamiento del perceptrón}}{29}{}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Funciones de Activación}}{31}{}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Ejemplo de red neuronal}}{32}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Ejemplo de métricas de fragmentación}}{42}{}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Volumen de tráfico variado utilizado}}{43}{}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Evolución del error a través de épocas}}{45}{}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Utilización de la red y predicciones}}{46}{}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Tabla 1 - Niveles de carga simulados}}{44}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Distruibución de niveles de carga en la simulación}}{44}{}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Evolución temporal de la carga en la simulación}}{45}{}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Tabla 2 - Muestra de datos temporales generados}}{45}{}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Componentes armónicas del modelo de carga}}{47}{}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Modelo matemático completo de la carga}}{47}{}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Distribución de fases operativas en la simulación}}{48}{}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Frecuencia de ocurrencia de niveles de carga}}{49}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagrama simulador / modelo entrenado}}{48}{}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología NSFNET}}{51}{}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología NSFNET}}{52}{}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología USNET}}{52}{}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología USNET}}{53}{}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagrama simulador / modelo entrenado}}{58}{}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología NSFNET}}{61}{}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología NSFNET}}{62}{}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología USNET}}{62}{}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Gráfico de soluciones en el frente pareto para la topología USNET}}{63}{}%
 \addvspace {10\p@ }

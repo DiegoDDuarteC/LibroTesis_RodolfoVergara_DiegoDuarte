@@ -1,7 +1,7 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{\'Indice de Figuras}{\es@scroman {iv}}{}%
-\contentsline {chapter}{\'Indice de Tablas}{\es@scroman {v}}{}%
-\contentsline {chapter}{Lista de Símbolos}{\es@scroman {vi}}{}%
+\contentsline {chapter}{\'Indice de Figuras}{\es@scroman {v}}{}%
+\contentsline {chapter}{\'Indice de Tablas}{\es@scroman {vi}}{}%
+\contentsline {chapter}{Lista de Símbolos}{\es@scroman {vii}}{}%
 \contentsline {chapter}{\numberline {1}Introducción}{1}{}%
 \contentsline {section}{\numberline {1.1}Justificación}{1}{}%
 \contentsline {section}{\numberline {1.2}Objetivos del trabajo}{5}{}%
@@ -18,22 +18,41 @@
 \contentsline {section}{\numberline {2.4}Descripción del problema tratado}{23}{}%
 \contentsline {chapter}{\numberline {3}Aprendizaje Automático}{25}{}%
 \contentsline {section}{\numberline {3.1}Clasificación de sistemas o tipos de aprendizaje automático}{26}{}%
-\contentsline {section}{\numberline {3.2}Redes Neuronales Artificiales}{28}{}%
-\contentsline {subsection}{\numberline {3.2.1}Perceptrón}{29}{}%
-\contentsline {subsection}{\numberline {3.2.2}Funciones de activación}{31}{}%
-\contentsline {subsection}{\numberline {3.2.3}Arquitectura y aprendizaje}{32}{}%
-\contentsline {section}{\numberline {3.3}Aplicación de Machine Learning en Redes Ópticas Elásticas Multinúcleo}{33}{}%
-\contentsline {chapter}{\numberline {4} Método Propuesto }{37}{}%
-\contentsline {section}{\numberline {4.1}Características}{38}{}%
-\contentsline {section}{\numberline {4.2}Obtención de datos para el entrenamiento}{41}{}%
-\contentsline {section}{\numberline {4.3}Herramientas Utilizadas}{43}{}%
-\contentsline {section}{\numberline {4.4}Modelado}{44}{}%
-\contentsline {section}{\numberline {4.5}Entrenamiento}{44}{}%
-\contentsline {section}{\numberline {4.6}Pruebas de predicción}{45}{}%
-\contentsline {chapter}{\numberline {5} Pruebas y resultados obtenidos }{47}{}%
-\contentsline {section}{\numberline {5.1}Objetivos a optimizar}{49}{}%
-\contentsline {section}{\numberline {5.2}Análisis de los resultados}{49}{}%
-\contentsline {chapter}{\numberline {6} Conclusiones y Trabajos Futuros }{55}{}%
-\contentsline {section}{\numberline {6.1}Conclusiones Experimentales}{56}{}%
-\contentsline {section}{\numberline {6.2}Aportes}{57}{}%
-\contentsline {section}{\numberline {6.3}Trabajos Futuros}{58}{}%
+\contentsline {section}{\numberline {3.2}Gradient Boosting}{28}{}%
+\contentsline {subsection}{\numberline {3.2.1}Fundamentos del Aprendizaje por Ensamble}{29}{}%
+\contentsline {subsection}{\numberline {3.2.2}Principios del Gradient Boosting}{30}{}%
+\contentsline {subsection}{\numberline {3.2.3}GradientBoostingClassifier}{31}{}%
+\contentsline {subsection}{\numberline {3.2.4}Hiperparámetros y Regularización}{32}{}%
+\contentsline {subsection}{\numberline {3.2.5}Ventajas y Limitaciones}{33}{}%
+\contentsline {section}{\numberline {3.3}Aplicación de Machine Learning en Redes Ópticas Elásticas Multinúcleo}{34}{}%
+\contentsline {subsection}{\numberline {3.3.1}Gradient Boosting en MC-EON}{37}{}%
+\contentsline {chapter}{\numberline {4} Método Propuesto }{39}{}%
+\contentsline {section}{\numberline {4.1}Características}{40}{}%
+\contentsline {section}{\numberline {4.2}Obtención de datos para el entrenamiento}{43}{}%
+\contentsline {subsection}{\numberline {4.2.1}Definición de niveles de carga}{43}{}%
+\contentsline {subsection}{\numberline {4.2.2}Modelo matemático de simulación}{46}{}%
+\contentsline {subsection}{\numberline {4.2.3}Mapeo de valores a niveles discretos}{47}{}%
+\contentsline {subsection}{\numberline {4.2.4}Identificación de fases de carga}{48}{}%
+\contentsline {subsection}{\numberline {4.2.5}Comportamiento general de la simulación}{49}{}%
+\contentsline {subsection}{\numberline {4.2.6}Aplicación al entrenamiento del modelo}{49}{}%
+\contentsline {section}{\numberline {4.3}Herramientas Utilizadas}{50}{}%
+\contentsline {section}{\numberline {4.4}Modelado}{50}{}%
+\contentsline {subsection}{\numberline {4.4.1}Gradient Boosting Classifier}{51}{}%
+\contentsline {subsection}{\numberline {4.4.2}Modelos Alternativos Evaluados}{51}{}%
+\contentsline {section}{\numberline {4.5}Entrenamiento}{52}{}%
+\contentsline {subsection}{\numberline {4.5.1}División Estratificada de Datos}{52}{}%
+\contentsline {subsection}{\numberline {4.5.2}Preprocesamiento}{52}{}%
+\contentsline {subsection}{\numberline {4.5.3}Proceso de Entrenamiento Iterativo}{53}{}%
+\contentsline {subsection}{\numberline {4.5.4}Optimización del Umbral de Decisión}{54}{}%
+\contentsline {section}{\numberline {4.6}Pruebas de Predicción}{54}{}%
+\contentsline {subsection}{\numberline {4.6.1}Evaluación en Conjunto de Prueba}{54}{}%
+\contentsline {subsection}{\numberline {4.6.2}Análisis de Viabilidad}{55}{}%
+\contentsline {subsection}{\numberline {4.6.3}Visualización de Predicciones}{55}{}%
+\contentsline {subsection}{\numberline {4.6.4}Análisis de Predictibilidad}{56}{}%
+\contentsline {chapter}{\numberline {5} Pruebas y resultados obtenidos }{57}{}%
+\contentsline {section}{\numberline {5.1}Objetivos a optimizar}{59}{}%
+\contentsline {section}{\numberline {5.2}Análisis de los resultados}{59}{}%
+\contentsline {chapter}{\numberline {6} Conclusiones y Trabajos Futuros }{65}{}%
+\contentsline {section}{\numberline {6.1}Conclusiones Experimentales}{66}{}%
+\contentsline {section}{\numberline {6.2}Aportes}{67}{}%
+\contentsline {section}{\numberline {6.3}Trabajos Futuros}{68}{}%

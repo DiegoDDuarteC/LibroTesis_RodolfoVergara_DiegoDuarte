@@ -57,11 +57,12 @@ En el trabajo presentado por Zhang \cite{zhang2014dynamic}, se realizó un anál
 En este trabajo nos centraremos en el tercer subproblema, ¿Cuándo reconfigurar?, ya que considerando el enfoque proactivo para resolver el problema de la fragmentación, encontramos que los procesos de desfragmentación podrían ejecutarse en periodos de tiempo donde no son del todo necesarios, es decir cuando la red se encuentra con una baja fragmentación, provocando desfragmentaciones ineficientes, una cantidad mayor de disrupciones de conexiones y una elevación innecesaria del costo de procesamiento.
 %
 
-En los siguientes capítulos presentamos un novedoso modelo de predicción de probabilidades de bloqueo implementado con técnicas de aprendizaje automático o \textit{Machine Learning}, el cual se utiliza como disparador del proceso de desfragmentación pero en este caso redes SDM-EON Multinúcleo, proponiendo de esta manera una solución al sub problema planteado anteriormente. 
+En los siguientes capítulos presentamos modelos de predicción de indice de fragmentación, entrenados para detectar si supera unos umbrales predefinidos, implementados con técnicas de aprendizaje automático o \textit{Machine Learning}, los cuales se utilizan como estrategia de disparo del proceso de desfragmentación pero en este caso redes SDM-EON Multinúcleo, proponiendo de esta manera una solución al sub problema planteado anteriormente. 
 %
 \section{Objetivos del trabajo}
 \subsection{Objetivo General}
-Diseñar un modelo de disparo para el proceso de desfragmentación en redes ópticas elásticas multicore basado en métricas que indiquen el estado de la fragmentación de la red, utilizando técnicas de aprendizaje automático (\textit{Machine Learning}), con el propósito de maximizar la eficiencia en el uso de los recursos de la red mediante la reducción de reconfiguraciones de conexiones existentes y la minimización de la probabilidad de bloqueo. 
+Diseñar modelos de predicción para el proceso de desfragmentación en redes ópticas elásticas multicore, utilizando técnicas de aprendizaje automático, con el propósito de maximizar la eficiencia en el uso de los recursos de la red mediante la reducción de reconfiguraciones innecesarias y la minimización de la cantidad de bloqueos.
+%%
 
 \subsection{Objetivos Específicos}
 \begin{itemize}

@@ -1,8 +1,8 @@
-PWD c:/Users/DD/Desktop/FACU/Libro Tesis/Tesis_DiegoDuarte_RodolfoVergara/book
+PWD c:/Users/rsvf9/Documents/tesis/LibroTesis_RodolfoVergara_DiegoDuarte/book
 INPUT c:/texlive/2025/texmf.cnf
 INPUT c:/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/DD/Desktop/FACU/Libro Tesis/Tesis_DiegoDuarte_RodolfoVergara/book/tesis.tex
+INPUT c:/Users/rsvf9/Documents/tesis/LibroTesis_RodolfoVergara_DiegoDuarte/book/tesis.tex
 OUTPUT tesis.log
 INPUT ./util/fpunathesis.cls
 INPUT ./util/fpunathesis.cls
@@ -240,8 +240,8 @@ INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-OUTPUT tesis.toc
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecsl1200.tfm
+OUTPUT tesis.toc
 INPUT ./tesis.lof
 INPUT ./tesis.lof
 INPUT tesis.lof
@@ -334,21 +334,6 @@ OUTPUT capitulos/capitulo3.aux
 INPUT ./capitulos/capitulo3.tex
 INPUT ./capitulos/capitulo3.tex
 INPUT capitulos/capitulo3.tex
-INPUT ./capitulos/img/perceptron.png
-INPUT ./capitulos/img/perceptron.png
-INPUT ./capitulos/img/perceptron.png
-INPUT ./capitulos/img/perceptron.png
-INPUT ./capitulos/img/perceptron.png
-INPUT ./capitulos/img/funcion_activacion.png
-INPUT ./capitulos/img/funcion_activacion.png
-INPUT ./capitulos/img/funcion_activacion.png
-INPUT ./capitulos/img/funcion_activacion.png
-INPUT ./capitulos/img/funcion_activacion.png
-INPUT ./capitulos/img/redNeuronal.png
-INPUT ./capitulos/img/redNeuronal.png
-INPUT ./capitulos/img/redNeuronal.png
-INPUT ./capitulos/img/redNeuronal.png
-INPUT ./capitulos/img/redNeuronal.png
 INPUT ./capitulos/capitulo4.tex
 INPUT ./capitulos/capitulo4.tex
 OUTPUT capitulos/capitulo4.aux
@@ -356,42 +341,47 @@ INPUT ./capitulos/capitulo4.tex
 INPUT ./capitulos/capitulo4.tex
 INPUT capitulos/capitulo4.tex
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbi1200.tfm
-INPUT ./capitulos/img/ejemploMetricasCompleto4.png
-INPUT ./capitulos/img/ejemploMetricasCompleto4.png
-INPUT ./capitulos/img/ejemploMetricasCompleto4.png
-INPUT ./capitulos/img/ejemploMetricasCompleto4.png
-INPUT ./capitulos/img/ejemploMetricasCompleto4.png
-INPUT ./capitulos/img/trafico_1_a.png
-INPUT ./capitulos/img/trafico_1_a.png
-INPUT ./capitulos/img/trafico_1_a.png
-INPUT ./capitulos/img/trafico_1_a.png
-INPUT ./capitulos/img/trafico_1_a.png
-INPUT ./capitulos/img/trafico_2_b.png
-INPUT ./capitulos/img/trafico_2_b.png
-INPUT ./capitulos/img/trafico_2_b.png
-INPUT ./capitulos/img/trafico_2_b.png
-INPUT ./capitulos/img/trafico_2_b.png
-INPUT ./capitulos/img/trafico_3_c.png
-INPUT ./capitulos/img/trafico_3_c.png
-INPUT ./capitulos/img/trafico_3_c.png
-INPUT ./capitulos/img/trafico_3_c.png
-INPUT ./capitulos/img/trafico_3_c.png
-INPUT ./capitulos/img/graficoErrorEs.png
-INPUT ./capitulos/img/graficoErrorEs.png
-INPUT ./capitulos/img/graficoErrorEs.png
-INPUT ./capitulos/img/graficoErrorEs.png
-INPUT ./capitulos/img/graficoErrorEs.png
-INPUT ./capitulos/img/trafico_1.png
-INPUT ./capitulos/img/trafico_1.png
-INPUT ./capitulos/img/trafico_1.png
-INPUT ./capitulos/img/trafico_1.png
-INPUT ./capitulos/img/trafico_1.png
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm
-INPUT ./capitulos/img/grafico_prediccion_usnet.PNG
-INPUT ./capitulos/img/grafico_prediccion_usnet.PNG
-INPUT ./capitulos/img/grafico_prediccion_usnet.PNG
-INPUT ./capitulos/img/grafico_prediccion_usnet.PNG
-INPUT ./capitulos/img/grafico_prediccion_usnet.PNG
+INPUT ./capitulos/img/SIMULACION_TABLA1_NIVELES DE CARGA.png
+INPUT ./capitulos/img/SIMULACION_TABLA1_NIVELES DE CARGA.png
+INPUT ./capitulos/img/SIMULACION_TABLA1_NIVELES DE CARGA.png
+INPUT ./capitulos/img/SIMULACION_TABLA1_NIVELES DE CARGA.png
+INPUT ./capitulos/img/SIMULACION_TABLA1_NIVELES DE CARGA.png
+INPUT ./capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png
+INPUT ./capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png
+INPUT ./capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png
+INPUT ./capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png
+INPUT ./capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png
+INPUT ./capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png
+INPUT ./capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png
+INPUT ./capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png
+INPUT ./capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png
+INPUT ./capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png
+INPUT ./capitulos/img/SIMULACION_TABLA2_MUESTRA_DE_DATOS_TEMPORALES.png
+INPUT ./capitulos/img/SIMULACION_TABLA2_MUESTRA_DE_DATOS_TEMPORALES.png
+INPUT ./capitulos/img/SIMULACION_TABLA2_MUESTRA_DE_DATOS_TEMPORALES.png
+INPUT ./capitulos/img/SIMULACION_TABLA2_MUESTRA_DE_DATOS_TEMPORALES.png
+INPUT ./capitulos/img/SIMULACION_TABLA2_MUESTRA_DE_DATOS_TEMPORALES.png
+INPUT ./capitulos/img/SIMULACION_TABLA5_COMPONENTES_ARMONICAS_DEL_MODELO.png
+INPUT ./capitulos/img/SIMULACION_TABLA5_COMPONENTES_ARMONICAS_DEL_MODELO.png
+INPUT ./capitulos/img/SIMULACION_TABLA5_COMPONENTES_ARMONICAS_DEL_MODELO.png
+INPUT ./capitulos/img/SIMULACION_TABLA5_COMPONENTES_ARMONICAS_DEL_MODELO.png
+INPUT ./capitulos/img/SIMULACION_TABLA5_COMPONENTES_ARMONICAS_DEL_MODELO.png
+INPUT ./capitulos/img/SIMULACION_MODELO_MATEMATICO_COMPLETO.png
+INPUT ./capitulos/img/SIMULACION_MODELO_MATEMATICO_COMPLETO.png
+INPUT ./capitulos/img/SIMULACION_MODELO_MATEMATICO_COMPLETO.png
+INPUT ./capitulos/img/SIMULACION_MODELO_MATEMATICO_COMPLETO.png
+INPUT ./capitulos/img/SIMULACION_MODELO_MATEMATICO_COMPLETO.png
+INPUT ./capitulos/img/SIMULACION_TABLA3_DISTRIBUCION_DE_FASES_OPERATIVAS.png
+INPUT ./capitulos/img/SIMULACION_TABLA3_DISTRIBUCION_DE_FASES_OPERATIVAS.png
+INPUT ./capitulos/img/SIMULACION_TABLA3_DISTRIBUCION_DE_FASES_OPERATIVAS.png
+INPUT ./capitulos/img/SIMULACION_TABLA3_DISTRIBUCION_DE_FASES_OPERATIVAS.png
+INPUT ./capitulos/img/SIMULACION_TABLA3_DISTRIBUCION_DE_FASES_OPERATIVAS.png
+INPUT ./capitulos/img/SIMULACION_TABLA4_FRECUENCIA_DE_OCURRENCIA.png
+INPUT ./capitulos/img/SIMULACION_TABLA4_FRECUENCIA_DE_OCURRENCIA.png
+INPUT ./capitulos/img/SIMULACION_TABLA4_FRECUENCIA_DE_OCURRENCIA.png
+INPUT ./capitulos/img/SIMULACION_TABLA4_FRECUENCIA_DE_OCURRENCIA.png
+INPUT ./capitulos/img/SIMULACION_TABLA4_FRECUENCIA_DE_OCURRENCIA.png
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ectt1200.tfm
 INPUT ./capitulos/capitulo5.tex
 INPUT ./capitulos/capitulo5.tex
 OUTPUT capitulos/capitulo5.aux
@@ -440,7 +430,6 @@ INPUT ./capitulos/capitulo6.tex
 INPUT ./capitulos/capitulo6.tex
 INPUT capitulos/capitulo6.tex
 OUTPUT ./anexo-1.aux
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ectt1200.tfm
 INPUT tesis.aux
 INPUT ./simbolos.aux
 INPUT ./simbolos.aux
@@ -476,6 +465,7 @@ INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb
@@ -484,7 +474,6 @@ INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb
-INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb

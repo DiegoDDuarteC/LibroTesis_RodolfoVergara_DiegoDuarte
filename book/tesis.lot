@@ -3,9 +3,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Tabla de resultados en pruebas de predicción}}{45}{}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Resultados en pruebas de predicción (Gradient Boosting)}}{55}{}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Tabla de soluciones en el frente pareto}}{50}{}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Tabla de cobertura para topología USNET}}{54}{}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Tabla de cobertura para topología NSFNET}}{54}{}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Tabla de soluciones en el frente pareto}}{60}{}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Tabla de cobertura para topología USNET}}{64}{}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Tabla de cobertura para topología NSFNET}}{64}{}%
 \addvspace {10\p@ }
