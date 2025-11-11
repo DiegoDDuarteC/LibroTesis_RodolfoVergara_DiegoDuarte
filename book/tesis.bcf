@@ -2390,8 +2390,7 @@
     <bcf:citekey order="15" intorder="1">davalos2019spectrum</bcf:citekey>
     <bcf:citekey order="16" intorder="1">scikit-learn</bcf:citekey>
     <bcf:citekey order="17" intorder="1">davalos2019spectrum</bcf:citekey>
-    <bcf:citekey order="18" intorder="1">davalos2019spectrum</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">von2014survey</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">zhang2014dynamic</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

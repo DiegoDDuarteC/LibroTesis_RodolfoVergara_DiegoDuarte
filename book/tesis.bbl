@@ -537,59 +537,9 @@
       \field{pages}{119835\bibrangedash 119843}
       \range{pages}{9}
     \endentry
-    \entry{tensowFlow}{misc}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://www.tensorflow.org}}
-      \field{title}{Tensor Flow}
-    \endentry
-    \entry{von2014survey}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=f81a2d6cbc6f1939e98b75f872a2a165}{%
-           family={Von\bibnamedelima Lucken},
-           familyi={V\bibinitperiod\bibinitdelim L\bibinitperiod},
-           given={Christian},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=6e5ce5734f8f1a93aeca21b7d3f9f625}{%
-           family={Baran},
-           familyi={B\bibinitperiod},
-           given={Benjamin},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=6a3ea05b939f0261e8390b223ba8bb44}{%
-           family={Brizuela},
-           familyi={B\bibinitperiod},
-           given={Carlos},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{4dc1d5c05e549b04e9cfdb40c2a09f34}
-      \strng{fullhash}{4dc1d5c05e549b04e9cfdb40c2a09f34}
-      \strng{fullhashraw}{4dc1d5c05e549b04e9cfdb40c2a09f34}
-      \strng{bibnamehash}{4dc1d5c05e549b04e9cfdb40c2a09f34}
-      \strng{authorbibnamehash}{4dc1d5c05e549b04e9cfdb40c2a09f34}
-      \strng{authornamehash}{4dc1d5c05e549b04e9cfdb40c2a09f34}
-      \strng{authorfullhash}{4dc1d5c05e549b04e9cfdb40c2a09f34}
-      \strng{authorfullhashraw}{4dc1d5c05e549b04e9cfdb40c2a09f34}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Computational optimization and applications}
-      \field{number}{3}
-      \field{title}{A survey on multi-objective evolutionary algorithms for many-objective problems}
-      \field{volume}{58}
-      \field{year}{2014}
-      \field{pages}{707\bibrangedash 756}
-      \range{pages}{50}
-    \endentry
   \enddatalist
   \missing{[]}
+  \missing{scikit-learn}
 \endrefsection
 \endinput
 

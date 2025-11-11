@@ -5,7 +5,12 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Resultados en pruebas de predicción (Gradient Boosting)}}{55}{}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Tabla de soluciones en el frente pareto}}{60}{}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Tabla de cobertura para topología USNET}}{64}{}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Tabla de cobertura para topología NSFNET}}{64}{}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Configuración de escenarios de carga evaluados}}{59}{}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Resultados comparativos - Escenario 1 (Carga Baja)}}{64}{}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Resultados comparativos - Escenario 2 (Carga Media)}}{65}{}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Resultados comparativos - Escenario 3 (Carga Alta)}}{66}{}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Resultados con estrategia de doble predictor (3 niveles)}}{68}{}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Distribución de soluciones en el Frente de Pareto}}{68}{}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Cobertura de Pareto entre métodos (agregado 3 escenarios)}}{69}{}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces Validación del horizonte de predicción $t+1000$}}{71}{}%
 \addvspace {10\p@ }
