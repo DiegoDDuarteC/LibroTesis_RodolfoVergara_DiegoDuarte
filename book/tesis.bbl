@@ -287,96 +287,6 @@
       \field{pages}{34\bibrangedash 48}
       \range{pages}{15}
     \endentry
-    \entry{trindade2020machine}{article}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=56128134ea2b50bc4ded8e7490450761}{%
-           family={Trindade},
-           familyi={T\bibinitperiod},
-           given={Silvana},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d0f646469dc6b2e2abe521ddd438d8f1}{%
-           family={Fonseca},
-           familyi={F\bibinitperiod},
-           given={Nelson\bibnamedelima LS},
-           giveni={N\bibinitperiod\bibinitdelim L\bibinitperiod},
-           givenun=0,
-           prefix={da},
-           prefixi={d\bibinitperiod},
-           prefixun=0}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{0a67059f20196c054ec85510dba4ee11}
-      \strng{fullhash}{0a67059f20196c054ec85510dba4ee11}
-      \strng{fullhashraw}{0a67059f20196c054ec85510dba4ee11}
-      \strng{bibnamehash}{0a67059f20196c054ec85510dba4ee11}
-      \strng{authorbibnamehash}{0a67059f20196c054ec85510dba4ee11}
-      \strng{authornamehash}{0a67059f20196c054ec85510dba4ee11}
-      \strng{authorfullhash}{0a67059f20196c054ec85510dba4ee11}
-      \strng{authorfullhashraw}{0a67059f20196c054ec85510dba4ee11}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Network}
-      \field{number}{1}
-      \field{title}{Machine Learning for Spectrum Defragmentation in Space-Division Multiplexing Elastic Optical Networks}
-      \field{volume}{35}
-      \field{year}{2020}
-      \field{pages}{326\bibrangedash 332}
-      \range{pages}{7}
-    \endentry
-    \entry{xiong2019machine}{article}{}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=8e3e3c8d33315b6f161cf2b5d3dc7a46}{%
-           family={Xiong},
-           familyi={X\bibinitperiod},
-           given={Yu},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=065dfa144c5d9780da4520f73c91cdda}{%
-           family={Yang},
-           familyi={Y\bibinitperiod},
-           given={Yaya},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ec2757f8f88a66efce3c1b79fbb4c974}{%
-           family={Ye},
-           familyi={Y\bibinitperiod},
-           given={Yulong},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=931fe14b9a31947a1ac532faef8cb589}{%
-           family={Rouskas},
-           familyi={R\bibinitperiod},
-           given={George\bibnamedelima N},
-           giveni={G\bibinitperiod\bibinitdelim N\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier}%
-      }
-      \strng{namehash}{72b76f23c016920088f2b6dfbfa627be}
-      \strng{fullhash}{f0aba3db9c71602f922fecb54930a780}
-      \strng{fullhashraw}{f0aba3db9c71602f922fecb54930a780}
-      \strng{bibnamehash}{72b76f23c016920088f2b6dfbfa627be}
-      \strng{authorbibnamehash}{72b76f23c016920088f2b6dfbfa627be}
-      \strng{authornamehash}{72b76f23c016920088f2b6dfbfa627be}
-      \strng{authorfullhash}{f0aba3db9c71602f922fecb54930a780}
-      \strng{authorfullhashraw}{f0aba3db9c71602f922fecb54930a780}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Optical Fiber Technology}
-      \field{title}{A machine learning approach to mitigating fragmentation and crosstalk in space division multiplexing elastic optical networks}
-      \field{volume}{50}
-      \field{year}{2019}
-      \field{pages}{99\bibrangedash 107}
-      \range{pages}{9}
-    \endentry
     \entry{zhang2013bandwidth}{inproceedings}{}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=1d5d31f94a9041f4f5e9c5718ef2f433}{%
@@ -422,8 +332,8 @@
       \strng{authorfullhash}{52aa6f97b30aa716e8154875411616b5}
       \strng{authorfullhashraw}{52aa6f97b30aa716e8154875411616b5}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2013 IEEE International Conference on Communications (ICC)}
@@ -464,8 +374,8 @@
       \strng{authornamehash}{77ccb98c6098f6ada92598c1a9572e70}
       \strng{authorfullhash}{77ccb98c6098f6ada92598c1a9572e70}
       \strng{authorfullhashraw}{77ccb98c6098f6ada92598c1a9572e70}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Optical Communications and Networking}
@@ -526,8 +436,8 @@
       \strng{authornamehash}{a95d06e6715d57e4945498b6834f857d}
       \strng{authorfullhash}{27225fe9dce762be74e6ee127353a07a}
       \strng{authorfullhashraw}{27225fe9dce762be74e6ee127353a07a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Access}
@@ -538,7 +448,6 @@
       \range{pages}{9}
     \endentry
   \enddatalist
-  \missing{[]}
   \missing{scikit-learn}
 \endrefsection
 \endinput

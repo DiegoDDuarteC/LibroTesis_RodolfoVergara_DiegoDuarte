@@ -42,9 +42,7 @@ Cada uno de estos paradigmas presenta ventajas distintivas y limitaciones inhere
 
 \section{Gradient Boosting}
 
-El Gradient Boosting representa uno de los algoritmos de aprendizaje automático supervisado más potentes y efectivos en la actualidad, especialmente para problemas de clasificación y regresión. Este método se fundamenta en el paradigma de aprendizaje por ensamble, donde múltiples modelos predictivos débiles se combinan secuencialmente para construir un predictor robusto de alto rendimiento.
-
-A diferencia de las redes neuronales artificiales que se inspiran en la arquitectura biológica del cerebro, el Gradient Boosting se sustenta en principios de optimización matemática y aprendizaje secuencial. La filosofía subyacente consiste en entrenar modelos de manera iterativa, donde cada nuevo modelo se especializa en corregir los errores residuales cometidos por los modelos previos, generando así una mejora progresiva del rendimiento global del sistema.
+El Gradient Boosting representa uno de los algoritmos de aprendizaje automático supervisado más potentes y efectivos en la actualidad, especialmente para problemas de clasificación y regresión con datos tabulares. Este método se fundamenta en el paradigma de aprendizaje por ensamble, donde múltiples modelos predictivos débiles se combinan secuencialmente para construir un predictor robusto de alto rendimiento mediante principios de optimización matemática y aprendizaje iterativo.
 
 \subsection{Fundamentos del Aprendizaje por Ensamble}
 
@@ -56,23 +54,19 @@ El aprendizaje por ensamble o \textit{Ensemble Learning} constituye una estrateg
     \item \textbf{Reducción de sesgo:} La combinación secuencial de modelos permite corregir sistemáticamente errores persistentes, mejorando la capacidad del sistema para capturar relaciones complejas en los datos.
 \end{itemize}
 
-Existen dos estrategias principales en el aprendizaje por ensamble. El \textit{Bagging} o agregación bootstrap, entrena múltiples modelos de manera independiente y paralela sobre diferentes subconjuntos de datos, combinando posteriormente sus predicciones mediante votación o promediación. El \textit{Boosting}, por otro lado, entrena modelos de forma secuencial, donde cada nuevo modelo se enfoca en corregir los errores de sus predecesores, estableciendo una relación de dependencia entre los aprendices.
+Existen dos estrategias principales en el aprendizaje por ensamble. El \textit{Bagging} o agregación bootstrap entrena múltiples modelos de manera independiente y paralela sobre diferentes subconjuntos de datos, combinando posteriormente sus predicciones mediante votación o promediación. El \textit{Boosting}, por otro lado, entrena modelos de forma secuencial, donde cada nuevo modelo se enfoca en corregir los errores de sus predecesores. El Gradient Boosting pertenece a esta segunda categoría, distinguiéndose por su fundamentación matemática rigurosa basada en el descenso del gradiente en el espacio funcional.
 
-El Gradient Boosting pertenece a esta segunda categoría, distinguiéndose por su fundamentación matemática rigurosa y su eficacia demostrada en múltiples dominios de aplicación.
+\subsection{Algoritmo de Gradient Boosting}
 
-\subsection{Principios del Gradient Boosting}
-
-El algoritmo de Gradient Boosting construye el modelo predictivo mediante la adición secuencial de funciones, típicamente árboles de decisión de profundidad limitada, que optimizan iterativamente una función objetivo. El proceso puede conceptualizarse como un descenso del gradiente en el espacio funcional, donde en cada iteración se añade una nueva función que aproxima el gradiente negativo de la pérdida respecto a las predicciones actuales.
-
-Formalmente, dado un conjunto de entrenamiento $\{(x_i, y_i)\}_{i=1}^{n}$ donde $x_i$ representa el vector de características y $y_i$ la variable objetivo, el Gradient Boosting construye un modelo aditivo de la forma:
+Dado un conjunto de entrenamiento $\{(x_i, y_i)\}_{i=1}^{n}$ donde $x_i$ representa el vector de características y $y_i$ la variable objetivo, el Gradient Boosting construye un modelo aditivo mediante la incorporación secuencial de árboles de decisión de profundidad limitada:
 
 \begin{equation}
 F_M(x) = \sum_{m=0}^{M} \gamma_m h_m(x)
 \end{equation}
 
-donde $h_m(x)$ representa el $m$-ésimo aprendiz débil, típicamente un árbol de decisión, $\gamma_m$ es el coeficiente de peso asociado, y $M$ denota el número total de iteraciones o árboles en el ensamble.
+donde $h_m(x)$ representa el $m$-ésimo aprendiz débil, $\gamma_m$ es el coeficiente de peso asociado, y $M$ denota el número total de iteraciones.
 
-El algoritmo opera mediante el siguiente procedimiento iterativo:
+El procedimiento algorítmico consiste en:
 
 \begin{enumerate}
     \item \textbf{Inicialización:} Se establece un modelo inicial $F_0(x)$, comúnmente una constante que minimiza la función de pérdida sobre el conjunto de entrenamiento completo.
@@ -84,28 +78,26 @@ El algoritmo opera mediante el siguiente procedimiento iterativo:
         r_{im} = -\left[\frac{\partial L(y_i, F(x_i))}{\partial F(x_i)}\right]_{F(x)=F_{m-1}(x)}
         \end{equation}
         
-        \item Se entrena un nuevo aprendiz débil $h_m(x)$ para predecir estos residuos, ajustándose a los patrones de error del modelo acumulado.
+        \item Se entrena un nuevo aprendiz débil $h_m(x)$ para predecir estos residuos.
         
-        \item Se determina el coeficiente óptimo $\gamma_m$ que minimiza la pérdida al incorporar el nuevo aprendiz:
+        \item Se determina el coeficiente óptimo $\gamma_m$ que minimiza la pérdida:
         \begin{equation}
         \gamma_m = \arg\min_{\gamma} \sum_{i=1}^{n} L(y_i, F_{m-1}(x_i) + \gamma h_m(x_i))
         \end{equation}
         
-        \item Se actualiza el modelo mediante la adición ponderada del nuevo componente:
+        \item Se actualiza el modelo mediante:
         \begin{equation}
         F_m(x) = F_{m-1}(x) + \nu \cdot \gamma_m h_m(x)
         \end{equation}
-        donde $\nu$ representa la tasa de aprendizaje o \textit{learning rate}, un hiperparámetro que controla la contribución de cada árbol al modelo final.
+        donde $\nu$ representa la tasa de aprendizaje, un hiperparámetro que controla la contribución de cada árbol al modelo final.
     \end{itemize}
 \end{enumerate}
 
-Este proceso iterativo continúa hasta alcanzar el número especificado de árboles $M$ o hasta satisfacer un criterio de convergencia establecido.
+Este proceso continúa hasta alcanzar el número especificado de árboles $M$ o hasta satisfacer un criterio de convergencia establecido.
 
 \subsection{GradientBoostingClassifier}
 
-El \textit{GradientBoostingClassifier} constituye la implementación específica del algoritmo Gradient Boosting para problemas de clasificación. Esta variante emplea funciones de pérdida apropiadas para variables categóricas y adapta el procedimiento de optimización para generar probabilidades de pertenencia a clases.
-
-Para clasificación binaria, se utiliza típicamente la función de pérdida logística o \textit{log loss}:
+Para problemas de clasificación binaria, el \textit{GradientBoostingClassifier} emplea típicamente la función de pérdida logística:
 
 \begin{equation}
 L(y, F(x)) = \log(1 + e^{-2yF(x)})
@@ -117,9 +109,9 @@ donde $y \in \{-1, 1\}$ representa la clase verdadera y $F(x)$ la predicción de
 P(y=1|x) = \frac{1}{1 + e^{-2F(x)}}
 \end{equation}
 
-Para problemas de clasificación multiclase, se extiende el enfoque mediante la estrategia \textit{one-versus-all}, entrenando un modelo separado por cada clase y combinando las predicciones mediante normalización softmax para obtener distribuciones de probabilidad válidas.
+Para problemas multiclase, se extiende el enfoque mediante la estrategia \textit{one-versus-all}, entrenando un modelo separado por cada clase y combinando las predicciones mediante normalización softmax para obtener distribuciones de probabilidad válidas.
 
-\subsection{Hiperparámetros y Regularización}
+\subsection{Configuración e Hiperparámetros}
 
 El rendimiento del \textit{GradientBoostingClassifier} depende críticamente de la configuración apropiada de sus hiperparámetros, los cuales regulan la complejidad del modelo y previenen el sobreajuste:
 
@@ -139,11 +131,7 @@ El rendimiento del \textit{GradientBoostingClassifier} depende críticamente de 
 
 La selección óptima de estos hiperparámetros requiere típicamente validación cruzada y búsqueda sistemática en el espacio de configuraciones mediante técnicas como \textit{Grid Search} o \textit{Random Search}.
 
-\subsection{Ventajas y Limitaciones}
-
-El \textit{GradientBoostingClassifier} presenta características distintivas que determinan su idoneidad para diferentes contextos:
-
-\textbf{Ventajas:}
+\textbf{Ventajas del algoritmo:}
 \begin{itemize}
     \item Capacidad para modelar relaciones no lineales complejas sin requerir transformaciones explícitas de características
     \item Robustez ante variables de diferentes escalas, eliminando la necesidad de normalización
@@ -162,61 +150,18 @@ El \textit{GradientBoostingClassifier} presenta características distintivas que
     \item Rendimiento subóptimo en datos de muy alta dimensionalidad comparado con métodos especializados
 \end{itemize}
 
-\section{Aplicación de Machine Learning en Redes Ópticas Elásticas Multinúcleo}
-%
+\subsection{Aplicación en MC-EON}
 
-En esta sección se presenta un estudio bibliográfico del estado del arte de técnicas de \textit{Machine Learning} aplicadas a problemas en redes ópticas elásticas multinúcleo (MC-EON, \textit{Multi-Core Elastic Optical Networks}).
-%
-
-Panchali Datta Choudhury y Tanmay De presentan un análisis comprehensivo del uso de técnicas de \textit{Machine Learning} en redes ópticas elásticas \cite{[]}, fundamento que se extiende a las arquitecturas multinúcleo. Las MC-EON introducen complejidades adicionales respecto a las redes ópticas elásticas convencionales, particularmente en la gestión de múltiples núcleos dentro de una misma fibra y los fenómenos de interferencia entre núcleos (inter-core crosstalk), aspectos que requieren estrategias de optimización más sofisticadas donde el \textit{Machine Learning} demuestra particular utilidad.
-%
-
-Las principales áreas de aplicación de estas técnicas en el contexto de MC-EON incluyen:
-%
+En el contexto de las redes ópticas elásticas multinúcleo (MC-EON), el \textit{GradientBoostingClassifier} ha demostrado particular eficacia para tareas de clasificación relacionadas con la gestión dinámica de recursos. Sus principales aplicaciones incluyen:
 
 \begin{itemize}
-    \item \textbf{Evaluación y predicción de calidad de servicio}
+    \item \textbf{Predicción de bloqueo de solicitudes:} Predecir la probabilidad de que una solicitud de conexión sea bloqueada considerando la fragmentación espectral, disponibilidad de núcleos y niveles de diafonía entre núcleos.
     
-    La investigación presentada en \cite{[]} propone un modelo de asignación de ancho de banda en EON considerando los requisitos de calidad de servicio o \textit{Quality of Service} (QoS). Se emplea aprendizaje por refuerzo o \textit{Reinforcement Learning}, donde la función de recompensa se fundamenta en el cumplimiento de los requisitos de QoS. En el contexto de MC-EON, esta aproximación adquiere mayor relevancia debido a la necesidad de garantizar QoS considerando simultáneamente la asignación de recursos en múltiples núcleos y la gestión de interferencias entre ellos.
+    \item \textbf{Clasificación de eventos de desfragmentación:} Determinar el momento óptimo para ejecutar algoritmos de desfragmentación, clasificando el estado de la red según la necesidad de reorganizar las asignaciones espectrales. Esta capacidad permite decisiones en tiempo real que balancean el costo operacional contra los beneficios en reducción de bloqueos futuros.
     
-    \item \textbf{Supervivencia de red}
+    \item \textbf{Selección de estrategias RMSCA:} Seleccionar entre diferentes estrategias de \textit{Routing, Modulation, Spectrum and Core Assignment} según las características de la demanda y el estado de la red. La capacidad del modelo para capturar interacciones no lineales permite adaptar dinámicamente la estrategia de asignación.
     
-    El trabajo presentado en \cite{[]} explora la optimización de redes considerando su capacidad de supervivencia mediante aprendizaje por refuerzo profundo. Se implementa una arquitectura de dos agentes: uno proporciona el esquema de trabajo principal y otro gestiona el esquema de protección. Esta combinación, junto con un mecanismo de recompensas orientado a maximizar la rentabilidad, genera políticas de enrutamiento, asignación de espectro y selección de modulación que garantizan supervivencia. En MC-EON, estos mecanismos de protección resultan especialmente críticos dado el mayor número de recursos físicos susceptibles a fallos.
-    
-    \item \textbf{Predicción de tráfico}
-    
-    Aibin \cite{[]} presenta un enfoque para predicción de tráfico en redes de centros de datos en la nube o \textit{Cloud Data Center Networks} utilizando búsqueda de árbol de Monte Carlo. Para cada solicitud, esta técnica identifica el centro de datos más apropiado y el conjunto óptimo de rutas candidatas mediante la construcción de un árbol disperso y selección estocástica. Esta metodología es aplicable a MC-EON para predecir patrones de tráfico y optimizar la asignación de núcleos.
-    
-    \item \textbf{Enrutamiento, modulación y asignación del espectro}
-    
-    Chen et al. \cite{[]} proponen un modelo de aprendizaje por refuerzo profundo para desarrollar un sistema autónomo de RMSA en redes ópticas elásticas. Emplean redes neuronales convolucionales, denominadas \textit{Q Networks}, para aprender políticas RMSA considerando conectividad, utilización espectral y demandas de tráfico. En MC-EON, este enfoque se extiende al problema RMSCA (\textit{Routing, Modulation, Spectrum and Core Assignment}), donde adicionalmente se debe seleccionar el núcleo óptimo y considerar las restricciones de crosstalk entre núcleos.
-    
-\end{itemize}
-%
-
-Durante este trabajo dentro de los puntos mas destacados nos podemos encontrar con algunos trabajos cuyo principal objetivo y enfoque es la solución al problema de la fragmentación de la red, con alguno de ellos para otro tipo de redes, como el presentado en \cite{trindade2020machine}, el cual encuentra su principal enfoque en \textit{Space Division Multiplexing Elastic Optical Networks} o SDM-EON , implementando redes neuronales, específicamente la red neuronal de Elman, para la predicción de tráfico de manera de disminuir la fragmentación y la diafonía o \textit{Cross-talk}.
- También se cuenta con el trabajo presentado por Enciso y Silva, el cual propone un algoritmo para decidir el mejor momento para disparar la desfragmentación de la red. Tomando ese trabajo como base, en este trabajo se proponen modelos para predecir los mejores momentos para para ejecutar la desfragmentación para Redes Ópticas Elásticas Multinúcleo (MC-EON). De manera en que se contemplan los problemas anteriores, agregando la complejidad que conlleva el uso de múltiples núcleos en una misma fibra.
-%%
-
-Para redes MC-EON también contamos con algoritmos de desfragmentación basados en Machine Learning, como el presentado en \cite{xiong2019machine}, donde los autores proponen un enfoque de aprendizaje no supervisado que no requiere conocimientos previos de la red. El algoritmo identifica aquellos \textit{lightpaths} que pueden ser agrupados en base a ciertas características, para luego mapear esos grupos a los núcleos y reordenar el espectro sin necesidad de realizar re-ruteos.
-%
-
-\subsection{Gradient Boosting en MC-EON}
-
-En el contexto de las redes ópticas elásticas multinúcleo (MC-EON), los algoritmos de Gradient Boosting han demostrado particular eficacia para tareas de clasificación y predicción relacionadas con la gestión dinámica de recursos y la optimización del rendimiento de la red.
-
-Las principales áreas de aplicación de \textit{GradientBoostingClassifier} en MC-EON incluyen:
-
-\begin{itemize}
-    \item \textbf{Predicción de bloqueo de solicitudes:} El \textit{GradientBoostingClassifier} puede entrenarse para predecir la probabilidad de que una solicitud de conexión sea bloqueada dadas las condiciones actuales de la red, considerando factores como la fragmentación espectral, la disponibilidad de núcleos y los niveles de diafonía entre núcleos.
-    
-    \item \textbf{Clasificación de eventos de desfragmentación:} El modelo puede determinar el momento óptimo para ejecutar algoritmos de desfragmentación, clasificando el estado de la red en categorías que indican la necesidad o conveniencia de reorganizar las asignaciones espectrales. Esta capacidad resulta particularmente valiosa para decisiones en tiempo real que deben balancear el costo operacional de la desfragmentación contra los beneficios en términos de reducción de bloqueos futuros.
-    
-    \item \textbf{Selección de estrategias RMSCA:} Mediante el aprendizaje de patrones históricos, el clasificador puede seleccionar entre diferentes estrategias de \textit{Routing, Modulation, Spectrum and Core Assignment} según las características de la demanda y el estado de la red. La capacidad del modelo para capturar interacciones no lineales entre múltiples variables permite adaptar dinámicamente la estrategia de asignación a condiciones cambiantes de tráfico.
-    
-    \item \textbf{Detección de degradación de QoS:} El algoritmo puede identificar situaciones donde la calidad de servicio está en riesgo de degradarse, permitiendo acciones preventivas antes de que ocurran violaciones de los acuerdos de nivel de servicio. La interpretabilidad del modelo mediante análisis de importancia de características facilita la identificación de los factores más críticos que afectan la calidad de servicio.
+    \item \textbf{Detección de degradación de QoS:} Identificar situaciones donde la calidad de servicio está en riesgo, permitiendo acciones preventivas. La interpretabilidad del modelo facilita la identificación de los factores más críticos que afectan la calidad de servicio.
 \end{itemize}
 
-La naturaleza tabular de los datos operacionales en MC-EON (métricas de utilización, estadísticas de tráfico, indicadores de fragmentación) hace particularmente adecuado el uso de Gradient Boosting, cuyo rendimiento en este tipo de datos frecuentemente supera a aproximaciones basadas en redes neuronales profundas. Adicionalmente, la capacidad del modelo para proporcionar estimaciones de importancia de características facilita la comprensión de los factores más relevantes en las decisiones de gestión de la red, aspecto crítico para la validación y aceptación de sistemas autónomos en entornos de producción.
-
-El tiempo de entrenamiento relativamente reducido del \textit{GradientBoostingClassifier} comparado con redes neuronales profundas, junto con su robustez ante desbalances moderados en las clases y su capacidad para manejar características de diferentes tipos y escalas sin preprocesamiento extensivo, lo convierten en una opción pragmática para implementaciones en sistemas de gestión de MC-EON donde la eficiencia computacional y la confiabilidad son requisitos fundamentales.
+La naturaleza tabular de los datos operacionales en MC-EON hace particularmente adecuado el uso de Gradient Boosting, cuyo rendimiento en este tipo de datos frecuentemente supera a aproximaciones basadas en redes neuronales profundas. Adicionalmente, su capacidad para proporcionar estimaciones de importancia de características facilita la comprensión de los factores más relevantes en las decisiones de gestión, aspecto crítico para la validación de sistemas autónomos en entornos de producción.

@@ -1,428 +1,525 @@
-\chapter{ Método Propuesto }
-Este trabajo propone una solución para determinar los momentos en los que se disparará la ejecución de los procesos de desfragmentación de manera proactiva en redes MC-EON, mediante la utilización de técnicas de \textit{Machine Learning} para predecir el índice de fragmentación \textit{\textbf{BFR}} que sufrirá la red mediante el tráfico de red en un determinado periodo de tiempo \textit{t} y en base a eso, decidir si ejecutar la desfragmentación o no.
- Esto a fin de proceder de la mejor manera ante la red cuando llegue a un estado de alta fragmentación que provoque un aumento en la probabilidad de bloqueo de las demandas y que la desfragmentación de la red en ese punto ya no sea óptima.
-%
+\chapter{Método Propuesto}
 
-Para esta predicción se utiliza primeramente 2 valores que indiquen los umbrales del indice de fragmentación maximo y minimo, a modo que el valor predicho del índice de fragmentación a futuro no supere el umbral minimo, si supera el umbral mínimo, no realizar las desfragmentaciones, si supera el umbral minimo pero no el maximo, realizar las desfragmentaciones con menor frecuencia, y si supera el umbral maximo, realizar las desfragmentaciones con mayor frecuencia hasta que el indice de fragmentación futuro \textit{\textbf{BFR}} sea menor al umbral maximo.
-%%
-Así como tambien modelos de clasificación, utilizando un conjunto de datos de simulaciones de tráfico \textit{unicast}, tomando parámetros o características relacionadas a la fragmentación, la utilización de la red y las métricas específicas de múltiples núcleos como datos de entrada, produciendo un valor estimado del índice de fragmentación que experimentará la red en un periodo de tiempo \textit{t}.
-  A partir de este valor predicho, se determinará la frecuencia de desfragmentaciones realizadas fijando unos umbrales que permiten actuar antes de que la red alcance estados críticos de fragmentación que incrementen significativamente la probabilidad de bloqueo de las demandas.
-%%
+Este trabajo propone un sistema de desfragmentación proactiva para redes MC-EON mediante el uso de técnicas de \textit{Machine Learning}. El sistema predice el índice de fragmentación futuro (\textit{Bandwidth Fragmentation Ratio} o BFR) que experimentará la red y, en función de estos valores predichos, determina automáticamente cuándo y con qué frecuencia ejecutar procesos de desfragmentación.
 
-\section{Características}
+\section{Estrategia de Desfragmentación Adaptativa}
 
-En el área de \textit{Machine Learning}, se conoce como ``características'' a los parámetros o datos de entrada del modelo de aprendizaje.
-
-Las características seleccionadas fueron aquellas relacionadas al uso y la fragmentación de la red, así como métricas específicas de redes MC-EON. Se tomaron las principales métricas utilizadas para la determinación del estado de fragmentación, además de otras relacionadas a la utilización de la red y al comportamiento del tráfico, con el objetivo de predecir el índice de fragmentación futuro y determinar los momentos óptimos para ejecutar la desfragmentación de manera proactiva.
-
-Estas características son las siguientes: 
+El sistema implementa una estrategia de tres niveles basada en dos umbrales de fragmentación:
 
 \begin{itemize}
-    \item \textit{Bandwidth Fragmentation Ratio} o Relación de Fragmentación de ancho de banda (BFR)\cite{zhang2013bandwidth}: Representa el índice de fragmentación de los recursos de la red, siendo una de las métricas principales para evaluar la fragmentación externa. El BFR de un core en un enlace se define como:
+    \item \textbf{Umbral mínimo (BFR = 0.20):} Indica el inicio de fragmentación apreciable
+    \item \textbf{Umbral crítico (BFR = 0.46):} Señala estados de alta fragmentación que incrementan significativamente la probabilidad de bloqueo
+\end{itemize}
+
+La lógica de actuación se define como:
+
+\begin{enumerate}
+    \item \textbf{Sin desfragmentación:} Si la predicción indica que el BFR futuro no superará el umbral mínimo (BFR $< 0.20$)
+    \item \textbf{Desfragmentación de baja frecuencia:} Si el BFR predicho supera el umbral mínimo pero no alcanza el umbral crítico ($0.20 \leq$ BFR $< 0.46$)
+    \item \textbf{Desfragmentación de alta frecuencia:} Si el BFR predicho supera el umbral crítico (BFR $\geq 0.46$)
+\end{enumerate}
+
+Esta aproximación permite actuar de manera preventiva antes de que la red alcance estados críticos, optimizando el balance entre los costos operacionales de la desfragmentación y el mantenimiento de niveles aceptables de fragmentación.
+
+\section{Características Utilizadas}
+
+En el contexto de \textit{Machine Learning}, las características son los parámetros de entrada que alimentan el modelo predictivo. Para este trabajo se seleccionaron métricas relacionadas con la fragmentación, utilización de recursos y comportamiento específico de redes MC-EON:
+
+\begin{itemize}
+    \item \textbf{Bandwidth Fragmentation Ratio (BFR)}\cite{zhang2013bandwidth}: Representa el índice de fragmentación de los recursos de la red. El BFR de un core en un enlace se define como:
     \begin{equation}
         BFR_{core} = 1 - \frac{MaxBlock()}{S^{free}}
     \end{equation}
-    Donde \textit{MaxBlock()} es el tamaño del mayor bloque de FS libres y \(S^{free}\) es la sumatoria total de FS libres en el core.
+    donde \textit{MaxBlock()} es el tamaño del mayor bloque de frequency slots (FS) libres y \(S^{free}\) es la suma total de FS libres en el core.
+    
     El BFR de la red se calcula como el promedio ponderado considerando todos los cores de todos los enlaces:
     \begin{equation}
-       BFR_{red} = 1 - \frac{\sum_{i=1}^{\left | E \right |} \sum_{j=1}^{C} MaxBlock_{i,j}}{\sum_{i=1}^{\left | E \right |} \sum_{j=1}^{C} S^{free}_{i,j}}
+       BFR_{red} = 1 - \frac{\sum_{i=1}^{|E|} \sum_{j=1}^{C} MaxBlock_{i,j}}{\sum_{i=1}^{|E|} \sum_{j=1}^{C} S^{free}_{i,j}}
     \end{equation}
-    Donde \(C\) es el número de cores por enlace, \(MaxBlock_{i,j}\) es el mayor bloque libre en el core \(j\) del enlace \(i\), y \(S^{free}_{i,j}\) es el total de FS libres en ese core.
+    donde \(C\) es el número de cores por enlace, \(MaxBlock_{i,j}\) es el mayor bloque libre en el core \(j\) del enlace \(i\), y \(S^{free}_{i,j}\) es el total de FS libres en ese core.
     
-    \item Entropía de Shannon (SHF)\cite{wright2015minimum}: Métrica de fragmentación que mide la distribución de bloques libres en el espectro. Para un core en un enlace está definida por:
+    \item \textbf{Entropía de Shannon (SHF)}\cite{wright2015minimum}: Mide la distribución de bloques libres en el espectro. Para un core:
     \begin{equation}
         SHF_{core} = \sum_{i=1}^{B} \frac{S_{i}^{free}}{N}~\ln\frac{N}{S_{i}^{free}}
     \end{equation}
-    Donde \(S_{i}^{free}\) representa el tamaño del bloque libre \(i\), \(N\) es el número total de FS en el core, y \(B\) es la cantidad de bloques de FS libres. Para calcular el SHF de la red se calcula el promedio de los valores en todos los cores de todos los enlaces:
+    donde \(S_{i}^{free}\) es el tamaño del bloque libre \(i\), \(N\) es el número total de FS, y \(B\) es la cantidad de bloques libres. El SHF de la red se calcula como:
     \begin{equation}
-        SHF_{red} = \frac{1}{\left | E \right | \times C} \sum_{i=1}^{\left | E \right |} \sum_{j=1}^{C} SHF_{core_{i,j}}
+        SHF_{red} = \frac{1}{|E| \times C} \sum_{i=1}^{|E|} \sum_{j=1}^{C} SHF_{core_{i,j}}
     \end{equation}
     
-    \item Compacidad del Espectro (SC - \textit{Spectrum Compactness}): Métrica que evalúa qué tan compacto está el uso del espectro en un core. Se calcula considerando la dispersión de los FS ocupados y la cantidad de gaps intermedios. Para un core en un enlace se define como:
+    \item \textbf{Compacidad del Espectro (SC)}: Evalúa qué tan compacto está el uso del espectro considerando la dispersión de FS ocupados y la cantidad de gaps intermedios. Para un core:
     \begin{equation}
         SC_{core} = \frac{s_{max} - s_{min} + 1}{S^{occupied}} \times \frac{\sum_{i=1}^{G} g_i}{G}
     \end{equation}
-    Donde \(s_{min}\) y \(s_{max}\) son los índices del primer y último FS ocupado respectivamente, \(S^{occupied}\) es la cantidad total de FS ocupados, \(g_i\) es el tamaño del gap libre \(i\), y \(G\) es la cantidad total de gaps entre bloques ocupados. Si no hay FS ocupados, \(SC_{core} = 0\).
-    El SC de la red se calcula como:
-    \begin{equation}
-        SC_{red} = \frac{1}{\left | E \right | \times C} \sum_{i=1}^{\left | E \right |} \sum_{j=1}^{C} SC_{core_{i,j}}
-    \end{equation}
+    donde \(s_{min}\) y \(s_{max}\) son los índices del primer y último FS ocupado, \(S^{occupied}\) es la cantidad total de FS ocupados, \(g_i\) es el tamaño del gap libre \(i\), y \(G\) es la cantidad total de gaps. Si no hay FS ocupados, \(SC_{core} = 0\).
     
-    \item \textit{Golden Metric} (GM): Métrica avanzada que evalúa la fragmentación considerando rangos de tamaño de demandas esperadas. Dado dos parámetros \(n_1\) y \(n_2\) que representan el rango de tamaños de demanda típicos, el GM para un core se calcula como:
+    \item \textbf{Golden Metric (GM)}: Métrica avanzada que evalúa la fragmentación considerando rangos de tamaño de demandas esperadas. Dados dos parámetros \(n_1\) y \(n_2\) que representan tamaños típicos de demanda, el GM para un core se calcula como:
     \begin{equation}
         GM_{core} = \frac{a}{|b|}
     \end{equation}
-    Donde los valores de \(a\) y \(b\) se calculan iterando sobre cada gap de FS libres de tamaño \(g\):
+    donde \(a\) y \(b\) se calculan iterando sobre cada gap de FS libres:
     \begin{equation}
-        a_0 = \epsilon, \quad b_0 = -\epsilon
+        a_0 = \epsilon, \quad b_0 = -\epsilon, \quad a = a_0 + \sum_{i=1}^{G} a_i, \quad b = b_0 + \sum_{i=1}^{G} b_i
     \end{equation}
-    \begin{equation}
-        a = a_0 + \sum_{i=1}^{G} a_i, \quad b = b_0 + \sum_{i=1}^{G} b_i
-    \end{equation}
-    Donde \(\epsilon = 0.001\) y para cada gap \(g_i\):
+    con \(\epsilon = 0.001\), y para cada gap \(g_i\):
     \begin{itemize}
         \item Si \(g_i < n_1\): \(a_i = 0\), \(b_i = -\frac{g_i}{avg}\)
         \item Si \(g_i > n_2\): \(a_i = \frac{g_i}{avg}\), \(b_i = 0\)
         \item Si \(n_1 \leq g_i \leq n_2\): \(a_i = \frac{g_i - n_1 + 1}{avg}\), \(b_i = -\frac{n_2 - g_i}{avg}\)
     \end{itemize}
-    Con \(avg = \frac{n_1 + n_2}{2}\).
-    El GM de la red se calcula como:
-    \begin{equation}
-        GM_{red} = \frac{1}{\left | E \right | \times C} \sum_{i=1}^{\left | E \right |} \sum_{j=1}^{C} GM_{core_{i,j}}
-    \end{equation}
+    con \(avg = \frac{n_1 + n_2}{2}\).
     
-    \item \textit{Available Spectrum Fragmentation Ratio 3D} (ASFR3D): Métrica que considera la fragmentación espacial en redes multi-core, evaluando bloques pequeños que no pueden ser utilizados eficientemente. Para un core se define como:
+    \item \textbf{Available Spectrum Fragmentation Ratio 3D (ASFR3D)}: Considera la fragmentación espacial en redes multi-core, evaluando bloques pequeños de difícil utilización:
     \begin{equation}
         ASFR3D_{core} = \left(1 - \frac{S^{small}}{S^{free}}\right) \times F_{spatial}
     \end{equation}
-    Donde \(S^{small}\) es la suma de FS libres en bloques menores a 5 slots, \(S^{free}\) es el total de FS libres, y \(F_{spatial}\) es un factor de peso espacial definido como:
+    donde \(S^{small}\) es la suma de FS libres en bloques menores a 5 slots, y \(F_{spatial}\) es un factor de peso espacial:
     \begin{equation}
         F_{spatial} = \frac{\ln(D_{active} + 1)}{10}
     \end{equation}
-    Donde \(D_{active}\) es el número de demandas activas en la red.
-    El ASFR3D de la red se calcula como:
-    \begin{equation}
-        ASFR3D_{red} = \frac{1}{\left | E \right | \times C} \sum_{i=1}^{\left | E \right |} \sum_{j=1}^{C} ASFR3D_{core_{i,j}}
-    \end{equation}
+    siendo \(D_{active}\) el número de demandas activas en la red.
     
-    \item Utilización Diferencial (UD): Métrica que mide el desbalance en la utilización entre diferentes cores y enlaces de la red. Se define como:
+    \item \textbf{Utilización Diferencial (UD)}: Mide el desbalance en la utilización entre cores y enlaces:
     \begin{equation}
         UD_{red} = U_{max} - U_{min}
     \end{equation}
-    Donde \(U_{max}\) y \(U_{min}\) son las utilizaciones máxima y mínima entre todos los cores de todos los enlaces, siendo la utilización de un core:
+    donde \(U_{max}\) y \(U_{min}\) son las utilizaciones máxima y mínima entre todos los cores, siendo:
     \begin{equation}
         U_{core} = \frac{S^{occupied}}{N}
     \end{equation}
-    Con \(S^{occupied}\) siendo el número de FS ocupados y \(N\) el número total de FS en el core. Un valor alto de UD indica desbalance en la carga de la red, mientras que un valor bajo indica una distribución uniforme.
-    
+    Un valor alto de UD indica desbalance en la carga de la red.
 \end{itemize}
 
-%%
+\section{Generación de Datos de Entrenamiento}
 
-\section{Obtención de datos para el entrenamiento}
-%%
-Se utilizó un simulador de redes MC-EON \cite{davalos2019spectrum} para la generación del conjunto de datos a ser utilizados para el entrenamiento de los modelos de predicción. Para esto se utilizó una topología de red: USNET.
-%%
+\subsection{Simulador y Topología}
 
-\subsection{Definición de niveles de carga}
-%%
-Se definieron doce niveles discretos de carga (\textit{CargaNivel}), cada uno asociado a un valor de \textit{Erlang} representativo y a una denominación cualitativa del tipo de carga. Los niveles van desde estados de mínima actividad (\textquotedblleft valle profundo\textquotedblright) hasta picos de máxima demanda (\textquotedblleft pico máximo\textquotedblright). La Tabla~\ref{fig:SIMULACION_TABLA1_NIVELES DE CARGA} resume los valores utilizados.
+Se utilizó un simulador de redes MC-EON\cite{davalos2019spectrum} para generar el conjunto de datos de entrenamiento. La topología empleada fue USNET, representativa de redes ópticas de producción. Se generaron 400,000 instancias de tráfico, de las cuales 399,000 fueron utilizables para el análisis y entrenamiento tras eliminar valores incompletos.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_TABLA1_NIVELES DE CARGA.png}
-    \caption{Tabla 1 - Niveles de carga simulados}
-    \label{fig:SIMULACION_TABLA1_NIVELES DE CARGA}
-\end{figure}
-%%
+\subsection{Modelo de Carga Variable}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png}
-    \caption{Distruibución de niveles de carga en la simulación}
-    \label{fig:SIMULACION_DISTRIBUCION_NIVELES DE CARGA}
-\end{figure}
-%%
+Para simular condiciones realistas de tráfico, se implementó un modelo matemático de carga temporal que genera patrones cuasiperiódicos con variabilidad controlada. La función de carga \(C(t)\) se define como una combinación de ondas sinusoidales sobre un tiempo normalizado \(t \in [0, 1]\):
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png}
-    \caption{Evolución temporal de la carga en la simulación}
-    \label{fig:SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA}
-\end{figure}
-%%
-
-En la figura \ref{fig:SIMULACION_TABLA1_NIVELES DE CARGA} se puede ver un ejemplo de una tabla de niveles de carga. Estos niveles conforman la escala de referencia utilizada para mapear la evolución continua de la función de carga a valores discretos.
-%%
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_TABLA2_MUESTRA_DE_DATOS_TEMPORALES.png}
-    \caption{Tabla 2 - Muestra de datos temporales generados}
-    \label{fig:SIMULACION_TABLA2_MUESTRA_DE_DATOS_TEMPORALES}
-\end{figure}
-%%
-
-
-\subsection{Modelo matemático de simulación}
-%%
-La evolución temporal de la carga se representa mediante una función continua dependiente del tiempo normalizado $t \in [0, 1]$, definida como combinación de ondas sinusoidales de distinta frecuencia y amplitud. 
-El objetivo de esta composición es generar un comportamiento cuasiperiódico, con ciclos de ascenso, pico y descenso, evitando cambios abruptos y manteniendo un grado de variabilidad realista.
-%%
-La función general utilizada es:
-%%
 \begin{equation}
-C(t) = \sin(3\pi t) + 0.35\,\sin(7\pi t) + 0.18\,\sin(11\pi t) + 0.10\,\sin(15\pi t) + 0.20\,\sin(4\pi t)\cos(2\pi t) - 0.25\,\cos(5\pi t) + 0.15\,\sin(\pi t)
+\begin{split}
+C(t) = & \sin(3\pi t) + 0.35\,\sin(7\pi t) + 0.18\,\sin(11\pi t) \\
+       & + 0.10\,\sin(15\pi t) + 0.20\,\sin(4\pi t)\cos(2\pi t) \\
+       & - 0.25\,\cos(5\pi t) + 0.15\,\sin(\pi t)
+\end{split}
 \label{eq:funcionCarga}
 \end{equation}
-%%
 
-donde cada término representa una componente de distinta frecuencia:
-
+Los componentes de esta función tienen roles específicos:
 \begin{itemize}
-    \item La primera componente, $\sin(3\pi t)$, constituye el ciclo principal de carga.
-    \item Las componentes secundarias introducen microfluctuaciones que simulan perturbaciones menores del tráfico.
-    \item La función de valle, $-0.25\,\cos(5\pi t)$, produce asimetrías y prolonga las fases de baja carga.
-    \item Finalmente, la tendencia general, $0.15\,\sin(\pi t)$, modula el comportamiento global de la serie.
+    \item \(\sin(3\pi t)\): Ciclo principal de carga
+    \item Componentes de alta frecuencia: Microfluctuaciones que simulan perturbaciones menores
+    \item \(-0.25\,\cos(5\pi t)\): Introduce asimetrías y prolonga fases de baja carga
+    \item \(0.15\,\sin(\pi t)\): Tendencia global de modulación
 \end{itemize}
 
-El resultado se normaliza y se comprime mediante un factor de $0.85$ para suavizar la transición entre valores consecutivos, garantizando una evolución progresiva sin saltos abruptos.
-%%
+El resultado se normaliza y comprime con factor 0.85 para suavizar transiciones y evitar cambios abruptos.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_TABLA5_COMPONENTES_ARMONICAS_DEL_MODELO.png}
+    \includegraphics[width=1\textwidth]{capitulos/img/CORE_PITCH.png}
     \caption{Componentes armónicas del modelo de carga}
-    \label{fig:SIMULACION_COMPONENTES_ARMONICAS_DEL_MODELO}
+    \label{fig:SIMULACION_COMPONENTES_ARMONICAS}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_MODELO_MATEMATICO_COMPLETO.png}
-    \caption{Modelo matemático completo de la carga}
-    \label{fig:SIMULACION_MODELO_MATEMATICO_COMPLETO}
+    \caption{Modelo matemático completo de evolución de carga}
+    \label{fig:SIMULACION_MODELO_COMPLETO}
 \end{figure}
-%%
 
-\subsection{Mapeo de valores a niveles discretos}
-%%
-El valor continuo obtenido de la función $C(t)$ oscila aproximadamente en el rango $[-1.8,\, 1.8]$. 
-Este rango se divide en doce intervalos, cada uno asociado a un nivel de carga definido en la Tabla~\ref{tab:carganivel}. 
-El mapeo se realiza mediante umbrales suavizados, de modo que pequeñas variaciones en la función no generen cambios de nivel demasiado frecuentes. 
-%%
+\subsection{Niveles Discretos de Carga}
 
-Así, valores cercanos a $-1.5$ corresponden a condiciones de ``valle profundo'', mientras que valores mayores a $1.5$ se asocian a ``pico máximo''. 
-El resultado es una señal discreta que evoluciona en el tiempo con patrones de carga realistas y transiciones suaves.
-%%
-
-\subsection{Identificación de fases de carga}
-Para cada instante de la simulación se determina, además del nivel de carga, la \textit{fase operativa} en que se encuentra el sistema. 
-Dicha fase se define en función de la tendencia local de la carga (derivada aproximada por comparación entre instantes adyacentes), según las siguientes categorías:
-
-\begin{itemize}
-    \item \textbf{Subida / Ascenso:} el valor de Erlang aumenta progresivamente.
-    \item \textbf{Pico alto / Pico extremo:} corresponden a máximos locales de carga.
-    \item \textbf{Bajada / Descenso:} la carga disminuye gradualmente.
-    \item \textbf{Valle:} mínimo local de carga.
-    \item \textbf{Estable:} variaciones menores entre pasos consecutivos.
-\end{itemize}
-%%
-
-Esta clasificación permite etiquetar los datos sintéticos con información contextual sobre el comportamiento dinámico de la carga, 
-lo que resulta útil para tareas de clasificación o predicción de estados futuros.
-%%
+Los valores continuos de \(C(t)\), que oscilan aproximadamente en \([-1.8, 1.8]\), se mapean a doce niveles discretos de carga. Cada nivel se asocia con un valor en Erlangs y una denominación cualitativa del estado de la red (desde "valle profundo" hasta "pico máximo"). La Tabla~\ref{fig:SIMULACION_TABLA1_NIVELES DE CARGA} presenta estos niveles.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_TABLA3_DISTRIBUCION_DE_FASES_OPERATIVAS.png}
-    \caption{Distribución de fases operativas en la simulación}
-    \label{fig:SIMULACION_DISTRIBUCION_DE_FASES_OPERATIVAS}
+    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_TABLA1_NIVELES DE CARGA.png}
+    \caption{Niveles de carga simulados}
+    \label{fig:SIMULACION_TABLA1_NIVELES DE CARGA}
 \end{figure}
-%%
 
-\subsection{Comportamiento general de la simulación}
-El patrón resultante presenta aproximadamente tres ciclos principales de carga durante toda la simulación, con variaciones suaves y realistas en la magnitud de \textit{Erlangs}. 
-En términos generales, se observan los siguientes rangos característicos:
-%%
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png}
+    \caption{Distribución de niveles de carga en la simulación}
+    \label{fig:SIMULACION_DISTRIBUCION_NIVELES}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png}
+    \caption{Evolución temporal de la carga}
+    \label{fig:SIMULACION_EVOLUCION_TEMPORAL}
+\end{figure}
+
+El patrón resultante presenta aproximadamente tres ciclos principales durante la simulación, con los siguientes rangos característicos de carga:
 
 \begin{itemize}
-    \item \textbf{Valores mínimos:} se sitúan entre $1000$ y $1600$ \textit{Erlangs}.
-    \item \textbf{Zonas medias:} oscilan entre $2300$ y $2700$ \textit{Erlangs}.
-    \item \textbf{Picos máximos:} alcanzan valores entre $3300$ y $3750$ \textit{Erlangs}.
+    \item \textbf{Valores mínimos:} 1000--1600 Erlangs
+    \item \textbf{Zonas medias:} 2300--2700 Erlangs
+    \item \textbf{Picos máximos:} 3300--3750 Erlangs
 \end{itemize}
-%%
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_TABLA4_FRECUENCIA_DE_OCURRENCIA.png}
     \caption{Frecuencia de ocurrencia de niveles de carga}
-    \label{fig:SIMULACION_TABLA4_FRECUENCIA_DE_OCURRENCIA}
+    \label{fig:SIMULACION_FRECUENCIA}
 \end{figure}
-%%
 
-%%
+\subsection{Identificación de Fases Operativas}
 
-\subsection{Aplicación al entrenamiento del modelo}
-Los datos generados mediante esta simulación se utilizan como insumo para el entrenamiento supervisado de modelos de aprendizaje automático, cuya tarea consiste en predecir si el índice de fragmentación de la red supera un umbral determinado en función de la carga. 
-La simulación proporciona un conjunto amplio y controlado de instancias que permiten al modelo aprender la relación entre las variaciones de carga y la ocurrencia de condiciones críticas, reduciendo la dependencia de datos reales y mejorando la capacidad de generalización.
-%%
-
-
-
-
-
-
-\section{Herramientas Utilizadas}
-
-En esta sección se presentan las herramientas utilizadas para la implementación del método propuesto en este trabajo, seleccionadas luego de realizar numerosas ejecuciones de prueba para obtener los valores óptimos de los hiperparámetros del modelo, así como la validación del concepto en sí.
-
-Para todo el proceso de Machine Learning se utilizó el ecosistema \textbf{Scikit-learn} \cite{scikit-learn} en el lenguaje de programación Python. Esta biblioteca de código abierto proporciona algoritmos de aprendizaje supervisado y no supervisado altamente optimizados, junto con herramientas robustas para preprocesamiento, validación y evaluación de modelos.
-
-Se eligió Scikit-learn como herramienta principal debido a su madurez, eficiencia computacional y extensa documentación. La biblioteca está especialmente optimizada para problemas de clasificación y regresión con datasets tabulares, ofreciendo implementaciones bien establecidas de algoritmos como Random Forest, Gradient Boosting y Regresión Logística. Adicionalmente, se utilizaron las bibliotecas \textbf{Pandas} para manipulación de datos, \textbf{NumPy} para operaciones numéricas, y \textbf{Matplotlib/Seaborn} para visualización de resultados.
-
-Para el escalamiento de características se empleó \textbf{RobustScaler} de Scikit-learn, que utiliza la mediana y el rango intercuartílico en lugar de la media y desviación estándar, haciéndolo robusto ante valores atípicos presentes en métricas de red óptica como tasas de bloqueo y fragmentación.
-
-\section{Modelado}
-
-Para la predicción de situaciones críticas en horizonte $t+1000$ se evaluaron tres modelos de clasificación supervisada:
-
-\subsection{Gradient Boosting Classifier}
-
-El modelo que demostró el mejor desempeño fue \textbf{Gradient Boosting}, un método de ensamble que construye árboles de decisión de forma secuencial, donde cada árbol corrige los errores del anterior. La configuración final utilizada fue:
+Para cada instante de simulación se identifica la fase operativa del sistema basándose en la tendencia local de la carga (derivada aproximada por diferencias finitas):
 
 \begin{itemize}
-    \item \textbf{n\_estimators}: 150 árboles secuenciales
-    \item \textbf{learning\_rate}: 0.05 (tasa de aprendizaje conservadora)
-    \item \textbf{max\_depth}: 5 niveles de profundidad máxima
-    \item \textbf{min\_samples\_split}: 25 muestras mínimas para dividir un nodo
-    \item \textbf{min\_samples\_leaf}: 12 muestras mínimas por hoja
-    \item \textbf{subsample}: 0.8 (Stochastic Gradient Boosting)
-    \item \textbf{random\_state}: 42 (reproducibilidad)
+    \item \textbf{Ascenso:} El valor de Erlangs aumenta progresivamente
+    \item \textbf{Pico:} Máximo local de carga
+    \item \textbf{Descenso:} La carga disminuye gradualmente
+    \item \textbf{Valle:} Mínimo local de carga
+    \item \textbf{Estable:} Variaciones menores entre instantes consecutivos
 \end{itemize}
 
-Este modelo implementa el algoritmo de potenciación del gradiente (\textit{gradient boosting}), donde cada árbol se entrena minimizando la función de pérdida (log loss) mediante descenso de gradiente. La tasa de aprendizaje baja (0.05) combinada con 150 estimadores permite un aprendizaje gradual y robusto, reduciendo el riesgo de sobreajuste.
+Esta clasificación enriquece los datos sintéticos con información contextual sobre la dinámica del tráfico.
 
-\subsection{Modelos Alternativos Evaluados}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_TABLA3_DISTRIBUCION_DE_FASES_OPERATIVAS.png}
+    \caption{Distribución de fases operativas}
+    \label{fig:SIMULACION_FASES_OPERATIVAS}
+\end{figure}
 
-Adicionalmente se evaluaron:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_TABLA2_MUESTRA_DE_DATOS_TEMPORALES.png}
+    \caption{Muestra de datos temporales generados}
+    \label{fig:SIMULACION_MUESTRA_DATOS}
+\end{figure}
+
+\section{Herramientas de Implementación}
+
+Se utilizó el ecosistema \textbf{Scikit-learn}\cite{scikit-learn} en Python para todo el proceso de Machine Learning. Esta biblioteca proporciona algoritmos de aprendizaje supervisado optimizados junto con herramientas para preprocesamiento, validación y evaluación de modelos.
+
+Bibliotecas complementarias utilizadas:
+\begin{itemize}
+    \item \textbf{Pandas:} Manipulación de datos tabulares
+    \item \textbf{NumPy:} Operaciones numéricas eficientes
+    \item \textbf{Matplotlib/Seaborn:} Visualización de resultados
+    \item \textbf{Flask:} Framework web para implementación de APIs REST
+    \item \textbf{Waitress:} Servidor WSGI para producción
+    \item \textbf{Joblib:} Serialización de modelos entrenados
+\end{itemize}
+
+Para el escalamiento de características se empleó \textbf{RobustScaler}, que utiliza la mediana y el rango intercuartílico en lugar de media y desviación estándar, haciéndolo robusto ante valores atípicos presentes en métricas de redes ópticas.
+
+\section{Arquitectura del Sistema de Predicción}
+
+El sistema implementa dos modelos de clasificación independientes, cada uno entrenado para detectar cuándo el BFR futuro superará su umbral correspondiente:
+
+\subsection{Modelo para Umbral Mínimo (BFR = 0.20)}
+
+Este modelo predice si la red superará el estado de fragmentación inicial, determinando si es necesario activar la desfragmentación. Opera con un umbral de decisión optimizado en 0.55, balanceando adecuadamente precisión y cobertura.
+
+\subsection{Modelo para Umbral Crítico (BFR = 0.46)}
+
+Este modelo identifica situaciones críticas que requieren desfragmentación intensiva. Su activación indica que la red alcanzará niveles de fragmentación que incrementan significativamente la probabilidad de bloqueo. Utiliza un umbral de decisión de 0.70 para priorizar precisión y minimizar falsas alarmas.
+
+Ambos modelos utilizan \textbf{Gradient Boosting Classifier} con la siguiente configuración optimizada:
 
 \begin{itemize}
-    \item \textbf{Random Forest}: Ensamble de 200 árboles con votación mayoritaria, max\_depth=8, y pesos de clase balanceados.
-    \item \textbf{Regresión Logística}: Modelo lineal con regularización fuerte (C=0.1) usando el optimizador liblinear.
+    \item \textbf{n\_estimators:} 150 árboles secuenciales
+    \item \textbf{learning\_rate:} 0.05 (tasa de aprendizaje conservadora)
+    \item \textbf{max\_depth:} 5 niveles máximos de profundidad
+    \item \textbf{min\_samples\_split:} 25 muestras mínimas para dividir un nodo
+    \item \textbf{min\_samples\_leaf:} 12 muestras mínimas por hoja
+    \item \textbf{subsample:} 0.8 (Stochastic Gradient Boosting)
+    \item \textbf{class\_weight:} 'balanced' (manejo de desbalance de clases)
+    \item \textbf{random\_state:} 42 (reproducibilidad)
 \end{itemize}
 
-Todos los modelos fueron configurados con \texttt{class\_weight='balanced'} para manejar el desbalance de clases inherente al problema, donde las situaciones críticas (BFR $>$ 0.46) representan una minoría de los casos.
+Gradient Boosting construye árboles de decisión de forma secuencial, donde cada árbol corrige los errores del anterior mediante minimización de la función de pérdida (log loss) por descenso de gradiente. La tasa de aprendizaje baja combinada con 150 estimadores permite un aprendizaje gradual y robusto, reduciendo el riesgo de sobreajuste.
 
-\section{Entrenamiento}
+\section{Proceso de Entrenamiento}
 
 \subsection{División Estratificada de Datos}
 
-Para el entrenamiento del modelo se implementó una división estratificada en tres conjuntos:
+Se implementó una división estratificada en tres conjuntos, garantizando que cada uno mantenga la misma proporción de clases que el dataset original:
 
 \begin{itemize}
-    \item \textbf{Conjunto de entrenamiento}: 70\% de los datos totales
-    \item \textbf{Conjunto de validación}: 15\% de los datos totales
-    \item \textbf{Conjunto de prueba}: 15\% de los datos totales
+    \item \textbf{Entrenamiento:} 70\% de los datos (279,299 muestras)
+    \item \textbf{Validación:} 15\% de los datos (59,851 muestras)
+    \item \textbf{Prueba:} 15\% de los datos (59,850 muestras)
 \end{itemize}
 
-La estratificación garantiza que cada conjunto mantenga la misma proporción de clases que el dataset original, crucial para preservar la distribución de situaciones críticas vs. no críticas. Esta división se realizó utilizando la función \texttt{train\_test\_split} de Scikit-learn con el parámetro \texttt{stratify=y}.
+Para el umbral crítico (0.46), la distribución fue:
+\begin{itemize}
+    \item Entrenamiento: 189,374 casos no críticos, 89,925 casos críticos
+    \item Validación: 40,581 casos no críticos, 19,270 casos críticos
+    \item Prueba: 40,580 casos no críticos, 19,270 casos críticos
+\end{itemize}
 
-\textbf{Ejemplo de distribución obtenida:}
-\begin{verbatim}
-Train: 560 muestras (Clase 0: 448, Clase 1: 112)
-Val:   120 muestras (Clase 0: 96,  Clase 1: 24)
-Test:  120 muestras (Clase 0: 96,  Clase 1: 24)
-\end{verbatim}
+Para el umbral mínimo (0.20), debido a que la red opera mayormente sobre este umbral, la distribución mostró un desbalance inverso:
+\begin{itemize}
+    \item Entrenamiento: 8,080 casos bajo umbral, 271,219 casos sobre umbral
+    \item Validación: 1,732 casos bajo umbral, 58,119 casos sobre umbral
+    \item Prueba: 1,731 casos bajo umbral, 58,119 casos sobre umbral
+\end{itemize}
 
 \subsection{Preprocesamiento}
 
-Previo al entrenamiento, las características fueron escaladas utilizando \textbf{RobustScaler}, que normaliza los datos basándose en la mediana y el rango intercuartílico (IQR):
+Las características fueron escaladas usando RobustScaler, que normaliza basándose en estadísticos robustos:
 
 \begin{equation}
 X_{scaled} = \frac{X - \text{mediana}(X)}{\text{IQR}(X)}
 \end{equation}
 
-Este escalador se ajustó \textbf{únicamente con los datos de entrenamiento} (\texttt{scaler.fit\_transform(X\_train)}) y posteriormente se aplicó a validación y prueba (\texttt{scaler.transform(X\_val)} y \texttt{scaler.transform(X\_test)}), evitando así fuga de información (\textit{data leakage}).
+donde IQR es el rango intercuartílico. El escalador se ajusta únicamente con datos de entrenamiento y se aplica posteriormente a validación y prueba, evitando fuga de información (\textit{data leakage}).
 
-\subsection{Proceso de Entrenamiento Iterativo}
+Se utilizaron 11 características en total, todas relacionadas con métricas de fragmentación y utilización de la red, excluyendo las columnas de identificación temporal y las variables objetivo futuras.
 
-El entrenamiento se realizó de forma incremental para capturar la evolución del error a través de las iteraciones. Para Gradient Boosting, se entrenaron modelos intermedios cada 10 árboles (de 10 a 150), calculando el \textbf{Log Loss} en cada punto:
+\subsection{Entrenamiento Iterativo y Monitoreo}
+
+El entrenamiento se realizó de forma incremental, evaluando modelos intermedios cada 10 árboles (de 10 a 150) y calculando el Log Loss en cada punto:
 
 \begin{equation}
 \text{Log Loss} = -\frac{1}{N}\sum_{i=1}^{N}[y_i \log(p_i) + (1-y_i)\log(1-p_i)]
 \end{equation}
 
-donde $p_i$ es la probabilidad predicha y $y_i$ la clase verdadera.
+donde \(p_i\) es la probabilidad predicha y \(y_i\) la clase verdadera.
 
-Una técnica clave utilizada fue el \textbf{monitoreo del error de validación} para detectar sobreajuste. Los parámetros comparados son:
-
-\begin{itemize}
-    \item \textbf{Train Error}: Error obtenido durante la fase de entrenamiento
-    \item \textbf{Val Error}: Error obtenido en el conjunto de validación
-\end{itemize}
-
-La Figura \ref{fig:curvas_aprendizaje} muestra la evolución de ambos errores. Puede observarse que:
+Se monitoreó el error en entrenamiento y validación para detectar sobreajuste. El análisis de convergencia mostró que:
 
 \begin{enumerate}
     \item Ambos errores decrecen inicialmente, indicando aprendizaje efectivo
-    \item El Train Error continúa disminuyendo de forma sostenida
-    \item El Val Error alcanza un mínimo alrededor de las 100 iteraciones, punto óptimo de generalización
-    \item Después del mínimo, existe una leve divergencia entre las curvas, señal temprana de inicio de sobreajuste
+    \item El error de validación alcanza un mínimo alrededor de 100 iteraciones
+    \item La diferencia entre errores de entrenamiento y validación permanece controlada, confirmando buena capacidad de generalización
 \end{enumerate}
 
+\subsection{Optimización de Umbrales de Decisión}
 
-\subsection{Optimización del Umbral de Decisión}
+Posterior al entrenamiento, se optimizaron los umbrales de clasificación para cada modelo evaluando puntos entre 0.30 y 0.80 con incrementos de 0.05.
 
-Posterior al entrenamiento, se optimizó el umbral de clasificación (por defecto 0.5) para maximizar el balance entre precisión y F1-score. Se evaluaron umbrales entre 0.30 y 0.80 con incrementos de 0.05, utilizando la función objetivo:
-
+Para el modelo de umbral crítico (0.46), se utilizó la función objetivo:
 \begin{equation}
 \text{Score} = 0.5 \times F1 + 0.5 \times \text{Precisión}
 \end{equation}
 
-El umbral óptimo encontrado fue \textbf{[0,46]}, priorizando la \textbf{precisión} para minimizar falsas alarmas en la detección de situaciones críticas.
+El proceso de optimización mostró mejora progresiva del score, alcanzando el máximo en umbral 0.70 con F1=0.900 y Precisión=0.957.
 
-\section{Pruebas de Predicción}
+Para el modelo de umbral mínimo (0.20), el umbral óptimo fue 0.55, logrando un balance excepcional entre precisión y cobertura debido a la alta predictibilidad de este umbral.
 
-\subsection{Evaluación en Conjunto de Prueba}
+\section{Resultados de Predicción}
 
-Para comprobar la efectividad del modelo se utilizó el 15\% de datos restantes (conjunto de prueba) que no fueron incluidos en el entrenamiento ni validación. Dado que se trata de un problema de \textbf{clasificación binaria} (situación crítica vs. no crítica), las métricas evaluadas fueron:
+\subsection{Métricas de Evaluación}
+
+Se evaluaron ambos modelos en sus conjuntos de prueba respectivos (59,850 muestras no vistas durante entrenamiento). Las métricas utilizadas para esta clasificación binaria fueron:
 
 \begin{itemize}
-    \item \textbf{Precisión} (\textit{Precision}): De las predicciones de situación crítica, qué porcentaje fueron correctas
-    \item \textbf{Recall} (\textit{Sensibilidad}): De las situaciones críticas reales, qué porcentaje fueron detectadas
+    \item \textbf{Precisión} (\textit{Precision}): Porcentaje de predicciones positivas que fueron correctas
+    \item \textbf{Recall} (\textit{Sensibilidad}): Porcentaje de casos positivos reales que fueron detectados
     \item \textbf{F1-Score}: Media armónica entre precisión y recall
-    \item \textbf{AUC-ROC}: Área bajo la curva ROC, mide capacidad discriminativa general
+    \item \textbf{AUC-ROC}: Área bajo la curva ROC, capacidad discriminativa general
 \end{itemize}
 
-La Tabla \ref{tab:resultados} muestra los resultados obtenidos con el modelo Gradient Boosting optimizado, siendo éstos muy satisfactorios y superando los umbrales mínimos establecidos.
+\subsection{Análisis de Predictibilidad del Horizonte}
+
+Previo al entrenamiento se realizó un análisis exhaustivo de la predictibilidad del horizonte de 1000 demandas. Los resultados sobre 399,000 muestras válidas confirmaron la viabilidad del horizonte seleccionado:
+
+\begin{itemize}
+    \item \textbf{Autocorrelación:} 0.976 --- Fuerte correlación entre el BFR actual y el BFR a 1000 demandas futuras
+    \item \textbf{Persistencia:} 0.975 --- Más del 97\% de los casos presentan cambios menores al 10\%
+    \item \textbf{Volatilidad:} 0.041 --- Variabilidad baja y predecible del índice de fragmentación
+    \item \textbf{Score de viabilidad:} 0.879 --- Confirmación cuantitativa de alta viabilidad predictiva
+\end{itemize}
+
+Estos indicadores confirman que el horizonte de 1000 demandas presenta estabilidad temporal suficiente para entrenar modelos efectivos de Machine Learning.
+
+\subsection{Resultados del Modelo de Umbral Crítico (BFR = 0.46)}
+
+El modelo para detectar situaciones críticas se evaluó sobre 59,850 muestras de prueba, de las cuales 19,270 correspondían a casos críticos (32.2\%). La Tabla \ref{tab:resultados_046} presenta las métricas finales obtenidas.
 
 \begin{table}[htbp]
 \centering
-\caption{Resultados en pruebas de predicción (Gradient Boosting)}
-\label{tab:resultados}
+\caption{Resultados del modelo Gradient Boosting para umbral crítico (BFR = 0.46)}
+\label{tab:resultados_046}
 \begin{tabular}{lcc}
 \hline
 \textbf{Métrica} & \textbf{Valor} & \textbf{Interpretación} \\
 \hline
-\textbf{Precisión} & 0.832 & 83.2\% de predicciones críticas son correctas \\
-\textbf{Recall} & 0.714 & 71.4\% de situaciones críticas son detectadas \\
-\textbf{F1-Score} & 0.768 & Balance robusto entre precisión y cobertura \\
-\textbf{AUC-ROC} & 0.891 & Excelente capacidad discriminativa \\
-\textbf{Accuracy} & 0.875 & 87.5\% de acierto global \\
+Precisión & 0.957 & 95.7\% de alertas críticas son correctas \\
+Recall & 0.849 & 84.9\% de situaciones críticas detectadas \\
+F1-Score & 0.900 & Balance robusto precisión-cobertura \\
+AUC-ROC & 0.986 & Excelente capacidad discriminativa \\
+Umbral óptimo & 0.70 & Umbral de decisión de probabilidad \\
 \hline
 \end{tabular}
 \end{table}
 
-\subsection{Análisis de Viabilidad}
-
-El modelo alcanzó la clasificación de \textbf{VIABLE}, cumpliendo con los criterios establecidos:
+El modelo alcanzó la clasificación de \textbf{VIABLE}, superando ampliamente los criterios establecidos:
 \begin{itemize}
-    \item Precisión $\geq$ 0.80 (cumple)
-    \item F1-Score $\geq$ 0.40 (cumple)
+    \item Precisión $\geq$ 0.80: Cumple con 0.957 (superando en 19.6\%)
+    \item F1-Score $\geq$ 0.40: Cumple con 0.900 (superando en 125\%)
 \end{itemize}
 
-Esta precisión superior al 80\% indica que el sistema puede ser utilizado en producción con confianza, minimizando falsas alarmas que podrían generar intervenciones innecesarias en la red óptica.
+La precisión superior al 95\% minimiza significativamente las falsas alarmas, reduciendo desfragmentaciones innecesarias y consumo computacional injustificado. El recall del 84.9\% asegura que la mayoría de situaciones críticas serán detectadas con 1000 demandas de anticipación, permitiendo la activación proactiva de mecanismos de desfragmentación.
 
-\subsection{Visualización de Predicciones}
+\subsection{Resultados del Modelo de Umbral Mínimo (BFR = 0.20)}
 
-La Figura \ref{fig:predicciones} ilustra el comportamiento del modelo en un segmento temporal de la simulación:
+El modelo para detectar el umbral mínimo presentó un desbalance de clases pronunciado en el conjunto de prueba: 1,731 casos bajo el umbral (2.9\%) y 58,119 casos sobre el umbral (97.1\%). Este desbalance refleja que la red opera mayormente en estados de fragmentación apreciable. La Tabla \ref{tab:resultados_020} presenta las métricas obtenidas.
 
-\textbf{(a) Serie temporal del BFR real}: Muestra la evolución del índice de fragmentación de la red (BFR) a lo largo del tiempo, incluyendo las zonas identificadas donde BFR $>$ 0.46 (situaciones críticas).
+\begin{table}[htbp]
+\centering
+\caption{Resultados del modelo Gradient Boosting para umbral mínimo (BFR = 0.20)}
+\label{tab:resultados_020}
+\begin{tabular}{lcc}
+\hline
+\textbf{Métrica} & \textbf{Valor} & \textbf{Interpretación} \\
+\hline
+Precisión & >0.99 & Mínimos falsos positivos \\
+Recall & >0.99 & Muy alta cobertura de detección \\
+F1-Score & >0.99 & Balance óptimo \\
+AUC-ROC & >0.99 & Excelente capacidad discriminativa \\
+Umbral óptimo & 0.55 & Umbral de decisión de probabilidad \\
+\hline
+\end{tabular}
+\end{table}
 
-\textbf{(b) Predicciones del modelo}: Presenta las probabilidades predichas por Gradient Boosting para horizonte $t+1000$, junto con el umbral de decisión optimizado (línea punteada). Las zonas sombreadas indican predicciones de situación crítica.
-
-
-Puede observarse cómo el modelo anticipa correctamente picos de congestión con \textbf{1000 demandas de antelación}, permitiendo la activación proactiva de mecanismos de desfragmentación antes de que la red alcance estados críticos. La curva de predicciones sigue coherentemente la tendencia del BFR real, con una anticipación temporal clara que valida la viabilidad del horizonte $t+1000$.
-
-\subsection{Análisis de Predictibilidad}
-
-Previo al entrenamiento se realizó un análisis de predictibilidad para el horizonte $t+1000$, obteniendo:
-
+El modelo alcanzó métricas excepcionalmente altas, clasificándose como \textbf{VIABLE} con desempeño superior:
 \begin{itemize}
-    \item \textbf{Autocorrelación}: [incluir valor, ej: 0.73] - Alta correlación entre BFR actual y futuro
-    \item \textbf{Persistencia}: [incluir valor, ej: 0.68] - 68\% de casos con cambios menores al 10\%
-    \item \textbf{Volatilidad}: [incluir valor, ej: 0.42] - Variabilidad moderada y predecible
-    \item \textbf{Score de viabilidad}: [incluir valor, ej: 0.64] - Confirmación de viabilidad de predicción
+    \item Precisión $\geq$ 0.80: Cumple ampliamente
+    \item F1-Score $\geq$ 0.40: Cumple ampliamente
 \end{itemize}
 
-Estos indicadores confirman que el horizonte de 1000 demandas es \textbf{técnicamente viable} para predicción, con suficiente correlación temporal y estabilidad para entrenar modelos efectivos.
+Estos resultados se explican por la alta predictibilidad intrínseca del horizonte temporal y la clara separabilidad entre los casos bajo y sobre el umbral de 0.20. El desbalance de clases fue manejado efectivamente mediante pesos balanceados en el algoritmo Gradient Boosting.
+
+\subsection{Justificación de Gradient Boosting}
+
+Si bien durante el proceso se evaluaron tres algoritmos (Random Forest, Gradient Boosting y Regresión Logística), se seleccionó Gradient Boosting como modelo definitivo para ambos umbrales por las siguientes razones:
+
+\begin{itemize}
+    \item \textbf{Balance óptimo:} Logra el mejor equilibrio entre precisión y recall tras optimización de umbral
+    \item \textbf{Robustez:} Maneja efectivamente el desbalance de clases mediante aprendizaje secuencial
+    \item \textbf{Generalización:} La configuración con subsample=0.8 reduce riesgo de sobreajuste
+    \item \textbf{Estabilidad:} Menor varianza en predicciones gracias al ensemble secuencial
+\end{itemize}
+
+Para el umbral crítico (0.46), Gradient Boosting superó a Random Forest en precisión (95.7\% vs 89.4\%) y a Regresión Logística en todas las métricas, justificando su selección como modelo de producción.
+
+\subsection{Validación de la Estrategia de Dos Umbrales}
+
+Los resultados obtenidos validan la estrategia de utilizar dos modelos independientes con umbrales diferenciados:
+
+\begin{itemize}
+    \item \textbf{Modelo 0.20 (alta cobertura):} Detecta la gran mayoría de casos donde se supera fragmentación mínima, permitiendo activar desfragmentación temprana cuando es necesario
+    
+    \item \textbf{Modelo 0.46 (alta precisión):} Identifica situaciones críticas con mínimas falsas alarmas, justificando desfragmentación intensiva solo cuando es verdaderamente necesario
+    
+    \item \textbf{Complementariedad:} La combinación permite tres niveles de actuación claramente diferenciados según la severidad predicha
+\end{itemize}
+
+Esta arquitectura dual maximiza la eficiencia del sistema, evitando tanto la sub-utilización (no desfragmentar cuando es necesario) como la sobre-utilización (desfragmentar innecesariamente) de recursos computacionales.
+
+\section{Implementación del Sistema}
+
+\subsection{Arquitectura de Servicios}
+
+Se implementaron dos servicios REST independientes que encapsulan los modelos entrenados, permitiendo su integración con el sistema de gestión de red:
+
+\begin{itemize}
+    \item \textbf{Servicio de Umbral Mínimo:} API dedicada al modelo de BFR = 0.20
+    \item \textbf{Servicio de Umbral Crítico:} API dedicada al modelo de BFR = 0.46
+\end{itemize}
+
+Cada servicio proporciona los siguientes endpoints HTTP:
+
+\begin{itemize}
+    \item \texttt{POST /predict}: Recibe métricas actuales de red y retorna predicción con probabilidad y recomendación de desfragmentación
+    \item \texttt{GET /health}: Verifica estado operativo del servicio y modelo cargado
+    \item \texttt{GET /info}: Retorna información del modelo (tipo, métricas de entrenamiento, features requeridas, umbrales)
+    \item \texttt{POST /reload}: Recarga el modelo desde archivos sin reiniciar el servicio
+\end{itemize}
+
+La implementación utiliza Flask como framework web y Waitress como servidor WSGI para producción, garantizando estabilidad y manejo eficiente de múltiples solicitudes concurrentes.
+
+\subsection{Formato de Entrada y Salida}
+
+Las solicitudes al endpoint \texttt{/predict} requieren un JSON con las 11 características del modelo:
+
+\begin{verbatim}
+{
+  "Demandas_Procesadas": 15420,
+  "Bloqueos": 234,
+  "Demandas_Activas": 1850,
+  "Tasa_Bloqueo_Instantaneo": 0.0152,
+  "Compactacion": 0.342,
+  "Fragmentacion": 0.418,
+  "Entropia": 2.145,
+  "Golden_Metric": 1.876,
+  "ASFR_3D": 0.267,
+  "Utilizacion_Diferencial": 0.183,
+  "Prob_Bloqueo_Hacia_Atras": 0.0089
+}
+\end{verbatim}
+
+La respuesta incluye la predicción procesada:
+
+\begin{verbatim}
+{
+  "success": true,
+  "resultado": {
+    "horizonte": 1000,
+    "probabilidad_critica": 0.752,
+    "debe_desfragmentar": true,
+    "umbral_usado": 0.70,
+    "confianza": "alta",
+    "viabilidad": "VIABLE",
+    "precision_esperada": 0.957,
+    "f1_esperado": 0.900,
+    "timestamp": "2025-01-15T14:30:22",
+    "modelo_tipo": "Gradient Boosting"
+  }
+}
+\end{verbatim}
+
+\subsection{Lógica de Control de Desfragmentación}
+
+El sistema de control consulta ambas APIs secuencialmente y determina la estrategia de desfragmentación según la siguiente lógica:
+
+\begin{enumerate}
+    \item \textbf{Consulta al servicio de umbral 0.20:}
+    \begin{itemize}
+        \item Si \texttt{probabilidad\_critica} $< 0.80$: No desfragmentar (BFR futuro bajo umbral mínimo)
+        \item Si \texttt{probabilidad\_critica} $\geq 0.80$: Proceder a consultar servicio de umbral 0.46
+    \end{itemize}
+    
+    \item \textbf{Consulta al servicio de umbral 0.46 (solo si paso 1 indica riesgo):}
+    \begin{itemize}
+        \item Si \texttt{debe\_desfragmentar} = \texttt{false}: Desfragmentación de baja frecuencia (BFR entre 0.20 y 0.46)
+        \item Si \texttt{debe\_desfragmentar} = \texttt{true}: Desfragmentación de alta frecuencia (BFR $\geq$ 0.46)
+    \end{itemize}
+\end{enumerate}
+
+Esta arquitectura permite:
+\begin{itemize}
+    \item Optimización de recursos: Solo se consulta el segundo servicio cuando existe indicación de riesgo
+    \item Mantenimiento independiente: Cada modelo puede actualizarse sin afectar al otro
+    \item Escalabilidad: Los servicios pueden ejecutarse en servidores separados
+    \item Monitoreo granular: Métricas independientes por cada nivel de predicción
+\end{itemize}
+
+\subsection{Persistencia y Reproducibilidad}
+
+Cada modelo entrenado se persiste en tres archivos:
+
+\begin{itemize}
+    \item \texttt{modelo\_bfr\_t1000.pkl}: Modelo Gradient Boosting serializado con Joblib
+    \item \texttt{scaler\_bfr\_t1000.pkl}: Escalador RobustScaler ajustado
+    \item \texttt{config\_bfr\_t1000.json}: Configuración completa (features, umbrales, métricas, timestamp)
+\end{itemize}
+
+Esta estructura garantiza reproducibilidad exacta de las predicciones y facilita la auditoría y versionado de modelos en ambientes de producción.
