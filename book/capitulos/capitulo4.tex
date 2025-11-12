@@ -109,40 +109,32 @@ C(t) = & \sin(3\pi t) + 0.35\,\sin(7\pi t) + 0.18\,\sin(11\pi t) \\
 \label{eq:funcionCarga}
 \end{equation}
 
-Los componentes de esta función tienen roles específicos:
-\begin{itemize}
-    \item \(\sin(3\pi t)\): Ciclo principal de carga
-    \item Componentes de alta frecuencia: Microfluctuaciones que simulan perturbaciones menores
-    \item \(-0.25\,\cos(5\pi t)\): Introduce asimetrías y prolonga fases de baja carga
-    \item \(0.15\,\sin(\pi t)\): Tendencia global de modulación
-\end{itemize}
+Los componentes de esta función tienen roles específicos, como se detalla en la Tabla~\ref{tab:componentes_modelo}:
+
+\begin{table}[H]
+\centering
+\caption{Componentes del modelo matemático de carga}
+\label{tab:componentes_modelo}
+\begin{tabular}{lll}
+\hline
+\textbf{Componente} & \textbf{Expresión} & \textbf{Función} \\
+\hline
+Principal & $\sin(3\pi t)$ & Ciclo fundamental de carga \\
+Armónica 1 & $0.35\,\sin(7\pi t)$ & Primera microfluctuación \\
+Armónica 2 & $0.18\,\sin(11\pi t)$ & Segunda microfluctuación \\
+Armónica 3 & $0.10\,\sin(15\pi t)$ & Tercera microfluctuación \\
+Modulación & $0.20\,\sin(4\pi t)\cos(2\pi t)$ & Interferencia entre patrones \\
+Compensación & $-0.25\,\cos(5\pi t)$ & Asimetrías y prolongación de fases \\
+Tendencia & $0.15\,\sin(\pi t)$ & Modulación global \\
+\hline
+\end{tabular}
+\end{table}
 
 El resultado se normaliza y comprime con factor 0.85 para suavizar transiciones y evitar cambios abruptos.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/CORE_PITCH.png}
-    \caption{Componentes armónicas del modelo de carga}
-    \label{fig:SIMULACION_COMPONENTES_ARMONICAS}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_MODELO_MATEMATICO_COMPLETO.png}
-    \caption{Modelo matemático completo de evolución de carga}
-    \label{fig:SIMULACION_MODELO_COMPLETO}
-\end{figure}
-
 \subsection{Niveles Discretos de Carga}
 
-Los valores continuos de \(C(t)\), que oscilan aproximadamente en \([-1.8, 1.8]\), se mapean a doce niveles discretos de carga. Cada nivel se asocia con un valor en Erlangs y una denominación cualitativa del estado de la red (desde "valle profundo" hasta "pico máximo"). La Tabla~\ref{fig:SIMULACION_TABLA1_NIVELES DE CARGA} presenta estos niveles.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_TABLA1_NIVELES DE CARGA.png}
-    \caption{Niveles de carga simulados}
-    \label{fig:SIMULACION_TABLA1_NIVELES DE CARGA}
-\end{figure}
+Los valores continuos de \(C(t)\), que oscilan aproximadamente en \([-1.8, 1.8]\), se mapean a doce niveles discretos de carga. Cada nivel se asocia con un valor en Erlangs.
 
 \begin{figure}[H]
     \centering
@@ -166,40 +158,29 @@ El patrón resultante presenta aproximadamente tres ciclos principales durante l
     \item \textbf{Picos máximos:} 3300--3750 Erlangs
 \end{itemize}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_TABLA4_FRECUENCIA_DE_OCURRENCIA.png}
-    \caption{Frecuencia de ocurrencia de niveles de carga}
-    \label{fig:SIMULACION_FRECUENCIA}
-\end{figure}
-
 \subsection{Identificación de Fases Operativas}
 
-Para cada instante de simulación se identifica la fase operativa del sistema basándose en la tendencia local de la carga (derivada aproximada por diferencias finitas):
+Para cada instante de simulación se identifica la fase operativa del sistema basándose en la tendencia local de la carga (derivada aproximada por diferencias finitas). La Tabla~\ref{tab:fases_operativas} describe las fases identificadas:
 
-\begin{itemize}
-    \item \textbf{Ascenso:} El valor de Erlangs aumenta progresivamente
-    \item \textbf{Pico:} Máximo local de carga
-    \item \textbf{Descenso:} La carga disminuye gradualmente
-    \item \textbf{Valle:} Mínimo local de carga
-    \item \textbf{Estable:} Variaciones menores entre instantes consecutivos
-\end{itemize}
+\begin{table}[H]
+\centering
+\caption{Fases operativas del sistema basadas en tendencia de carga}
+\label{tab:fases_operativas}
+\begin{tabular}{lp{10cm}}
+\hline
+\textbf{Fase} & \textbf{Descripción} \\
+\hline
+Incremento de carga & El valor de Erlangs aumenta progresivamente \\
+Período de alta demanda & Máximo local de carga en la red \\
+Decremento de carga & La carga disminuye gradualmente \\
+Período de baja demanda & Mínimo local de carga en la red \\
+Estado estacionario & Variaciones menores entre instantes consecutivos \\
+Fase transitoria & Cambios moderados sin alcanzar extremos \\
+\hline
+\end{tabular}
+\end{table}
 
 Esta clasificación enriquece los datos sintéticos con información contextual sobre la dinámica del tráfico.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_TABLA3_DISTRIBUCION_DE_FASES_OPERATIVAS.png}
-    \caption{Distribución de fases operativas}
-    \label{fig:SIMULACION_FASES_OPERATIVAS}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/SIMULACION_TABLA2_MUESTRA_DE_DATOS_TEMPORALES.png}
-    \caption{Muestra de datos temporales generados}
-    \label{fig:SIMULACION_MUESTRA_DATOS}
-\end{figure}
 
 \section{Herramientas de Implementación}
 
@@ -435,56 +416,7 @@ Se implementaron dos servicios REST independientes que encapsulan los modelos en
     \item \textbf{Servicio de Umbral Crítico:} API dedicada al modelo de BFR = 0.46
 \end{itemize}
 
-Cada servicio proporciona los siguientes endpoints HTTP:
-
-\begin{itemize}
-    \item \texttt{POST /predict}: Recibe métricas actuales de red y retorna predicción con probabilidad y recomendación de desfragmentación
-    \item \texttt{GET /health}: Verifica estado operativo del servicio y modelo cargado
-    \item \texttt{GET /info}: Retorna información del modelo (tipo, métricas de entrenamiento, features requeridas, umbrales)
-    \item \texttt{POST /reload}: Recarga el modelo desde archivos sin reiniciar el servicio
-\end{itemize}
-
 La implementación utiliza Flask como framework web y Waitress como servidor WSGI para producción, garantizando estabilidad y manejo eficiente de múltiples solicitudes concurrentes.
-
-\subsection{Formato de Entrada y Salida}
-
-Las solicitudes al endpoint \texttt{/predict} requieren un JSON con las 11 características del modelo:
-
-\begin{verbatim}
-{
-  "Demandas_Procesadas": 15420,
-  "Bloqueos": 234,
-  "Demandas_Activas": 1850,
-  "Tasa_Bloqueo_Instantaneo": 0.0152,
-  "Compactacion": 0.342,
-  "Fragmentacion": 0.418,
-  "Entropia": 2.145,
-  "Golden_Metric": 1.876,
-  "ASFR_3D": 0.267,
-  "Utilizacion_Diferencial": 0.183,
-  "Prob_Bloqueo_Hacia_Atras": 0.0089
-}
-\end{verbatim}
-
-La respuesta incluye la predicción procesada:
-
-\begin{verbatim}
-{
-  "success": true,
-  "resultado": {
-    "horizonte": 1000,
-    "probabilidad_critica": 0.752,
-    "debe_desfragmentar": true,
-    "umbral_usado": 0.70,
-    "confianza": "alta",
-    "viabilidad": "VIABLE",
-    "precision_esperada": 0.957,
-    "f1_esperado": 0.900,
-    "timestamp": "2025-01-15T14:30:22",
-    "modelo_tipo": "Gradient Boosting"
-  }
-}
-\end{verbatim}
 
 \subsection{Lógica de Control de Desfragmentación}
 
@@ -511,15 +443,3 @@ Esta arquitectura permite:
     \item Escalabilidad: Los servicios pueden ejecutarse en servidores separados
     \item Monitoreo granular: Métricas independientes por cada nivel de predicción
 \end{itemize}
-
-\subsection{Persistencia y Reproducibilidad}
-
-Cada modelo entrenado se persiste en tres archivos:
-
-\begin{itemize}
-    \item \texttt{modelo\_bfr\_t1000.pkl}: Modelo Gradient Boosting serializado con Joblib
-    \item \texttt{scaler\_bfr\_t1000.pkl}: Escalador RobustScaler ajustado
-    \item \texttt{config\_bfr\_t1000.json}: Configuración completa (features, umbrales, métricas, timestamp)
-\end{itemize}
-
-Esta estructura garantiza reproducibilidad exacta de las predicciones y facilita la auditoría y versionado de modelos en ambientes de producción.

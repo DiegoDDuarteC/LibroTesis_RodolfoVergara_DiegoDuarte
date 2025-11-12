@@ -3,15 +3,17 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Resultados del modelo Gradient Boosting para umbral crítico (BFR = 0.46)}}{50}{}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Resultados del modelo Gradient Boosting para umbral mínimo (BFR = 0.20)}}{50}{}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Componentes del modelo matemático de carga}}{39}{}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Fases operativas del sistema basadas en tendencia de carga}}{41}{}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Resultados del modelo Gradient Boosting para umbral crítico (BFR = 0.46)}}{47}{}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Resultados del modelo Gradient Boosting para umbral mínimo (BFR = 0.20)}}{48}{}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Configuración de escenarios de carga evaluados}}{58}{}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Resultados comparativos - Escenario 1 (Carga Baja)}}{63}{}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Resultados comparativos - Escenario 2 (Carga Media)}}{64}{}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Resultados comparativos - Escenario 3 (Carga Alta)}}{65}{}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Resultados con estrategia de doble predictor (3 niveles)}}{67}{}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Distribución de soluciones en el Frente de Pareto}}{67}{}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces Cobertura de Pareto entre métodos (agregado 3 escenarios)}}{68}{}%
-\contentsline {table}{\numberline {5.8}{\ignorespaces Validación del horizonte de predicción $t+1000$}}{70}{}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Configuración de escenarios de carga evaluados}}{53}{}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Resultados comparativos - Escenario 1 (Carga Baja)}}{58}{}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Resultados comparativos - Escenario 2 (Carga Media)}}{59}{}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Resultados comparativos - Escenario 3 (Carga Alta)}}{60}{}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Resultados con estrategia de doble predictor (3 niveles)}}{62}{}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Distribución de soluciones en el Frente de Pareto}}{62}{}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Cobertura de Pareto entre métodos (agregado 3 escenarios)}}{63}{}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces Validación del horizonte de predicción $t+1000$}}{65}{}%
 \addvspace {10\p@ }

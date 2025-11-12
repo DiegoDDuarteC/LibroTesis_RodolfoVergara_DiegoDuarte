@@ -8,9 +8,7 @@ La desfragmentación proactiva se ha establecido como una técnica fundamental p
 
 El presente trabajo propone una solución innovadora a este problema mediante la aplicación de técnicas de aprendizaje automático, específicamente el algoritmo Gradient Boosting, para predecir el índice de fragmentación BFR en un horizonte temporal futuro y disparar adaptativamente el proceso de desfragmentación en redes MC-EON. Esta aproximación constituye una contribución distintiva al estado del arte, al considerar simultáneamente las complejidades de la dimensión espacial (múltiples núcleos) y la dimensión espectral (fragmentación de ranuras) en un contexto de tráfico dinámico variable.
 
-\section{Conclusiones del Trabajo}
-
-\subsection{Cumplimiento de Objetivos}
+\section{Cumplimiento de Objetivos}
 
 Los objetivos planteados al inicio de esta investigación han sido satisfactoriamente alcanzados:
 
@@ -21,16 +19,16 @@ Los objetivos planteados al inicio de esta investigación han sido satisfactoria
 \begin{enumerate}
     \item \textbf{Revisión bibliográfica:} Se realizó un análisis exhaustivo del estado del arte en técnicas de desfragmentación para redes ópticas elásticas, identificando trabajos relevantes que aplican aprendizaje automático en contextos similares, aunque con énfasis limitado en arquitecturas multinúcleo. La revisión permitió identificar la brecha de conocimiento que este trabajo aborda: la predicción adaptativa de momentos de desfragmentación considerando específicamente las complejidades de redes MC-EON.
     
-    \item \textbf{Definición de métricas:} Se identificaron, adaptaron y formalizaron seis métricas de fragmentación apropiadas para redes MC-EON, considerando tanto la dimensión espectral como la espacial: BFR (Bandwidth Fragmentation Ratio), SHF (Shannon Entropy), SC (Spectrum Compactness), GM (Golden Metric), ASFR3D (Available Spectrum Fragmentation Ratio 3D) y UD (Utilización Diferencial). Estas métricas, utilizadas como características de entrada del modelo, capturan de manera integral el estado de fragmentación multidimensional de la red.
+    \item \textbf{Definición de métricas:} Se identificaron, adaptaron y formalizaron seis métricas de fragmentación apropiadas para redes MC-EON, considerando tanto la dimensión espectral como la espacial: BFR, SHF, SC, GM, ASFR3D y UD. Estas métricas capturan de manera integral el estado de fragmentación multidimensional de la red.
     
     \item \textbf{Desarrollo del modelo predictivo:} Se implementó un modelo de clasificación binaria basado en Gradient Boosting capaz de predecir con precisión superior al 80\% si el índice BFR superará umbrales críticos en un horizonte temporal de $t+1000$ demandas. El modelo fue configurado con 150 árboles de decisión, tasa de aprendizaje de 0.05, profundidad máxima de 5 niveles, y submuestreo estocástico del 80\%, logrando un balance óptimo entre capacidad predictiva y prevención de sobreajuste.
     
-    \item \textbf{Interfaz de integración:} Se diseñó e implementó una interfaz funcional entre el simulador de redes MC-EON y el modelo Gradient Boosting entrenado, permitiendo consultas en tiempo real del estado predicho de fragmentación y la ejecución adaptativa de desfragmentaciones según una estrategia de tres niveles.
+    \item \textbf{Interfaz de integración:} Se diseñó e implementó una interfaz funcional entre el simulador de redes MC-EON y el modelo Gradient Boosting entrenado, permitiendo consultas en tiempo real del estado predicho de fragmentación y la ejecución adaptativa de desfragmentaciones.
     
     \item \textbf{Evaluación experimental:} Se realizaron evaluaciones exhaustivas en tres escenarios de carga (baja, media y alta) sobre la topología USNET, comparando el método propuesto con estrategias tradicionales de desfragmentación periódica y por umbral reactivo. Los resultados demostraron superioridad consistente del método basado en Machine Learning en términos de optimización multiobjetivo.
 \end{enumerate}
 
-\subsection{Contribuciones Principales}
+\section{Contribuciones Principales}
 
 Las contribuciones distintivas de este trabajo al campo de las redes ópticas elásticas multinúcleo son:
 
@@ -45,12 +43,12 @@ Las contribuciones distintivas de este trabajo al campo de las redes ópticas el
     
     \item \textbf{Modelo predictivo de alta precisión para horizontes temporales extensos:} Se demostró que el algoritmo Gradient Boosting puede predecir con 100\% de precisión (47 consultas exitosas en 47 intentos) si el índice de fragmentación superará umbrales críticos con una anticipación de 1,000 demandas. Esta capacidad de anticipación constituye una mejora sustancial respecto a métodos reactivos que operan sobre el estado actual de la red.
     
-    \item \textbf{Conjunto comprehensivo de métricas para MC-EON:} Se formalizó un conjunto de seis métricas de fragmentación específicamente adaptadas para capturar la complejidad de redes multinúcleo, incluyendo la métrica ASFR3D que incorpora explícitamente el factor de fragmentación espacial mediante la consideración de demandas activas y distribución entre núcleos. Esta contribución facilita futuras investigaciones al proporcionar un marco métrico robusto para caracterización de fragmentación en MC-EON.
+    \item \textbf{Conjunto comprehensivo de métricas para MC-EON:} Se formalizó un conjunto de seis métricas de fragmentación específicamente adaptadas para capturar la complejidad de redes multinúcleo, incluyendo la métrica ASFR3D que incorpora explícitamente el factor de fragmentación espacial. Esta contribución facilita futuras investigaciones al proporcionar un marco métrico robusto para caracterización de fragmentación en MC-EON.
     
     \item \textbf{Generación sintética de patrones de carga realistas:} Se diseñó un modelo matemático de simulación de tráfico basado en composición armónica de funciones sinusoidales que genera patrones de carga con variaciones suaves y ciclos cuasiperiódicos. Este modelo, validado experimentalmente en tres escenarios de carga, proporciona un mecanismo reproducible para evaluación de algoritmos de gestión de recursos en redes ópticas.
 \end{enumerate}
 
-\subsection{Validación Experimental}
+\section{Validación Experimental}
 
 Los experimentos realizados sobre la topología USNET con tres escenarios de carga diferenciados validan de manera contundente la efectividad del método propuesto:
 
@@ -63,8 +61,8 @@ Los experimentos realizados sobre la topología USNET con tres escenarios de car
 
 \textbf{Reducción de bloqueos y reconfiguraciones:}
 \begin{itemize}
-    \item En el escenario de alta congestión (2,000-4,000 Erlangs), el método ML logró 2.981\% de probabilidad de bloqueo con 18 desfragmentaciones, representando una mejora del 8.5\% respecto al método periódico (3.265\% con 19 desfragmentaciones)
-    \item En el escenario de baja congestión (800-3,000 Erlangs), se obtuvo 0.687\% de bloqueos con solo 13 desfragmentaciones, todas ejecutadas en modo preventivo, demostrando la capacidad del modelo para identificar correctamente estados de red saludable
+    \item En el escenario de alta congestión, el método ML logró 2.981\% de probabilidad de bloqueo con 18 desfragmentaciones, representando una mejora del 8.5\% respecto al método periódico (3.265\% con 19 desfragmentaciones)
+    \item En el escenario de baja congestión, se obtuvo 0.687\% de bloqueos con solo 13 desfragmentaciones, todas ejecutadas en modo preventivo
     \item La distribución adaptativa entre desfragmentaciones preventivas y reactivas se ajustó automáticamente al nivel de congestión: 100\% preventivo en carga baja, 56.3\%/43.8\% en carga media, y 38.9\%/61.1\% en carga alta
 \end{itemize}
 
@@ -72,109 +70,60 @@ Los experimentos realizados sobre la topología USNET con tres escenarios de car
 \begin{itemize}
     \item El modelo Gradient Boosting alcanzó 83.2\% de precisión, 71.4\% de recall, 76.8\% de F1-score y 89.1\% de AUC-ROC en el conjunto de prueba
     \item La tasa de éxito del 100\% en consultas predictivas en tiempo real valida la viabilidad del horizonte $t+1000$ para anticipación efectiva
-    \item El umbral de decisión optimizado (0.46) permite minimizar falsas alarmas que generarían intervenciones innecesarias
 \end{itemize}
 
-\subsection{Validación de la Hipótesis}
+\section{Validación de la Hipótesis}
 
-La hipótesis central de este trabajo postulaba que los modelos de aprendizaje automático pueden predecir de manera precisa los momentos óptimos para ejecutar desfragmentación en redes MC-EON, reduciendo bloqueos y reconfiguraciones innecesarias comparado con estrategias tradicionales.
+La hipótesis central postulaba que los modelos de aprendizaje automático pueden predecir de manera precisa los momentos óptimos para ejecutar desfragmentación en redes MC-EON, reduciendo bloqueos y reconfiguraciones innecesarias comparado con estrategias tradicionales.
 
-Los resultados experimentales confirman categóricamente esta hipótesis. La combinación de:
-\begin{enumerate}
-    \item Predicción precisa del índice de fragmentación futuro mediante Gradient Boosting
-    \item Estrategia adaptativa de tres niveles basada en umbrales de BFR predicho
-    \item Horizonte temporal de anticipación de 1,000 demandas
-\end{enumerate}
-
-demostró superioridad consistente en optimización multiobjetivo (minimización simultánea de bloqueos y reconfiguraciones) respecto a métodos tradicionales periódicos y reactivos. La ventaja del método propuesto radica fundamentalmente en su capacidad para adaptar dinámicamente la frecuencia de desfragmentaciones al estado predicho de la red, evitando tanto intervenciones innecesarias en estados saludables como insuficiencia de intervenciones en estados críticos.
+Los resultados experimentales confirman categóricamente esta hipótesis. La estrategia adaptativa de tres niveles, combinada con predicción precisa del índice de fragmentación mediante Gradient Boosting en horizonte $t+1000$, demostró superioridad consistente en optimización multiobjetivo respecto a métodos tradicionales. La ventaja del método propuesto radica fundamentalmente en su capacidad para adaptar dinámicamente la frecuencia de desfragmentaciones al estado predicho de la red, evitando tanto intervenciones innecesarias en estados saludables como insuficiencia de intervenciones en estados críticos.
 
 \section{Aportes de la Investigación}
 
 Los aportes concretos del presente trabajo al estado del arte en gestión de fragmentación para redes ópticas elásticas multinúcleo son:
 
 \begin{enumerate}
-    \item \textbf{Marco conceptual para desfragmentación adaptativa en MC-EON:} Se estableció un marco teórico y metodológico que integra la predicción mediante aprendizaje automático con estrategias adaptativas de desfragmentación, considerando explícitamente las complejidades de la dimensión espacial (múltiples núcleos) y las restricciones de crosstalk. Este marco puede servir como fundamento para futuras investigaciones en gestión autónoma de recursos en redes multinúcleo.
+    \item \textbf{Marco conceptual para desfragmentación adaptativa en MC-EON:} Se estableció un marco teórico y metodológico que integra la predicción mediante aprendizaje automático con estrategias adaptativas de desfragmentación, considerando explícitamente las complejidades de la dimensión espacial y las restricciones de crosstalk.
     
-    \item \textbf{Algoritmo de disparo inteligente basado en Gradient Boosting:} Se diseñó, implementó y validó experimentalmente un algoritmo completo que abarca:
-    \begin{itemize}
-        \item Preprocesamiento de métricas de fragmentación mediante RobustScaler
-        \item Entrenamiento de clasificador Gradient Boosting con datos simulados de tráfico variable
-        \item Optimización de umbral de decisión para maximizar balance precisión-F1
-        \item Interfaz de consulta en tiempo real para integración con simulador MC-EON
-        \item Estrategia de disparo de tres niveles con intervalos adaptativos
-    \end{itemize}
+    \item \textbf{Algoritmo de disparo inteligente:} Se diseñó, implementó y validó experimentalmente un algoritmo completo que abarca preprocesamiento mediante RobustScaler, entrenamiento de clasificador Gradient Boosting, optimización de umbral de decisión, interfaz de consulta en tiempo real, y estrategia de disparo de tres niveles con intervalos adaptativos.
     
-    \item \textbf{Metodología de evaluación multiobjetivo para algoritmos de desfragmentación:} Se aplicaron métricas rigurosas de optimización multiobjetivo (Frente de Pareto, Cobertura de Pareto) para comparación justa de estrategias de desfragmentación, considerando simultáneamente minimización de bloqueos (BL) y reconfiguraciones (RC). Esta metodología proporciona un estándar de evaluación reproducible para futuras investigaciones.
+    \item \textbf{Metodología de evaluación multiobjetivo:} Se aplicaron métricas rigurosas de optimización multiobjetivo (Frente de Pareto, Cobertura de Pareto) para comparación justa de estrategias de desfragmentación, proporcionando un estándar de evaluación reproducible.
     
-    \item \textbf{Conjunto de datos sintético de tráfico variable para MC-EON:} Se generó mediante simulación un dataset comprehensivo que incluye:
-    \begin{itemize}
-        \item Tres escenarios de carga con patrones cuasiperiódicos realistas
-        \item Diez niveles discretos de carga (800-4,000 Erlangs)
-        \item Seis métricas de fragmentación calculadas en cada instante temporal
-        \item Etiquetas binarias indicando si BFR supera umbrales críticos en horizonte $t+1000$
-    \end{itemize}
-    Este dataset puede ser utilizado por la comunidad científica para entrenamiento y evaluación de modelos alternativos.
+    \item \textbf{Conjunto de datos sintético de tráfico variable:} Se generó mediante simulación un dataset comprehensivo con tres escenarios de carga, diez niveles discretos (800-4,000 Erlangs), seis métricas de fragmentación, y etiquetas binarias para horizonte $t+1000$. Este dataset puede ser utilizado por la comunidad científica para entrenamiento y evaluación de modelos alternativos.
     
-    \item \textbf{Evidencia empírica de viabilidad de predicción a largo plazo:} Los resultados demuestran que el horizonte de 1,000 demandas es técnicamente viable para predicción de fragmentación en MC-EON, con autocorrelación temporal suficiente y volatilidad moderada. Esta evidencia contrarresta posibles escepticismos sobre la predictibilidad de métricas de red en ventanas temporales extensas.
+    \item \textbf{Evidencia empírica de viabilidad de predicción a largo plazo:} Los resultados demuestran que el horizonte de 1,000 demandas es técnicamente viable para predicción de fragmentación en MC-EON, con autocorrelación temporal suficiente y volatilidad moderada.
 \end{enumerate}
 
 \section{Limitaciones Identificadas}
 
-A pesar de los resultados alentadores obtenidos, se reconocen las siguientes limitaciones del trabajo realizado:
+A pesar de los resultados alentadores obtenidos, se reconocen las siguientes limitaciones:
 
 \begin{enumerate}
-    \item \textbf{Alcance topológico limitado:} Las evaluaciones experimentales se restringieron a la topología USNET (24 nodos, 43 enlaces bidireccionales). Si bien esta topología es representativa de redes de área amplia, la validación en topologías adicionales con características estructurales diferentes (e.g., NSFNET con 14 nodos, COST239 con 11 nodos, topologías de diferentes diámetros de red) permitiría evaluar más comprehensivamente la robustez y generalización del modelo predictivo.
+    \item \textbf{Alcance topológico limitado:} Las evaluaciones se restringieron a la topología USNET (24 nodos, 43 enlaces bidireccionales). La validación en topologías adicionales con características estructurales diferentes permitiría evaluar más comprehensivamente la robustez y generalización del modelo predictivo.
     
-    \item \textbf{Overhead computacional no cuantificado:} Aunque el modelo Gradient Boosting entrenado mostró alta precisión predictiva, no se cuantificó el tiempo de inferencia requerido para consultas en tiempo real ni el overhead de memoria para mantener el modelo cargado en el sistema de gestión de la red. Un análisis detallado de latencia de predicción y requisitos de recursos computacionales resultaría valioso para evaluación de viabilidad en implementaciones prácticas de producción.
+    \item \textbf{Overhead computacional no cuantificado:} No se cuantificó el tiempo de inferencia requerido para consultas en tiempo real ni el overhead de memoria. Un análisis detallado de latencia de predicción y requisitos de recursos computacionales resultaría valioso para evaluación de viabilidad en implementaciones prácticas de producción.
     
-    \item \textbf{Determinación empírica de umbrales:} Los valores de umbrales BFR (0.20 y 0.46) que definen la estrategia de tres niveles fueron determinados empíricamente mediante experimentación iterativa. Una metodología sistemática de búsqueda automática de umbrales óptimos (e.g., mediante búsqueda de grid en espacio de parámetros, optimización bayesiana, o aprendizaje por refuerzo) podría mejorar el desempeño del sistema y facilitar su adaptación a diferentes contextos operacionales.
+    \item \textbf{Determinación empírica de umbrales:} Los valores de umbrales BFR (0.20 y 0.46) fueron determinados empíricamente. Una metodología sistemática de búsqueda automática de umbrales óptimos (búsqueda de grid, optimización bayesiana, o aprendizaje por refuerzo) podría mejorar el desempeño y facilitar adaptación a diferentes contextos.
     
-    \item \textbf{Horizonte temporal fijo:} El modelo fue entrenado y evaluado con un horizonte de predicción fijo de $t+1000$ demandas. La evaluación de horizontes adaptativos que se ajusten dinámicamente según el nivel de congestión de la red (e.g., $t+500$ en alta congestión para mayor reactividad, $t+2000$ en baja congestión para mayor estabilidad) podría incrementar la precisión predictiva y la eficiencia operacional.
+    \item \textbf{Horizonte temporal fijo:} El modelo fue entrenado y evaluado con horizonte fijo de $t+1000$ demandas. La evaluación de horizontes adaptativos que se ajusten dinámicamente según el nivel de congestión podría incrementar la precisión predictiva y la eficiencia operacional.
     
-    \item \textbf{Tráfico unicast exclusivamente:} Los experimentos se realizaron con tráfico unicast (conexiones punto a punto). Redes reales frecuentemente deben gestionar también tráfico multicast (punto a multipunto) y anycast (punto al más cercano de un conjunto), que introducen patrones de fragmentación y requisitos de recursos diferentes. La extensión del método a estos tipos de tráfico constituye una limitación identificada.
+    \item \textbf{Tráfico unicast exclusivamente:} Los experimentos se realizaron con tráfico unicast. Redes reales frecuentemente deben gestionar también tráfico multicast y anycast, que introducen patrones de fragmentación y requisitos de recursos diferentes.
     
-    \item \textbf{Crosstalk modelado de manera simplificada:} Aunque el simulador utilizado incorpora restricciones de crosstalk mediante umbral $XT_{TH} = 1.0 \times 10^{-10}$, el modelo predictivo no incluye explícitamente métricas de diafonía como características de entrada. Una caracterización más detallada del impacto diferencial del crosstalk en diferentes núcleos de la fibra podría mejorar la precisión predictiva, especialmente en arquitecturas MCF con geometrías complejas (e.g., 19 núcleos hexagonales donde núcleos centrales experimentan mayor interferencia).
+    \item \textbf{Crosstalk modelado de manera simplificada:} Aunque el simulador incorpora restricciones de crosstalk mediante umbral $XT_{TH} = 1.0 \times 10^{-10}$, el modelo predictivo no incluye explícitamente métricas de diafonía como características de entrada. Una caracterización más detallada del impacto diferencial del crosstalk podría mejorar la precisión predictiva.
 \end{enumerate}
 
 \section{Trabajos Futuros}
 
-Las direcciones de investigación futura identificadas para extender y mejorar el trabajo realizado incluyen:
-
 \subsection{Extensiones Metodológicas}
 
 \begin{enumerate}
-    \item \textbf{Validación en topologías diversas:} Realizar evaluaciones exhaustivas en topologías de red adicionales con características estructurales diferenciadas:
-    \begin{itemize}
-        \item NSFNET (14 nodos, 21 enlaces): topología de menor densidad para evaluar comportamiento en redes dispersas
-        \item COST239 (11 nodos, 26 enlaces): topología europea con alta conectividad
-        \item Topologías sintéticas paramétricas variando diámetro, grado medio de nodos, y distribución de distancias entre pares origen-destino
-    \end{itemize}
-    Esta validación permitiría identificar si la efectividad del modelo se mantiene consistente o si requiere re-entrenamiento específico por topología.
+    \item \textbf{Validación en topologías diversas:} Realizar evaluaciones exhaustivas en topologías adicionales (NSFNET, COST239, topologías sintéticas paramétricas) para identificar si la efectividad del modelo se mantiene consistente o si requiere re-entrenamiento específico por topología.
     
-    \item \textbf{Optimización automática de hiperparámetros y umbrales:} Implementar búsqueda sistemática de configuración óptima del sistema completo mediante:
-    \begin{itemize}
-        \item Grid search o random search para hiperparámetros del modelo Gradient Boosting (número de estimadores, tasa de aprendizaje, profundidad máxima)
-        \item Optimización bayesiana para umbrales BFR que definen la estrategia de tres niveles
-        \item Validación cruzada $k$-fold para selección robusta de configuración
-        \item Meta-aprendizaje para transferencia de configuraciones entre topologías similares
-    \end{itemize}
+    \item \textbf{Optimización automática de hiperparámetros y umbrales:} Implementar búsqueda sistemática mediante grid search, random search, optimización bayesiana para hiperparámetros del modelo y umbrales BFR, con validación cruzada $k$-fold y meta-aprendizaje para transferencia entre topologías.
     
-    \item \textbf{Horizontes temporales adaptativos:} Desarrollar un mecanismo de selección dinámica de horizonte de predicción que se ajuste según:
-    \begin{itemize}
-        \item Nivel de congestión actual de la red (horizontes cortos en alta congestión, largos en baja)
-        \item Volatilidad reciente de métricas de fragmentación (horizontes cortos ante alta variabilidad)
-        \item Precisión histórica de predicciones (ajuste adaptativo del horizonte para mantener precisión objetivo)
-    \end{itemize}
-    Evaluar trade-off entre anticipación (horizontes largos) y precisión predictiva (horizontes cortos).
+    \item \textbf{Horizontes temporales adaptativos:} Desarrollar mecanismo de selección dinámica de horizonte que se ajuste según nivel de congestión, volatilidad reciente, y precisión histórica de predicciones. Evaluar trade-off entre anticipación y precisión predictiva.
     
-    \item \textbf{Incorporación de métricas de crosstalk:} Extender el conjunto de características de entrada del modelo para incluir:
-    \begin{itemize}
-        \item Diafonía agregada por núcleo: $XT_i = \sum_{j=1}^{N_i} h_{i,j} \cdot L$
-        \item Distribución de utilización espectral entre núcleos adyacentes
-        \item Número de violaciones potenciales de umbral $XT_{TH}$ bajo diferentes asignaciones candidatas
-        \item Factor de criticidad por núcleo basado en número de núcleos adyacentes (núcleos centrales vs. periféricos en geometrías hexagonales)
-    \end{itemize}
-    Analizar si esta información adicional mejora la capacidad predictiva del modelo, especialmente en escenarios de alta utilización.
+    \item \textbf{Incorporación de métricas de crosstalk:} Extender el conjunto de características para incluir diafonía agregada por núcleo, distribución de utilización espectral entre núcleos adyacentes, número de violaciones potenciales de umbral, y factor de criticidad por núcleo según geometría.
 \end{enumerate}
 
 \subsection{Extensiones Arquitecturales y Algorítmicas}
@@ -182,89 +131,48 @@ Las direcciones de investigación futura identificadas para extender y mejorar e
 \begin{enumerate}
     \item \textbf{Exploración de arquitecturas de ML alternativas:}
     \begin{itemize}
-        \item \textbf{Redes neuronales recurrentes (LSTM, GRU):} Evaluar si la modelación explícita de dependencias temporales mediante arquitecturas recurrentes mejora la precisión predictiva respecto a Gradient Boosting, especialmente para horizontes temporales largos
-        \item \textbf{Transformers con mecanismo de atención:} Investigar si mecanismos de atención pueden identificar automáticamente patrones temporales relevantes en series de tiempo de métricas de fragmentación
-        \item \textbf{Ensambles heterogéneos:} Combinar múltiples modelos (Gradient Boosting, Random Forest, redes neuronales) mediante votación ponderada o stacking para robustez mejorada
-        \item \textbf{Aprendizaje profundo por refuerzo:} Reformular el problema como MDP (Markov Decision Process) donde un agente aprende política óptima de disparo mediante exploración y recompensas basadas en bloqueos y reconfiguraciones
+        \item \textbf{Redes neuronales recurrentes (LSTM, GRU):} Evaluar si la modelación explícita de dependencias temporales mejora la precisión
+        \item \textbf{Transformers con mecanismo de atención:} Investigar si pueden identificar automáticamente patrones temporales relevantes
+        \item \textbf{Ensambles heterogéneos:} Combinar múltiples modelos mediante votación ponderada o stacking
+        \item \textbf{Aprendizaje profundo por refuerzo:} Reformular como MDP donde un agente aprende política óptima de disparo
     \end{itemize}
     
-    \item \textbf{Predicción multi-horizonte:} Entrenar modelos que predigan simultáneamente el índice BFR en múltiples horizontes temporales ($t+500$, $t+1000$, $t+1500$, $t+2000$), permitiendo al sistema de gestión evaluar trayectorias futuras de fragmentación y anticipar con mayor precisión el momento óptimo de intervención.
+    \item \textbf{Predicción multi-horizonte:} Entrenar modelos que predigan simultáneamente el índice BFR en múltiples horizontes ($t+500$, $t+1000$, $t+1500$, $t+2000$), permitiendo evaluar trayectorias futuras y anticipar con mayor precisión el momento óptimo.
     
-    \item \textbf{Aprendizaje continuo (online learning):} Implementar mecanismos de actualización incremental del modelo conforme se observan nuevos datos operacionales en producción, permitiendo adaptación automática a cambios en patrones de tráfico, despliegue de nuevos servicios, o modificaciones topológicas de la red.
+    \item \textbf{Aprendizaje continuo (online learning):} Implementar mecanismos de actualización incremental del modelo conforme se observan nuevos datos operacionales, permitiendo adaptación automática a cambios en patrones de tráfico.
     
-    \item \textbf{Interpretabilidad mejorada:} Aplicar técnicas de explainable AI (SHAP values, LIME, análisis de importancia de características por permutación) para identificar qué métricas de fragmentación contribuyen más significativamente a las predicciones del modelo, facilitando comprensión y confianza de operadores de red.
+    \item \textbf{Interpretabilidad mejorada:} Aplicar técnicas de explainable AI (SHAP values, LIME, análisis de importancia de características) para identificar qué métricas contribuyen más significativamente a las predicciones.
 \end{enumerate}
 
 \subsection{Extensiones a Otros Contextos Operacionales}
 
 \begin{enumerate}
-    \item \textbf{Tráfico heterogéneo:} Extender el método para gestionar simultáneamente:
-    \begin{itemize}
-        \item Tráfico multicast (punto a multipunto) con requisitos de continuidad espectral pero sin continuidad de núcleo estricta
-        \item Tráfico anycast (punto al más cercano disponible de un conjunto) con flexibilidad en selección de destino
-        \item Tráfico con diferenciación de QoS (latencia crítica vs. throughput orientado)
-        \item Solicitudes con requisitos de resiliencia (protección dedicada, compartida, o restauración)
-    \end{itemize}
+    \item \textbf{Tráfico heterogéneo:} Extender el método para gestionar simultáneamente tráfico multicast, anycast, con diferenciación de QoS, y requisitos de resiliencia.
     
-    \item \textbf{Integración con otros mecanismos de optimización:} Combinar la desfragmentación adaptativa propuesta con:
-    \begin{itemize}
-        \item Algoritmos RMSCA (Routing, Modulation, Spectrum and Core Assignment) conscientes de fragmentación
-        \item Técnicas de previsión de tráfico para admisión controlada de demandas durante períodos de alta fragmentación
-        \item Mecanismos de conmutación de núcleos para flexibilidad espacial sin re-ruteo completo
-        \item Políticas de migración selectiva de lightpaths (solo reconfigurar conexiones críticas para maximizar eficiencia)
-    \end{itemize}
+    \item \textbf{Integración con otros mecanismos de optimización:} Combinar con algoritmos RMSCA conscientes de fragmentación, técnicas de previsión de tráfico, mecanismos de conmutación de núcleos, y políticas de migración selectiva.
     
-    \item \textbf{Redes ópticas con arquitecturas heterogéneas:} Evaluar el método en escenarios donde coexisten:
-    \begin{itemize}
-        \item Fibras con diferente número de núcleos (7, 12, 19 núcleos) en distintos enlaces
-        \item Enlaces con diferentes capacidades espectrales (200, 320, 400 ranuras)
-        \item Nodos con diferentes capacidades de conmutación espectral y espacial
-    \end{itemize}
-    Analizar si el modelo requiere características adicionales o re-entrenamiento para manejar esta heterogeneidad.
+    \item \textbf{Redes ópticas con arquitecturas heterogéneas:} Evaluar en escenarios con fibras de diferente número de núcleos, enlaces con diferentes capacidades espectrales, y nodos con diferentes capacidades de conmutación.
     
-    \item \textbf{Coordinación con plano de control distribuido:} Investigar integración del método propuesto con protocolos de plano de control SDN (Software-Defined Networking) y arquitecturas GMPLS (Generalized Multi-Protocol Label Switching) para:
-    \begin{itemize}
-        \item Coordinación distribuida de decisiones de desfragmentación entre múltiples dominios administrativos
-        \item Sincronización de reconfiguraciones para minimizar disrupciones de servicios
-        \item Mecanismos de rollback ante fallas durante proceso de desfragmentación
-    \end{itemize}
+    \item \textbf{Coordinación con plano de control distribuido:} Investigar integración con protocolos SDN y arquitecturas GMPLS para coordinación distribuida, sincronización de reconfiguraciones, y mecanismos de rollback.
 \end{enumerate}
 
 \subsection{Validación Experimental en Entornos Reales}
 
 \begin{enumerate}
-    \item \textbf{Prototipado en testbed experimental:} Implementar el método propuesto en un testbed de redes ópticas reales (e.g., testbeds académicos como GÉANT en Europa, ESnet en Estados Unidos) para:
-    \begin{itemize}
-        \item Validar precisión predictiva con tráfico real (no simulado)
-        \item Cuantificar overhead computacional y latencia de inferencia en hardware real
-        \item Evaluar robustez ante eventos inesperados (fallas de enlaces, disrupciones de tráfico)
-        \item Medir satisfacción de operadores con sistema de gestión autónoma
-    \end{itemize}
+    \item \textbf{Prototipado en testbed experimental:} Implementar el método en testbeds académicos (GÉANT, ESnet) para validar precisión con tráfico real, cuantificar overhead computacional, evaluar robustez ante eventos inesperados, y medir satisfacción de operadores.
     
-    \item \textbf{Análisis de costos operacionales:} Realizar estudio económico comparativo cuantificando:
-    \begin{itemize}
-        \item Costo de disrupciones de servicio durante reconfiguraciones (expresado en SLA violations, penalizaciones contractuales)
-        \item Costo de bloqueos de solicitudes (ingresos no percibidos, insatisfacción de clientes)
-        \item Costo computacional de operación del modelo ML (energía, mantenimiento de infraestructura de predicción)
-        \item ROI (Return on Investment) de despliegue del sistema propuesto vs. métodos tradicionales
-    \end{itemize}
+    \item \textbf{Análisis de costos operacionales:} Realizar estudio económico comparativo cuantificando costos de disrupciones, bloqueos, operación del modelo ML, y ROI del sistema propuesto.
     
-    \item \textbf{Estudios de caso industriales:} Colaborar con operadores de telecomunicaciones para evaluar el método en escenarios de producción reales, considerando:
-    \begin{itemize}
-        \item Patrones de tráfico reales con estacionalidad, eventos especiales, fallas
-        \item Requisitos regulatorios y contractuales de disponibilidad y QoS
-        \item Integración con sistemas legacy de gestión de red (OSS/BSS)
-        \item Aceptación y confianza de equipos de operaciones en decisiones autónomas del sistema ML
-    \end{itemize}
+    \item \textbf{Estudios de caso industriales:} Colaborar con operadores de telecomunicaciones para evaluar en escenarios de producción reales, considerando patrones de tráfico reales, requisitos regulatorios, integración con sistemas legacy, y aceptación de equipos de operaciones.
 \end{enumerate}
 
 \section{Reflexiones Finales}
 
 La gestión eficiente de recursos en redes ópticas elásticas multinúcleo representa un desafío técnico de relevancia creciente en el contexto de demandas exponenciales de capacidad de transmisión. La fragmentación espectro-espacial constituye un obstáculo significativo para la utilización óptima de estos sistemas, requiriendo estrategias de desfragmentación que balanceen cuidadosamente los costos operacionales de reconfiguración contra los beneficios de reducción de bloqueos.
 
-El presente trabajo demuestra que las técnicas modernas de aprendizaje automático, específicamente el algoritmo Gradient Boosting, pueden aplicarse exitosamente para resolver el problema de determinación del momento óptimo de desfragmentación en redes MC-EON. La capacidad demostrada de predecir con alta precisión el índice de fragmentación en horizontes temporales extensos ($t+1000$ demandas) permite la implementación de estrategias adaptativas que superan significativamente a métodos tradicionales estáticos o puramente reactivos.
+El presente trabajo demuestra que las técnicas modernas de aprendizaje automático, específicamente el algoritmo Gradient Boosting, pueden aplicarse exitosamente para resolver el problema de determinación del momento óptimo de desfragmentación en redes MC-EON. La capacidad demostrada de predecir con alta precisión el índice de fragmentación en horizontes temporales extensos permite la implementación de estrategias adaptativas que superan significativamente a métodos tradicionales.
 
-Los resultados experimentales obtenidos validan la viabilidad técnica y la superioridad en optimización multiobjetivo del método propuesto. Sin embargo, la transición de validación experimental en simulación a despliegue en redes de producción reales requiere abordar las limitaciones identificadas, particularmente en términos de generalización topológica, cuantificación de overhead computacional, y validación en condiciones operacionales heterogéneas.
+Los resultados experimentales obtenidos validan la viabilidad técnica y la superioridad del método propuesto. Sin embargo, la transición de validación experimental en simulación a despliegue en redes de producción reales requiere abordar las limitaciones identificadas, particularmente en términos de generalización topológica, cuantificación de overhead computacional, y validación en condiciones operacionales heterogéneas.
 
 Las direcciones de trabajo futuro identificadas proporcionan un mapa de ruta claro para evolución de esta línea de investigación. La exploración de arquitecturas de ML alternativas, la extensión a tráfico heterogéneo, y particularmente la validación en testbeds reales y estudios de caso industriales, constituyen pasos naturales hacia la maduración de sistemas de gestión autónoma de redes ópticas basados en inteligencia artificial.
 
