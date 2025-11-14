@@ -81,15 +81,13 @@ Diseñar modelos de predicción para el proceso de desfragmentación en redes ó
 \section{Organización del libro}
 El presente trabajo se encuentra organizado de la siguiente manera:
 
-En el capítulo dos se trata sobre características y conceptos relacionados con las redes EON, su principal
-dificultad (la fragmentación del ancho de banda), los diferentes enfoques para manejar la misma y una 
-presentación de trabajos relacionados presentes en la literatura científica.
+En el capítulo dos se presentan las características y conceptos fundamentales de las redes ópticas elásticas multinúcleo (MC-EON), incluyendo la multiplexación por división de espacio (SDM), el fenómeno de diafonía entre núcleos (crosstalk), y el problema de la fragmentación espectro-espacial del ancho de banda. Se describen los diferentes enfoques para la gestión de la fragmentación, con énfasis en la estrategia de desfragmentación proactiva con re-ruteo adoptada en este trabajo.
 
-En el capítulo tres se hace una introducción al \textit{Machine learning}, enfocado al aprendizaje supervisado y redes neuronales.
+En el capítulo tres se introduce el aprendizaje automático, enfocándose en los fundamentos del aprendizaje supervisado y el paradigma de aprendizaje por ensamble. Se presenta en detalle el algoritmo Gradient Boosting, describiendo su funcionamiento, configuración de hiperparámetros, y su aplicación específica a problemas de clasificación en redes MC-EON mediante el GradientBoostingClassifier.
 
-En el capítulo cuatro se presenta el método propuesto para la selección del momento de desfragmentación, 
-describiendo todo el proceso que conlleva.
+En el capítulo cuatro se describe el método propuesto para la selección del momento óptimo de desfragmentación mediante predicción con aprendizaje automático. Se presenta la estrategia adaptativa de tres niveles basada en doble umbral, las características utilizadas como entrada al modelo, el proceso de generación de datos sintéticos con carga variable, el entrenamiento de dos modelos Gradient Boosting independientes, y la arquitectura de servicios REST para integración con el simulador de red.
 
-El capítulo cinco se muestra las pruebas experimentales junto a un análisis de los resultados obtenidos.
+El capítulo cinco presenta las pruebas experimentales realizadas sobre la topología USNET en tres escenarios de carga (baja, media y alta). Se muestran los resultados comparativos del método propuesto frente a estrategias tradicionales de desfragmentación, evaluando objetivos multiobjetivo mediante métricas de bloqueos, reconfiguraciones, soluciones en el Frente de Pareto y Cobertura de Pareto.
 
-Por último, el capítulo seis presenta las conclusiones del trabajo y sugerencias para trabajos futuros. 
+Por último, el capítulo seis presenta las conclusiones del trabajo, validando el cumplimiento de objetivos, destacando las contribuciones principales, identificando limitaciones, y proponiendo direcciones para trabajos futuros en extensiones metodológicas, arquitecturales y validación experimental en entornos reales.
+%%

@@ -1,6 +1,77 @@
 \chapter{Pruebas y Resultados Obtenidos}
 
-Las pruebas experimentales se realizaron sobre el simulador de redes ópticas elásticas multinúcleo desarrollado en \cite{davalos2019spectrum}, utilizando la topología USNET. El objetivo fundamental de esta evaluación consiste en validar la efectividad del método propuesto basado en aprendizaje automático para la predicción proactiva de fragmentación y el disparo adaptativo de procesos de desfragmentación en redes MC-EON.
+Las pruebas experimentales se realizaron sobre el simulador de redes ópticas elásticas multinúcleo, utilizando la topología USNET. El objetivo fundamental de esta evaluación consiste en validar la efectividad del método propuesto basado en aprendizaje automático para la predicción proactiva de fragmentación y el disparo adaptativo de procesos de desfragmentación en redes MC-EON.
+
+\section{Flujo del Algoritmo de Desfragmentación Adaptativa}
+
+La Tabla~\ref{tab:flujo_algoritmo} presenta el flujo de decisiones del método propuesto durante la ejecución de la simulación. El algoritmo opera en tres niveles de respuesta según las predicciones del modelo de aprendizaje automático.
+
+\begin{table}[htbp]
+\centering
+\caption{Flujo de decisiones del algoritmo de desfragmentación adaptativa}
+\label{tab:flujo_algoritmo}
+\small
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Etapa} & \textbf{Descripción} \\
+\hline
+\hline
+\multicolumn{2}{|c|}{\textbf{INICIALIZACIÓN}} \\
+\hline
+1. Inicio & Configuración de parámetros RSA y generación de patrones de demanda \\
+\hline
+\hline
+\multicolumn{2}{|c|}{\textbf{BUCLE PRINCIPAL (cada unidad de tiempo t)}} \\
+\hline
+2. Procesamiento & Procesar demandas entrantes usando algoritmo RSA MULTIPLES\_CORES \\
+\hline
+3. Verificación & ¿Tiempo de consulta ML? \\
+ & \quad $\rightarrow$ \textbf{No}: Continuar a Etapa 9 \\
+ & \quad $\rightarrow$ \textbf{Sí}: Continuar a Etapa 4 \\
+\hline
+\hline
+\multicolumn{2}{|c|}{\textbf{PREDICCIÓN Y DECISIÓN}} \\
+\hline
+4. Extracción & Calcular features del estado actual de la red \\
+\hline
+5. Predictor 1 & Consultar Modelo ML 1 (umbral 0.20) \\
+ & Predicción: $\widehat{BFR}_{t+1000}$ \\
+\hline
+6. Decisión 1 & ¿$\widehat{BFR}_{t+1000} \geq 0.20$? \\
+ & \quad $\rightarrow$ \textbf{No}: \textit{NIVEL 1} - NO desfragmentar \\
+ & \quad \hspace{1.5cm} Próxima consulta en $t + 1500$ \\
+ & \quad \hspace{1.5cm} Continuar a Etapa 10 \\
+ & \quad $\rightarrow$ \textbf{Sí}: Continuar a Etapa 7 \\
+\hline
+7. Predictor 2 & Consultar Modelo ML 2 (umbral 0.46) \\
+ & Predicción: $\widehat{BFR}_{t+1000}$ \\
+\hline
+8. Decisión 2 & ¿$\widehat{BFR}_{t+1000} \geq 0.46$? \\
+ & \quad $\rightarrow$ \textbf{No}: \textit{NIVEL 2} - Desfragmentación PREVENTIVA \\
+ & \quad \hspace{1.5cm} Ejecutar desfragmentación \\
+ & \quad \hspace{1.5cm} Próxima consulta en $t + 1500$ \\
+ & \quad $\rightarrow$ \textbf{Sí}: \textit{NIVEL 3} - Desfragmentación REACTIVA \\
+ & \quad \hspace{1.5cm} Ejecutar desfragmentación \\
+ & \quad \hspace{1.5cm} Próxima consulta en $t + 800$ \\
+\hline
+\hline
+\multicolumn{2}{|c|}{\textbf{ACTUALIZACIÓN Y CONTINUACIÓN}} \\
+\hline
+9. Actualización & Actualizar estado de rutas y recursos espectrales \\
+\hline
+10. Verificación & ¿Fin de simulación (t = 20,000)? \\
+ & \quad $\rightarrow$ \textbf{No}: Retornar a Etapa 2 (siguiente unidad de tiempo) \\
+ & \quad $\rightarrow$ \textbf{Sí}: Finalizar y generar métricas \\
+\hline
+\end{tabular}
+\end{table}
+
+El algoritmo implementa un sistema de decisión en cascada donde:
+\begin{itemize}
+    \item El \textbf{Predictor 1} actúa como filtro inicial, identificando estados saludables que no requieren intervención
+    \item El \textbf{Predictor 2} discrimina entre fragmentación moderada (respuesta preventiva) y crítica (respuesta reactiva)
+    \item Los intervalos de consulta se ajustan dinámicamente: 1,500 unidades para estados normales/preventivos y 800 unidades para estados críticos
+\end{itemize}
 
 \section{Configuración Experimental}
 

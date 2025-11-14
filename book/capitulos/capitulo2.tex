@@ -1,4 +1,4 @@
-\chapter{Redes Ópticas Elásticas Multicore y Fragmentación del Ancho de Banda}
+\chapter{Fragmentación en Redes EON Multinúcleo}
 Las redes ópticas que se basan en WDM dividen el espectro de cada enlace en canales cuyo ancho de banda se fija de 50 GHz o 100 GHz. Esto debido a que la Unión Internacional de Telecomunicaciones (\textit{ITU-T International Telecommunication Union}) especificó el estándar G.694.1 en el año 2002.
 %
 Estas redes WDM resultan muy rígidas, y debido a eso es posible que ocurra una utilización ineficiente de la capacidad, provocado por el hecho de que el espacio entre dos canales adyacentes es relativamente grande y si la señal que se transmite utiliza un ancho de banda muy bajo, gran parte del espectro será desperdiciado.
@@ -9,45 +9,54 @@ Una nueva tecnología denominada Redes Ópticas Elásticas o \textit{Elastic Opt
 Esta aproximación multidimensional proporciona una mayor escalabilidad, eficiencia en la asignación del espectro y reducción del consumo energético, posicionando a las MC-EON como una de las tecnologías mas prometedoras para la implementación de redes ópticas de ultra alta capacidad en escenarios de próxima generación.
 %
 
-% En la Figura \ref{fig:eonwdm}, se muestra una comparación en la asignación de demandas en ambas tecnologías, observándose un mejor aprovechamiento del espectro óptico para el caso de las redes EON, debido a un menor desperdicio de ancho en banda.
-
-% % \begin{figure}
-% %     \centering
-% %     \includegraphics[width=0.95\textwidth]{capitulos/img/eonwdm.png}
-% %     \caption{Redes WDM v s Redes EON}
-% %     \label{fig:eonwdm}
-% % \end{figure}
 
 \section{Redes EON Multinúcleo}
-Las redes EON Multinúcleo constituyen una variante avanzada de las redes EON que integran el concepto de fibras multinúcleo (MCF) para incrementar significativamente la capacidad de transmisión y la eficiencia espectral. Fundamentalmente, las redes EON Multinúcleo aprovechan múltiples núcleos independientes dentro de una misma fibra óptica para transmitir señales de forma simultánea y paralela, posibilitando una multiplicación de la capacidad de transmisión en comparación con las fibras convencionales [15].
- Estas características mencionadas en las EON Multinúcleo se materializan mediante la implementación de la Multiplexación por División de Espacio (SDM). Por esta razón, las redes EON Multinúcleo también se denominan SDM-EON[5]. En las redes EON Multinúcleo, se integra el concepto de asignación flexible de espectro con la utilización de múltiples núcleos, alcanzando una distribución más eficiente de la capacidad total de transmisión. Esta integración de tecnologías posibilita un incremento sustancial en la capacidad de transmisión a través de una única fibra, resultando esencial en un contexto donde la demanda de datos continúa creciendo de manera exponencial.
+Las redes EON Multinúcleo constituyen una variante avanzada de las redes EON que integran el concepto de fibras multinúcleo (MCF) para incrementar significativamente la capacidad de transmisión y la eficiencia espectral. Fundamentalmente, las redes EON Multinúcleo aprovechan múltiples núcleos independientes dentro de una misma fibra óptica para transmitir señales de forma simultánea y paralela, posibilitando una multiplicación de la capacidad de transmisión en comparación con las fibras convencionales.
+ Estas características mencionadas en las EON Multinúcleo se materializan mediante la implementación de la Multiplexación por División de Espacio (SDM). Por esta razón, las redes EON Multinúcleo también se denominan SDM-EON. En las redes EON Multinúcleo, se integra el concepto de asignación flexible de espectro con la utilización de múltiples núcleos, alcanzando una distribución más eficiente de la capacidad total de transmisión. Esta integración de tecnologías posibilita un incremento sustancial en la capacidad de transmisión a través de una única fibra, resultando esencial en un contexto donde la demanda de datos continúa creciendo de manera exponencial.
   Al incorporar el concepto de fibras multinúcleo en el diseño de las redes EON, se puede lograr una mayor adaptabilidad a las cambiantes necesidades del tráfico y una optimización más profunda de los recursos disponibles.
 %
 
+
+Inicialmente podría considerarse que la utilización de redes EON con mayor cantidad de núcleos proporciona ventajas sustanciales debido a la amplia disponibilidad de recursos espectrales y espaciales. No obstante, se ha identificado que en las redes MCF, el principal desafío radica en la interferencia denominada diafonía (crosstalk), la cual se genera cuando una fracción de la potencia óptica de un núcleo se propaga hacia los núcleos contiguos.
+ Este fenómeno ocasiona una interferencia significativa en los circuitos activos y complejiza considerablemente la asignación de las ranuras espectrales (FS). Investigaciones previas [16] [17] han indicado que para viabilizar la implementación de redes EON multinúcleo, resulta fundamental desarrollar fibras que minimicen la diafonía entre núcleos adyacentes.
+%
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/MCF_NUCLEOS.png}
-    \caption{Ejemplo de Fibras Multinúcleo (MCF) con 7, 12 y 19 núcleos}
-    \label{fig:MCF_NUCLEOS}
+    \includegraphics[width=1\textwidth]{capitulos/img/7_NUCLEOS.png}
+    \caption{Ejemplo de Fibra Multinúcleo (MCF) con 7 núcleos}
+    \label{fig:7_NUCLEOS}
 \end{figure}
-%
 
-Conforme a lo documentado en la literatura [], inicialmente podría considerarse que la utilización de redes EON con mayor cantidad de núcleos proporciona ventajas sustanciales debido a la amplia disponibilidad de recursos espectrales y espaciales. No obstante, se ha identificado que en las redes MCF, el principal desafío radica en la interferencia denominada diafonía (crosstalk), la cual se genera cuando una fracción de la potencia óptica de un núcleo se propaga hacia los núcleos contiguos.
- Este fenómeno ocasiona una interferencia significativa en los circuitos activos y complejiza considerablemente la asignación de las ranuras espectrales (FS). Investigaciones previas [] [] han indicado que para viabilizar la implementación de redes EON multinúcleo, resulta fundamental desarrollar fibras que minimicen la diafonía entre núcleos adyacentes.
-%
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{capitulos/img/12_NUCLEOS.png}
+    \caption{Ejemplo de Fibra Multinúcleo (MCF) con 12 núcleos}
+    \label{fig:12_NUCLEOS}
+\end{figure}
 
- En la Figura [], se presenta una configuración de MCF con 7 núcleos dispuestos en un patrón hexagonal. En esta arquitectura, el núcleo central (núcleo N° 6) se encuentra rodeado por 6 núcleos adyacentes, resultando en una mayor incidencia de diafonía sobre este núcleo.
- En contraste, los núcleos periféricos (núcleos N° 0, 1, 2, 3, 4 y 5) poseen 3 núcleos adyacentes cada uno. La Figura [] exhibe una MCF con 12 núcleos organizados en una disposición anular. En esta configuración, cada núcleo presenta exactamente 2 núcleos adyacentes, lo que deriva en que todos los núcleos experimenten un nivel equivalente de diafonía.
+ En la Figura~\ref{fig:7_NUCLEOS}, se presenta una configuración de MCF con 7 núcleos dispuestos en un patrón hexagonal. En esta arquitectura, el núcleo central (núcleo N° 6) se encuentra rodeado por 6 núcleos adyacentes, resultando en una mayor incidencia de diafonía sobre este núcleo.
+ En contraste, los núcleos periféricos (núcleos N° 0, 1, 2, 3, 4 y 5) poseen 3 núcleos adyacentes cada uno.
+ %
+ 
+ La Figura~\ref{fig:12_NUCLEOS} exhibe una MCF con 12 núcleos organizados en una disposición anular. En esta configuración, cada núcleo presenta exactamente 2 núcleos adyacentes, lo que deriva en que todos los núcleos experimenten un nivel equivalente de diafonía.
  %
 
- Finalmente, la Figura [] ilustra una MCF con 19 núcleos. En este tipo de fibras, los núcleos pueden presentar hasta 6 núcleos adyacentes por núcleo, generando una mayor incidencia de diafonía.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{capitulos/img/19_NUCLEOS.png}
+    \caption{Ejemplo de Fibra Multinúcleo (MCF) con 19 núcleos}
+    \label{fig:19_NUCLEOS}
+\end{figure}
+
+ Finalmente, la Figura~\ref{fig:19_NUCLEOS} ilustra una MCF con 19 núcleos. En este tipo de fibras, los núcleos pueden presentar hasta 6 núcleos adyacentes por núcleo, generando una mayor incidencia de diafonía.
 %
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/CORE_PITCH.png}
+    \includegraphics[width=1\textwidth]{capitulos/img/CORE_PITCH_II.png}
     \caption{Core Pitch entre dos núcleos adyacentes en un MCF de 7 núcleos}
-    \label{fig:CORE_PITCH}
+    \label{fig:CORE_PITCH_II}
 \end{figure}
 
 \section{Diafonía en Redes Ópticas Elásticas Multinúcleo}
@@ -61,26 +70,26 @@ La diafonía constituye un fenómeno indeseado que se manifiesta en las redes de
  En síntesis, esto deriva en una reducción de la cantidad total de FS disponibles para la transmisión de datos, limitando la capacidad operativa de la red. Con menor disponibilidad de FS, se reducen los canales para transmitir datos, lo que puede restringir la capacidad total de transmisión de la infraestructura de red.
 %
 
- En las redes SDM-EON, el XT entre dos núcleos de una MCF depende significativamente de la distancia entre dicho par de núcleos, denominada core pitch ($\Lambda_{i,j}$). A mayor core pitch, menor será el impacto del XT entre estos dos núcleos [].
+ En las redes SDM-EON, el XT entre dos núcleos de una MCF depende significativamente de la distancia entre dicho par de núcleos, denominada core pitch ($\Lambda_{i,j}$). A mayor core pitch, menor será el impacto del XT entre estos dos núcleos.
  No obstante, resulta importante destacar que, a medida que se incrementa el core pitch, la capacidad de la fibra óptica disminuye. Es decir, al aumentar la distancia física entre dos núcleos, se reduce el espacio disponible en la fibra óptica para albergar núcleos adicionales.
  Por consiguiente, resulta fundamental establecer un equilibrio entre un core pitch reducido para incrementar la capacidad y uno suficientemente amplio para minimizar los efectos del XT. Este balance posibilita optimizar el desempeño y la eficiencia de la red.
  %
 
 
-Para demostrar el comportamiento del crosstalk (XT) entre núcleos en fibras multinúcleo, se analiza el ejemplo presentado en la figura [], la cual ilustra una fibra óptica multinúcleo (MCF) compuesta por tres núcleos organizados en configuración lineal.
+Para demostrar el comportamiento del crosstalk (XT) entre núcleos en fibras multinúcleo, se analiza el ejemplo presentado en la figura~\ref{fig:XT_MCF_II}, la cual ilustra una fibra óptica multinúcleo (MCF) compuesta por tres núcleos organizados en configuración lineal.
 En esta topología, resulta evidente que el núcleo central (núcleo 2) experimenta una interferencia significativa por XT intercore. Este fenómeno se atribuye a que ambos núcleos contiguos (núcleos 1 y 3) mantienen conexiones establecidas en intervalos espectrales similares a aquellos ya ocupados en el núcleo 2.
 A modo de ejemplo, los segmentos espectrales FS1 y FS2 resultan inutilizables en el núcleo 2 debido a la interferencia generada por las asignaciones activas en los núcleos laterales.
 Esta misma situación se replica en los intervalos FS4, FS5 y FS6 del núcleo mencionado. Consecuentemente, en arquitecturas SDM-EON basadas en fibras multinúcleo, resulta imperativo evaluar el impacto del XT intercore durante el proceso de asignación de recursos espectrales, a fin de mitigar degradaciones en la calidad de transmisión.
 
-Es relevante destacar que el crosstalk intercore no afecta exclusivamente a los segmentos espectrales con demandas activas, sino también a aquellos recursos disponibles en núcleos adyacentes. Un análisis detallado de la figura [] revela que incluso los intervalos espectrales sin conexiones asignadas experimentan interferencia procedente de transmisiones en núcleos contiguos.
+Es relevante destacar que el crosstalk intercore no afecta exclusivamente a los segmentos espectrales con demandas activas, sino también a aquellos recursos disponibles en núcleos adyacentes. Un análisis detallado de la figura revela que incluso los intervalos espectrales sin conexiones asignadas experimentan interferencia procedente de transmisiones en núcleos contiguos.
  Esto se ejemplifica con los segmentos FS8 y FS9 del núcleo 1, que sufren degradación por el XT generado desde las mismas posiciones espectrales en el núcleo 2. En determinadas circunstancias, esta interferencia puede superar el umbral de crosstalk admisible, imposibilitando la utilización de dichos recursos para el establecimiento de futuras conexiones en arquitecturas multinúcleo.
 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/XT_MCF.png}
-    \caption{XT en un Fibra MCF de 3 núcleos []}
-    \label{fig:XT_MCF}
+    \includegraphics[width=1\textwidth]{capitulos/img/XT_MCF_II.png}
+    \caption{XT en un Fibra MCF de 3 núcleos}
+    \label{fig:XT_MCF_II}
 \end{figure}
 %
 
@@ -105,7 +114,7 @@ XT_i = \sum_{j=1}^{N_i} h_{i,j} \cdot L
 
 Donde $N_i$ representa la cantidad de núcleos adyacentes al núcleo $i$, y $L$ corresponde a la longitud física del enlace óptico.
 
-Con el propósito de garantizar la integridad de la señal transmitida, resulta imperativo que el valor calculado de $XT_i$ no exceda un umbral máximo admisible de diafonía al momento de establecer de forma óptima la trayectoria óptica para una solicitud de conexión entrante. El umbral de diafonía o \textit{Crosstalk Threshold} ($XT_{TH}$) se conceptualiza como el límite superior de XT que una señal propagada a través del sistema puede tolerar sin experimentar una degradación considerable en su calidad o sin provocar la generación de errores en la transmisión de datos [19].
+Con el propósito de garantizar la integridad de la señal transmitida, resulta imperativo que el valor calculado de $XT_i$ no exceda un umbral máximo admisible de diafonía al momento de establecer de forma óptima la trayectoria óptica para una solicitud de conexión entrante. El umbral de diafonía o \textit{Crosstalk Threshold} ($XT_{TH}$) se conceptualiza como el límite superior de XT que una señal propagada a través del sistema puede tolerar sin experimentar una degradación considerable en su calidad o sin provocar la generación de errores en la transmisión de datos.
 
 El valor particular del $XT_{TH}$ puede fluctuar en función de las características de la aplicación y las especificaciones técnicas del sistema implementado. En contextos de aplicaciones que demandan elevadas velocidades de transmisión y capacidades sustanciales, es factible admitir niveles considerablemente reducidos de $XT_{TH}$, en tanto que para aplicaciones de menor criticidad, los valores de $XT_{TH}$ admisibles pueden ser superiores.
 
@@ -118,25 +127,25 @@ En las arquitecturas SDM-EON, es posible optimizar la eficiencia espectral media
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/CONMUNATCION_NUCLEOS.png}
-    \caption{ Conmutación de núcleos con contigüidad de espectro []}
-    \label{fig:CONMUNATCION_NUCLEOS}
+    \includegraphics[width=1\textwidth]{capitulos/img/CONMUTACION_NUCLEOS_II.png}
+    \caption{ Conmutación de núcleos con contigüidad de espectro}
+    \label{fig:CONMUTACION_NUCLEOS_II}
 \end{figure}
 
-En las Figuras [] y [] se ilustra la asignación de núcleos y recursos espectrales sin conmutación de núcleos y con conmutación de núcleos, respectivamente. Los elementos gráficos de color naranja denotan FS ocupadas, mientras que los elementos en blanco representan FS disponibles. Con el propósito de ejemplificar el funcionamiento del mecanismo de asignación espectral con conmutación de núcleos, se presentan dos casos representativos documentados en la literatura [20]. En ambos escenarios, se considera una demanda $d(2,4,4)$, donde el primer parámetro identifica el nodo de origen, el segundo corresponde al nodo de destino, y el tercero especifica la cantidad de FS requeridas para satisfacer dicha demanda, respectivamente. Es posible identificar y asignar los recursos espectrales necesarios para la demanda a lo largo de la trayectoria conformada por dos enlaces de fibra: $l_0$ (2-5) y $l_1$ (5-4), implementando tres núcleos. 
+En las Figuras~\ref{fig:Asignacion_espectro_SIN_conmutacion_II} y ~\ref{fig:Asignacion_espectro_CON_conmutacion_II} se ilustra la asignación de núcleos y recursos espectrales sin conmutación de núcleos y con conmutación de núcleos, respectivamente. Los elementos gráficos de color naranja denotan FS ocupadas, mientras que los elementos en blanco representan FS disponibles. Con el propósito de ejemplificar el funcionamiento del mecanismo de asignación espectral con conmutación de núcleos, se presentan dos casos representativos documentados en la literatura [20]. En ambos escenarios, se considera una demanda $d(2,4,4)$, donde el primer parámetro identifica el nodo de origen, el segundo corresponde al nodo de destino, y el tercero especifica la cantidad de FS requeridas para satisfacer dicha demanda, respectivamente. Es posible identificar y asignar los recursos espectrales necesarios para la demanda a lo largo de la trayectoria conformada por dos enlaces de fibra: $l_0$ (2-5) y $l_1$ (5-4), implementando tres núcleos. 
 
-La Figura [] exhibe la asignación de núcleos y espectro sin aplicar conmutación de núcleos para la demanda $d(2,4,4)$. En los enlaces $l_0$ y $l_1$ existen diversos bloques contiguos de FS disponibles. No obstante, debido a la restricción de continuidad espectral, únicamente se configura un bloque candidato de FS en el núcleo 2, representado mediante $SC_{2,l_0}^0$, $SC_{2,l_1}^0$. Posteriormente, se verifica el impacto del XT con el objetivo de asegurar que la incorporación de la demanda no supere el umbral $XT_{TH}$. En caso de que el XT exceda $XT_{TH}$, la demanda $d(2,4,4)$ resultará bloqueada, dado que no existen recursos espectrales disponibles a lo largo de la ruta establecida.
+La Figura ~\ref{fig:Asignacion_espectro_SIN_conmutacion_II} exhibe la asignación de núcleos y espectro sin aplicar conmutación de núcleos para la demanda $d(2,4,4)$. En los enlaces $l_0$ y $l_1$ existen diversos bloques contiguos de FS disponibles. No obstante, debido a la restricción de continuidad espectral, únicamente se configura un bloque candidato de FS en el núcleo 2, representado mediante $SC_{2,l_0}^0$, $SC_{2,l_1}^0$. Posteriormente, se verifica el impacto del XT con el objetivo de asegurar que la incorporación de la demanda no supere el umbral $XT_{TH}$. En caso de que el XT exceda $XT_{TH}$, la demanda $d(2,4,4)$ resultará bloqueada, dado que no existen recursos espectrales disponibles a lo largo de la ruta establecida.
 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/ASIGNACION_ESPECTRO_SIN_CONMMUTACION.png}
-    \caption{  Asignación de espectro sin conmutación de núcleos []}
-    \label{fig:ASIGNACION_ESPECTRO_SIN_CONMMUTACION}
+    \includegraphics[width=1\textwidth]{capitulos/img/Asignación_espectro_SIN_conmutación_II.png}
+    \caption{  Asignación de espectro sin conmutación de núcleos}
+    \label{fig:Asignacion_espectro_SIN_conmutacion_II}
 \end{figure}
 
 
-La Figura [] ilustra la asignación de núcleos y espectro mediante la implementación de conmutación para la demanda $d(2,4,4)$. El mecanismo de conmutación de núcleos posibilita la identificación de bloques de FS que satisfacen la restricción de contigüidad espectral distribuidos en núcleos distintos a través de múltiples enlaces de la trayectoria establecida.
+La Figura~\ref{fig:Asignacion_espectro_CON_conmutacion_II} ilustra la asignación de núcleos y espectro mediante la implementación de conmutación para la demanda $d(2,4,4)$. El mecanismo de conmutación de núcleos posibilita la identificación de bloques de FS que satisfacen la restricción de contigüidad espectral distribuidos en núcleos distintos a través de múltiples enlaces de la trayectoria establecida.
 
 A modo de ejemplo, para la demanda $d(2,4,4)$ se identifican tres bloques candidatos de FS que cumplen con dicha restricción: $\{SC_{2,l_0}^0, SC_{2,l_1}^0\}$, $\{SC_{1,l_0}^3, SC_{3,l_1}^3\}$ y $\{SC_{3,l_0}^6, SC_{1,l_1}^6\}$. Estos bloques se encuentran disponibles a lo largo de la ruta conformada por los enlaces $l_0$ (2-5) y $l_1$ (5-4).
 
@@ -145,9 +154,9 @@ Conforme se observó en el caso precedente, si el bloque candidato de FS represe
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/ASIGNACION_ESPECTRO_CON_CONMMUTACION.png}
-    \caption{  Asignación de espectro con conmutación de núcleos []}
-    \label{fig:ASIGNACION_ESPECTRO_CON_CONMMUTACION}
+    \includegraphics[width=1\textwidth]{capitulos/img/Asignación_espectro_CON_conmutación_II.png}
+    \caption{  Asignación de espectro con conmutación de núcleos}
+    \label{fig:Asignacion_espectro_CON_conmutacion_II}
 \end{figure}
 
 
@@ -185,39 +194,39 @@ pudiendo la red rechazar demandas incluso cuando existe ancho de banda disponibl
 \end{enumerate}
 %
 
-Para ilustrar estas restricciones, se presenta un ejemplo en las Figuras [] y [], donde se simula la conexión de una demanda de fod FS, con un nodo origen en 0 y un nodo destino en 3. En este escenario, existen dos posibblews caminos: 0-1-3 y 0-1-2-3.
+Para ilustrar estas restricciones, se presenta un ejemplo en las Figuras~\ref{fig:FRACMENTACION_C_RECHAZADA} y ~\ref{fig:FRACMENTACION_C_ESTABLECIDA}, donde se simula la conexión de una demanda de fod FS, con un nodo origen en 0 y un nodo destino en 3. En este escenario, existen dos posibbles caminos: 0-1-3 y 0-1-2-3.
 %
 
-La trayectoria de menor longitud corresponde a la ruta 0-1-3. No obstante, al procurar el establecimiento del lightpath mediante esta alternativa, la solicitud de conexión resulta denegada, dado que los enlaces 0-1 y 1-3 carecen de dos FS consecutivos y alineados espectralmente, tal como se evidencia en la Figura [].
+La trayectoria de menor longitud corresponde a la ruta 0-1-3. No obstante, al procurar el establecimiento del lightpath mediante esta alternativa, la solicitud de conexión resulta denegada, dado que los enlaces 0-1 y 1-3 carecen de dos FS consecutivos y alineados espectralmente, tal como se evidencia en la Figura~\ref{fig:FRACMENTACION_C_RECHAZADA}.
 %
 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/fragmentacionNuevo.png}
+    \includegraphics[width=1\textwidth]{capitulos/img/FRACMENTACIÓN_C_RECHAZADA.png}
     \caption{Restricciones de contigüidad y continuidad aplicadas- Conexión Rechazada}
-    \label{fig:fragmentacionNueva}
+    \label{fig:FRACMENTACION_C_RECHAZADA}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/fragmentacion2Nuevo.png}
+    \includegraphics[width=1\textwidth]{capitulos/img/FRACMENTACIÓN_C_ESTABLECIDA.png}
     \caption{Restricciones de contigüidad y continuidad aplicadas- Conexión Establecida}
-    \label{fig:fragmentacion2Nueva}
+    \label{fig:FRACMENTACION_C_ESTABLECIDA}
 \end{figure}
 
-En contraste, al considerar la asignación del lightpath a través de la trayectoria de mayor extensión, específicamente 0-1-2-3, empleando los FS 4 y 5, la conexión se establece satisfactoriamente, puesto que esta configuración dispone de dos FS contiguos y alineados espectralmente, según se observa en la Figura [].
+En contraste, al considerar la asignación del lightpath a través de la trayectoria de mayor extensión, específicamente 0-1-2-3, empleando los FS 4 y 5, la conexión se establece satisfactoriamente, puesto que esta configuración dispone de dos FS contiguos y alineados espectralmente, según se observa en la Figura~\ref{fig:FRACMENTACION_C_ESTABLECIDA}.
 %
 
 \subsection{Enfoques de gestión de fragmentación}
 La problemática descrita previamente genera consecuencias perjudiciales para la infraestructura de red, ocasionando un incremento en la probabilidad de bloqueo y comprometiendo significativamente su desempeño óptimo y continuidad operacional. En consecuencia, resulta fundamental identificar estrategias que permitan prevenir, mitigar o reducir la fragmentación del espectro disponible.
 %
 
-De acuerdo con la bibliografía especializada, existen diversas aproximaciones que pueden ser consideradas para abordar la gestión de la desfragmentación. En la figura [] se presentan las principales estrategias de gestión de la fragmentación \cite{chatterjee2017fragmentation}.
+De acuerdo con la bibliografía especializada, existen diversas aproximaciones que pueden ser consideradas para abordar la gestión de la desfragmentación. En la figura~\ref{fig:GESTION_FRACMENTACION_II} se presentan las principales estrategias de gestión de la fragmentación \cite{chatterjee2017fragmentation}.
 %
 
 
-La Desfragmentación constituye un procedimiento mediante el cual se ejecuta la reconfiguración o el re-ruteo de un subconjunto de conexiones existentes en la infraestructura de red. Su propósito fundamental consiste en reacomodar las asignaciones espectrales de las solicitudes de tráfico vigentes, consolidando de este modo los recursos disponibles en segmentos contiguos y continuos de mayor magnitud, los cuales pueden ser aprovechados para el establecimiento de futuras demandas \cite{talebi2014spectrum}.
+La Desfragmentación constituye un procedimiento mediante el cual se ejecuta la reconfiguración o el re-ruteo de un subconjunto de conexiones existentes en la infraestructura de red. Su propósito fundamental consiste en reacomodar las asignaciones espectrales de las solicitudes de tráfico vigentes, consolidando de este modo los recursos disponibles en segmentos contiguos y continuos de mayor magnitud, los cuales pueden ser aprovechados para el establecimiento de futuras demandas.
 %
 
 Es factible abordar la problemática de la fragmentación prescindiendo de técnicas de desfragmentación espectral (Sin Desfragmentación), lo cual se alcanza mediante una administración del espectro orientada a la prevención de su fragmentación.
@@ -234,14 +243,14 @@ Alternativamente, es posible emplear técnicas de desfragmentación, las cuales 
 Las aproximaciones que implementan técnicas de desfragmentación pueden clasificarse además en: (i) estrategias sin re-ruteo, las cuales realizan únicamente una reasignación espectral en los \textit{lightpaths} o caminos ópticos establecidos, y (ii) estrategias con re-ruteo, que constituyen técnicas capaces de modificar tanto las rutas como el espectro asignado a los lightpaths existentes.
 %
 
-En el presente trabajo, para la gestión de la fragmentación se adoptó la aproximación con desfragmentación, de naturaleza proactiva y con re-ruteo de lightpaths preexistentes. En la figura [] se puede observar resaltada dicha estrategia.
+En el presente trabajo, para la gestión de la fragmentación se adoptó la aproximación con desfragmentación, de naturaleza proactiva y con re-ruteo de lightpaths preexistentes. En la figura~\ref{fig:GESTION_FRACMENTACION_II} se puede observar resaltada dicha estrategia.
 %
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/Gestion_Fragmentacion.PNG}
+    \includegraphics[width=1\textwidth]{capitulos/img/GESTION_FRACMENTACION_II.png}
     \caption{Esquema de Gestión de la Fragmentación}
-    \label{fig:gestion_fragmentacion}
+    \label{fig:GESTION_FRACMENTACION_II}
 \end{figure}
 %
 
@@ -253,7 +262,7 @@ La Fragmentación del Espectro en Redes Ópticas Elásticas Multinúcleo (Multi-
 Un método ampliamente implementado consiste en ejecutar el procedimiento de desfragmentación de manera periódica con el propósito de prevenir bloqueos futuros, abordando así una de las cuatro interrogantes planteadas por Zhang [], ¿Cuándo reconfigurar?.
 %
 
-En la figura [] se puede observar una posible solución a la problemática de la selección del momento óptimo para realizar la desfragmentación, la cual consiste en ejecutar desfragmentaciones periódicas en intervalos temporales fijos. En este caso, cada 100 unidades de tiempo, el eje vertical representa el volumen de tráfico cuantificado mediante el número de conexiones activas, mientras que el eje horizontal indica las unidades temporales; cada punto azul denota el instante en que el proceso de desfragmentación se ejecuta. Siguiendo este patrón, se evidencian situaciones donde se realizan procesos de desfragmentación cuando la red podría no requerirlos, considerando que la utilización de los recursos espectrales y de los núcleos constituye un indicador significativo del grado de fragmentación.
+En la figura~\ref{fig:EJEMPLO_PERIODICO_II} se puede observar una posible solución a la problemática de la selección del momento óptimo para realizar la desfragmentación, la cual consiste en ejecutar desfragmentaciones periódicas en intervalos temporales fijos. En este caso, cada 100 unidades de tiempo, el eje vertical representa el volumen de tráfico cuantificado mediante el número de conexiones activas, mientras que el eje horizontal indica las unidades temporales; cada punto azul denota el instante en que el proceso de desfragmentación se ejecuta. Siguiendo este patrón, se evidencian situaciones donde se realizan procesos de desfragmentación cuando la red podría no requerirlos, considerando que la utilización de los recursos espectrales y de los núcleos constituye un indicador significativo del grado de fragmentación.
 %
 
 Además de la utilización de la red, existen otras métricas de fragmentación relevantes en redes multinúcleo, cuyos valores deben considerarse para el disparo de los procesos de desfragmentación, incluyendo la fragmentación por núcleo y la disponibilidad de recursos en la dimensión espacial.
@@ -270,9 +279,9 @@ En los capítulos subsiguientes se presenta y aborda en profundidad un modelo de
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/ejemploPeriodico.png}
+    \includegraphics[width=1\textwidth]{capitulos/img/EJEMPLO_PERIODICO_II.png}
     \caption{Ejemplo de desfragmentaciones periódicas con volumen de carga de tráfico variado}
-    \label{fig:ejemploPeriodico}
+    \label{fig:EJEMPLO_PERIODICO_II}
 \end{figure}
 %
 

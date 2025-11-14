@@ -26,7 +26,7 @@ Esta aproximación permite actuar de manera preventiva antes de que la red alcan
 En el contexto de \textit{Machine Learning}, las características son los parámetros de entrada que alimentan el modelo predictivo. Para este trabajo se seleccionaron métricas relacionadas con la fragmentación, utilización de recursos y comportamiento específico de redes MC-EON:
 
 \begin{itemize}
-    \item \textbf{Bandwidth Fragmentation Ratio (BFR)}\cite{zhang2013bandwidth}: Representa el índice de fragmentación de los recursos de la red. El BFR de un core en un enlace se define como:
+    \item \textbf{Bandwidth Fragmentation Ratio (BFR)}: Representa el índice de fragmentación de los recursos de la red. El BFR de un core en un enlace se define como:
     \begin{equation}
         BFR_{core} = 1 - \frac{MaxBlock()}{S^{free}}
     \end{equation}
@@ -38,7 +38,7 @@ En el contexto de \textit{Machine Learning}, las características son los parám
     \end{equation}
     donde \(C\) es el número de cores por enlace, \(MaxBlock_{i,j}\) es el mayor bloque libre en el core \(j\) del enlace \(i\), y \(S^{free}_{i,j}\) es el total de FS libres en ese core.
     
-    \item \textbf{Entropía de Shannon (SHF)}\cite{wright2015minimum}: Mide la distribución de bloques libres en el espectro. Para un core:
+    \item \textbf{Entropía de Shannon (SHF)}: Mide la distribución de bloques libres en el espectro. Para un core:
     \begin{equation}
         SHF_{core} = \sum_{i=1}^{B} \frac{S_{i}^{free}}{N}~\ln\frac{N}{S_{i}^{free}}
     \end{equation}
@@ -94,7 +94,7 @@ En el contexto de \textit{Machine Learning}, las características son los parám
 
 \subsection{Simulador y Topología}
 
-Se utilizó un simulador de redes MC-EON\cite{davalos2019spectrum} para generar el conjunto de datos de entrenamiento. La topología empleada fue USNET, representativa de redes ópticas de producción. Se generaron 400,000 instancias de tráfico, de las cuales 399,000 fueron utilizables para el análisis y entrenamiento tras eliminar valores incompletos.
+Se utilizó un simulador de redes MC-EON para generar el conjunto de datos de entrenamiento. La topología empleada fue USNET, representativa de redes ópticas de producción. Se generaron 400,000 instancias de tráfico, de las cuales 399,000 fueron utilizables para el análisis y entrenamiento tras eliminar valores incompletos.
 
 \subsection{Modelo de Carga Variable}
 
@@ -158,7 +158,7 @@ El patrón resultante presenta aproximadamente tres ciclos principales durante l
     \item \textbf{Picos máximos:} 3300--3750 Erlangs
 \end{itemize}
 
-\subsection{Identificación de Fases Operativas}
+\subsection{Identificación de Fases Operativas} 
 
 Para cada instante de simulación se identifica la fase operativa del sistema basándose en la tendencia local de la carga (derivada aproximada por diferencias finitas). La Tabla~\ref{tab:fases_operativas} describe las fases identificadas:
 
@@ -184,7 +184,7 @@ Esta clasificación enriquece los datos sintéticos con información contextual 
 
 \section{Herramientas de Implementación}
 
-Se utilizó el ecosistema \textbf{Scikit-learn}\cite{scikit-learn} en Python para todo el proceso de Machine Learning. Esta biblioteca proporciona algoritmos de aprendizaje supervisado optimizados junto con herramientas para preprocesamiento, validación y evaluación de modelos.
+Se utilizó el ecosistema \textbf{Scikit-learn} en Python para todo el proceso de Machine Learning. Esta biblioteca proporciona algoritmos de aprendizaje supervisado optimizados junto con herramientas para preprocesamiento, validación y evaluación de modelos.
 
 Bibliotecas complementarias utilizadas:
 \begin{itemize}
@@ -341,7 +341,7 @@ Umbral óptimo & 0.70 & Umbral de decisión de probabilidad \\
 \end{tabular}
 \end{table}
 
-El modelo alcanzó la clasificación de \textbf{VIABLE}, superando ampliamente los criterios establecidos:
+El modelo alcanzó un rendimiento excelente, superando ampliamente los criterios establecidos:
 \begin{itemize}
     \item Precisión $\geq$ 0.80: Cumple con 0.957 (superando en 19.6\%)
     \item F1-Score $\geq$ 0.40: Cumple con 0.900 (superando en 125\%)
@@ -361,16 +361,16 @@ El modelo para detectar el umbral mínimo presentó un desbalance de clases pron
 \hline
 \textbf{Métrica} & \textbf{Valor} & \textbf{Interpretación} \\
 \hline
-Precisión & >0.99 & Mínimos falsos positivos \\
-Recall & >0.99 & Muy alta cobertura de detección \\
-F1-Score & >0.99 & Balance óptimo \\
-AUC-ROC & >0.99 & Excelente capacidad discriminativa \\
+Precisión & >0.95 & Mínimos falsos positivos \\
+Recall & >0.95 & Alta cobertura de detección \\
+F1-Score & >0.95 & Balance óptimo \\
+AUC-ROC & >0.95 & Excelente capacidad discriminativa \\
 Umbral óptimo & 0.55 & Umbral de decisión de probabilidad \\
 \hline
 \end{tabular}
 \end{table}
 
-El modelo alcanzó métricas excepcionalmente altas, clasificándose como \textbf{VIABLE} con desempeño superior:
+El modelo alcanzó métricas bastante altas, con desempeño superior:
 \begin{itemize}
     \item Precisión $\geq$ 0.80: Cumple ampliamente
     \item F1-Score $\geq$ 0.40: Cumple ampliamente
@@ -443,3 +443,4 @@ Esta arquitectura permite:
     \item Escalabilidad: Los servicios pueden ejecutarse en servidores separados
     \item Monitoreo granular: Métricas independientes por cada nivel de predicción
 \end{itemize}
+

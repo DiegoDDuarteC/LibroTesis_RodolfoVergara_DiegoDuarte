@@ -1,0 +1,17 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'paper-i3e.blg'
+[98] biber-MSWIN64:342> INFO - === 
+[132] Biber.pm:421> INFO - Reading 'paper-i3e.bcf'
+[238] Biber.pm:1002> INFO - Found 2 citekeys in bib section 0
+[252] Biber.pm:4487> INFO - Processing section 0
+[263] Biber.pm:4678> INFO - Looking for bibtex file '../book/referencias.bib' for section 0
+[303] bibtex.pm:1713> INFO - LaTeX decoding ...
+[338] bibtex.pm:1519> INFO - Found BibTeX data source '../book/referencias.bib'
+[347] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[347] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[347] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[348] bbl.pm:676> INFO - Writing 'paper-i3e.bbl' with encoding 'UTF-8'
+[348] bbl.pm:779> INFO - Output to paper-i3e.bbl
+[348] Biber.pm:132> WARN - I didn't find a database entry for 'griffiths1997learning' (section 0)
+[348] Biber.pm:132> WARN - I didn't find a database entry for 'lamport1985i1' (section 0)
+[348] Biber.pm:134> INFO - WARNINGS: 2
