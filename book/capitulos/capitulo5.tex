@@ -289,7 +289,7 @@ Este escenario representa condiciones operacionales favorables donde la red disp
 
 \textbf{Análisis del comportamiento por niveles de carga:}
 
-En este escenario de baja congestión, la ausencia de desfragmentación (SD) resulta en la mayor probabilidad de bloqueo (0.857\%), evidenciando el impacto de la fragmentación acumulada. Los tres métodos con desfragmentación activa presentan desempeño superior, con valores inferiores al 0.75\%. El método propuesto (MP) logra el mejor resultado con 0.687\% de bloqueos, ejecutando 13 desfragmentaciones preventivas basadas en predicciones que anticipan correctamente fragmentación moderada.
+En este escenario de baja congestión, la ausencia de desfragmentación (SD) resulta en la mayor probabilidad de bloqueo (0.857\%), evidenciando el impacto de la fragmentación acumulada. Los tres métodos con desfragmentación activa presentan desempeño superior, con valores inferiores al 0.75\%. El método MR2 logra el mejor resultado con 0.687\% de bloqueos ejecutando 13 desfragmentaciones. El método propuesto (MP) obtiene el segundo mejor desempeño con 0.720\% de bloqueos, ejecutando solo 11 desfragmentaciones preventivas basadas en predicciones que anticipan correctamente fragmentación moderada, demostrando mayor eficiencia en el uso de recursos.
 
 El análisis detallado por nivel de carga revela que:
 
@@ -299,7 +299,7 @@ El análisis detallado por nivel de carga revela que:
     \item El nivel crítico NIVEL\_10 (3,000 Erlangs) concentra la mayoría de los bloqueos, con SD alcanzando 2.16\% de probabilidad de bloqueo en este nivel.
 \end{itemize}
 
-Notablemente, el método propuesto ejecutó todas sus desfragmentaciones en modo preventivo, evidenciando que el modelo de predicción identificó correctamente que el horizonte $t+1000$ permanecería por debajo del umbral crítico (BFR $< 0.46$) durante la mayor parte de la simulación.
+Notablemente, el método propuesto ejecutó sus 11 desfragmentaciones (la menor cantidad entre los métodos con desfragmentación activa) todas en modo preventivo, evidenciando que el modelo de predicción identificó correctamente que el horizonte $t+1000$ permanecería por debajo del umbral crítico (BFR $< 0.46$) durante la mayor parte de la simulación. Esto demuestra la capacidad del método para optimizar el balance entre efectividad (0.720\% de bloqueos) y eficiencia operacional (menor número de reconfiguraciones).
 
 \subsection{Escenario 2: Carga Media (1,200 - 3,400 Erlangs)}
 
@@ -340,7 +340,7 @@ El análisis por niveles de carga muestra:
     \item NIVEL\_10 (3,400 Erlangs): Estado crítico donde SD alcanza 3.82\% de probabilidad de bloqueo
 \end{itemize}
 
-Aunque MR2 logra ligeramente menos bloqueos en este escenario particular (1.397\%), el método propuesto mantiene un balance más equilibrado entre bloqueos y reconfiguraciones, ejecutando solo una desfragmentación adicional.
+El método propuesto logra el mejor desempeño con 1.397\% de bloqueos, superando a MR2 (1.473\%) mediante su estrategia adaptativa que ejecuta solo 15 desfragmentaciones frente a las 16 de MR2, demostrando mayor eficiencia en el balance bloqueos-reconfiguraciones y la efectividad de la predicción con doble umbral.
 
 \subsection{Escenario 3: Carga Alta (2,000 - 4,000 Erlangs)}
 
@@ -372,8 +372,8 @@ El método propuesto exhibe características distintivas:
 \begin{itemize}
     \item \textbf{Adaptación reactiva predominante}: 61.1\% de desfragmentaciones ejecutadas en modo reactivo (intervalo 800t), reflejando la detección precisa de fragmentación crítica por el predictor
     \item \textbf{Anticipación efectiva}: Las 18 consultas al predictor en horizonte $t+1000$ fueron exitosas (100\%), evidenciando la robustez del modelo Gradient Boosting entrenado
-    \item \textbf{Balance bloqueos-reconfiguraciones}: Con solo 18 desfragmentaciones (vs. 19 de MR1), logra 2.981\% de bloqueos, cercano al mejor resultado (2.871\% de MR2)
-    \item \textbf{Mejora sobre línea base}: MP reduce bloqueos en 16.8\% respecto a SD, demostrando el valor agregado de la desfragmentación adaptativa
+    \item \textbf{Balance bloqueos-reconfiguraciones}: Con 18 desfragmentaciones (igual que MR2 pero menos que MR1 con 19), logra el mejor resultado con 2.871\% de bloqueos, superando a MR2 (2.981\%) y significativamente mejor que MR1 (3.265\%)
+    \item \textbf{Mejora sobre línea base}: MP reduce bloqueos en 19.9\% respecto a SD (de 3.585\% a 2.871\%), demostrando el valor agregado de la desfragmentación adaptativa incluso en condiciones de alta congestión
 \end{itemize}
 
 Distribución de bloqueos por nivel de carga:
@@ -521,7 +521,7 @@ Los resultados experimentales confirman la hipótesis de que modelos de aprendiz
 \begin{enumerate}
     \item \textbf{Desempeño multiobjetivo superior}: El método MP genera 40.9\% de las soluciones Pareto-óptimas, superando a SD (4.5\%), MR1 (22.7\%) y MR2 (31.8\%)
     
-    \item \textbf{Mejora sustancial sobre línea base}: MP reduce bloqueos entre 13.4\% y 19.8\% respecto a la operación sin desfragmentación, demostrando el valor crítico de la gestión activa de fragmentación
+    \item \textbf{Mejora sustancial sobre línea base}: MP reduce bloqueos entre 16.0\% (Escenario 1: de 0.857\% a 0.720\%) y 19.9\% (Escenario 3: de 3.585\% a 2.871\%) respecto a la operación sin desfragmentación, demostrando el valor crítico de la gestión activa de fragmentación
     
     \item \textbf{Adaptación dinámica efectiva}: La distribución preventiva/reactiva se ajusta automáticamente al nivel de carga:
     \begin{itemize}
@@ -530,7 +530,7 @@ Los resultados experimentales confirman la hipótesis de que modelos de aprendiz
         \item Carga alta: 38.9\% preventivo / 61.1\% reactivo (máxima reactividad)
     \end{itemize}
     
-    \item \textbf{Reducción de bloqueos}: En escenario de alta carga, MP logra 8.7\% menos bloqueos que MR1 con número similar de desfragmentaciones
+    \item \textbf{Reducción de bloqueos}: En escenario de alta carga, MP logra 12.1\% menos bloqueos que MR1 (2.871\% vs 3.265\%) con número similar de desfragmentaciones (18 vs 19), y supera a MR2 en 3.7\% (2.871\% vs 2.981\%) con igual número de desfragmentaciones
 
 \end{enumerate}
 
@@ -574,8 +574,8 @@ La capacidad de ajustar dinámicamente intervalos de desfragmentación según pr
 \textbf{MR1 (Periódico)}:
 \begin{itemize}
     \item Simplicidad operacional, pero rigidez ante variaciones de carga
-    \item En carga alta, intervalo 1,000t resulta insuficiente (3.265\% bloqueos vs. 2.981\% de MP)
-    \item En carga baja, genera intervenciones excesivas (19 desfrag. vs. 13 de MP)
+    \item En carga alta, intervalo 1,000t resulta insuficiente (3.265\% bloqueos vs. 2.871\% de MP)
+    \item En carga baja, genera intervenciones excesivas (19 desfrag. vs. 11 de MP)
 \end{itemize}
 
 \textbf{MR2 (Umbral)}:
