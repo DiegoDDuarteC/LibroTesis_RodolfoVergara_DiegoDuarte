@@ -43,54 +43,55 @@
 \contentsline {subsection}{\numberline {4.6.4}Optimización de Umbrales de Decisión}{47}{}%
 \contentsline {section}{\numberline {4.7}Resultados de Predicción}{47}{}%
 \contentsline {subsection}{\numberline {4.7.1}Métricas de Evaluación}{47}{}%
-\contentsline {subsection}{\numberline {4.7.2}Análisis de Predictibilidad del Horizonte}{48}{}%
-\contentsline {subsection}{\numberline {4.7.3}Resultados del Modelo de Umbral Crítico (BFR = 0.46)}{48}{}%
-\contentsline {subsection}{\numberline {4.7.4}Resultados del Modelo de Umbral Mínimo (BFR = 0.20)}{49}{}%
-\contentsline {subsection}{\numberline {4.7.5}Justificación de Gradient Boosting}{50}{}%
-\contentsline {subsection}{\numberline {4.7.6}Validación de la Estrategia de Dos Umbrales}{51}{}%
-\contentsline {section}{\numberline {4.8}Implementación del Sistema}{51}{}%
-\contentsline {subsection}{\numberline {4.8.1}Arquitectura de Servicios}{51}{}%
+\contentsline {subsection}{\numberline {4.7.2}Metodología de Selección del Horizonte}{48}{}%
+\contentsline {subsection}{\numberline {4.7.3}Análisis de Predictibilidad del Horizonte}{48}{}%
+\contentsline {subsection}{\numberline {4.7.4}Resultados del Modelo de Umbral Crítico (BFR = 0.46)}{49}{}%
+\contentsline {subsection}{\numberline {4.7.5}Resultados del Modelo de Umbral Mínimo (BFR = 0.20)}{50}{}%
+\contentsline {subsection}{\numberline {4.7.6}Justificación de Gradient Boosting}{51}{}%
+\contentsline {subsection}{\numberline {4.7.7}Validación de la Estrategia de Dos Umbrales}{51}{}%
+\contentsline {section}{\numberline {4.8}Implementación del Sistema}{52}{}%
+\contentsline {subsection}{\numberline {4.8.1}Arquitectura de Servicios}{52}{}%
 \contentsline {subsection}{\numberline {4.8.2}Lógica de Control de Desfragmentación}{52}{}%
-\contentsline {chapter}{\numberline {5}Pruebas y Resultados Obtenidos}{53}{}%
-\contentsline {section}{\numberline {5.1}Flujo del Algoritmo de Desfragmentación Adaptativa}{53}{}%
-\contentsline {section}{\numberline {5.2}Configuración Experimental}{55}{}%
-\contentsline {subsection}{\numberline {5.2.1}Topología y Parámetros de Red}{55}{}%
-\contentsline {subsection}{\numberline {5.2.2}Escenarios de Carga Evaluados}{55}{}%
-\contentsline {section}{\numberline {5.3}Métodos Comparados}{57}{}%
-\contentsline {subsection}{\numberline {5.3.1}Línea Base (SD): Sin Desfragmentación}{57}{}%
-\contentsline {subsection}{\numberline {5.3.2}Método de Referencia 1 (MR1): Desfragmentación Periódica por Tiempo Fijo}{58}{}%
-\contentsline {subsection}{\numberline {5.3.3}Método de Referencia 2 (MR2): Desfragmentación por Umbral de BFR}{58}{}%
-\contentsline {subsection}{\numberline {5.3.4}Método Propuesto (MP): Desfragmentación Adaptativa con Doble Umbral}{59}{}%
-\contentsline {section}{\numberline {5.4}Objetivos de Optimización}{60}{}%
-\contentsline {subsection}{\numberline {5.4.1}Objetivo 1: Cantidad de Bloqueos (BL)}{60}{}%
-\contentsline {subsection}{\numberline {5.4.2}Objetivo 2: Cantidad de Reconfiguraciones (RC)}{61}{}%
-\contentsline {subsection}{\numberline {5.4.3}Métricas de Evaluación Multiobjetivo}{61}{}%
-\contentsline {subsubsection}{Soluciones en el Frente de Pareto (SFP)}{61}{}%
-\contentsline {subsubsection}{Cobertura de Pareto (CP)}{62}{}%
-\contentsline {section}{\numberline {5.5}Resultados Experimentales}{62}{}%
-\contentsline {subsection}{\numberline {5.5.1}Escenario 1: Carga Baja (800 - 3,000 Erlangs)}{62}{}%
-\contentsline {subsection}{\numberline {5.5.2}Escenario 2: Carga Media (1,200 - 3,400 Erlangs)}{63}{}%
-\contentsline {subsection}{\numberline {5.5.3}Escenario 3: Carga Alta (2,000 - 4,000 Erlangs)}{65}{}%
-\contentsline {section}{\numberline {5.6}Análisis Comparativo Multiobjetivo}{66}{}%
-\contentsline {subsection}{\numberline {5.6.1}Soluciones en el Frente de Pareto}{66}{}%
-\contentsline {subsection}{\numberline {5.6.2}Cobertura de Pareto}{67}{}%
-\contentsline {subsection}{\numberline {5.6.3}Eficiencia en Uso de Recursos}{69}{}%
-\contentsline {section}{\numberline {5.7}Validación del Horizonte de Predicción}{70}{}%
-\contentsline {section}{\numberline {5.8}Discusión de Resultados}{70}{}%
-\contentsline {subsection}{\numberline {5.8.1}Superioridad del Método Propuesto}{70}{}%
-\contentsline {subsection}{\numberline {5.8.2}Valor de la Desfragmentación Activa}{71}{}%
-\contentsline {subsection}{\numberline {5.8.3}Ventajas de la Estrategia Adaptativa}{72}{}%
-\contentsline {subsection}{\numberline {5.8.4}Comparación con Métodos Tradicionales}{72}{}%
-\contentsline {chapter}{\numberline {6}Conclusiones y Trabajos Futuros}{74}{}%
-\contentsline {section}{\numberline {6.1}Cumplimiento de Objetivos}{75}{}%
-\contentsline {section}{\numberline {6.2}Contribuciones Principales}{76}{}%
-\contentsline {section}{\numberline {6.3}Validación Experimental}{78}{}%
-\contentsline {section}{\numberline {6.4}Validación de la Hipótesis}{79}{}%
-\contentsline {section}{\numberline {6.5}Aportes de la Investigación}{80}{}%
-\contentsline {section}{\numberline {6.6}Limitaciones Identificadas}{81}{}%
-\contentsline {section}{\numberline {6.7}Trabajos Futuros}{82}{}%
-\contentsline {subsection}{\numberline {6.7.1}Extensiones Metodológicas}{82}{}%
-\contentsline {subsection}{\numberline {6.7.2}Extensiones Arquitecturales y Algorítmicas}{83}{}%
-\contentsline {subsection}{\numberline {6.7.3}Extensiones a Otros Contextos Operacionales}{83}{}%
-\contentsline {subsection}{\numberline {6.7.4}Validación Experimental en Entornos Reales}{84}{}%
-\contentsline {section}{\numberline {6.8}Reflexiones Finales}{85}{}%
+\contentsline {chapter}{\numberline {5}Pruebas y Resultados Obtenidos}{54}{}%
+\contentsline {section}{\numberline {5.1}Flujo del Algoritmo de Desfragmentación Adaptativa}{54}{}%
+\contentsline {section}{\numberline {5.2}Configuración Experimental}{56}{}%
+\contentsline {subsection}{\numberline {5.2.1}Topología y Parámetros de Red}{56}{}%
+\contentsline {subsection}{\numberline {5.2.2}Escenarios de Carga Evaluados}{56}{}%
+\contentsline {section}{\numberline {5.3}Métodos Comparados}{58}{}%
+\contentsline {subsection}{\numberline {5.3.1}Línea Base (SD): Sin Desfragmentación}{58}{}%
+\contentsline {subsection}{\numberline {5.3.2}Método de Referencia 1 (MR1): Desfragmentación Periódica por Tiempo Fijo}{59}{}%
+\contentsline {subsection}{\numberline {5.3.3}Método de Referencia 2 (MR2): Desfragmentación por Umbral de BFR}{59}{}%
+\contentsline {subsection}{\numberline {5.3.4}Método Propuesto (MP): Desfragmentación Adaptativa con Doble Umbral}{60}{}%
+\contentsline {section}{\numberline {5.4}Objetivos de Optimización}{61}{}%
+\contentsline {subsection}{\numberline {5.4.1}Objetivo 1: Cantidad de Bloqueos (BL)}{61}{}%
+\contentsline {subsection}{\numberline {5.4.2}Objetivo 2: Cantidad de Reconfiguraciones (RC)}{62}{}%
+\contentsline {subsection}{\numberline {5.4.3}Métricas de Evaluación Multiobjetivo}{62}{}%
+\contentsline {subsubsection}{Soluciones en el Frente de Pareto (SFP)}{62}{}%
+\contentsline {subsubsection}{Cobertura de Pareto (CP)}{63}{}%
+\contentsline {section}{\numberline {5.5}Resultados Experimentales}{63}{}%
+\contentsline {subsection}{\numberline {5.5.1}Escenario 1: Carga Baja (800 - 3,000 Erlangs)}{63}{}%
+\contentsline {subsection}{\numberline {5.5.2}Escenario 2: Carga Media (1,200 - 3,400 Erlangs)}{64}{}%
+\contentsline {subsection}{\numberline {5.5.3}Escenario 3: Carga Alta (2,000 - 4,000 Erlangs)}{66}{}%
+\contentsline {section}{\numberline {5.6}Análisis Comparativo Multiobjetivo}{67}{}%
+\contentsline {subsection}{\numberline {5.6.1}Soluciones en el Frente de Pareto}{67}{}%
+\contentsline {subsection}{\numberline {5.6.2}Cobertura de Pareto}{68}{}%
+\contentsline {subsection}{\numberline {5.6.3}Eficiencia en Uso de Recursos}{70}{}%
+\contentsline {section}{\numberline {5.7}Validación del Horizonte de Predicción}{71}{}%
+\contentsline {section}{\numberline {5.8}Discusión de Resultados}{71}{}%
+\contentsline {subsection}{\numberline {5.8.1}Superioridad del Método Propuesto}{71}{}%
+\contentsline {subsection}{\numberline {5.8.2}Valor de la Desfragmentación Activa}{72}{}%
+\contentsline {subsection}{\numberline {5.8.3}Ventajas de la Estrategia Adaptativa}{73}{}%
+\contentsline {subsection}{\numberline {5.8.4}Comparación con Métodos Tradicionales}{73}{}%
+\contentsline {chapter}{\numberline {6}Conclusiones y Trabajos Futuros}{75}{}%
+\contentsline {section}{\numberline {6.1}Cumplimiento de Objetivos}{76}{}%
+\contentsline {section}{\numberline {6.2}Contribuciones Principales}{77}{}%
+\contentsline {section}{\numberline {6.3}Validación Experimental}{79}{}%
+\contentsline {section}{\numberline {6.4}Validación de la Hipótesis}{80}{}%
+\contentsline {section}{\numberline {6.5}Aportes de la Investigación}{81}{}%
+\contentsline {section}{\numberline {6.6}Limitaciones Identificadas}{82}{}%
+\contentsline {section}{\numberline {6.7}Trabajos Futuros}{83}{}%
+\contentsline {subsection}{\numberline {6.7.1}Extensiones Metodológicas}{83}{}%
+\contentsline {subsection}{\numberline {6.7.2}Extensiones Arquitecturales y Algorítmicas}{84}{}%
+\contentsline {subsection}{\numberline {6.7.3}Extensiones a Otros Contextos Operacionales}{84}{}%
+\contentsline {subsection}{\numberline {6.7.4}Validación Experimental en Entornos Reales}{85}{}%
+\contentsline {section}{\numberline {6.8}Reflexiones Finales}{86}{}%

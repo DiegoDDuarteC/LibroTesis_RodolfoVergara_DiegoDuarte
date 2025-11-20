@@ -30,7 +30,7 @@ En el contexto de \textit{Machine Learning}, las características son los parám
     \begin{equation}
         BFR_{core} = 1 - \frac{MaxBlock()}{S^{free}}
     \end{equation}
-    donde \textit{MaxBlock()} es el tamaño del mayor bloque de frequency slots (FS) libres y \(S^{free}\) es la suma total de FS libres en el core.
+    donde \textit{MaxBlock()} es el tamaño del mayor bloque de \textit{Frequency Slot} (FS) libres y \(S^{free}\) es la suma total de FS libres en el core.
     
     El BFR de la red se calcula como el promedio ponderado considerando todos los cores de todos los enlaces:
     \begin{equation}
@@ -306,6 +306,23 @@ Se evaluaron ambos modelos en sus conjuntos de prueba respectivos (59,850 muestr
     \item \textbf{F1-Score}: Media armónica entre precisión y recall
     \item \textbf{AUC-ROC}: Área bajo la curva ROC, capacidad discriminativa general
 \end{itemize}
+
+\subsection{Metodología de Selección del Horizonte}
+
+El horizonte temporal de predicción fue seleccionado mediante análisis 
+de correlación temporal sobre las 399,000 muestras del dataset sintético. 
+Para cada muestra $i$, se calculó:
+
+\begin{itemize}
+    \item Autocorrelación entre $BFR_i$ y $BFR_{i+h}$ para diferentes 
+          horizontes $h \in \{500, 1000, 1500, 2000\}$
+    \item Persistencia como proporción de casos donde 
+          $|BFR_{i+h} - BFR_i| < 0.10$
+    \item Volatilidad como desviación estándar de $BFR_{i+h} - BFR_i$
+\end{itemize}
+
+El horizonte $h=1000$ presentó el mejor balance entre predictibilidad 
+y anticipación suficiente.
 
 \subsection{Análisis de Predictibilidad del Horizonte}
 
