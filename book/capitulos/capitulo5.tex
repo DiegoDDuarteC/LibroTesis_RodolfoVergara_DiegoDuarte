@@ -179,7 +179,7 @@ Este método implementa una estrategia reactiva basada en el monitoreo continuo 
 
 \subsection{Método Propuesto (MP): Desfragmentación Adaptativa con Doble Umbral}
 
-El método propuesto implementa una estrategia de tres niveles basada en la predicción del índice de fragmentación BFR en horizonte $t+1000$ mediante dos modelos Gradient Boosting~\cite{friedman2001greedy} entrenados utilizando la librería Scikit-learn~\cite{pedregosa2011scikit}. La estrategia adaptativa opera según los siguientes criterios:
+El método propuesto implementa una estrategia de tres niveles basada en la predicción del índice de fragmentación BFR en horizonte $t+1000$ mediante dos modelos Gradient Boosting entrenados. La estrategia adaptativa opera según los siguientes criterios:
 
 \begin{itemize}
     \item \textbf{Período de warm-up}: 1,000 unidades de tiempo iniciales sin desfragmentación para permitir estabilización de la red

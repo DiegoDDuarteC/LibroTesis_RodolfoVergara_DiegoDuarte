@@ -902,42 +902,6 @@
       \field{pages}{1189\bibrangedash 1232}
       \range{pages}{44}
     \endentry
-    \entry{choudhury2019recent}{inproceedings}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=f1d6667b6e878193857242da128e1913}{%
-           family={Choudhury},
-           familyi={C\bibinitperiod},
-           given={Panchali\bibnamedelima Datta},
-           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ec9aa5405e437dd7d609425949d2e723}{%
-           family={De},
-           familyi={D\bibinitperiod},
-           given={Tanmay},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{ac0169906ead9138bfcd4827bdf0c85e}
-      \strng{fullhash}{ac0169906ead9138bfcd4827bdf0c85e}
-      \strng{fullhashraw}{ac0169906ead9138bfcd4827bdf0c85e}
-      \strng{bibnamehash}{ac0169906ead9138bfcd4827bdf0c85e}
-      \strng{authorbibnamehash}{ac0169906ead9138bfcd4827bdf0c85e}
-      \strng{authornamehash}{ac0169906ead9138bfcd4827bdf0c85e}
-      \strng{authorfullhash}{ac0169906ead9138bfcd4827bdf0c85e}
-      \strng{authorfullhashraw}{ac0169906ead9138bfcd4827bdf0c85e}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2019 21st International Conference on Transparent Optical Networks (ICTON)}
-      \field{title}{Recent developments in Elastic Optical Networks Using Machine Learning}
-      \field{year}{2019}
-      \field{pages}{1\bibrangedash 3}
-      \range{pages}{3}
-    \endentry
     \entry{pedregosa2011scikit}{article}{}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -1198,8 +1162,8 @@
       \strng{authornamehash}{7cf8eaf74a2659f76a70a943f2d3282a}
       \strng{authorfullhash}{a5a797d00a22012ad72d7ecd116c1dec}
       \strng{authorfullhashraw}{a5a797d00a22012ad72d7ecd116c1dec}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{The 10th International Conference on Optical Internet (COIN2012)}
