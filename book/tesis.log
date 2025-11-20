@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.3)  20 NOV 2025 14:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.3)  20 NOV 2025 14:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -884,11 +884,15 @@ LaTeX Info: Redefining \% on input line 1.
 
 
 
-])
+]
+
+LaTeX Info: Redefining \. on input line 56.
+LaTeX Info: Redefining \% on input line 56.
+[8])
 
 LaTeX Info: Redefining \. on input line 64.
 LaTeX Info: Redefining \% on input line 64.
-[8]
+[9]
 \openout2 = `capitulos/capitulo1.aux'.
 
  (./capitulos/capitulo1.tex
@@ -945,12 +949,12 @@ Cap\'{\i }tulo 2.
 LaTeX Info: Redefining \. on input line 19.
 LaTeX Info: Redefining \% on input line 19.
 [9]
-<capitulos/img/7_NUCLEOS.png, id=78, 277.035pt x 188.20313pt>
+<capitulos/img/7_NUCLEOS.png, id=82, 277.035pt x 188.20313pt>
 File: capitulos/img/7_NUCLEOS.png Graphic file (type png)
 <use capitulos/img/7_NUCLEOS.png>
 Package pdftex.def Info: capitulos/img/7_NUCLEOS.png  used on input line 24.
 (pdftex.def)             Requested size: 426.79135pt x 289.94281pt.
-<capitulos/img/12_NUCLEOS.png, id=80, 277.035pt x 207.77625pt>
+<capitulos/img/12_NUCLEOS.png, id=84, 277.035pt x 207.77625pt>
 File: capitulos/img/12_NUCLEOS.png Graphic file (type png)
 <use capitulos/img/12_NUCLEOS.png>
 Package pdftex.def Info: capitulos/img/12_NUCLEOS.png  used on input line 31.
@@ -960,7 +964,7 @@ Package pdftex.def Info: capitulos/img/12_NUCLEOS.png  used on input line 31.
 LaTeX Info: Redefining \. on input line 35.
 LaTeX Info: Redefining \% on input line 35.
 [10 <./capitulos/img/7_NUCLEOS.png>]
-<capitulos/img/19_NUCLEOS.png, id=86, 249.18094pt x 191.21437pt>
+<capitulos/img/19_NUCLEOS.png, id=89, 249.18094pt x 191.21437pt>
 File: capitulos/img/19_NUCLEOS.png Graphic file (type png)
 <use capitulos/img/19_NUCLEOS.png>
 Package pdftex.def Info: capitulos/img/19_NUCLEOS.png  used on input line 43.
@@ -970,7 +974,7 @@ Package pdftex.def Info: capitulos/img/19_NUCLEOS.png  used on input line 43.
 LaTeX Info: Redefining \. on input line 47.
 LaTeX Info: Redefining \% on input line 47.
 [11{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./capitulos/img/12_NUCLEOS.png>]
-<capitulos/img/CORE_PITCH_II.png, id=92, 960.58875pt x 553.06625pt>
+<capitulos/img/CORE_PITCH_II.png, id=95, 960.58875pt x 553.06625pt>
 File: capitulos/img/CORE_PITCH_II.png Graphic file (type png)
 <use capitulos/img/CORE_PITCH_II.png>
 Package pdftex.def Info: capitulos/img/CORE_PITCH_II.png  used on input line 52.
@@ -988,7 +992,7 @@ LaTeX Info: Redefining \% on input line 64.
 LaTeX Info: Redefining \. on input line 76.
 LaTeX Info: Redefining \% on input line 76.
 [14]
-<capitulos/img/XT_MCF_II.png, id=104, 441.14813pt x 256.70906pt>
+<capitulos/img/XT_MCF_II.png, id=107, 441.14813pt x 256.70906pt>
 File: capitulos/img/XT_MCF_II.png Graphic file (type png)
 <use capitulos/img/XT_MCF_II.png>
 Package pdftex.def Info: capitulos/img/XT_MCF_II.png  used on input line 83.
@@ -1002,7 +1006,7 @@ LaTeX Info: Redefining \% on input line 92.
 LaTeX Info: Redefining \. on input line 112.
 LaTeX Info: Redefining \% on input line 112.
 [16]
-<capitulos/img/CONMUTACION_NUCLEOS_II.png, id=116, 505.13719pt x 167.87718pt>
+<capitulos/img/CONMUTACION_NUCLEOS_II.png, id=119, 505.13719pt x 167.87718pt>
 File: capitulos/img/CONMUTACION_NUCLEOS_II.png Graphic file (type png)
 <use capitulos/img/CONMUTACION_NUCLEOS_II.png>
 Package pdftex.def Info: capitulos/img/CONMUTACION_NUCLEOS_II.png  used on input line 124.
@@ -1012,7 +1016,7 @@ Package pdftex.def Info: capitulos/img/CONMUTACION_NUCLEOS_II.png  used on input
 LaTeX Info: Redefining \. on input line 130.
 LaTeX Info: Redefining \% on input line 130.
 [17 <./capitulos/img/CONMUTACION_NUCLEOS_II.png>]
-<capitulos/img/Asignación_espectro_SIN_conmutación_II.png, id=121, 1283.79625pt x 776.9025pt>
+<capitulos/img/Asignación_espectro_SIN_conmutación_II.png, id=124, 1283.79625pt x 776.9025pt>
 File: capitulos/img/Asignación_espectro_SIN_conmutación_II.png Graphic file (type png)
 <use capitulos/img/Asignación_espectro_SIN_conmutación_II.png>
 Package pdftex.def Info: capitulos/img/Asignación_espectro_SIN_conmutación_II.png  used on input line 136.
@@ -1026,7 +1030,7 @@ LaTeX Info: Redefining \% on input line 140.
 LaTeX Info: Redefining \. on input line 147.
 LaTeX Info: Redefining \% on input line 147.
 [19 <./capitulos/img/Asignación_espectro_SIN_conmutación_II.png>]
-<capitulos/img/Asignación_espectro_CON_conmutación_II.png, id=130, 976.64874pt x 606.265pt>
+<capitulos/img/Asignación_espectro_CON_conmutación_II.png, id=133, 976.64874pt x 606.265pt>
 File: capitulos/img/Asignación_espectro_CON_conmutación_II.png Graphic file (type png)
 <use capitulos/img/Asignación_espectro_CON_conmutación_II.png>
 Package pdftex.def Info: capitulos/img/Asignación_espectro_CON_conmutación_II.png  used on input line 151.
@@ -1040,7 +1044,7 @@ LaTeX Info: Redefining \% on input line 166.
 LaTeX Info: Redefining \. on input line 181.
 LaTeX Info: Redefining \% on input line 181.
 [21]
-<capitulos/img/FRACMENTACIÓN_C_RECHAZADA.png, id=138, 1205.50375pt x 523.9575pt>
+<capitulos/img/FRACMENTACIÓN_C_RECHAZADA.png, id=142, 1205.50375pt x 523.9575pt>
 File: capitulos/img/FRACMENTACIÓN_C_RECHAZADA.png Graphic file (type png)
 <use capitulos/img/FRACMENTACIÓN_C_RECHAZADA.png>
 Package pdftex.def Info: capitulos/img/FRACMENTACIÓN_C_RECHAZADA.png  used on input line 192.
@@ -1050,7 +1054,7 @@ Package pdftex.def Info: capitulos/img/FRACMENTACIÓN_C_RECHAZADA.png  used on i
 LaTeX Info: Redefining \. on input line 196.
 LaTeX Info: Redefining \% on input line 196.
 [22]
-<capitulos/img/FRACMENTACIÓN_C_ESTABLECIDA.png, id=143, 1228.59pt x 523.9575pt>
+<capitulos/img/FRACMENTACIÓN_C_ESTABLECIDA.png, id=146, 1228.59pt x 523.9575pt>
 File: capitulos/img/FRACMENTACIÓN_C_ESTABLECIDA.png Graphic file (type png)
 <use capitulos/img/FRACMENTACIÓN_C_ESTABLECIDA.png>
 Package pdftex.def Info: capitulos/img/FRACMENTACIÓN_C_ESTABLECIDA.png  used on input line 199.
@@ -1064,7 +1068,7 @@ LaTeX Info: Redefining \% on input line 208.
 LaTeX Info: Redefining \. on input line 221.
 LaTeX Info: Redefining \% on input line 221.
 [24]
-<capitulos/img/GESTION_FRACMENTACION_II.png, id=152, 612.2875pt x 392.46625pt>
+<capitulos/img/GESTION_FRACMENTACION_II.png, id=155, 612.2875pt x 392.46625pt>
 File: capitulos/img/GESTION_FRACMENTACION_II.png Graphic file (type png)
 <use capitulos/img/GESTION_FRACMENTACION_II.png>
 Package pdftex.def Info: capitulos/img/GESTION_FRACMENTACION_II.png  used on input line 229.
@@ -1078,7 +1082,7 @@ LaTeX Info: Redefining \% on input line 237.
 LaTeX Info: Redefining \. on input line 243.
 LaTeX Info: Redefining \% on input line 243.
 [26]
-<capitulos/img/EJEMPLO_PERIODICO_II.png, id=160, 595.22375pt x 133.49875pt>
+<capitulos/img/EJEMPLO_PERIODICO_II.png, id=163, 595.22375pt x 133.49875pt>
 File: capitulos/img/EJEMPLO_PERIODICO_II.png Graphic file (type png)
 <use capitulos/img/EJEMPLO_PERIODICO_II.png>
 Package pdftex.def Info: capitulos/img/EJEMPLO_PERIODICO_II.png  used on input line 252.
@@ -1158,7 +1162,7 @@ LaTeX Info: Redefining \% on input line 75.
 LaTeX Info: Redefining \. on input line 102.
 LaTeX Info: Redefining \% on input line 102.
 [40]
-<capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png, id=208, 951.555pt x 364.36125pt>
+<capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png, id=212, 951.555pt x 364.36125pt>
 File: capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png Graphic file (type png)
 <use capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png>
 Package pdftex.def Info: capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png  used on input line 141.
@@ -1168,7 +1172,7 @@ Package pdftex.def Info: capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.
 LaTeX Info: Redefining \. on input line 145.
 LaTeX Info: Redefining \% on input line 145.
 [41]
-<capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png, id=213, 951.555pt x 423.83344pt>
+<capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png, id=216, 951.555pt x 423.83344pt>
 File: capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png Graphic file (type png)
 <use capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png>
 Package pdftex.def Info: capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png  used on input line 148.
@@ -1469,16 +1473,16 @@ Package logreq Info: Writing requests to 'tesis.run.xml'.
 Here is how much of TeX's memory you used:
  28504 strings out of 473190
  565494 string characters out of 5715800
- 1393620 words of memory out of 5000000
+ 1393623 words of memory out of 5000000
  51272 multiletter control sequences out of 15000+600000
  579827 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,16n,91p,1247b,2210s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on tesis.pdf (99 pages, 1927797 bytes).
+Output written on tesis.pdf (100 pages, 1928364 bytes).
 PDF statistics:
- 498 PDF objects out of 1000 (max. 8388607)
- 309 compressed objects within 4 object streams
+ 501 PDF objects out of 1000 (max. 8388607)
+ 311 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

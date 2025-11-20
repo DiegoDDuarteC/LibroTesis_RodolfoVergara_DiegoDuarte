@@ -3,69 +3,77 @@
 \addcontentsline{toc}{chapter}{Lista de Símbolos}
 \begin{tabbing}
 
-%\textit{HM} \indent \textit{High-slot Mark}\\
-%\textit{MS} \indent \textit{Maximon Slot Index} - Mayor Índice de Ranura\\
 \color{white}Zero \=\color{white}One \=\color{white}Twoooooo \=\color{white}Thre\\
 
-\textit{HM} \>\>\>\textit{High-slot Mark}.\\
-\textit{\(HM_{max}\)} \>\>\> HM máximo.\\
-
-\textit{\(Ent_{link}\)} \>\>\> Entropía del enlace.\\
-\textit{\(Ent_{link-i}\)} \>\>\> Entropía del enlace \textit{i}. \\
-\textit{\(Ent_{red}\)} \>\>\> Entropía de la red. \\
+\textbf{Parámetros de red y espectro}\\
 \textit{N} \>\>\> Cantidad de \textit{FS} en un enlace.\\
 \textit{\(FS_{i}\)} \>\>\> \textit{Frecuency Slot} de índice \textit{i}.\\
 \textit{\(FS_{i+1}\)} \>\>\> \textit{Frecuency Slot} de índice \(\textit{i} + 1\).\\
 |\textit{E}| \>\>\> Cantidad de enlaces de la red.\\
-
-\textit{\(SHF_{link}\)} \>\>\> Entropía de Shannon del enlace.\\
-\textit{\(SHF_{link-i}\)} \>\>\> Entropía de Shannon del enlace \textit{i}. \\
-\textit{\(SHF_{red}\)} \>\>\> Entropía de Shannon de la red. \\
-\textit{\(S_{free}\)} \>\>\> Cantidad de \textit{FS} libres en un enlace.\\
-
+\textit{C} \>\>\> Número de núcleos por enlace.\\
+\textit{L} \>\>\> Longitud física del enlace óptico.\\
+\textit{\(S_{free}\)} \>\>\> Cantidad de \textit{FS} libres en un enlace o núcleo.\\
+\textit{\(S^{occupied}\)} \>\>\> Cantidad de \textit{FS} ocupados.\\
+\textit{\(S^{small}\)} \>\>\> Suma de \textit{FS} libres en bloques menores a 5 slots.\\
+\textit{Bloques} \>\>\> Cantidad de bloques de ranuras libres en un enlace. \\
+\textit{B} \>\>\> Cantidad de bloques libres.\\
+\textit{G} \>\>\> Cantidad total de gaps.\\
+\textit{\(g_{i}\)} \>\>\> Tamaño del gap libre \textit{i}.\\
+\textit{\(s_{min}\)} \>\>\> Índice del primer \textit{FS} ocupado.\\
+\textit{\(s_{max}\)} \>\>\> Índice del último \textit{FS} ocupado.\\
+\\
+\textbf{Parámetros de fibra multinúcleo}\\
+\textit{\(\Lambda_{i,j}\)} \>\>\> Core pitch - Distancia entre los núcleos \textit{i} y \textit{j}.\\
+\textit{\(N_{i}\)} \>\>\> Cantidad de núcleos adyacentes al núcleo \textit{i}.\\
+\textit{k} \>\>\> Coeficiente de acoplamiento.\\
+\textit{r} \>\>\> Radio de curvatura.\\
+\textit{\(\beta\)} \>\>\> Constante de propagación.\\
+\textit{\(h_{i,j}\)} \>\>\> XT por unidad de longitud entre núcleos \textit{i} y \textit{j}.\\
+\textit{\(XT_{i}\)} \>\>\> Crosstalk total que impacta al núcleo \textit{i}.\\
+\textit{\(XT_{TH}\)} \>\>\> Umbral de crosstalk admisible.\\
+\\
+\textbf{Métricas de fragmentación}\\
 \textit{\(BFR_{link}\)} \>\>\> Relación de Fragmentación de ancho de banda de un enlace.\\
 \textit{\(BFR_{link-i}\)} \>\>\> Relación de Fragmentación de ancho de banda del enlace \textit{i}. \\
 \textit{\(BFR_{red}\)} \>\>\> Relación de Fragmentación de ancho de banda de la red. \\
-\textit{MaxBlock()} \>\>\> Tamaño del mayor bloque de \textit{FS} bloquados.\\
-
+\textit{MaxBlock()} \>\>\> Tamaño del mayor bloque de \textit{FS} libres.\\
+\\
+\textit{\(SHF_{link}\)} \>\>\> Entropía de Shannon del enlace.\\
+\textit{\(SHF_{link-i}\)} \>\>\> Entropía de Shannon del enlace \textit{i}. \\
+\textit{\(SHF_{red}\)} \>\>\> Entropía de Shannon de la red. \\
+\\
 \textit{MSI} \>\>\> Índice de slot máximo utilizado.\\
 \textit{\(MSI_{link-i}\)} \>\>\> Índice de slot máximo utilizado del enlace \textit{i}. \\
 \textit{\(MSI_{red}\)} \>\>\> Índice de slot máximo utilizado de la red. \\
-
-\textit{\(CE_{link}\)} \>\>\> Consecutividad del espectro.\\
-\textit{\(CE_{red}\)} \>\>\> Consecutividad del espectro de la red. \\
-\textit{Joins} \>\>\> Cantidad total de bloques de dos ranuras libres adyacentes\\ 
-                \>\>\>  distintos dentro de un enlace.\\
-\textit{Bloques} \>\>\> Cantidad de bloques de ranuras libres en un enlace. \\
-\textit{K} \>\>\> Cantidad de rutas de dos enlaces en la red.\\
-
+\\
+\textit{\(n_{1}, n_{2}\)} \>\>\> Parámetros de tamaños típicos de demanda (Golden Metric).\\
+\textit{\(F_{spatial}\)} \>\>\> Factor de peso espacial.\\
+\textit{\(D_{active}\)} \>\>\> Número de demandas activas en la red.\\
+\\
+\textbf{Utilización de red}\\
 \textit{Uso} \>\>\> Porcentaje de utilización de la red.\\
-\textit{sum(i)} \>\>\> Cantidad de \textit{FS} utilizadas en el enlace \textit{i}.\\
-
-\textit{FSB} \>\>\> Acumulación de \textit{FS} bloqueados.\\
-\textit{\(S_{i}^{block}\)} \>\>\> Cantidad de \textit{FS} solicitadas por la demanda bloqueada \textit{i}.\\
-\textit{D} \>\>\> Cantidad de demandas.\\
-\textit{T} \>\>\> Ventada de tiempo seleccionada para el calculo de \textit{IB}.\\
-
-\textit{\(PB_{t}\)} \>\>\> Índice de bloqueo para el tiempo \textit{t}.\\
-\textit{\(FSD_{i}\)} \>\>\> Cantidad de \textit{FS} demandadas en el tiempo \textit{t}.\\ 
-
-\textit{\(train_{mean}\)} \>\>\> Media de valores.\\
-\textit{\(train_{stf}\)} \>\>\> Desviación estándar.\\
-
-\textit{MAE} \>\>\> Error Absoluto Medio.\\
-\textit{MSE} \>\>\> Error Cuadrático Medio.\\
-
+\textit{\(U_{core}\)} \>\>\> Utilización de un núcleo.\\
+\textit{\(U_{max}\)} \>\>\> Utilización máxima entre todos los núcleos.\\
+\textit{\(U_{min}\)} \>\>\> Utilización mínima entre todos los núcleos.\\
+\\
+\textbf{Métricas de desempeño}\\
 \textit{PB} \>\>\> Probabilidad de Bloqueo.\\
 \textit{\(PB_{th}\)} \>\>\> Umbral para disparar el proceso de desfragmentación.\\
-
 \textit{BL} \>\>\> Cantidad de Bloqueos.\\
 \textit{RC} \>\>\> Cantidad de Reconfiguraciones.\\
 \textit{SFP} \>\>\> Número de soluciones en el Frente Pareto.\\
 \textit{CP} \>\>\> Cobertura Pareto.\\
-\textit{MP} \>\>\> Método Propuesto.
-% \begin{tabular}{p{0.1\linewidth}p{0.9\linewidth}}
-% \textit{HM} & \textit{High-slot Mark} \\
-% \textit{MS} & \textit{Maximun Slot Index} - Mayor Índice de Ranura \\
-% \end{tabular}
+\\
+\textbf{Parámetros de aprendizaje automático}\\
+\textit{M} \>\>\> Número total de iteraciones (Gradient Boosting).\\
+\textit{\(h_{m}(x)\)} \>\>\> m-ésimo aprendiz débil.\\
+\textit{\(\gamma_{m}\)} \>\>\> Coeficiente de peso asociado.\\
+\textit{\(\nu\)} \>\>\> Tasa de aprendizaje.\\
+\\
+\textbf{Métodos comparados}\\
+\textit{MP} \>\>\> Método Propuesto.\\
+\textit{MR1} \>\>\> Método de Referencia 1 (Desfragmentación Periódica).\\
+\textit{MR2} \>\>\> Método de Referencia 2 (Desfragmentación por Umbral).\\
+\textit{SD} \>\>\> Sin Desfragmentación.\\
+
 \end{tabbing}
