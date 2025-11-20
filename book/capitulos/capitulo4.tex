@@ -1,10 +1,10 @@
 \chapter{Método Propuesto}
 
-Este trabajo propone un sistema de desfragmentación proactiva para redes MC-EON mediante el uso de técnicas de \textit{Machine Learning}. El sistema predice el índice de fragmentación futuro (\textit{Bandwidth Fragmentation Ratio} o BFR) que experimentará la red y, en función de estos valores predichos, determina automáticamente cuándo y con qué frecuencia ejecutar procesos de desfragmentación.
+Este trabajo propone un sistema de desfragmentación proactiva para redes MC-EON mediante el uso de técnicas de \textit{Machine Learning} \cite{mitchell1997machine}. El sistema predice el índice de fragmentación futuro (\textit{Bandwidth Fragmentation Ratio} o BFR) que experimentará la red y, en función de estos valores predichos, determina automáticamente cuándo y con qué frecuencia ejecutar procesos de desfragmentación.
 
 \section{Estrategia de Desfragmentación Adaptativa}
 
-El sistema implementa una estrategia de tres niveles basada en dos umbrales de fragmentación:
+El sistema implementa una estrategia de tres niveles basada en dos umbrales de fragmentación \cite{zhang2014dynamic}:
 
 \begin{itemize}
     \item \textbf{Umbral mínimo (BFR = 0.20):} Indica el inicio de fragmentación apreciable
@@ -19,14 +19,14 @@ La lógica de actuación se define como:
     \item \textbf{Desfragmentación de alta frecuencia:} Si el BFR predicho supera el umbral crítico (BFR $\geq 0.46$)
 \end{enumerate}
 
-Esta aproximación permite actuar de manera preventiva antes de que la red alcance estados críticos, optimizando el balance entre los costos operacionales de la desfragmentación y el mantenimiento de niveles aceptables de fragmentación.
+Esta aproximación permite actuar de manera preventiva antes de que la red alcance estados críticos \cite{comellas2018periodic}, optimizando el balance entre los costos operacionales de la desfragmentación y el mantenimiento de niveles aceptables de fragmentación.
 
 \section{Características Utilizadas}
 
-En el contexto de \textit{Machine Learning}, las características son los parámetros de entrada que alimentan el modelo predictivo. Para este trabajo se seleccionaron métricas relacionadas con la fragmentación, utilización de recursos y comportamiento específico de redes MC-EON:
+En el contexto de \textit{Machine Learning}, las características son los parámetros de entrada que alimentan el modelo predictivo. Para este trabajo se seleccionaron métricas relacionadas con la fragmentación, utilización de recursos y comportamiento específico de redes MC-EON \cite{quagliotti2017spectrum}:
 
 \begin{itemize}
-    \item \textbf{Bandwidth Fragmentation Ratio (BFR)}: Representa el índice de fragmentación de los recursos de la red. El BFR de un core en un enlace se define como:
+    \item \textbf{Bandwidth Fragmentation Ratio (BFR)}: Representa el índice de fragmentación de los recursos de la red \cite{zhang2013bandwidth}. El BFR de un core en un enlace se define como:
     \begin{equation}
         BFR_{core} = 1 - \frac{MaxBlock()}{S^{free}}
     \end{equation}
@@ -38,7 +38,7 @@ En el contexto de \textit{Machine Learning}, las características son los parám
     \end{equation}
     donde \(C\) es el número de cores por enlace, \(MaxBlock_{i,j}\) es el mayor bloque libre en el core \(j\) del enlace \(i\), y \(S^{free}_{i,j}\) es el total de FS libres en ese core.
     
-    \item \textbf{Entropía de Shannon (SHF)}: Mide la distribución de bloques libres en el espectro. Para un core:
+    \item \textbf{Entropía de Shannon (SHF)}: Mide la distribución de bloques libres en el espectro \cite{wright2015minimum}. Para un core:
     \begin{equation}
         SHF_{core} = \sum_{i=1}^{B} \frac{S_{i}^{free}}{N}~\ln\frac{N}{S_{i}^{free}}
     \end{equation}
@@ -47,13 +47,13 @@ En el contexto de \textit{Machine Learning}, las características son los parám
         SHF_{red} = \frac{1}{|E| \times C} \sum_{i=1}^{|E|} \sum_{j=1}^{C} SHF_{core_{i,j}}
     \end{equation}
     
-    \item \textbf{Compacidad del Espectro (SC)}: Evalúa qué tan compacto está el uso del espectro considerando la dispersión de FS ocupados y la cantidad de gaps intermedios. Para un core:
+    \item \textbf{Compacidad del Espectro (SC)}: Evalúa qué tan compacto está el uso del espectro considerando la dispersión de FS ocupados y la cantidad de gaps intermedios \cite{zhang2012priority}. Para un core:
     \begin{equation}
         SC_{core} = \frac{s_{max} - s_{min} + 1}{S^{occupied}} \times \frac{\sum_{i=1}^{G} g_i}{G}
     \end{equation}
     donde \(s_{min}\) y \(s_{max}\) son los índices del primer y último FS ocupado, \(S^{occupied}\) es la cantidad total de FS ocupados, \(g_i\) es el tamaño del gap libre \(i\), y \(G\) es la cantidad total de gaps. Si no hay FS ocupados, \(SC_{core} = 0\).
     
-    \item \textbf{Golden Metric (GM)}: Métrica avanzada que evalúa la fragmentación considerando rangos de tamaño de demandas esperadas. Dados dos parámetros \(n_1\) y \(n_2\) que representan tamaños típicos de demanda, el GM para un core se calcula como:
+    \item \textbf{Golden Metric (GM)}: Métrica avanzada que evalúa la fragmentación considerando rangos de tamaño de demandas esperadas \cite{khorasani2018novel}. Dados dos parámetros \(n_1\) y \(n_2\) que representan tamaños típicos de demanda, el GM para un core se calcula como:
     \begin{equation}
         GM_{core} = \frac{a}{|b|}
     \end{equation}
@@ -69,7 +69,7 @@ En el contexto de \textit{Machine Learning}, las características son los parám
     \end{itemize}
     con \(avg = \frac{n_1 + n_2}{2}\).
     
-    \item \textbf{Available Spectrum Fragmentation Ratio 3D (ASFR3D)}: Considera la fragmentación espacial en redes multi-core, evaluando bloques pequeños de difícil utilización:
+    \item \textbf{Available Spectrum Fragmentation Ratio 3D (ASFR3D)}: Considera la fragmentación espacial en redes multi-core \cite{zhang2020fragmentation}, evaluando bloques pequeños de difícil utilización:
     \begin{equation}
         ASFR3D_{core} = \left(1 - \frac{S^{small}}{S^{free}}\right) \times F_{spatial}
     \end{equation}
@@ -79,7 +79,7 @@ En el contexto de \textit{Machine Learning}, las características son los parám
     \end{equation}
     siendo \(D_{active}\) el número de demandas activas en la red.
     
-    \item \textbf{Utilización Diferencial (UD)}: Mide el desbalance en la utilización entre cores y enlaces:
+    \item \textbf{Utilización Diferencial (UD)}: Mide el desbalance en la utilización entre cores y enlaces. Esta métrica está inspirada en conceptos de balanceo de carga en redes definidas por software \cite{guo2014improving}:
     \begin{equation}
         UD_{red} = U_{max} - U_{min}
     \end{equation}
@@ -94,7 +94,7 @@ En el contexto de \textit{Machine Learning}, las características son los parám
 
 \subsection{Simulador y Topología}
 
-Se utilizó un simulador de redes MC-EON para generar el conjunto de datos de entrenamiento. La topología empleada fue USNET, representativa de redes ópticas de producción. Se generaron 400,000 instancias de tráfico, de las cuales 399,000 fueron utilizables para el análisis y entrenamiento tras eliminar valores incompletos.
+Se utilizó un simulador de redes MC-EON \cite{davalos2019spectrum} para generar el conjunto de datos de entrenamiento. La topología empleada fue USNET, representativa de redes ópticas de producción. Se generaron 400,000 instancias de tráfico, de las cuales 399,000 fueron utilizables para el análisis y entrenamiento tras eliminar valores incompletos.
 
 \subsection{Modelo de Carga Variable}
 
@@ -184,7 +184,7 @@ Esta clasificación enriquece los datos sintéticos con información contextual 
 
 \section{Herramientas de Implementación}
 
-Se utilizó el ecosistema \textbf{Scikit-learn} en Python para todo el proceso de Machine Learning. Esta biblioteca proporciona algoritmos de aprendizaje supervisado optimizados junto con herramientas para preprocesamiento, validación y evaluación de modelos.
+Se utilizó el ecosistema \textbf{Scikit-learn}~\cite{pedregosa2011scikit} en Python para todo el proceso de Machine Learning. Esta biblioteca proporciona algoritmos de aprendizaje supervisado optimizados junto con herramientas para preprocesamiento, validación y evaluación de modelos.
 
 Bibliotecas complementarias utilizadas:
 \begin{itemize}
@@ -210,7 +210,7 @@ Este modelo predice si la red superará el estado de fragmentación inicial, det
 
 Este modelo identifica situaciones críticas que requieren desfragmentación intensiva. Su activación indica que la red alcanzará niveles de fragmentación que incrementan significativamente la probabilidad de bloqueo. Utiliza un umbral de decisión de 0.70 para priorizar precisión y minimizar falsas alarmas.
 
-Ambos modelos utilizan \textbf{Gradient Boosting Classifier} con la siguiente configuración optimizada:
+Ambos modelos utilizan \textbf{Gradient Boosting Classifier}~\cite{friedman2001greedy}, implementado en Scikit-learn~\cite{pedregosa2011scikit}, con la siguiente configuración optimizada:
 
 \begin{itemize}
     \item \textbf{n\_estimators:} 150 árboles secuenciales
@@ -223,7 +223,7 @@ Ambos modelos utilizan \textbf{Gradient Boosting Classifier} con la siguiente co
     \item \textbf{random\_state:} 42 (reproducibilidad)
 \end{itemize}
 
-Gradient Boosting construye árboles de decisión de forma secuencial, donde cada árbol corrige los errores del anterior mediante minimización de la función de pérdida (log loss) por descenso de gradiente. La tasa de aprendizaje baja combinada con 150 estimadores permite un aprendizaje gradual y robusto, reduciendo el riesgo de sobreajuste.
+Gradient Boosting construye árboles de decisión de forma secuencial, donde cada árbol corrige los errores del anterior mediante minimización de la función de pérdida (log loss) por descenso de gradiente~\cite{friedman2001greedy}. La tasa de aprendizaje baja combinada con 150 estimadores permite un aprendizaje gradual y robusto, reduciendo el riesgo de sobreajuste.
 
 \section{Proceso de Entrenamiento}
 
@@ -318,7 +318,7 @@ Previo al entrenamiento se realizó un análisis exhaustivo de la predictibilida
     \item \textbf{Score de viabilidad:} 0.879 --- Confirmación cuantitativa de alta viabilidad predictiva
 \end{itemize}
 
-Estos indicadores confirman que el horizonte de 1000 demandas presenta estabilidad temporal suficiente para entrenar modelos efectivos de Machine Learning.
+Estos indicadores confirman que el horizonte de 1000 demandas presenta estabilidad temporal suficiente para entrenar modelos efectivos de Machine Learning \cite{aibin2018traffic}.
 
 \subsection{Resultados del Modelo de Umbral Crítico (BFR = 0.46)}
 
@@ -380,7 +380,7 @@ Estos resultados se explican por la alta predictibilidad intrínseca del horizon
 
 \subsection{Justificación de Gradient Boosting}
 
-Si bien durante el proceso se evaluaron tres algoritmos (Random Forest, Gradient Boosting y Regresión Logística), se seleccionó Gradient Boosting como modelo definitivo para ambos umbrales por las siguientes razones:
+Si bien durante el proceso se evaluaron tres algoritmos (Random Forest, Gradient Boosting y Regresión Logística), se seleccionó Gradient Boosting~\cite{friedman2001greedy} como modelo definitivo para ambos umbrales por las siguientes razones:
 
 \begin{itemize}
     \item \textbf{Balance óptimo:} Logra el mejor equilibrio entre precisión y recall tras optimización de umbral
@@ -443,4 +443,3 @@ Esta arquitectura permite:
     \item Escalabilidad: Los servicios pueden ejecutarse en servidores separados
     \item Monitoreo granular: Métricas independientes por cada nivel de predicción
 \end{itemize}
-

@@ -1,23 +1,16 @@
 \chapter{Aprendizaje Automático}
-%
 
-El Aprendizaje Automático, conocido en inglés como \textit{Machine Learning}, representa una de las áreas más dinámicas y prometedoras dentro del campo de la inteligencia artificial contemporánea. se fundamenta en el desarrollo de algoritmos y modelos computacionales capaces de identificar patrones complejos en conjuntos de datos, con el propósito de generar predicciones o tomar decisiones informadas sin necesidad de instrucciones programáticas explícitas para cada escenario específico.
-%
+El Aprendizaje Automático, conocido en inglés como \textit{Machine Learning}, representa una de las áreas más dinámicas y prometedoras dentro del campo de la inteligencia artificial contemporánea. Se fundamenta en el desarrollo de algoritmos y modelos computacionales capaces de identificar patrones complejos en conjuntos de datos, con el propósito de generar predicciones o tomar decisiones informadas sin necesidad de instrucciones programáticas explícitas para cada escenario específico \cite{mitchell1997machine}.
 
-La esencia del aprendizaje automático radica en su capacidad para mejorar el desempeño de manera iterativa mediante la experiencia acumulada. Mitchell proporciona una definición operacional particularmente esclarecedora: un sistema computacional manifiesta capacidad de aprendizaje cuando su rendimiento en una tarea determinada T, cuantificado mediante una métrica de desempeño P, experimenta una mejora mensurable como consecuencia de la exposición a una experiencia E. Esta conceptualización establece tres componentes fundamentales que articulan cualquier sistema de aprendizaje automático: la tarea objetivo, la experiencia de aprendizaje y el criterio de evaluación.
-%
+La esencia del aprendizaje automático radica en su capacidad para mejorar el desempeño de manera iterativa mediante la experiencia acumulada. Mitchell \cite{mitchell1997machine} proporciona una definición operacional particularmente esclarecedora: un sistema computacional manifiesta capacidad de aprendizaje cuando su rendimiento en una tarea determinada T, cuantificado mediante una métrica de desempeño P, experimenta una mejora mensurable como consecuencia de la exposición a una experiencia E. Esta conceptualización establece tres componentes fundamentales que articulan cualquier sistema de aprendizaje automático: la tarea objetivo, la experiencia de aprendizaje y el criterio de evaluación.
 
 Para ilustrar estos conceptos de manera concreta, se puede examinar el caso de los sistemas de filtrado de correo electrónico no deseado. Un filtro de spam ejemplifica de forma paradigmática los principios del aprendizaje automático. El sistema desarrolla progresivamente la capacidad de discriminar entre mensajes legítimos y correo no solicitado mediante el análisis de ejemplos previamente etiquetados por usuarios. Estos conjuntos de datos, denominados conjuntos de entrenamiento, contienen tanto instancias positivas (correos identificados como spam) como negativas (mensajes legítimos), permitiendo al algoritmo extraer características distintivas de cada categoría.
-%
 
 En este contexto específico, la tarea T consiste en la clasificación binaria de nuevos mensajes electrónicos, la experiencia E está constituida por el proceso de entrenamiento con los datos etiquetados, y la métrica de desempeño P puede definirse como la tasa de precisión o \textit{Accuracy}, que cuantifica la proporción de mensajes correctamente clasificados en relación con el total de predicciones realizadas.
-%
 
 \section{Clasificación de sistemas o tipos de aprendizaje automático}
-%
 
-La diversidad de aplicaciones y contextos en los que se implementan sistemas de aprendizaje automático ha propiciado el desarrollo de múltiples paradigmas metodológicos. La clasificación más fundamental de estos enfoques se establece en función del tipo y grado de supervisión disponible durante la fase de entrenamiento. A continuación, se muestran las tres categorías principales:
-%
+La diversidad de aplicaciones y contextos en los que se implementan sistemas de aprendizaje automático ha propiciado el desarrollo de múltiples paradigmas metodológicos. La clasificación más fundamental de estos enfoques se establece en función del tipo y grado de supervisión disponible durante la fase de entrenamiento \cite{mitchell1997machine}. A continuación, se muestran las tres categorías principales:
 
 \begin{itemize}
     \item \textbf{Aprendizaje supervisado:} Este paradigma constituye el enfoque más ampliamente implementado en aplicaciones prácticas. Se caracteriza por la disponibilidad de un conjunto de entrenamiento que incluye pares de entrada-salida, donde cada instancia de entrada está asociada con su correspondiente etiqueta o \textit{label}, que representa la solución correcta. El objetivo del algoritmo consiste en inferir una función de mapeo que establezca la correspondencia óptima entre el espacio de características de entrada y el conjunto de salidas deseadas, de manera que pueda generalizar efectivamente a instancias no observadas previamente.
@@ -32,17 +25,15 @@ La diversidad de aplicaciones y contextos en los que se implementan sistemas de 
     
     \item \textbf{Aprendizaje no supervisado:} Este paradigma aborda escenarios donde los datos de entrenamiento carecen de soluciones deseadas. La ausencia de supervisión directa plantea un desafío metodológico fundamentalmente diferente: el algoritmo debe descubrir estructuras intrínsecas, patrones latentes o relaciones subyacentes en los datos sin guía externa. Las técnicas de aprendizaje no supervisado resultan particularmente valiosas para tareas exploratorias, tales como la segmentación de clientes, detección de anomalías, reducción de dimensionalidad y descubrimiento de asociaciones en grandes volúmenes de datos. Este enfoque refleja una aproximación más cercana a cómo los sistemas biológicos pueden aprender mediante la observación y organización autónoma de información sensorial.
     
-    \item \textbf{Aprendizaje por refuerzo:} Este paradigma se distingue por su naturaleza secuencial e interactiva. En lugar de aprender a partir de un conjunto estático de ejemplos, el aprendizaje por refuerzo se fundamenta en la interacción continua de un agente con un entorno dinámico. El proceso de aprendizaje se articula mediante señales de retroalimentación en forma de recompensas (positivas o negativas) que el agente recibe como consecuencia de sus acciones. El objetivo fundamental consiste en desarrollar una política de comportamiento que maximice la recompensa acumulada a largo plazo.
+    \item \textbf{Aprendizaje por refuerzo:} Este paradigma se distingue por su naturaleza secuencial e interactiva. En lugar de aprender a partir de un conjunto estático de ejemplos, el aprendizaje por refuerzo se fundamenta en la interacción continua de un agente con un entorno dinámico \cite{luo2019leveraging}. El proceso de aprendizaje se articula mediante señales de retroalimentación en forma de recompensas (positivas o negativas) que el agente recibe como consecuencia de sus acciones. El objetivo fundamental consiste en desarrollar una política de comportamiento que maximice la recompensa acumulada a largo plazo.
      Este bucle de retroalimentación continua entre acción, observación y recompensa permite al sistema refinar progresivamente su estrategia mediante exploración y explotación del espacio de estados. Las aplicaciones emblemáticas incluyen sistemas de control robótico, estrategias de juegos, optimización de recursos y vehículos autónomos.
 \end{itemize}
-%
 
 Cada uno de estos paradigmas presenta ventajas distintivas y limitaciones inherentes, determinando su idoneidad para contextos específicos. La selección del enfoque apropiado constituye una decisión metodológica crucial que debe considerar tanto la naturaleza del problema como las características de los datos disponibles.
-%
 
 \section{Gradient Boosting}
 
-El Gradient Boosting representa uno de los algoritmos de aprendizaje automático supervisado más potentes y efectivos en la actualidad, especialmente para problemas de clasificación y regresión con datos tabulares. Este método se fundamenta en el paradigma de aprendizaje por ensamble, donde múltiples modelos predictivos débiles se combinan secuencialmente para construir un predictor robusto de alto rendimiento mediante principios de optimización matemática y aprendizaje iterativo.
+El Gradient Boosting~\cite{friedman2001greedy} representa uno de los algoritmos de aprendizaje automático supervisado más potentes y efectivos en la actualidad, especialmente para problemas de clasificación y regresión con datos tabulares. Este método se fundamenta en el paradigma de aprendizaje por ensamble, donde múltiples modelos predictivos débiles se combinan secuencialmente para construir un predictor robusto de alto rendimiento mediante principios de optimización matemática y aprendizaje iterativo.
 
 \subsection{Fundamentos del Aprendizaje por Ensamble}
 
@@ -54,11 +45,11 @@ El aprendizaje por ensamble o \textit{Ensemble Learning} constituye una estrateg
     \item \textbf{Reducción de sesgo:} La combinación secuencial de modelos permite corregir sistemáticamente errores persistentes, mejorando la capacidad del sistema para capturar relaciones complejas en los datos.
 \end{itemize}
 
-Existen dos estrategias principales en el aprendizaje por ensamble. El \textit{Bagging} o agregación bootstrap entrena múltiples modelos de manera independiente y paralela sobre diferentes subconjuntos de datos, combinando posteriormente sus predicciones mediante votación o promediación. El \textit{Boosting}, por otro lado, entrena modelos de forma secuencial, donde cada nuevo modelo se enfoca en corregir los errores de sus predecesores. El Gradient Boosting pertenece a esta segunda categoría, distinguiéndose por su fundamentación matemática rigurosa basada en el descenso del gradiente en el espacio funcional.
+Existen dos estrategias principales en el aprendizaje por ensamble. El \textit{Bagging} o agregación bootstrap entrena múltiples modelos de manera independiente y paralela sobre diferentes subconjuntos de datos, combinando posteriormente sus predicciones mediante votación o promediación. El \textit{Boosting}, por otro lado, entrena modelos de forma secuencial, donde cada nuevo modelo se enfoca en corregir los errores de sus predecesores. El Gradient Boosting~\cite{friedman2001greedy} pertenece a esta segunda categoría, distinguiéndose por su fundamentación matemática rigurosa basada en el descenso del gradiente en el espacio funcional.
 
 \subsection{Algoritmo de Gradient Boosting}
 
-Dado un conjunto de entrenamiento $\{(x_i, y_i)\}_{i=1}^{n}$ donde $x_i$ representa el vector de características y $y_i$ la variable objetivo, el Gradient Boosting construye un modelo aditivo mediante la incorporación secuencial de árboles de decisión de profundidad limitada:
+Dado un conjunto de entrenamiento $\{(x_i, y_i)\}_{i=1}^{n}$ donde $x_i$ representa el vector de características y $y_i$ la variable objetivo, el Gradient Boosting~\cite{friedman2001greedy} construye un modelo aditivo mediante la incorporación secuencial de árboles de decisión de profundidad limitada:
 
 \begin{equation}
 F_M(x) = \sum_{m=0}^{M} \gamma_m h_m(x)
@@ -95,9 +86,9 @@ El procedimiento algorítmico consiste en:
 
 Este proceso continúa hasta alcanzar el número especificado de árboles $M$ o hasta satisfacer un criterio de convergencia establecido.
 
-\subsection{GradientBoostingClassifier}
+\subsection{Gradient Boosting Classifier}
 
-Para problemas de clasificación binaria, el \textit{GradientBoostingClassifier} emplea típicamente la función de pérdida logística:
+Para problemas de clasificación binaria, el \textit{Gradient Boosting Classifier}~\cite{friedman2001greedy} emplea típicamente la función de pérdida logística:
 
 \begin{equation}
 L(y, F(x)) = \log(1 + e^{-2yF(x)})
@@ -113,7 +104,7 @@ Para problemas multiclase, se extiende el enfoque mediante la estrategia \textit
 
 \subsection{Configuración e Hiperparámetros}
 
-El rendimiento del \textit{GradientBoostingClassifier} depende críticamente de la configuración apropiada de sus hiperparámetros, los cuales regulan la complejidad del modelo y previenen el sobreajuste:
+El rendimiento del \textit{Gradient Boosting Classifier} depende críticamente de la configuración apropiada de sus hiperparámetros, los cuales regulan la complejidad del modelo y previenen el sobreajuste:
 
 \begin{itemize}
     \item \textbf{Número de estimadores (n\_estimators):} Define la cantidad de árboles en el ensamble. Valores elevados incrementan la capacidad expresiva pero aumentan el riesgo de sobreajuste y el costo computacional. Típicamente se emplean valores entre 100 y 1000.
@@ -152,16 +143,6 @@ La selección óptima de estos hiperparámetros requiere típicamente validació
 
 \subsection{Aplicación en MC-EON}
 
-En el contexto de las redes ópticas elásticas multinúcleo (MC-EON), el \textit{GradientBoostingClassifier} ha demostrado particular eficacia para tareas de clasificación relacionadas con la gestión dinámica de recursos. Sus principales aplicaciones incluyen:
+En el contexto de las redes ópticas elásticas multinúcleo (MC-EON), el \textit{Gradient Boosting Classifier} ha demostrado particular eficacia para tareas de clasificación relacionadas con la gestión dinámica de recursos \cite{choudhury2019recent}. Sus principales aplicaciones incluyen:
 
-\begin{itemize}
-    \item \textbf{Predicción de bloqueo de solicitudes:} Predecir la probabilidad de que una solicitud de conexión sea bloqueada considerando la fragmentación espectral, disponibilidad de núcleos y niveles de diafonía entre núcleos.
-    
-    \item \textbf{Clasificación de eventos de desfragmentación:} Determinar el momento óptimo para ejecutar algoritmos de desfragmentación, clasificando el estado de la red según la necesidad de reorganizar las asignaciones espectrales. Esta capacidad permite decisiones en tiempo real que balancean el costo operacional contra los beneficios en reducción de bloqueos futuros.
-    
-    \item \textbf{Selección de estrategias RMSCA:} Seleccionar entre diferentes estrategias de \textit{Routing, Modulation, Spectrum and Core Assignment} según las características de la demanda y el estado de la red. La capacidad del modelo para capturar interacciones no lineales permite adaptar dinámicamente la estrategia de asignación.
-    
-    \item \textbf{Detección de degradación de QoS:} Identificar situaciones donde la calidad de servicio está en riesgo, permitiendo acciones preventivas. La interpretabilidad del modelo facilita la identificación de los factores más críticos que afectan la calidad de servicio.
-\end{itemize}
-
-La naturaleza tabular de los datos operacionales en MC-EON hace particularmente adecuado el uso de Gradient Boosting, cuyo rendimiento en este tipo de datos frecuentemente supera a aproximaciones basadas en redes neuronales profundas. Adicionalmente, su capacidad para proporcionar estimaciones de importancia de características facilita la comprensión de los factores más relevantes en las decisiones de gestión, aspecto crítico para la validación de sistemas autónomos en entornos de producción.
+La naturaleza tabular de los datos operacionales en MC-EON, implementada mediante la librería Scikit-learn~\cite{pedregosa2011scikit}, hace particularmente adecuado el uso de Gradient Boosting, cuyo rendimiento en este tipo de datos frecuentemente supera a aproximaciones basadas en redes neuronales profundas. Adicionalmente, su capacidad para proporcionar estimaciones de importancia de características facilita la comprensión de los factores más relevantes en las decisiones de gestión, aspecto crítico para la validación de sistemas autónomos en entornos de producción \cite{singh2018machine}.
