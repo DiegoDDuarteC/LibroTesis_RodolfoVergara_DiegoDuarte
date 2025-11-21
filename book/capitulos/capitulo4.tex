@@ -14,29 +14,39 @@ El sistema implementa una estrategia de tres niveles basada en dos umbrales de f
 La lógica de actuación se define como:
 
 \begin{enumerate}
-    \item \textbf{Sin desfragmentación:} Si la predicción indica que el $\text{BFR}_F$ no superará el umbral mínimo ($\text{BFR}_F$ $< 0.20$)
-    \item \textbf{Desfragmentación de baja frecuencia:} Si el $\text{BFR}_F$ predicho supera el umbral mínimo pero no alcanza el umbral crítico ($0.20 \leq$ $\text{BFR}_F$ $< 0.46$)
-    \item \textbf{Desfragmentación de alta frecuencia:} Si el $\text{BFR}_F$ predicho supera el umbral crítico ($\text{BFR}_F$ $\geq 0.46$)
+    \item \textbf{Sin desfragmentación:} Si la predicción del primer modelo indica que el $\text{BFR}_F$ no superará el umbral mínimo ($\text{BFR}_F$ $< 0.20$)
+    
+    En este escenario, el sistema determina que la red mantendrá un estado saludable con fragmentación insignificante durante el horizonte predicho. Dado que por debajo de este umbral los bloqueos son mínimos o nulos, no se justifica el costo operacional de ejecutar una desfragmentación. El sistema suprime cualquier intervención de reordenamiento y programa la siguiente consulta al modelo predictivo para 1,500 unidades de tiempo después. Esta decisión maximiza la eficiencia operacional al evitar reconfiguraciones innecesarias cuando los recursos espectrales se encuentran adecuadamente distribuidos.
+    
+    \item \textbf{Desfragmentación de baja frecuencia:} Si el primer modelo predice que se superará el umbral mínimo ($\text{BFR}_F$ $\geq 0.20$), pero el segundo modelo indica que no se alcanzará el umbral crítico ($0.20 \leq$ $\text{BFR}_F$ $< 0.46$)
+    
+    Esta condición indica que la red entrará en un rango donde comenzarán a aparecer bloqueos debido a fragmentación moderada, aunque sin alcanzar niveles críticos. La estrategia preventiva consiste en ejecutar inmediatamente un proceso de desfragmentación para reorganizar el espectro y minimizar los bloqueos emergentes antes de que la situación se agrave. Tras esta intervención, el sistema establece un intervalo de monitoreo de 1,500 unidades de tiempo antes de realizar la siguiente consulta predictiva. Este intervalo relativamente largo es apropiado porque en este rango de fragmentación la red aún dispone de recursos razonables y la degradación evoluciona de manera gradual, permitiendo espaciar las intervenciones sin comprometer significativamente el desempeño.
+    
+    \item \textbf{Desfragmentación de alta frecuencia:} Si ambos modelos coinciden en que el $\text{BFR}_F$ predicho superará el umbral crítico ($\text{BFR}_F$ $\geq 0.46$)
+    
+    En este caso crítico, el sistema anticipa que la red alcanzará niveles de fragmentación donde la cantidad de bloqueos se incrementa considerablemente. La escasez severa de bloques espectrales contiguos compromete significativamente la capacidad de la red para aceptar nuevas conexiones. La respuesta consiste en ejecutar inmediatamente una desfragmentación reactiva para mitigar el impacto de esta fragmentación crítica anticipada. Sin embargo, dada la severidad de la situación y la velocidad con que evoluciona la fragmentación en estados de alta congestión, el sistema reduce el intervalo de monitoreo a 800 unidades de tiempo. Este intervalo más corto permite al sistema mantenerse vigilante y responder ágilmente mediante intervenciones frecuentes, asegurando que la fragmentación crítica se gestione de manera intensiva para contener el aumento de bloqueos durante períodos de alta demanda.
 \end{enumerate}
 
-Esta aproximación permite actuar de manera preventiva antes de que la red alcance estados críticos \cite{comellas2018periodic}, optimizando el balance entre los costos operacionales de la desfragmentación y el mantenimiento de niveles aceptables de fragmentación.
+Esta aproximación permite actuar de manera preventiva antes de que la red alcance estados críticos \cite{comellas2018periodic}, optimizando el balance entre los costos operacionales de la desfragmentación y el mantenimiento de niveles aceptables de fragmentación. La estrategia de tres niveles con intervalos adaptativos (sin intervención cuando $\text{BFR}_F < 0.20$, intervalo de 1,500 unidades cuando $0.20 \leq \text{BFR}_F < 0.46$, e intervalo de 800 unidades cuando $\text{BFR}_F \geq 0.46$) constituye el mecanismo fundamental mediante el cual el sistema traduce las predicciones de los modelos de Machine Learning en acciones concretas de gestión de red. Esta arquitectura dual de predictores maximiza la eficiencia al intensificar intervenciones solo cuando es verdaderamente necesario y suprimiéndolas cuando la red opera en condiciones saludables.
 
 \section{Características Utilizadas}
 
-En el contexto de \textit{Machine Learning}, las características son los parámetros de entrada que alimentan el modelo predictivo. Para este trabajo se seleccionaron métricas relacionadas con la fragmentación, utilización de recursos y comportamiento específico de redes MC-EON \cite{quagliotti2017spectrum}:
+En el contexto de \textit{Machine Learning}, las características son los parámetros de entrada que alimentan el modelo predictivo. Para este trabajo se seleccionaron métricas relacionadas con la fragmentación, utilización de recursos y comportamiento específico de redes MC-EON \cite{quagliotti2017spectrum}.
+
+\textbf{Nota:} Todas las métricas descritas a continuación se capturan en el instante temporal $t$ de la simulación.
 
 \begin{itemize}
     \item \textbf{Tiempo de Simulación ($t$)}: Instante temporal en el cual se captura el estado de la red. Permite identificar patrones temporales y correlaciones con las fases operativas del sistema.
 
-    \item \textbf{Bloqueos en Tiempo $t$ ($B_t$)}: Número de demandas bloqueadas en el instante actual de la simulación. Esta métrica refleja la incapacidad de la red para satisfacer solicitudes de conexión debido a insuficiencia de recursos espectrales disponibles.
+    \item \textbf{Bloqueos ($B_t$)}: Número de demandas bloqueadas en el instante actual de la simulación. Esta métrica refleja la incapacidad de la red para satisfacer solicitudes de conexión debido a insuficiencia de recursos espectrales disponibles.
 
-    \item \textbf{Demandas Activas en Tiempo $t$ ($D_{active}$)}: Cantidad de conexiones activas establecidas en la red en el instante $t$. Indica el nivel de ocupación de recursos y se utiliza como factor espacial en la métrica ASFR3D.
+    \item \textbf{Demandas Activas ($D_{active}$)}: Cantidad de conexiones activas establecidas en la red. Indica el nivel de ocupación de recursos y se utiliza como factor espacial en la métrica ASFR3D.
 
-    \item \textbf{Tasa de Bloqueo Instantánea ($TBI_t$)}: Ratio entre demandas bloqueadas y demandas procesadas en el instante $t$:
+    \item \textbf{Tasa de Bloqueo Instantánea ($TBI_t$)}: Ratio entre demandas bloqueadas y demandas procesadas:
     \begin{equation}
         TBI_t = \frac{B_t}{D_{processed,t}}
     \end{equation}
-    donde $D_{processed,t}$ es el número total de demandas procesadas (aceptadas y bloqueadas) hasta el instante $t$. Esta métrica proporciona una medida instantánea del rendimiento de la red.
+    donde $D_{processed,t}$ es el número total de demandas procesadas (aceptadas y bloqueadas) en el instante actual. Esta métrica proporciona una medida instantánea del rendimiento de la red.
 
     \item \textbf{Bandwidth Fragmentation Ratio (BFR)}: Representa el índice de fragmentación de los recursos de la red \cite{zhang2013bandwidth}. El BFR de un core en un enlace se define como:
     \begin{equation}
