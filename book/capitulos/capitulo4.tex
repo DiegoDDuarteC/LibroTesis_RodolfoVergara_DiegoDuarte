@@ -1,22 +1,22 @@
 \chapter{Método Propuesto}
 
-Este trabajo propone un sistema de desfragmentación proactiva para redes MC-EON mediante el uso de técnicas de \textit{Machine Learning} \cite{mitchell1997machine}. El sistema predice el índice de fragmentación futuro (\textit{Bandwidth Fragmentation Ratio} o BFR) que experimentará la red y, en función de estos valores predichos, determina automáticamente cuándo y con qué frecuencia ejecutar procesos de desfragmentación.
+Este trabajo propone un sistema de desfragmentación proactiva para redes MC-EON mediante el uso de técnicas de \textit{Machine Learning} \cite{mitchell1997machine}. El sistema predice el índice de fragmentación futuro ($\text{BFR}_F$) que experimentará la red y, en función de estos valores predichos, determina automáticamente cuándo y con qué frecuencia ejecutar procesos de desfragmentación.
 
 \section{Estrategia de Desfragmentación Adaptativa}
 
 El sistema implementa una estrategia de tres niveles basada en dos umbrales de fragmentación \cite{zhang2014dynamic}:
 
 \begin{itemize}
-    \item \textbf{Umbral mínimo (BFR = 0.20):} Indica el inicio de fragmentación apreciable
-    \item \textbf{Umbral crítico (BFR = 0.46):} Señala estados de alta fragmentación que incrementan significativamente la probabilidad de bloqueo
+    \item \textbf{Umbral mínimo ($\text{BFR}_F$ = $\text{BFR}_{F_{\text{MIN}}}$):} Indica el inicio de fragmentación apreciable
+    \item \textbf{Umbral crítico ($\text{BFR}_F$ = $\text{BFR}_{F_{\text{MAX}}}$):} Señala estados de alta fragmentación que incrementan significativamente la probabilidad de bloqueo
 \end{itemize}
 
 La lógica de actuación se define como:
 
 \begin{enumerate}
-    \item \textbf{Sin desfragmentación:} Si la predicción indica que el BFR futuro no superará el umbral mínimo (BFR $< 0.20$)
-    \item \textbf{Desfragmentación de baja frecuencia:} Si el BFR predicho supera el umbral mínimo pero no alcanza el umbral crítico ($0.20 \leq$ BFR $< 0.46$)
-    \item \textbf{Desfragmentación de alta frecuencia:} Si el BFR predicho supera el umbral crítico (BFR $\geq 0.46$)
+    \item \textbf{Sin desfragmentación:} Si la predicción indica que el $\text{BFR}_F$ no superará el umbral mínimo ($\text{BFR}_F$ $< 0.20$)
+    \item \textbf{Desfragmentación de baja frecuencia:} Si el $\text{BFR}_F$ predicho supera el umbral mínimo pero no alcanza el umbral crítico ($0.20 \leq$ $\text{BFR}_F$ $< 0.46$)
+    \item \textbf{Desfragmentación de alta frecuencia:} Si el $\text{BFR}_F$ predicho supera el umbral crítico ($\text{BFR}_F$ $\geq 0.46$)
 \end{enumerate}
 
 Esta aproximación permite actuar de manera preventiva antes de que la red alcance estados críticos \cite{comellas2018periodic}, optimizando el balance entre los costos operacionales de la desfragmentación y el mantenimiento de niveles aceptables de fragmentación.
@@ -26,6 +26,18 @@ Esta aproximación permite actuar de manera preventiva antes de que la red alcan
 En el contexto de \textit{Machine Learning}, las características son los parámetros de entrada que alimentan el modelo predictivo. Para este trabajo se seleccionaron métricas relacionadas con la fragmentación, utilización de recursos y comportamiento específico de redes MC-EON \cite{quagliotti2017spectrum}:
 
 \begin{itemize}
+    \item \textbf{Tiempo de Simulación ($t$)}: Instante temporal en el cual se captura el estado de la red. Permite identificar patrones temporales y correlaciones con las fases operativas del sistema.
+
+    \item \textbf{Bloqueos en Tiempo $t$ ($B_t$)}: Número de demandas bloqueadas en el instante actual de la simulación. Esta métrica refleja la incapacidad de la red para satisfacer solicitudes de conexión debido a insuficiencia de recursos espectrales disponibles.
+
+    \item \textbf{Demandas Activas en Tiempo $t$ ($D_{active}$)}: Cantidad de conexiones activas establecidas en la red en el instante $t$. Indica el nivel de ocupación de recursos y se utiliza como factor espacial en la métrica ASFR3D.
+
+    \item \textbf{Tasa de Bloqueo Instantánea ($TBI_t$)}: Ratio entre demandas bloqueadas y demandas procesadas en el instante $t$:
+    \begin{equation}
+        TBI_t = \frac{B_t}{D_{processed,t}}
+    \end{equation}
+    donde $D_{processed,t}$ es el número total de demandas procesadas (aceptadas y bloqueadas) hasta el instante $t$. Esta métrica proporciona una medida instantánea del rendimiento de la red.
+
     \item \textbf{Bandwidth Fragmentation Ratio (BFR)}: Representa el índice de fragmentación de los recursos de la red \cite{zhang2013bandwidth}. El BFR de un core en un enlace se define como:
     \begin{equation}
         BFR_{core} = 1 - \frac{MaxBlock()}{S^{free}}
@@ -94,7 +106,7 @@ En el contexto de \textit{Machine Learning}, las características son los parám
 
 \subsection{Simulador y Topología}
 
-Se utilizó un simulador de redes MC-EON \cite{davalos2019spectrum} para generar el conjunto de datos de entrenamiento. La topología empleada fue USNET, representativa de redes ópticas de producción. Se generaron 400,000 instancias de tráfico, de las cuales 399,000 fueron utilizables para el análisis y entrenamiento tras eliminar valores incompletos.
+Se utilizó un simulador de redes MC-EON \cite{davalos2019spectrum} para generar el conjunto de datos de entrenamiento. La topología empleada fue USNET, representativa de redes ópticas de producción.
 
 \subsection{Modelo de Carga Variable}
 
@@ -202,11 +214,11 @@ Para el escalamiento de características se empleó \textbf{RobustScaler}, que u
 
 El sistema implementa dos modelos de clasificación independientes, cada uno entrenado para detectar cuándo el BFR futuro superará su umbral correspondiente:
 
-\subsection{Modelo para Umbral Mínimo (BFR = 0.20)}
+\subsection{Modelo para Umbral Mínimo ($\text{BFR}_F$ = 0.20)}
 
 Este modelo predice si la red superará el estado de fragmentación inicial, determinando si es necesario activar la desfragmentación. Opera con un umbral de decisión optimizado en 0.55, balanceando adecuadamente precisión y cobertura.
 
-\subsection{Modelo para Umbral Crítico (BFR = 0.46)}
+\subsection{Modelo para Umbral Crítico ($\text{BFR}_F$ = 0.46)}
 
 Este modelo identifica situaciones críticas que requieren desfragmentación intensiva. Su activación indica que la red alcanzará niveles de fragmentación que incrementan significativamente la probabilidad de bloqueo. Utiliza un umbral de decisión de 0.70 para priorizar precisión y minimizar falsas alarmas.
 
@@ -337,13 +349,13 @@ Previo al entrenamiento se realizó un análisis exhaustivo de la predictibilida
 
 Estos indicadores confirman que el horizonte de 1000 demandas presenta estabilidad temporal suficiente para entrenar modelos efectivos de Machine Learning \cite{aibin2018traffic}.
 
-\subsection{Resultados del Modelo de Umbral Crítico (BFR = 0.46)}
+\subsection{Resultados del Modelo de Umbral Crítico ($\text{BFR}_F$ = 0.46)}
 
 El modelo para detectar situaciones críticas se evaluó sobre 59,850 muestras de prueba, de las cuales 19,270 correspondían a casos críticos (32.2\%). La Tabla \ref{tab:resultados_046} presenta las métricas finales obtenidas.
 
 \begin{table}[htbp]
 \centering
-\caption{Resultados del modelo Gradient Boosting para umbral crítico (BFR = 0.46)}
+\caption{Resultados del modelo Gradient Boosting para umbral crítico ($\text{BFR}_F$ = 0.46)}
 \label{tab:resultados_046}
 \begin{tabular}{lcc}
 \hline
@@ -366,13 +378,13 @@ El modelo alcanzó un rendimiento excelente, superando ampliamente los criterios
 
 La precisión superior al 95\% minimiza significativamente las falsas alarmas, reduciendo desfragmentaciones innecesarias y consumo computacional injustificado. El recall del 84.9\% asegura que la mayoría de situaciones críticas serán detectadas con 1000 demandas de anticipación, permitiendo la activación proactiva de mecanismos de desfragmentación.
 
-\subsection{Resultados del Modelo de Umbral Mínimo (BFR = 0.20)}
+\subsection{Resultados del Modelo de Umbral Mínimo ($\text{BFR}_F$ = 0.20)}
 
 El modelo para detectar el umbral mínimo presentó un desbalance de clases pronunciado en el conjunto de prueba: 1,731 casos bajo el umbral (2.9\%) y 58,119 casos sobre el umbral (97.1\%). Este desbalance refleja que la red opera mayormente en estados de fragmentación apreciable. La Tabla \ref{tab:resultados_020} presenta las métricas obtenidas.
 
 \begin{table}[htbp]
 \centering
-\caption{Resultados del modelo Gradient Boosting para umbral mínimo (BFR = 0.20)}
+\caption{Resultados del modelo Gradient Boosting para umbral mínimo ($\text{BFR}_F$ = 0.20)}
 \label{tab:resultados_020}
 \begin{tabular}{lcc}
 \hline

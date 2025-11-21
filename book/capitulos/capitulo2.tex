@@ -21,38 +21,13 @@ Este fenómeno ocasiona una interferencia significativa en los circuitos activos
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/7_NUCLEOS.png}
-    \caption{Ejemplo de Fibra Multinúcleo (MCF) con 7 núcleos}
-    \label{fig:7_NUCLEOS}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/12_NUCLEOS.png}
-    \caption{Ejemplo de Fibra Multinúcleo (MCF) con 12 núcleos}
-    \label{fig:12_NUCLEOS}
-\end{figure}
-
-En la Figura~\ref{fig:7_NUCLEOS}, se presenta una configuración de MCF con 7 núcleos dispuestos en un patrón hexagonal. En esta arquitectura, el núcleo central (núcleo N° 6) se encuentra rodeado por 6 núcleos adyacentes, resultando en una mayor incidencia de diafonía sobre este núcleo.
-En contraste, los núcleos periféricos (núcleos N° 0, 1, 2, 3, 4 y 5) poseen 3 núcleos adyacentes cada uno.
- 
-La Figura~\ref{fig:12_NUCLEOS} exhibe una MCF con 12 núcleos organizados en una disposición anular. En esta configuración, cada núcleo presenta exactamente 2 núcleos adyacentes, lo que deriva en que todos los núcleos experimenten un nivel equivalente de diafonía.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/19_NUCLEOS.png}
-    \caption{Ejemplo de Fibra Multinúcleo (MCF) con 19 núcleos}
-    \label{fig:19_NUCLEOS}
-\end{figure}
-
-Finalmente, la Figura~\ref{fig:19_NUCLEOS} ilustra una MCF con 19 núcleos. En este tipo de fibras, los núcleos pueden presentar hasta 6 núcleos adyacentes por núcleo, generando una mayor incidencia de diafonía.
-
-\begin{figure}[H]
-    \centering
     \includegraphics[width=1\textwidth]{capitulos/img/CORE_PITCH_II.png}
-    \caption{Core Pitch entre dos núcleos adyacentes en un MCF de 7 núcleos}
+    \caption{Ejemplo de Fibra Multinúcleo (MCF) con 7 núcleos}
     \label{fig:CORE_PITCH_II}
 \end{figure}
+
+En la Figura~\ref{fig:CORE_PITCH_II}, se presenta una configuración de MCF con 7 núcleos dispuestos en un patrón hexagonal. En esta arquitectura, el núcleo central (núcleo N° 6) se encuentra rodeado por 6 núcleos adyacentes, resultando en una mayor incidencia de diafonía sobre este núcleo.
+En contraste, los núcleos periféricos (núcleos N° 0, 1, 2, 3, 4 y 5) poseen 3 núcleos adyacentes cada uno.
 
 \section{Diafonía en Redes Ópticas Elásticas Multinúcleo}
 La diafonía constituye un fenómeno indeseado que se manifiesta en las redes de fibra óptica cuando la señal transmitida en una fibra se acopla hacia otra fibra contigua. En el contexto de las redes EON fundamentadas en MCF, la diafonía se define como la interferencia entre conexiones ópticas establecidas en núcleos adyacentes que emplean las mismas ranuras espectrales (FS) en un enlace común \cite{takenaga2011reduction}.
@@ -63,28 +38,11 @@ Consecuentemente, impacta directamente en la capacidad de la red al «inhabilita
 
 En síntesis, esto deriva en una reducción de la cantidad total de FS disponibles para la transmisión de datos, limitando la capacidad operativa de la red. Con menor disponibilidad de FS, se reducen los canales para transmitir datos, lo que puede restringir la capacidad total de transmisión de la infraestructura de red.
 
-En las redes SDM-EON, el XT entre dos núcleos de una MCF depende significativamente de la distancia entre dicho par de núcleos, denominada core pitch ($\Lambda_{i,j}$). A mayor core pitch, menor será el impacto del XT entre estos dos núcleos.
+En las redes SDM-EON, el XT entre dos núcleos de una MCF depende significativamente de la distancia entre dicho par de núcleos, denominada core pitch ($\Lambda_{i,j}$). A mayor core pitch, menor será el impacto del XT entre estos dos núcleos~\ref{fig:7_NUCLEOS}.
 
 No obstante, resulta importante destacar que, a medida que se incrementa el core pitch, la capacidad de la fibra óptica disminuye. Es decir, al aumentar la distancia física entre dos núcleos, se reduce el espacio disponible en la fibra óptica para albergar núcleos adicionales.
 
 Por consiguiente, resulta fundamental establecer un equilibrio entre un core pitch reducido para incrementar la capacidad y uno suficientemente amplio para minimizar los efectos del XT. Este balance posibilita optimizar el desempeño y la eficiencia de la red.
-
-Para demostrar el comportamiento del crosstalk (XT) entre núcleos en fibras multinúcleo, se analiza el ejemplo presentado en la figura~\ref{fig:XT_MCF_II}, la cual ilustra una fibra óptica multinúcleo (MCF) compuesta por tres núcleos organizados en configuración lineal.
-En esta topología, resulta evidente que el núcleo central (núcleo 2) experimenta una interferencia significativa por XT intercore. Este fenómeno se atribuye a que ambos núcleos contiguos (núcleos 1 y 3) mantienen conexiones establecidas en intervalos espectrales similares a aquellos ya ocupados en el núcleo 2.
-A modo de ejemplo, los segmentos espectrales FS1 y FS2 resultan inutilizables en el núcleo 2 debido a la interferencia generada por las asignaciones activas en los núcleos laterales.
-Esta misma situación se replica en los intervalos FS4, FS5 y FS6 del núcleo mencionado. Consecuentemente, en arquitecturas SDM-EON basadas en fibras multinúcleo, resulta imperativo evaluar el impacto del XT intercore durante el proceso de asignación de recursos espectrales, a fin de mitigar degradaciones en la calidad de transmisión.
-
-Es relevante destacar que el crosstalk intercore no afecta exclusivamente a los segmentos espectrales con demandas activas, sino también a aquellos recursos disponibles en núcleos adyacentes. Un análisis detallado de la figura revela que incluso los intervalos espectrales sin conexiones asignadas experimentan interferencia procedente de transmisiones en núcleos contiguos.
-Esto se ejemplifica con los segmentos FS8 y FS9 del núcleo 1, que sufren degradación por el XT generado desde las mismas posiciones espectrales en el núcleo 2. En determinadas circunstancias, esta interferencia puede superar el umbral de crosstalk admisible, imposibilitando la utilización de dichos recursos para el establecimiento de futuras conexiones en arquitecturas multinúcleo.
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/XT_MCF_II.png}
-    \caption{XT en un Fibra MCF de 3 núcleos}
-    \label{fig:XT_MCF_II}
-\end{figure}
-
 
 \subsection{Cálculo de la diafonía}
 
@@ -108,8 +66,6 @@ Donde $N_i$ representa la cantidad de núcleos adyacentes al núcleo $i$, y $L$ 
 
 Con el propósito de garantizar la integridad de la señal transmitida, resulta imperativo que el valor calculado de $XT_i$ no exceda un umbral máximo admisible de diafonía al momento de establecer de forma óptima la trayectoria óptica para una solicitud de conexión entrante. El umbral de diafonía o \textit{Crosstalk Threshold} ($XT_{TH}$) se conceptualiza como el límite superior de XT que una señal propagada a través del sistema puede tolerar sin experimentar una degradación considerable en su calidad o sin provocar la generación de errores en la transmisión de datos.
 
-El valor particular del $XT_{TH}$ puede fluctuar en función de las características de la aplicación y las especificaciones técnicas del sistema implementado. En contextos de aplicaciones que demandan elevadas velocidades de transmisión y capacidades sustanciales, es factible admitir niveles considerablemente reducidos de $XT_{TH}$, en tanto que para aplicaciones de menor criticidad, los valores de $XT_{TH}$ admisibles pueden ser superiores.
-
 
 \subsection{Asignación de espectro con conmutación de núcleo}
 
@@ -126,17 +82,14 @@ Para materializar la conmutación de núcleos, resulta fundamental respetar la r
     \label{fig:CONMUTACION_NUCLEOS_II}
 \end{figure}
 
-En las Figuras~\ref{fig:Asignacion_espectro_SIN_conmutacion_II} y ~\ref{fig:Asignacion_espectro_CON_conmutacion_II} se ilustra la asignación de núcleos y recursos espectrales sin conmutación de núcleos y con conmutación de núcleos, respectivamente. Los elementos gráficos de color naranja denotan FS ocupadas, mientras que los elementos en blanco representan FS disponibles. Con el propósito de ejemplificar el funcionamiento del mecanismo de asignación espectral con conmutación de núcleos, se presentan dos casos representativos documentados en la literatura \cite{lei2019crosstalk}. En ambos escenarios, se considera una demanda $d(2,4,4)$, donde el primer parámetro identifica el nodo de origen, el segundo corresponde al nodo de destino, y el tercero especifica la cantidad de FS requeridas para satisfacer dicha demanda, respectivamente. Es posible identificar y asignar los recursos espectrales necesarios para la demanda a lo largo de la trayectoria conformada por dos enlaces de fibra: $l_0$ (2-5) y $l_1$ (5-4), implementando tres núcleos. 
-
-La Figura ~\ref{fig:Asignacion_espectro_SIN_conmutacion_II} exhibe la asignación de núcleos y espectro sin aplicar conmutación de núcleos para la demanda $d(2,4,4)$. En los enlaces $l_0$ y $l_1$ existen diversos bloques contiguos de FS disponibles. No obstante, debido a la restricción de continuidad espectral \cite{chatterjee2015routing}, únicamente se configura un bloque candidato de FS en el núcleo 2, representado mediante $SC_{2,l_0}^0$, $SC_{2,l_1}^0$. Posteriormente, se verifica el impacto del XT con el objetivo de asegurar que la incorporación de la demanda no supere el umbral $XT_{TH}$. En caso de que el XT exceda $XT_{TH}$, la demanda $d(2,4,4)$ resultará bloqueada, dado que no existen recursos espectrales disponibles a lo largo de la ruta establecida.
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{capitulos/img/Asignación_espectro_SIN_conmutación_II.png}
-    \caption{  Asignación de espectro sin conmutación de núcleos}
-    \label{fig:Asignacion_espectro_SIN_conmutacion_II}
-\end{figure}
+En la Figura~\ref{fig:CONMUTACION_NUCLEOS_II} se ilustra una fibra óptica multicore de tres núcleos (1, 2 y 3), en la
+ que el bloque de FS (BloqueFS1) conmuta del core 1 en el Enlace 1 al core 2 en el Enlace 2,
+ manteniendo la continuidad del espectro asignado. Asimismo, el bloque de FS (BloqueFS2) tambien
+ conmuta, pasando del core 2 en el Enlace 1 al core 3 en el Enlace 2. Por último, el bloque
+ de FS (BloqueFS3) conmuta del core 3 al core 1 entre los enlaces.
+ Este enfoque de conmutación de núcleos permite un uso más eficiente del espectro en redes
+ de fibra óptica multicore, reduciendo notablemente la probabilidad de bloqueo en comparación
+ con los RSA que no implementan conmutación de núcleos. 
 
 
 La Figura~\ref{fig:Asignacion_espectro_CON_conmutacion_II} ilustra la asignación de núcleos y espectro mediante la implementación de conmutación para la demanda $d(2,4,4)$. El mecanismo de conmutación de núcleos posibilita la identificación de bloques de FS que satisfacen la restricción de contigüidad espectral distribuidos en núcleos distintos a través de múltiples enlaces de la trayectoria establecida.

@@ -3,17 +3,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Componentes del modelo matemático de carga}}{41}{}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Fases operativas del sistema basadas en tendencia de carga}}{43}{}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Resultados del modelo Gradient Boosting para umbral crítico (BFR = 0.46)}}{49}{}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Resultados del modelo Gradient Boosting para umbral mínimo (BFR = 0.20)}}{50}{}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Componentes del modelo matemático de carga}}{39}{}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Fases operativas del sistema basadas en tendencia de carga}}{41}{}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Resultados del modelo Gradient Boosting para umbral crítico ($\text {BFR}_F$ = 0.46)}}{47}{}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Resultados del modelo Gradient Boosting para umbral mínimo ($\text {BFR}_F$ = 0.20)}}{48}{}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Flujo de decisiones del algoritmo de desfragmentación adaptativa}}{55}{}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Configuración de escenarios de carga evaluados}}{57}{}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Resultados comparativos - Escenario 1 (Carga Baja)}}{63}{}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Resultados comparativos - Escenario 2 (Carga Media)}}{65}{}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Resultados comparativos - Escenario 3 (Carga Alta)}}{66}{}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Distribución de soluciones en el Frente de Pareto}}{68}{}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces Cobertura de Pareto entre métodos (agregado 3 escenarios)}}{69}{}%
-\contentsline {table}{\numberline {5.8}{\ignorespaces Validación del horizonte de predicción $t+1000$}}{71}{}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Flujo de decisiones del algoritmo de desfragmentación adaptativa}}{53}{}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Configuración de escenarios de carga evaluados}}{55}{}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Resultados comparativos - Escenario 1 (Carga Baja)}}{60}{}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Resultados comparativos - Escenario 2 (Carga Media)}}{62}{}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Resultados comparativos - Escenario 3 (Carga Alta)}}{63}{}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Cobertura de Pareto entre métodos (agregado 3 escenarios)}}{65}{}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Validación del horizonte de predicción $t+1000$}}{67}{}%
 \addvspace {10\p@ }

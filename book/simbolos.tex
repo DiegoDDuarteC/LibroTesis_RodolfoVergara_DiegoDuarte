@@ -36,6 +36,9 @@
 \textit{\(BFR_{link}\)} \>\>\> Relación de Fragmentación de ancho de banda de un enlace.\\
 \textit{\(BFR_{link-i}\)} \>\>\> Relación de Fragmentación de ancho de banda del enlace \textit{i}. \\
 \textit{\(BFR_{red}\)} \>\>\> Relación de Fragmentación de ancho de banda de la red. \\
+\textit{\(BFR_F\)} \>\>\> BFR futuro predicho.\\
+\textit{\(BFR_{F_{MIN}}\)} \>\>\> Umbral mínimo de BFR.\\
+\textit{\(BFR_{F_{MAX}}\)} \>\>\> Umbral crítico de BFR.\\
 \textit{MaxBlock()} \>\>\> Tamaño del mayor bloque de \textit{FS} libres.\\
 \\
 \textit{\(SHF_{link}\)} \>\>\> Entropía de Shannon del enlace.\\
@@ -47,6 +50,9 @@
 \textit{\(MSI_{red}\)} \>\>\> Índice de slot máximo utilizado de la red. \\
 \\
 \textit{\(n_{1}, n_{2}\)} \>\>\> Parámetros de tamaños típicos de demanda (Golden Metric).\\
+\textit{avg} \>\>\> Promedio en cálculo de Golden Metric.\\
+\textit{\(\epsilon\)} \>\>\> Valor pequeño para evitar división por cero.\\
+\textit{a, b} \>\>\> Variables acumulativas en Golden Metric.\\
 \textit{\(F_{spatial}\)} \>\>\> Factor de peso espacial.\\
 \textit{\(D_{active}\)} \>\>\> Número de demandas activas en la red.\\
 \\
@@ -59,16 +65,31 @@
 \textbf{Métricas de desempeño}\\
 \textit{PB} \>\>\> Probabilidad de Bloqueo.\\
 \textit{\(PB_{th}\)} \>\>\> Umbral para disparar el proceso de desfragmentación.\\
+\textit{\(P_{bloqueo}\)} \>\>\> Probabilidad de bloqueo global.\\
 \textit{BL} \>\>\> Cantidad de Bloqueos.\\
+\textit{\(B_t\)} \>\>\> Bloqueos en tiempo \textit{t}.\\
 \textit{RC} \>\>\> Cantidad de Reconfiguraciones.\\
+\textit{\(N_{demandas}\)} \>\>\> Número total de demandas.\\
+\textit{\(N_{desfrag}\)} \>\>\> Número de procesos de desfragmentación.\\
+\textit{\(|C_j|\)} \>\>\> Cantidad de conexiones reconfiguradas en proceso \textit{j}.\\
+\textit{\(\mathbf{1}_{bloqueada}(i)\)} \>\>\> Función indicadora de bloqueo para demanda \textit{i}.\\
 \textit{SFP} \>\>\> Número de soluciones en el Frente Pareto.\\
 \textit{CP} \>\>\> Cobertura Pareto.\\
+\textit{\(TBI_t\)} \>\>\> Tasa de Bloqueo Instantánea en tiempo \textit{t}.\\
+\textit{\(D_{processed,t}\)} \>\>\> Demandas procesadas hasta tiempo \textit{t}.\\
+\\
+\textbf{Parámetros de simulación y tiempo}\\
+\textit{t} \>\>\> Tiempo de simulación.\\
+\textit{\(\widehat{BFR}_{t+1000}\)} \>\>\> BFR predicho a 1000 demandas futuras.\\
 \\
 \textbf{Parámetros de aprendizaje automático}\\
 \textit{M} \>\>\> Número total de iteraciones (Gradient Boosting).\\
 \textit{\(h_{m}(x)\)} \>\>\> m-ésimo aprendiz débil.\\
 \textit{\(\gamma_{m}\)} \>\>\> Coeficiente de peso asociado.\\
 \textit{\(\nu\)} \>\>\> Tasa de aprendizaje.\\
+\textit{\(p_i\)} \>\>\> Probabilidad predicha para la muestra \textit{i}.\\
+\textit{\(X_{scaled}\)} \>\>\> Características escaladas.\\
+\textit{IQR} \>\>\> Rango intercuartílico.\\
 \\
 \textbf{Métodos comparados}\\
 \textit{MP} \>\>\> Método Propuesto.\\

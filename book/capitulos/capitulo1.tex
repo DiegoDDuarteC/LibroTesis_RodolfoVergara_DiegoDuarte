@@ -15,10 +15,6 @@ Las fibras multinúcleo contienen múltiples núcleos dentro de una única fibra
 
 Los métodos de ruteo y asignación del espectro y núcleo tienen gran impacto sobre el uso eficiente de los recursos de la red. Los algoritmos RSCA (\textit{Routing, Spectrum and Core Assignment}) \cite{lei2019crosstalk} se encargan de resolver dicho problema encontrando el camino más apropiado desde el origen hasta el destino, el núcleo a utilizar y las ranuras que utilizará el requerimiento dentro del espectro de los enlaces.
 
-Se han propuesto varios algoritmos RSCA con el fin de conseguir la mejor utilización de recursos \cite{chatterjee2015routing}, estos algoritmos están sujetos a tres principios fundamentales: la restricción de consecutividad del ancho de banda, la restricción de la continuidad del ancho de banda y la restricción de continuidad de núcleo.
-
-La restricción de continuidad espectral establece que se deben utilizar los mismos FS en todo el camino y la restricción de contigüidad dispone que los FS seleccionados para satisfacer la demanda deben ser contiguos. La restricción de continuidad de núcleo especifica que se debe mantener el mismo núcleo a lo largo de toda la ruta establecida \cite{lei2019crosstalk}.
-
 Adicionalmente, en las redes SDM-EON surge un nuevo fenómeno denominado \textit{Crosstalk} o diafonía entre núcleos \textit{inter-core crosstalk, XT}, que ocurre cuando las señales ópticas de núcleos adyacentes interfieren entre sí, degradando la calidad de la transmisión \cite{takenaga2011reduction}. Este fenómeno debe ser considerado como una restricción adicional en los algoritmos RSCA para garantizar la calidad del servicio.
 
 Debido a las restricciones explicadas y a que las asignaciones de recursos son realizadas de manera dinámica, surge el fenómeno denominado "Fragmentación del Ancho de Banda y del Espacio", este problema es una de las principales dificultades de las redes SDM-EON \cite{xiong2019machine} ya que tiene un impacto directo en el uso eficiente del espectro y de los núcleos disponibles.
@@ -39,6 +35,12 @@ En este trabajo nos centraremos en el tercer subproblema, ¿Cuándo reconfigurar
 
 En los siguientes capítulos presentamos modelos de predicción de índice de fragmentación, entrenados para detectar si supera unos umbrales predefinidos, implementados con técnicas de aprendizaje automático o \textit{Machine Learning} \cite{mitchell1997machine}, los cuales se utilizan como estrategia de disparo del proceso de desfragmentación pero en este caso redes SDM-EON Multinúcleo, proponiendo de esta manera una solución al sub problema planteado anteriormente.
 
+En este contexto, la Inteligencia Artificial (IA) y específicamente el Aprendizaje Automático o \textit{Machine Learning} (ML) \cite{mitchell1997machine}, emergen como herramientas fundamentales para abordar estos desafíos de optimización en redes de telecomunicaciones. El ML se fundamenta en el desarrollo de algoritmos capaces de identificar patrones complejos en conjuntos de datos, mejorando su desempeño de manera iterativa mediante la experiencia acumulada, sin necesidad de instrucciones programáticas explícitas para cada escenario específico.
+
+Dentro del paradigma de aprendizaje supervisado, el algoritmo Gradient Boosting \cite{friedman2001greedy} ha demostrado ser particularmente efectivo para problemas de clasificación y predicción con datos tabulares. Este método construye secuencialmente múltiples modelos predictivos débiles mediante principios de optimización matemática, corrigiendo iterativamente los errores de sus predecesores. Su capacidad para modelar relaciones no lineales complejas, manejar variables de diferentes escalas, y proporcionar estimaciones de importancia de características lo hacen especialmente adecuado para el análisis de métricas operacionales en redes ópticas.
+
+La aplicación de estas técnicas de ML al problema de la desfragmentación en redes SDM-EON permite desarrollar sistemas predictivos que anticipen el estado futuro de fragmentación de la red, considerando múltiples factores como métricas de fragmentación espectral y espacial, utilización de recursos en los núcleos, y patrones temporales de tráfico. Esta capacidad de anticipación posibilita la implementación de estrategias de desfragmentación adaptativas que optimicen el balance entre la reducción de bloqueos y el costo operacional de las reconfiguraciones.
+
 \section{Objetivos del trabajo}
 \subsection{Objetivo General}
 Diseñar modelos de predicción para el proceso de desfragmentación en redes ópticas elásticas multicore, utilizando técnicas de aprendizaje automático, con el propósito de maximizar la eficiencia en el uso de los recursos de la red mediante la reducción de reconfiguraciones innecesarias y la minimización de la cantidad de bloqueos.
@@ -55,6 +57,26 @@ Diseñar modelos de predicción para el proceso de desfragmentación en redes ó
     
     \item Evaluar el desempeño del modelo propuesto mediante simulaciones, comparando sus resultados con técnicas de desfragmentación existentes en términos de probabilidad de bloqueo, número de reconfiguraciones y eficiencia en el uso de recursos espectrales.
 \end{itemize}
+
+
+
+\section{Análisis Bibliográfico}
+
+El problema de la fragmentación en redes ópticas elásticas ha sido ampliamente estudiado en la literatura científica, con diversos enfoques propuestos para su gestión. En el trabajo presentado por Enciso y Silva \cite{enciso2021estrategia}, se aborda específicamente el problema del momento de disparo del proceso de desfragmentación en redes EON utilizando técnicas de aprendizaje automático con redes neuronales artificiales. Su enfoque se centra en la predicción de probabilidades de bloqueo para determinar cuándo ejecutar el proceso de desfragmentación de manera proactiva.
+
+Diversos autores han propuesto diferentes estrategias para el disparo de procesos de desfragmentación. Takita y colaboradores \cite{takita2016wavelength} proponen un mecanismo basado en el valor del \textit{High-slot Mark} (HM), que indica el número máximo de una ranura ocupada en la red. El proceso se dispara cuando el HM supera un umbral predefinido. Por su parte, Fávero y colegas \cite{favero2015new} combinan enfoques reactivos y proactivos, considerando tanto los bloqueos como las conexiones liberadas para determinar el momento de desfragmentación.
+
+Zhang y colaboradores \cite{zhang2013bandwidth} proponen un disparo basado en la cantidad de conexiones liberadas, ejecutando la desfragmentación cuando este número alcanza un umbral específico. En otro trabajo, Zhang \cite{zhang2012priority} utiliza la métrica de \textit{Spectrum Compactness} (SC) como criterio de disparo, comparando su valor actual con un umbral predefinido para determinar la necesidad de desfragmentación.
+
+El enfoque de desfragmentación periódica, ampliamente utilizado en la literatura, ha sido analizado por Comellas, Vicario y Junyent \cite{comellas2018periodic}, quienes evaluaron los efectos de diferentes parámetros de desfragmentación en el rendimiento de la red bajo tráfico dinámico. Sus resultados indican que períodos de desfragmentación muy pequeños pueden generar complejidad excesiva, mientras que períodos muy grandes producen efectos insignificantes.
+
+En el contexto del aprendizaje automático aplicado a redes ópticas, el algoritmo Gradient Boosting \cite{friedman2001greedy} ha demostrado ser particularmente efectivo para problemas de clasificación y predicción. Friedman introduce este método como una técnica que construye secuencialmente modelos predictivos mediante la optimización de funciones de pérdida, corrigiendo iterativamente los errores de modelos anteriores. La implementación práctica de este algoritmo ha sido facilitada por herramientas como Scikit-learn \cite{pedregosa2011scikit}, una biblioteca de código abierto para Python que proporciona implementaciones eficientes de algoritmos de aprendizaje automático.
+
+El estado del arte en desfragmentación de redes ópticas elásticas muestra una tendencia hacia enfoques adaptativos e inteligentes. Chatterjee, Ba y Oki \cite{chatterjee2017fragmentation} realizaron un análisis exhaustivo de los problemas de fragmentación y los enfoques de gestión, clasificándolos en estrategias sin desfragmentación (mediante algoritmos sensibles a la fragmentación), desfragmentación reactiva (ante bloqueos) y desfragmentación proactiva (preventiva).
+
+En el contexto de redes SDM-EON, Trindade y da Fonseca \cite{trindade2020machine} proponen un enfoque de aprendizaje no supervisado para la desfragmentación, identificando grupos de \textit{lightpaths} que pueden ser reordenados eficientemente entre núcleos. Xiong y colaboradores \cite{xiong2019machine} utilizan técnicas de ML para mitigar simultáneamente la fragmentación y el \textit{crosstalk} en redes con multiplexación por división de espacio.
+
+El presente trabajo se posiciona en la intersección de estas líneas de investigación, extendiendo los enfoques de disparo inteligente de desfragmentación mediante ML al contexto más complejo de las redes SDM-EON multinúcleo, donde la dimensión espacial adicional introduce nuevos desafíos en la gestión de recursos y la prevención de la fragmentación tanto espectral como espacial.
 
 \section{Organización del libro}
 El presente trabajo se encuentra organizado de la siguiente manera:

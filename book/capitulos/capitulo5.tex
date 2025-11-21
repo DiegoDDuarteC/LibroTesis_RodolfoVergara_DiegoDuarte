@@ -240,30 +240,6 @@ donde $N_{desfrag}$ representa el número de procesos de desfragmentación ejecu
     \item Overhead de señalización en el plano de control
 \end{itemize}
 
-\subsection{Métricas de Evaluación Multiobjetivo}
-
-Dado que BL y RC representan objetivos conflictivos (mayor frecuencia de desfragmentación reduce BL pero incrementa RC), se emplean métricas específicas para optimización multiobjetivo:
-
-\subsubsection{Soluciones en el Frente de Pareto (SFP)}
-
-Una solución $s_1$ domina a otra solución $s_2$ (denotado $s_1 \prec s_2$) si y solo si:
-
-\begin{equation}
-BL(s_1) \leq BL(s_2) \land RC(s_1) \leq RC(s_2) \land (BL(s_1) < BL(s_2) \lor RC(s_1) < RC(s_2))
-\end{equation}
-
-El conjunto de soluciones no dominadas constituye el Frente de Pareto. La métrica SFP cuantifica el número de configuraciones de cada método que pertenecen a este frente óptimo.
-
-\subsubsection{Cobertura de Pareto (CP)}
-
-Para comparar pares de métodos $A$ y $B$, se define la métrica de cobertura:
-
-\begin{equation}
-C(A,B) = \frac{|\{s_B \in S_B : \exists s_A \in S_A, s_A \prec s_B\}|}{|S_B|}
-\end{equation}
-
-donde $S_A$ y $S_B$ son los conjuntos de soluciones de los métodos $A$ y $B$ respectivamente. Esta métrica indica qué proporción de las soluciones del método $B$ son dominadas por al menos una solución del método $A$.
-
 \section{Resultados Experimentales}
 
 \subsection{Escenario 1: Carga Baja (800 - 3,000 Erlangs)}
@@ -279,10 +255,10 @@ Este escenario representa condiciones operacionales favorables donde la red disp
 \textbf{Métrica} & \textbf{SD} & \textbf{MR1} & \textbf{MR2} & \textbf{MP} \\
  & \textbf{(Sin Desfrag.)} & \textbf{(Periódico)} & \textbf{(Umbral)} & \textbf{(Doble Umbral)} \\
 \hline
-\textbf{Demandas totales} & 99,950 & 100,090 &  99,720 & 99,601 \\
-\textbf{Bloqueos (BL)} & 857 & 730 & 685 & 717 \\
-\textbf{Prob. bloqueo} & 0.857\% & 0.729\% & 0.687\% & 0.720\% \\
-\textbf{Desfragmentaciones} & 0 & 19 &  13 & 11 \\
+\textbf{Demandas totales} & 99,950 & 100,090 &  99,720 & \textbf{99,601} \\
+\textbf{Bloqueos (BL)} & 857 & 730 & 685 & \textbf{717} \\
+\textbf{Prob. bloqueo} & 0.857\% & 0.729\% & 0.687\% & \textbf{0.720\%} \\
+\textbf{Desfragmentaciones} & 0 & 19 &  13 & \textbf{11} \\
 \hline
 \end{tabular}
 \end{table}
@@ -314,10 +290,10 @@ Este escenario intermedio representa condiciones operacionales típicas donde la
 \textbf{Métrica} & \textbf{SD} & \textbf{MR1} & \textbf{MR2} & \textbf{MP} \\
  & \textbf{(Sin Desfrag.)} & \textbf{(Periódico)} & \textbf{(Umbral)} & \textbf{(Doble Umbral)} \\
 \hline
-\textbf{Demandas totales} & 99,590 & 100,184 & 100,023 & 100,066\\
-\textbf{Bloqueos (BL)} & 1,693 & 1,561 & 1,473 & 1,397 \\
-\textbf{Prob. bloqueo} & 1.700\% & 1.558\% & 1.473\% & 1.397\% \\
-\textbf{Desfragmentaciones} & 0 & 19 & 16 & 15 \\
+\textbf{Demandas totales} & 99,590 & 100,184 & 100,023 & \textbf{100,066}\\
+\textbf{Bloqueos (BL)} & 1,693 & 1,561 & 1,473 & \textbf{1,397} \\
+\textbf{Prob. bloqueo} & 1.700\% & 1.558\% & 1.473\% & \textbf{1.397\%} \\
+\textbf{Desfragmentaciones} & 0 & 19 & 16 & \textbf{15} \\
 \hline
 \end{tabular}
 \end{table}
@@ -363,10 +339,10 @@ Este escenario crítico evalúa el comportamiento bajo condiciones de alta conge
 \textbf{Métrica} & \textbf{SD} & \textbf{MR1} & \textbf{MR2} & \textbf{MP} \\
  & \textbf{(Sin Desfrag.)} & \textbf{(Periódico)} & \textbf{(Umbral)} & \textbf{(Doble Umbral)} \\
 \hline
-\textbf{Demandas totales} & 99,752 & 99,896 & 100,174 &  100,066 \\
-\textbf{Bloqueos (BL)} & 3,576 & 3,262 & 2,986 & 2,873\\
-\textbf{Prob. bloqueo} & 3.585\% & 3.265\% & 2.981\% & 2.871\% \\
-\textbf{Desfragmentaciones} & 0 & 19 & 18 & 18 \\
+\textbf{Demandas totales} & 99,752 & 99,896 & 100,174 &  \textbf{100,066} \\
+\textbf{Bloqueos (BL)} & 3,576 & 3,262 & 2,986 & \textbf{2,873}\\
+\textbf{Prob. bloqueo} & 3.585\% & 3.265\% & 2.981\% & \textbf{2.871\%} \\
+\textbf{Desfragmentaciones} & 0 & 19 & 18 & \textbf{18} \\
 \hline
 \end{tabular}
 \end{table}
@@ -397,40 +373,6 @@ El comportamiento del método MP en este escenario valida su capacidad de adapta
 
 
 \section{Análisis Comparativo Multiobjetivo}
-
-\subsection{Soluciones en el Frente de Pareto}
-
-Para cada escenario de carga, se identificaron las soluciones no dominadas considerando simultáneamente minimización de bloqueos (BL) y reconfiguraciones (RC). La Tabla~\ref{tab:frente_pareto} presenta la distribución de soluciones en el Frente de Pareto por método.
-
-\begin{table}[htbp]
-\centering
-\caption{Distribución de soluciones en el Frente de Pareto}
-\label{tab:frente_pareto}
-\begin{tabular}{lccccc}
-\hline
-\textbf{Escenario} & \textbf{SD} & \textbf{MR1} & \textbf{MR2} & \textbf{MP} & \textbf{Total} \\
- & \textbf{(Sin Desfrag.)} & \textbf{(Periódico)} & \textbf{(Umbral)} & \textbf{(Doble Umbral)} & \\
-\hline
-Carga Baja & 1 & 2 & 2 & \textbf{3} & 8 \\
-Carga Media & 0 & 1 & 2 & \textbf{3} & 6 \\
-Carga Alta & 0 & 2 & 3 & \textbf{3} & 8 \\
-\hline
-\textbf{Total General} & 1 (4.5\%) & 5 (22.7\%) & 7 (31.8\%) & \textbf{9 (40.9\%)} & 22 \\
-\hline
-\end{tabular}
-\end{table}
-
-\textbf{Interpretación de resultados:}
-
-El método propuesto (MP) contribuye con 9 soluciones no dominadas de las 22 identificadas (40.9\%), superando significativamente a todos los demás métodos. Esta predominancia se mantiene consistente en los tres escenarios de carga, evidenciando:
-
-\begin{itemize}
-    \item \textbf{Robustez}: El método MP genera soluciones Pareto-óptimas independientemente del nivel de congestión
-    \item \textbf{Diversidad}: Las configuraciones adaptativas (preventiva/reactiva) exploran eficientemente el espacio de soluciones
-    \item \textbf{Superioridad multiobjetivo}: El balance bloqueos-reconfiguraciones supera a estrategias sin desfragmentación, estáticas (periódica) y puramente reactivas (umbral)
-\end{itemize}
-
-Es notable que SD solo contribuye con 1 solución Pareto-óptima (4.5\%), correspondiente al escenario de carga baja donde su nula cantidad de reconfiguraciones compensa parcialmente su mayor tasa de bloqueos. En escenarios de carga media y alta, SD es completamente dominada por los métodos con desfragmentación activa.
 
 \subsection{Cobertura de Pareto}
 

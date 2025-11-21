@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.24)  20 NOV 2025 17:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.24)  20 NOV 2025 22:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -851,9 +851,9 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 48.
 [2]
 
-LaTeX Info: Redefining \sptext on input line 74.
-LaTeX Info: Redefining \. on input line 74.
-LaTeX Info: Redefining \% on input line 74.
+LaTeX Info: Redefining \sptext on input line 72.
+LaTeX Info: Redefining \. on input line 72.
+LaTeX Info: Redefining \% on input line 72.
 [3])
 \tf@toc=\write5
 \openout5 = `tesis.toc'.
@@ -879,6 +879,11 @@ LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
+
+Overfull \hbox (0.85324pt too wide) in paragraph at lines 9--9
+ [][] []\T1/cmr/m/n/12 Resultados del mo-de-lo Gra-dient Boos-ting pa-ra um-bral m�-ni-mo ($[][]$ 
+ []
+
 )
 \tf@lot=\write7
 \openout7 = `tesis.lot'.
@@ -901,11 +906,15 @@ LaTeX Info: Redefining \% on input line 1.
 
 LaTeX Info: Redefining \. on input line 56.
 LaTeX Info: Redefining \% on input line 56.
-[8])
+[8]
+
+LaTeX Info: Redefining \. on input line 83.
+LaTeX Info: Redefining \% on input line 83.
+[9])
 
 LaTeX Info: Redefining \. on input line 64.
 LaTeX Info: Redefining \% on input line 64.
-[9]
+[10]
 \openout2 = `capitulos/capitulo1.aux'.
 
  (./capitulos/capitulo1.tex
@@ -930,28 +939,36 @@ LaTeX Info: Redefining \. on input line 32.
 LaTeX Info: Redefining \% on input line 32.
 [3]
 
-LaTeX Info: Redefining \. on input line 42.
-LaTeX Info: Redefining \% on input line 42.
+LaTeX Info: Redefining \. on input line 41.
+LaTeX Info: Redefining \% on input line 41.
 [4]
 
-LaTeX Info: Redefining \. on input line 57.
-LaTeX Info: Redefining \% on input line 57.
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
 [5]
 
-LaTeX Info: Redefining \. on input line 70.
-LaTeX Info: Redefining \% on input line 70.
-[6])
+LaTeX Info: Redefining \. on input line 68.
+LaTeX Info: Redefining \% on input line 68.
+[6]
+
+LaTeX Info: Redefining \. on input line 76.
+LaTeX Info: Redefining \% on input line 76.
+[7]
+
+LaTeX Info: Redefining \. on input line 89.
+LaTeX Info: Redefining \% on input line 89.
+[8])
 
 LaTeX Info: Redefining \. on input line 73.
 LaTeX Info: Redefining \% on input line 73.
-[7]
+[9]
 \openout2 = `capitulos/capitulo2.aux'.
 
  (./capitulos/capitulo2.tex
 Cap\'{\i }tulo 2.
 
 
-[8
+[10
 
 
 
@@ -961,157 +978,111 @@ Cap\'{\i }tulo 2.
 
 LaTeX Info: Redefining \. on input line 19.
 LaTeX Info: Redefining \% on input line 19.
-[9]
-<capitulos/img/7_NUCLEOS.png, id=82, 277.035pt x 188.20313pt>
-File: capitulos/img/7_NUCLEOS.png Graphic file (type png)
-<use capitulos/img/7_NUCLEOS.png>
-Package pdftex.def Info: capitulos/img/7_NUCLEOS.png  used on input line 24.
-(pdftex.def)             Requested size: 426.79135pt x 289.94281pt.
-<capitulos/img/12_NUCLEOS.png, id=84, 277.035pt x 207.77625pt>
-File: capitulos/img/12_NUCLEOS.png Graphic file (type png)
-<use capitulos/img/12_NUCLEOS.png>
-Package pdftex.def Info: capitulos/img/12_NUCLEOS.png  used on input line 31.
-(pdftex.def)             Requested size: 426.79135pt x 320.09686pt.
-
-
-LaTeX Info: Redefining \. on input line 35.
-LaTeX Info: Redefining \% on input line 35.
-[10 <./capitulos/img/7_NUCLEOS.png>]
-<capitulos/img/19_NUCLEOS.png, id=89, 249.18094pt x 191.21437pt>
-File: capitulos/img/19_NUCLEOS.png Graphic file (type png)
-<use capitulos/img/19_NUCLEOS.png>
-Package pdftex.def Info: capitulos/img/19_NUCLEOS.png  used on input line 43.
-(pdftex.def)             Requested size: 426.79135pt x 327.53723pt.
-
-
-LaTeX Info: Redefining \. on input line 47.
-LaTeX Info: Redefining \% on input line 47.
-[11{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./capitulos/img/12_NUCLEOS.png>]
-<capitulos/img/CORE_PITCH_II.png, id=95, 960.58875pt x 553.06625pt>
+[11]
+<capitulos/img/CORE_PITCH_II.png, id=95, 486.31688pt x 247.67531pt>
 File: capitulos/img/CORE_PITCH_II.png Graphic file (type png)
 <use capitulos/img/CORE_PITCH_II.png>
-Package pdftex.def Info: capitulos/img/CORE_PITCH_II.png  used on input line 52.
-(pdftex.def)             Requested size: 426.79135pt x 245.72972pt.
+Package pdftex.def Info: capitulos/img/CORE_PITCH_II.png  used on input line 24.
+(pdftex.def)             Requested size: 426.79135pt x 217.35782pt.
 
 
-LaTeX Info: Redefining \. on input line 56.
-LaTeX Info: Redefining \% on input line 56.
-[12 <./capitulos/img/19_NUCLEOS.png>]
+LaTeX Info: Redefining \. on input line 34.
+LaTeX Info: Redefining \% on input line 34.
+[12{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./capitulos/img/CORE_PITCH_II.png>]
 
-LaTeX Info: Redefining \. on input line 64.
-LaTeX Info: Redefining \% on input line 64.
-[13 <./capitulos/img/CORE_PITCH_II.png>]
+LaTeX Warning: Reference `fig:7_NUCLEOS' on page 13 undefined on input line 41.
 
-LaTeX Info: Redefining \. on input line 76.
-LaTeX Info: Redefining \% on input line 76.
+
+
+LaTeX Info: Redefining \. on input line 46.
+LaTeX Info: Redefining \% on input line 46.
+[13]
+
+LaTeX Info: Redefining \. on input line 68.
+LaTeX Info: Redefining \% on input line 68.
 [14]
-<capitulos/img/XT_MCF_II.png, id=107, 441.14813pt x 256.70906pt>
-File: capitulos/img/XT_MCF_II.png Graphic file (type png)
-<use capitulos/img/XT_MCF_II.png>
-Package pdftex.def Info: capitulos/img/XT_MCF_II.png  used on input line 83.
-(pdftex.def)             Requested size: 426.79135pt x 248.36508pt.
-
-
-LaTeX Info: Redefining \. on input line 92.
-LaTeX Info: Redefining \% on input line 92.
-[15 <./capitulos/img/XT_MCF_II.png>]
-
-LaTeX Info: Redefining \. on input line 112.
-LaTeX Info: Redefining \% on input line 112.
-[16]
-<capitulos/img/CONMUTACION_NUCLEOS_II.png, id=119, 505.13719pt x 167.87718pt>
+<capitulos/img/CONMUTACION_NUCLEOS_II.png, id=109, 505.13719pt x 167.87718pt>
 File: capitulos/img/CONMUTACION_NUCLEOS_II.png Graphic file (type png)
 <use capitulos/img/CONMUTACION_NUCLEOS_II.png>
-Package pdftex.def Info: capitulos/img/CONMUTACION_NUCLEOS_II.png  used on input line 124.
+Package pdftex.def Info: capitulos/img/CONMUTACION_NUCLEOS_II.png  used on input line 80.
 (pdftex.def)             Requested size: 426.79135pt x 141.8407pt.
 
 
-LaTeX Info: Redefining \. on input line 130.
-LaTeX Info: Redefining \% on input line 130.
-[17 <./capitulos/img/CONMUTACION_NUCLEOS_II.png>]
-<capitulos/img/Asignación_espectro_SIN_conmutación_II.png, id=124, 1283.79625pt x 776.9025pt>
-File: capitulos/img/Asignación_espectro_SIN_conmutación_II.png Graphic file (type png)
-<use capitulos/img/Asignación_espectro_SIN_conmutación_II.png>
-Package pdftex.def Info: capitulos/img/Asignación_espectro_SIN_conmutación_II.png  used on input line 136.
-(pdftex.def)             Requested size: 426.79135pt x 258.27534pt.
-
-
-LaTeX Info: Redefining \. on input line 140.
-LaTeX Info: Redefining \% on input line 140.
-[18]
-
-LaTeX Info: Redefining \. on input line 147.
-LaTeX Info: Redefining \% on input line 147.
-[19 <./capitulos/img/Asignación_espectro_SIN_conmutación_II.png>]
-<capitulos/img/Asignación_espectro_CON_conmutación_II.png, id=133, 976.64874pt x 606.265pt>
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
+[15 <./capitulos/img/CONMUTACION_NUCLEOS_II.png>]
+<capitulos/img/Asignación_espectro_CON_conmutación_II.png, id=114, 976.64874pt x 606.265pt>
 File: capitulos/img/Asignación_espectro_CON_conmutación_II.png Graphic file (type png)
 <use capitulos/img/Asignación_espectro_CON_conmutación_II.png>
-Package pdftex.def Info: capitulos/img/Asignación_espectro_CON_conmutación_II.png  used on input line 151.
+Package pdftex.def Info: capitulos/img/Asignación_espectro_CON_conmutación_II.png  used on input line 104.
 (pdftex.def)             Requested size: 426.79135pt x 264.935pt.
 
 
-LaTeX Info: Redefining \. on input line 166.
-LaTeX Info: Redefining \% on input line 166.
-[20 <./capitulos/img/Asignación_espectro_CON_conmutación_II.png>]
+LaTeX Info: Redefining \. on input line 108.
+LaTeX Info: Redefining \% on input line 108.
+[16]
 
-LaTeX Info: Redefining \. on input line 181.
-LaTeX Info: Redefining \% on input line 181.
-[21]
-<capitulos/img/FRACMENTACIÓN_C_RECHAZADA.png, id=142, 1205.50375pt x 523.9575pt>
+LaTeX Info: Redefining \. on input line 120.
+LaTeX Info: Redefining \% on input line 120.
+[17 <./capitulos/img/Asignación_espectro_CON_conmutación_II.png>]
+
+LaTeX Info: Redefining \. on input line 135.
+LaTeX Info: Redefining \% on input line 135.
+[18]
+<capitulos/img/FRACMENTACIÓN_C_RECHAZADA.png, id=126, 1205.50375pt x 523.9575pt>
 File: capitulos/img/FRACMENTACIÓN_C_RECHAZADA.png Graphic file (type png)
 <use capitulos/img/FRACMENTACIÓN_C_RECHAZADA.png>
-Package pdftex.def Info: capitulos/img/FRACMENTACIÓN_C_RECHAZADA.png  used on input line 192.
+Package pdftex.def Info: capitulos/img/FRACMENTACIÓN_C_RECHAZADA.png  used on input line 145.
 (pdftex.def)             Requested size: 426.79135pt x 185.49854pt.
-
-
-LaTeX Info: Redefining \. on input line 196.
-LaTeX Info: Redefining \% on input line 196.
-[22]
-<capitulos/img/FRACMENTACIÓN_C_ESTABLECIDA.png, id=146, 1228.59pt x 523.9575pt>
+<capitulos/img/FRACMENTACIÓN_C_ESTABLECIDA.png, id=127, 1228.59pt x 523.9575pt>
 File: capitulos/img/FRACMENTACIÓN_C_ESTABLECIDA.png Graphic file (type png)
 <use capitulos/img/FRACMENTACIÓN_C_ESTABLECIDA.png>
-Package pdftex.def Info: capitulos/img/FRACMENTACIÓN_C_ESTABLECIDA.png  used on input line 199.
+Package pdftex.def Info: capitulos/img/FRACMENTACIÓN_C_ESTABLECIDA.png  used on input line 152.
 (pdftex.def)             Requested size: 426.79135pt x 182.01274pt.
 
 
-LaTeX Info: Redefining \. on input line 208.
-LaTeX Info: Redefining \% on input line 208.
-[23 <./capitulos/img/FRACMENTACIÓN_C_RECHAZADA.png> <./capitulos/img/FRACMENTACIÓN_C_ESTABLECIDA.png>]
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
+[19 <./capitulos/img/FRACMENTACIÓN_C_RECHAZADA.png>]
 
-LaTeX Info: Redefining \. on input line 221.
-LaTeX Info: Redefining \% on input line 221.
-[24]
-<capitulos/img/GESTION_FRACMENTACION_II.png, id=155, 612.2875pt x 392.46625pt>
+LaTeX Info: Redefining \. on input line 166.
+LaTeX Info: Redefining \% on input line 166.
+[20 <./capitulos/img/FRACMENTACIÓN_C_ESTABLECIDA.png>]
+<capitulos/img/GESTION_FRACMENTACION_II.png, id=137, 612.2875pt x 392.46625pt>
 File: capitulos/img/GESTION_FRACMENTACION_II.png Graphic file (type png)
 <use capitulos/img/GESTION_FRACMENTACION_II.png>
-Package pdftex.def Info: capitulos/img/GESTION_FRACMENTACION_II.png  used on input line 229.
+Package pdftex.def Info: capitulos/img/GESTION_FRACMENTACION_II.png  used on input line 182.
 (pdftex.def)             Requested size: 426.79135pt x 273.56271pt.
 
 
-LaTeX Info: Redefining \. on input line 237.
-LaTeX Info: Redefining \% on input line 237.
-[25 <./capitulos/img/GESTION_FRACMENTACION_II.png>]
+LaTeX Info: Redefining \. on input line 186.
+LaTeX Info: Redefining \% on input line 186.
+[21]
 
-LaTeX Info: Redefining \. on input line 243.
-LaTeX Info: Redefining \% on input line 243.
-[26]
-<capitulos/img/EJEMPLO_PERIODICO_II.png, id=163, 595.22375pt x 133.49875pt>
+LaTeX Info: Redefining \. on input line 192.
+LaTeX Info: Redefining \% on input line 192.
+[22 <./capitulos/img/GESTION_FRACMENTACION_II.png>]
+
+LaTeX Info: Redefining \. on input line 202.
+LaTeX Info: Redefining \% on input line 202.
+[23]
+<capitulos/img/EJEMPLO_PERIODICO_II.png, id=148, 595.22375pt x 133.49875pt>
 File: capitulos/img/EJEMPLO_PERIODICO_II.png Graphic file (type png)
 <use capitulos/img/EJEMPLO_PERIODICO_II.png>
-Package pdftex.def Info: capitulos/img/EJEMPLO_PERIODICO_II.png  used on input line 252.
+Package pdftex.def Info: capitulos/img/EJEMPLO_PERIODICO_II.png  used on input line 205.
 (pdftex.def)             Requested size: 426.79135pt x 95.72179pt.
 
 
-LaTeX Info: Redefining \. on input line 257.
-LaTeX Info: Redefining \% on input line 257.
-[27 <./capitulos/img/EJEMPLO_PERIODICO_II.png>])
+LaTeX Info: Redefining \. on input line 210.
+LaTeX Info: Redefining \% on input line 210.
+[24 <./capitulos/img/EJEMPLO_PERIODICO_II.png>])
 \openout2 = `capitulos/capitulo3.aux'.
 
  (./capitulos/capitulo3.tex
 Cap\'{\i }tulo 3.
 
 
-[28
+[25
 
 
 
@@ -1121,42 +1092,42 @@ Cap\'{\i }tulo 3.
 
 LaTeX Info: Redefining \. on input line 17.
 LaTeX Info: Redefining \% on input line 17.
-[29]
+[26]
 
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
-[30]
+[27]
 
 LaTeX Info: Redefining \. on input line 37.
 LaTeX Info: Redefining \% on input line 37.
-[31]
+[28]
 
 LaTeX Info: Redefining \. on input line 53.
 LaTeX Info: Redefining \% on input line 53.
-[32]
+[29]
 
 LaTeX Info: Redefining \. on input line 89.
 LaTeX Info: Redefining \% on input line 89.
-[33]
+[30]
 
 LaTeX Info: Redefining \. on input line 113.
 LaTeX Info: Redefining \% on input line 113.
-[34]
+[31]
 
 LaTeX Info: Redefining \. on input line 130.
 LaTeX Info: Redefining \% on input line 130.
-[35])
+[32])
 
 LaTeX Info: Redefining \. on input line 75.
 LaTeX Info: Redefining \% on input line 75.
-[36]
+[33]
 \openout2 = `capitulos/capitulo4.aux'.
 
  (./capitulos/capitulo4.tex
 Cap\'{\i }tulo 4.
 
 
-[37
+[34
 
 
 
@@ -1164,91 +1135,95 @@ Cap\'{\i }tulo 4.
 
 ]
 
-LaTeX Info: Redefining \. on input line 46.
-LaTeX Info: Redefining \% on input line 46.
+LaTeX Info: Redefining \. on input line 38.
+LaTeX Info: Redefining \% on input line 38.
+[35]
+
+LaTeX Info: Redefining \. on input line 63.
+LaTeX Info: Redefining \% on input line 63.
+[36]
+
+LaTeX Info: Redefining \. on input line 91.
+LaTeX Info: Redefining \% on input line 91.
+[37]
+
+LaTeX Info: Redefining \. on input line 122.
+LaTeX Info: Redefining \% on input line 122.
 [38]
-
-LaTeX Info: Redefining \. on input line 75.
-LaTeX Info: Redefining \% on input line 75.
-[39]
-
-LaTeX Info: Redefining \. on input line 102.
-LaTeX Info: Redefining \% on input line 102.
-[40]
-<capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png, id=212, 951.555pt x 364.36125pt>
+<capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png, id=200, 951.555pt x 364.36125pt>
 File: capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png Graphic file (type png)
 <use capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png>
-Package pdftex.def Info: capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png  used on input line 141.
+Package pdftex.def Info: capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png  used on input line 153.
 (pdftex.def)             Requested size: 426.79135pt x 163.42175pt.
 
 
-LaTeX Info: Redefining \. on input line 145.
-LaTeX Info: Redefining \% on input line 145.
-[41]
-<capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png, id=216, 951.555pt x 423.83344pt>
+LaTeX Info: Redefining \. on input line 157.
+LaTeX Info: Redefining \% on input line 157.
+[39]
+<capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png, id=205, 951.555pt x 423.83344pt>
 File: capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png Graphic file (type png)
 <use capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png>
-Package pdftex.def Info: capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png  used on input line 148.
+Package pdftex.def Info: capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png  used on input line 160.
 (pdftex.def)             Requested size: 426.79135pt x 190.09596pt.
 
 
-LaTeX Info: Redefining \. on input line 164.
-LaTeX Info: Redefining \% on input line 164.
-[42 <./capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png> <./capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png>]
-Overfull \hbox (13.39992pt too wide) in paragraph at lines 169--181
+LaTeX Info: Redefining \. on input line 176.
+LaTeX Info: Redefining \% on input line 176.
+[40 <./capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png> <./capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png>]
+Overfull \hbox (13.39992pt too wide) in paragraph at lines 181--193
  [][] 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 200.
-LaTeX Info: Redefining \% on input line 200.
+LaTeX Info: Redefining \. on input line 212.
+LaTeX Info: Redefining \% on input line 212.
+[41]
+
+LaTeX Info: Redefining \. on input line 233.
+LaTeX Info: Redefining \% on input line 233.
+[42]
+
+LaTeX Info: Redefining \. on input line 262.
+LaTeX Info: Redefining \% on input line 262.
 [43]
 
-LaTeX Info: Redefining \. on input line 221.
-LaTeX Info: Redefining \% on input line 221.
+LaTeX Info: Redefining \. on input line 292.
+LaTeX Info: Redefining \% on input line 292.
 [44]
 
-LaTeX Info: Redefining \. on input line 250.
-LaTeX Info: Redefining \% on input line 250.
+LaTeX Info: Redefining \. on input line 318.
+LaTeX Info: Redefining \% on input line 318.
 [45]
-
-LaTeX Info: Redefining \. on input line 280.
-LaTeX Info: Redefining \% on input line 280.
-[46]
-
-LaTeX Info: Redefining \. on input line 306.
-LaTeX Info: Redefining \% on input line 306.
-[47]
-Overfull \hbox (71.89066pt too wide) in paragraph at lines 317--319
+Overfull \hbox (71.89066pt too wide) in paragraph at lines 329--331
 []\T1/cmr/m/n/12 Autocorrelaci�n en-tre $\OML/cmm/m/it/12 BFR[]$ \T1/cmr/m/n/12 y $\OML/cmm/m/it/12 BFR[]$ \T1/cmr/m/n/12 pa-ra di-fe-ren-tes ho-ri-zon-tes $\OML/cmm/m/it/12 h \OMS/cmsy/m/n/12 2 f\OT1/cmr/m/n/12 500\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1000\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1500\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2000\OMS/cmsy/m/n/12 g$ 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 336.
-LaTeX Info: Redefining \% on input line 336.
+LaTeX Info: Redefining \. on input line 348.
+LaTeX Info: Redefining \% on input line 348.
+[46]
+
+LaTeX Info: Redefining \. on input line 380.
+LaTeX Info: Redefining \% on input line 380.
+[47]
+
+LaTeX Info: Redefining \. on input line 413.
+LaTeX Info: Redefining \% on input line 413.
 [48]
 
-LaTeX Info: Redefining \. on input line 368.
-LaTeX Info: Redefining \% on input line 368.
+LaTeX Info: Redefining \. on input line 433.
+LaTeX Info: Redefining \% on input line 433.
 [49]
 
-LaTeX Info: Redefining \. on input line 401.
-LaTeX Info: Redefining \% on input line 401.
-[50]
-
-LaTeX Info: Redefining \. on input line 421.
-LaTeX Info: Redefining \% on input line 421.
-[51]
-
-LaTeX Info: Redefining \. on input line 451.
-LaTeX Info: Redefining \% on input line 451.
-[52])
+LaTeX Info: Redefining \. on input line 463.
+LaTeX Info: Redefining \% on input line 463.
+[50])
 
 LaTeX Info: Redefining \. on input line 76.
 LaTeX Info: Redefining \% on input line 76.
-[53]
+[51]
 \openout2 = `capitulos/capitulo5.aux'.
 
  (./capitulos/capitulo5.tex
@@ -1260,7 +1235,7 @@ Overfull \hbox (4.63756pt too wide) in paragraph at lines 5--5
 
 
 
-[54
+[52
 
 
 
@@ -1270,11 +1245,11 @@ Overfull \hbox (4.63756pt too wide) in paragraph at lines 5--5
 
 LaTeX Info: Redefining \. on input line 74.
 LaTeX Info: Redefining \% on input line 74.
-[55]
+[53]
 
 LaTeX Info: Redefining \. on input line 100.
 LaTeX Info: Redefining \% on input line 100.
-[56]
+[54]
 Overfull \hbox (59.98611pt too wide) in paragraph at lines 122--137
  [][] 
  []
@@ -1283,112 +1258,99 @@ Overfull \hbox (59.98611pt too wide) in paragraph at lines 122--137
 
 LaTeX Info: Redefining \. on input line 144.
 LaTeX Info: Redefining \% on input line 144.
-[57]
+[55]
 
 LaTeX Info: Redefining \. on input line 161.
 LaTeX Info: Redefining \% on input line 161.
-[58]
+[56]
 
 LaTeX Info: Redefining \. on input line 183.
 LaTeX Info: Redefining \% on input line 183.
-[59]
+[57]
 
 LaTeX Info: Redefining \. on input line 209.
 LaTeX Info: Redefining \% on input line 209.
-[60]
+[58]
 
 LaTeX Info: Redefining \. on input line 232.
 LaTeX Info: Redefining \% on input line 232.
+[59]
+Overfull \hbox (47.0616pt too wide) in paragraph at lines 253--264
+ [][] 
+ []
+
+
+
+LaTeX Info: Redefining \. on input line 269.
+LaTeX Info: Redefining \% on input line 269.
+[60]
+
+LaTeX Info: Redefining \. on input line 283.
+LaTeX Info: Redefining \% on input line 283.
 [61]
+Overfull \hbox (47.0616pt too wide) in paragraph at lines 288--299
+ [][] 
+ []
 
-LaTeX Info: Redefining \. on input line 261.
-LaTeX Info: Redefining \% on input line 261.
+
+
+LaTeX Info: Redefining \. on input line 323.
+LaTeX Info: Redefining \% on input line 323.
 [62]
-Overfull \hbox (47.0616pt too wide) in paragraph at lines 277--288
+Overfull \hbox (47.0616pt too wide) in paragraph at lines 337--348
  [][] 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 293.
-LaTeX Info: Redefining \% on input line 293.
+LaTeX Info: Redefining \. on input line 357.
+LaTeX Info: Redefining \% on input line 357.
 [63]
-Overfull \hbox (47.0616pt too wide) in paragraph at lines 312--323
- [][] 
- []
 
-
-
-LaTeX Info: Redefining \. on input line 333.
-LaTeX Info: Redefining \% on input line 333.
+LaTeX Info: Redefining \. on input line 375.
+LaTeX Info: Redefining \% on input line 375.
 [64]
-
-LaTeX Info: Redefining \. on input line 352.
-LaTeX Info: Redefining \% on input line 352.
-[65]
-Overfull \hbox (47.0616pt too wide) in paragraph at lines 361--372
+Overfull \hbox (49.28194pt too wide) in paragraph at lines 385--402
  [][] 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 384.
-LaTeX Info: Redefining \% on input line 384.
+LaTeX Info: Redefining \. on input line 414.
+LaTeX Info: Redefining \% on input line 414.
+[65]
+
+LaTeX Info: Redefining \. on input line 443.
+LaTeX Info: Redefining \% on input line 443.
 [66]
 
-LaTeX Info: Redefining \. on input line 404.
-LaTeX Info: Redefining \% on input line 404.
+LaTeX Info: Redefining \. on input line 475.
+LaTeX Info: Redefining \% on input line 475.
 [67]
-Overfull \hbox (54.35721pt too wide) in paragraph at lines 409--421
- [][] 
- []
 
-
-Overfull \hbox (49.28194pt too wide) in paragraph at lines 443--460
- [][] 
- []
-
-
-
-LaTeX Info: Redefining \. on input line 460.
-LaTeX Info: Redefining \% on input line 460.
+LaTeX Info: Redefining \. on input line 497.
+LaTeX Info: Redefining \% on input line 497.
 [68]
 
-LaTeX Info: Redefining \. on input line 479.
-LaTeX Info: Redefining \% on input line 479.
+LaTeX Info: Redefining \. on input line 521.
+LaTeX Info: Redefining \% on input line 521.
 [69]
-
-LaTeX Info: Redefining \. on input line 508.
-LaTeX Info: Redefining \% on input line 508.
-[70]
-
-LaTeX Info: Redefining \. on input line 538.
-LaTeX Info: Redefining \% on input line 538.
-[71]
-
-LaTeX Info: Redefining \. on input line 564.
-LaTeX Info: Redefining \% on input line 564.
-[72]
-Overfull \hbox (1.1959pt too wide) in paragraph at lines 585--586
+Overfull \hbox (1.1959pt too wide) in paragraph at lines 527--528
 []\T1/cmr/m/n/12 En car-ga al-ta, in-ter-va-lo 1,000t re-sul-ta in-su-fi-cien-te (3.265$ $% blo-queos vs. 2.871$ $%
  []
 
-
-
-LaTeX Info: Redefining \. on input line 586.
-LaTeX Info: Redefining \% on input line 586.
-[73])
+)
 
 LaTeX Info: Redefining \. on input line 77.
 LaTeX Info: Redefining \% on input line 77.
-[74]
+[70]
 \openout2 = `capitulos/capitulo6.aux'.
 
  (./capitulos/capitulo6.tex
 Cap\'{\i }tulo 6.
 
 
-[75
+[71
 
 
 
@@ -1398,58 +1360,58 @@ Cap\'{\i }tulo 6.
 
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
-[76]
+[72]
 
 LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
-[77]
+[73]
 
 LaTeX Info: Redefining \. on input line 49.
 LaTeX Info: Redefining \% on input line 49.
-[78]
+[74]
 
 LaTeX Info: Redefining \. on input line 66.
 LaTeX Info: Redefining \% on input line 66.
-[79]
+[75]
 
 LaTeX Info: Redefining \. on input line 86.
 LaTeX Info: Redefining \% on input line 86.
-[80]
+[76]
 
 LaTeX Info: Redefining \. on input line 102.
 LaTeX Info: Redefining \% on input line 102.
-[81]
+[77]
 
 LaTeX Info: Redefining \. on input line 113.
 LaTeX Info: Redefining \% on input line 113.
-[82]
+[78]
 
 LaTeX Info: Redefining \. on input line 134.
 LaTeX Info: Redefining \% on input line 134.
-[83]
+[79]
 
 LaTeX Info: Redefining \. on input line 153.
 LaTeX Info: Redefining \% on input line 153.
-[84]
+[80]
 
 LaTeX Info: Redefining \. on input line 172.
 LaTeX Info: Redefining \% on input line 172.
-[85])
+[81])
 
 LaTeX Info: Redefining \. on input line 78.
 LaTeX Info: Redefining \% on input line 78.
-[86]
+[82]
 
 LaTeX Info: Redefining \. on input line 78.
 LaTeX Info: Redefining \% on input line 78.
-[87]
+[83]
 \openout2 = `./anexo-1.aux'.
 
 
 No file ./anexo-1.tex.
 
 
-[88
+[84
 
 
 
@@ -1466,20 +1428,20 @@ Overfull \hbox (2.30606pt too wide) in paragraph at lines 87--87
 
 LaTeX Info: Redefining \. on input line 86.
 LaTeX Info: Redefining \% on input line 86.
-[89]
+[85]
+
+LaTeX Info: Redefining \. on input line 86.
+LaTeX Info: Redefining \% on input line 86.
+[86]
 Overfull \hbox (1.29262pt too wide) in paragraph at lines 87--87
 []\T1/cmr/m/n/12 Yaghoub Kho-ra-sa-ni, Ak-bar Ghaf-far-pour Rah-bar y Moham-mad Jafari-Beyrami.
  []
 
 
 
-LaTeX Info: Redefining \. on input line 86.
-LaTeX Info: Redefining \% on input line 86.
-[90]
-
 LaTeX Info: Redefining \. on input line 88.
 LaTeX Info: Redefining \% on input line 88.
-[91] (./tesis.aux
+[87] (./tesis.aux
 LaTeX Info: Redefining \sptext on input line 11.
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
@@ -1488,23 +1450,27 @@ LaTeX Info: Redefining \% on input line 11.
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'tesis.run.xml'.
 \openout1 = `tesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28540 strings out of 467797
- 563103 string characters out of 5435982
- 1405521 words of memory out of 5000000
- 56700 multiletter control sequences out of 15000+600000
- 647815 words of font info for 81 fonts, out of 8000000 for 9000
+ 28526 strings out of 467797
+ 562262 string characters out of 5435982
+ 1405564 words of memory out of 5000000
+ 56680 multiletter control sequences out of 15000+600000
+ 653526 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,16n,91p,1243b,2235s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on tesis.pdf (101 pages, 1929016 bytes).
+ 84i,16n,91p,993b,2235s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0600.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb>
+Output written on tesis.pdf (98 pages, 1443640 bytes).
 PDF statistics:
- 504 PDF objects out of 1000 (max. 8388607)
- 313 compressed objects within 4 object streams
+ 490 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
