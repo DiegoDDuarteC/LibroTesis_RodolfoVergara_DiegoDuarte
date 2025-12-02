@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.3)  21 NOV 2025 15:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.10.3)  1 DEC 2025 12:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1130,86 +1130,91 @@ LaTeX Info: Redefining \. on input line 63.
 LaTeX Info: Redefining \% on input line 63.
 [37]
 
-LaTeX Info: Redefining \. on input line 90.
-LaTeX Info: Redefining \% on input line 90.
+LaTeX Info: Redefining \. on input line 87.
+LaTeX Info: Redefining \% on input line 87.
 [38]
 
-LaTeX Info: Redefining \. on input line 120.
-LaTeX Info: Redefining \% on input line 120.
+LaTeX Info: Redefining \. on input line 119.
+LaTeX Info: Redefining \% on input line 119.
 [39]
 
-LaTeX Info: Redefining \. on input line 160.
-LaTeX Info: Redefining \% on input line 160.
+LaTeX Info: Redefining \. on input line 143.
+LaTeX Info: Redefining \% on input line 143.
 [40]
 <capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png, id=207, 951.555pt x 364.36125pt>
 File: capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png Graphic file (type png)
 <use capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png>
-Package pdftex.def Info: capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png  used on input line 163.
+Package pdftex.def Info: capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png  used on input line 181.
 (pdftex.def)             Requested size: 426.79135pt x 163.42175pt.
-<capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png, id=208, 951.555pt x 423.83344pt>
+
+
+LaTeX Info: Redefining \. on input line 185.
+LaTeX Info: Redefining \% on input line 185.
+[41]
+<capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png, id=211, 951.555pt x 423.83344pt>
 File: capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png Graphic file (type png)
 <use capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png>
-Package pdftex.def Info: capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png  used on input line 170.
+Package pdftex.def Info: capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png  used on input line 188.
 (pdftex.def)             Requested size: 426.79135pt x 190.09596pt.
 
 
-LaTeX Info: Redefining \. on input line 181.
-LaTeX Info: Redefining \% on input line 181.
-[41 <./capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png> <./capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png>]
-Overfull \hbox (13.39992pt too wide) in paragraph at lines 191--203
+LaTeX Info: Redefining \. on input line 204.
+LaTeX Info: Redefining \% on input line 204.
+[42 <./capitulos/img/SIMULACION_DISTRIBUCION_NIVELES DE CARGA.png> <./capitulos/img/SIMULACION_EVOLUCION_TEMPORAL_DE_LA_CARGA.png>]
+Overfull \hbox (13.39992pt too wide) in paragraph at lines 209--221
  [][] 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 218.
-LaTeX Info: Redefining \% on input line 218.
-[42]
-
-LaTeX Info: Redefining \. on input line 242.
-LaTeX Info: Redefining \% on input line 242.
+LaTeX Info: Redefining \. on input line 240.
+LaTeX Info: Redefining \% on input line 240.
 [43]
 
-LaTeX Info: Redefining \. on input line 271.
-LaTeX Info: Redefining \% on input line 271.
+LaTeX Info: Redefining \. on input line 261.
+LaTeX Info: Redefining \% on input line 261.
 [44]
 
-LaTeX Info: Redefining \. on input line 301.
-LaTeX Info: Redefining \% on input line 301.
+LaTeX Info: Redefining \. on input line 290.
+LaTeX Info: Redefining \% on input line 290.
 [45]
 
-LaTeX Info: Redefining \. on input line 328.
-LaTeX Info: Redefining \% on input line 328.
+LaTeX Info: Redefining \. on input line 320.
+LaTeX Info: Redefining \% on input line 320.
 [46]
-Overfull \hbox (71.89066pt too wide) in paragraph at lines 339--341
+
+LaTeX Info: Redefining \. on input line 346.
+LaTeX Info: Redefining \% on input line 346.
+[47]
+Overfull \hbox (71.89066pt too wide) in paragraph at lines 357--359
 []\T1/cmr/m/n/12 Autocorrelación en-tre $\OML/cmm/m/it/12 BFR[]$ \T1/cmr/m/n/12 y $\OML/cmm/m/it/12 BFR[]$ \T1/cmr/m/n/12 pa-ra di-fe-ren-tes ho-ri-zon-tes $\OML/cmm/m/it/12 h \OMS/cmsy/m/n/12 2 f\OT1/cmr/m/n/12 500\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1000\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1500\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2000\OMS/cmsy/m/n/12 g$ 
  []
 
 
 
-LaTeX Info: Redefining \. on input line 357.
-LaTeX Info: Redefining \% on input line 357.
-[47]
-
-LaTeX Info: Redefining \. on input line 390.
-LaTeX Info: Redefining \% on input line 390.
+LaTeX Info: Redefining \. on input line 376.
+LaTeX Info: Redefining \% on input line 376.
 [48]
 
-LaTeX Info: Redefining \. on input line 423.
-LaTeX Info: Redefining \% on input line 423.
+LaTeX Info: Redefining \. on input line 408.
+LaTeX Info: Redefining \% on input line 408.
 [49]
 
-LaTeX Info: Redefining \. on input line 443.
-LaTeX Info: Redefining \% on input line 443.
+LaTeX Info: Redefining \. on input line 441.
+LaTeX Info: Redefining \% on input line 441.
 [50]
 
-LaTeX Info: Redefining \. on input line 473.
-LaTeX Info: Redefining \% on input line 473.
-[51])
+LaTeX Info: Redefining \. on input line 461.
+LaTeX Info: Redefining \% on input line 461.
+[51]
+
+LaTeX Info: Redefining \. on input line 491.
+LaTeX Info: Redefining \% on input line 491.
+[52])
 
 LaTeX Info: Redefining \. on input line 76.
 LaTeX Info: Redefining \% on input line 76.
-[52]
+[53]
 \openout2 = `capitulos/capitulo5.aux'.
 
  (./capitulos/capitulo5.tex
@@ -1221,7 +1226,7 @@ Overfull \hbox (4.63756pt too wide) in paragraph at lines 5--5
 
 
 
-[53
+[54
 
 
 
@@ -1231,11 +1236,11 @@ Overfull \hbox (4.63756pt too wide) in paragraph at lines 5--5
 
 LaTeX Info: Redefining \. on input line 74.
 LaTeX Info: Redefining \% on input line 74.
-[54]
+[55]
 
 LaTeX Info: Redefining \. on input line 100.
 LaTeX Info: Redefining \% on input line 100.
-[55]
+[56]
 Overfull \hbox (59.98611pt too wide) in paragraph at lines 122--137
  [][] 
  []
@@ -1244,23 +1249,23 @@ Overfull \hbox (59.98611pt too wide) in paragraph at lines 122--137
 
 LaTeX Info: Redefining \. on input line 144.
 LaTeX Info: Redefining \% on input line 144.
-[56]
+[57]
 
 LaTeX Info: Redefining \. on input line 161.
 LaTeX Info: Redefining \% on input line 161.
-[57]
+[58]
 
 LaTeX Info: Redefining \. on input line 183.
 LaTeX Info: Redefining \% on input line 183.
-[58]
+[59]
 
 LaTeX Info: Redefining \. on input line 209.
 LaTeX Info: Redefining \% on input line 209.
-[59]
+[60]
 
 LaTeX Info: Redefining \. on input line 232.
 LaTeX Info: Redefining \% on input line 232.
-[60]
+[61]
 Overfull \hbox (47.0616pt too wide) in paragraph at lines 253--264
  [][] 
  []
@@ -1269,11 +1274,11 @@ Overfull \hbox (47.0616pt too wide) in paragraph at lines 253--264
 
 LaTeX Info: Redefining \. on input line 269.
 LaTeX Info: Redefining \% on input line 269.
-[61]
+[62]
 
 LaTeX Info: Redefining \. on input line 283.
 LaTeX Info: Redefining \% on input line 283.
-[62]
+[63]
 Overfull \hbox (47.0616pt too wide) in paragraph at lines 288--299
  [][] 
  []
@@ -1282,7 +1287,7 @@ Overfull \hbox (47.0616pt too wide) in paragraph at lines 288--299
 
 LaTeX Info: Redefining \. on input line 323.
 LaTeX Info: Redefining \% on input line 323.
-[63]
+[64]
 Overfull \hbox (47.0616pt too wide) in paragraph at lines 337--348
  [][] 
  []
@@ -1291,11 +1296,11 @@ Overfull \hbox (47.0616pt too wide) in paragraph at lines 337--348
 
 LaTeX Info: Redefining \. on input line 357.
 LaTeX Info: Redefining \% on input line 357.
-[64]
+[65]
 
 LaTeX Info: Redefining \. on input line 375.
 LaTeX Info: Redefining \% on input line 375.
-[65]
+[66]
 Overfull \hbox (49.28194pt too wide) in paragraph at lines 385--402
  [][] 
  []
@@ -1304,23 +1309,23 @@ Overfull \hbox (49.28194pt too wide) in paragraph at lines 385--402
 
 LaTeX Info: Redefining \. on input line 414.
 LaTeX Info: Redefining \% on input line 414.
-[66]
+[67]
 
 LaTeX Info: Redefining \. on input line 443.
 LaTeX Info: Redefining \% on input line 443.
-[67]
+[68]
 
 LaTeX Info: Redefining \. on input line 475.
 LaTeX Info: Redefining \% on input line 475.
-[68]
+[69]
 
 LaTeX Info: Redefining \. on input line 497.
 LaTeX Info: Redefining \% on input line 497.
-[69]
+[70]
 
 LaTeX Info: Redefining \. on input line 521.
 LaTeX Info: Redefining \% on input line 521.
-[70]
+[71]
 Overfull \hbox (1.1959pt too wide) in paragraph at lines 527--528
 []\T1/cmr/m/n/12 En car-ga al-ta, in-ter-va-lo 1,000t re-sul-ta in-su-fi-cien-te (3.265$ $% blo-queos vs. 2.871$ $%
  []
@@ -1329,14 +1334,14 @@ Overfull \hbox (1.1959pt too wide) in paragraph at lines 527--528
 
 LaTeX Info: Redefining \. on input line 77.
 LaTeX Info: Redefining \% on input line 77.
-[71]
+[72]
 \openout2 = `capitulos/capitulo6.aux'.
 
  (./capitulos/capitulo6.tex
 Cap\'{\i }tulo 6.
 
 
-[72
+[73
 
 
 
@@ -1346,58 +1351,58 @@ Cap\'{\i }tulo 6.
 
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
-[73]
+[74]
 
 LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
-[74]
+[75]
 
 LaTeX Info: Redefining \. on input line 49.
 LaTeX Info: Redefining \% on input line 49.
-[75]
+[76]
 
 LaTeX Info: Redefining \. on input line 66.
 LaTeX Info: Redefining \% on input line 66.
-[76]
+[77]
 
 LaTeX Info: Redefining \. on input line 86.
 LaTeX Info: Redefining \% on input line 86.
-[77]
+[78]
 
 LaTeX Info: Redefining \. on input line 102.
 LaTeX Info: Redefining \% on input line 102.
-[78]
+[79]
 
 LaTeX Info: Redefining \. on input line 113.
 LaTeX Info: Redefining \% on input line 113.
-[79]
+[80]
 
 LaTeX Info: Redefining \. on input line 134.
 LaTeX Info: Redefining \% on input line 134.
-[80]
+[81]
 
 LaTeX Info: Redefining \. on input line 153.
 LaTeX Info: Redefining \% on input line 153.
-[81]
+[82]
 
 LaTeX Info: Redefining \. on input line 172.
 LaTeX Info: Redefining \% on input line 172.
-[82])
-
-LaTeX Info: Redefining \. on input line 78.
-LaTeX Info: Redefining \% on input line 78.
-[83]
+[83])
 
 LaTeX Info: Redefining \. on input line 78.
 LaTeX Info: Redefining \% on input line 78.
 [84]
+
+LaTeX Info: Redefining \. on input line 78.
+LaTeX Info: Redefining \% on input line 78.
+[85]
 \openout2 = `./anexo-1.aux'.
 
 
 No file ./anexo-1.tex.
 
 
-[85
+[86
 
 
 
@@ -1414,11 +1419,11 @@ Overfull \hbox (2.30606pt too wide) in paragraph at lines 87--87
 
 LaTeX Info: Redefining \. on input line 86.
 LaTeX Info: Redefining \% on input line 86.
-[86]
+[87]
 
 LaTeX Info: Redefining \. on input line 86.
 LaTeX Info: Redefining \% on input line 86.
-[87]
+[88]
 Overfull \hbox (1.29262pt too wide) in paragraph at lines 87--87
 []\T1/cmr/m/n/12 Yaghoub Kho-ra-sa-ni, Ak-bar Ghaf-far-pour Rah-bar y Moham-mad Jafari-Beyrami.
  []
@@ -1427,7 +1432,7 @@ Overfull \hbox (1.29262pt too wide) in paragraph at lines 87--87
 
 LaTeX Info: Redefining \. on input line 88.
 LaTeX Info: Redefining \% on input line 88.
-[88] (./tesis.aux
+[89] (./tesis.aux
 LaTeX Info: Redefining \sptext on input line 11.
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
@@ -1443,16 +1448,16 @@ Package logreq Info: Writing requests to 'tesis.run.xml'.
 Here is how much of TeX's memory you used:
  28486 strings out of 473190
  564476 string characters out of 5715800
- 1393591 words of memory out of 5000000
+ 1393593 words of memory out of 5000000
  51248 multiletter control sequences out of 15000+600000
  585538 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,16n,91p,1056b,2210s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on tesis.pdf (99 pages, 1446126 bytes).
+Output written on tesis.pdf (100 pages, 1447908 bytes).
 PDF statistics:
- 493 PDF objects out of 1000 (max. 8388607)
- 312 compressed objects within 4 object streams
+ 496 PDF objects out of 1000 (max. 8388607)
+ 314 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  63 words of extra memory for PDF output out of 10000 (max. 10000000)
 

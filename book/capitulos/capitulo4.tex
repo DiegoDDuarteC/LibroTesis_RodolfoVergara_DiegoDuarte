@@ -75,6 +75,12 @@ En el contexto de \textit{Machine Learning}, las características son los parám
     \end{equation}
     donde \(s_{min}\) y \(s_{max}\) son los índices del primer y último FS ocupado, \(S^{occupied}\) es la cantidad total de FS ocupados, \(g_i\) es el tamaño del gap libre \(i\), y \(G\) es la cantidad total de gaps. Si no hay FS ocupados, \(SC_{core} = 0\).
     
+    El SC de la red se calcula como el promedio aritmético simple sobre todos los cores de todos los enlaces:
+    \begin{equation}
+        SC_{red} = \frac{1}{|E| \times C} \sum_{i=1}^{|E|} \sum_{j=1}^{C} SC_{core_{i,j}}
+    \end{equation}
+    donde \(|E|\) es el número total de enlaces en la red y \(C\) es el número de cores por enlace.
+    
     \item \textbf{Golden Metric (GM)}: Métrica avanzada que evalúa la fragmentación considerando rangos de tamaño de demandas esperadas \cite{khorasani2018novel}. Dados dos parámetros \(n_1\) y \(n_2\) que representan tamaños típicos de demanda, el GM para un core se calcula como:
     \begin{equation}
         GM_{core} = \frac{a}{|b|}
@@ -91,6 +97,12 @@ En el contexto de \textit{Machine Learning}, las características son los parám
     \end{itemize}
     con \(avg = \frac{n_1 + n_2}{2}\).
     
+    El GM de la red se calcula como el promedio aritmético simple sobre todos los cores de todos los enlaces:
+    \begin{equation}
+        GM_{red} = \frac{1}{|E| \times C} \sum_{i=1}^{|E|} \sum_{j=1}^{C} GM_{core_{i,j}}
+    \end{equation}
+    donde \(|E|\) es el número total de enlaces en la red y \(C\) es el número de cores por enlace.
+    
     \item \textbf{Available Spectrum Fragmentation Ratio 3D (ASFR3D)}: Considera la fragmentación espacial en redes multi-core \cite{zhang2020fragmentation}, evaluando bloques pequeños de difícil utilización:
     \begin{equation}
         ASFR3D_{core} = \left(1 - \frac{S^{small}}{S^{free}}\right) \times F_{spatial}
@@ -100,6 +112,12 @@ En el contexto de \textit{Machine Learning}, las características son los parám
         F_{spatial} = \frac{\ln(D_{active} + 1)}{10}
     \end{equation}
     siendo \(D_{active}\) el número de demandas activas en la red.
+    
+    El ASFR3D de la red se calcula como el promedio aritmético simple sobre todos los cores de todos los enlaces:
+    \begin{equation}
+        ASFR3D_{red} = \frac{1}{|E| \times C} \sum_{i=1}^{|E|} \sum_{j=1}^{C} ASFR3D_{core_{i,j}}
+    \end{equation}
+    donde \(|E|\) es el número total de enlaces en la red y \(C\) es el número de cores por enlace.
     
     \item \textbf{Utilización Diferencial (UD)}: Mide el desbalance en la utilización entre cores y enlaces. Esta métrica está inspirada en conceptos de balanceo de carga en redes definidas por software \cite{guo2014improving}:
     \begin{equation}
