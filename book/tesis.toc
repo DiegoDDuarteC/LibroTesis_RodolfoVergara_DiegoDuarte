@@ -48,7 +48,7 @@
 \contentsline {subsection}{\numberline {4.7.3}Análisis de Predictibilidad del Horizonte}{48}{}%
 \contentsline {subsection}{\numberline {4.7.4}Resultados del Modelo de Umbral Crítico ($\text {BFR}_F$ = 0.46)}{49}{}%
 \contentsline {subsection}{\numberline {4.7.5}Resultados del Modelo de Umbral Mínimo ($\text {BFR}_F$ = 0.20)}{50}{}%
-\contentsline {subsection}{\numberline {4.7.6}Justificación de Gradient Boosting}{51}{}%
+\contentsline {subsection}{\numberline {4.7.6}Justificación de Gradient Boosting}{50}{}%
 \contentsline {subsection}{\numberline {4.7.7}Validación de la Estrategia de Dos Umbrales}{51}{}%
 \contentsline {section}{\numberline {4.8}Implementación del Sistema}{52}{}%
 \contentsline {subsection}{\numberline {4.8.1}Arquitectura de Servicios}{52}{}%

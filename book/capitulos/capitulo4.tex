@@ -393,7 +393,6 @@ Precisión & 0.957 & 95.7\% de alertas críticas son correctas \\
 Recall & 0.849 & 84.9\% de situaciones críticas detectadas \\
 F1-Score & 0.900 & Balance robusto precisión-cobertura \\
 AUC-ROC & 0.986 & Excelente capacidad discriminativa \\
-Umbral óptimo & 0.70 & Umbral de decisión de probabilidad \\
 \hline
 \end{tabular}
 \end{table}
@@ -418,19 +417,18 @@ El modelo para detectar el umbral mínimo presentó un desbalance de clases pron
 \hline
 \textbf{Métrica} & \textbf{Valor} & \textbf{Interpretación} \\
 \hline
-Precisión & >0.95 & Mínimos falsos positivos \\
-Recall & >0.95 & Alta cobertura de detección \\
-F1-Score & >0.95 & Balance óptimo \\
-AUC-ROC & >0.95 & Excelente capacidad discriminativa \\
-Umbral óptimo & 0.55 & Umbral de decisión de probabilidad \\
+Precisión & 0.970 & 97.0\% de alertas críticas son correctas \\
+Recall & 0.963 & 96.3\% de situaciones críticas detectadas \\
+F1-Score & 0.966 & Balance muy robusto precisión-cobertura \\
+AUC-ROC & 0.992 & Excelente capacidad discriminativa \\
 \hline
 \end{tabular}
 \end{table}
 
 El modelo alcanzó métricas bastante altas, con desempeño superior:
 \begin{itemize}
-    \item Precisión $\geq$ 0.80: Cumple ampliamente
-    \item F1-Score $\geq$ 0.40: Cumple ampliamente
+    \item Precisión $\geq$ 0.95: Cumple ampliamente
+    \item F1-Score $\geq$ 0.95: Cumple ampliamente
 \end{itemize}
 
 Estos resultados se explican por la alta predictibilidad intrínseca del horizonte temporal y la clara separabilidad entre los casos bajo y sobre el umbral de 0.20. El desbalance de clases fue manejado efectivamente mediante pesos balanceados en el algoritmo Gradient Boosting.
